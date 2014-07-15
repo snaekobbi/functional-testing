@@ -1,0 +1,10 @@
+script: mvn test
+after_success: 
+  - source upload_with_ftp.sh
+branches:
+  only:
+  - master
+env:
+  global:
+    - secure: "FbotqK6NJPnZj5ecT0N8jO30+SggF0656F5qKbjePq4Y+bVL8+a6wqlMtcay\nRG7mniLt4IbvxS2o+t1BXkPiUa0dH1tLTnLS7tJFazXBC9xUVKJiUcVQfohv\nz+PpqmeaIdlOO06BZd1LWycH22jSjULVO3wRSQr+8qao8afPB6M="
+    - secure: "aPE474JDNmY0ApZQbKfOBDwLAaPDN3oTqrdggEj/MNXpwBL3tPpNEMcKiv+q\nvoY4ffU0xyVZMydeCCs9yBG6abOZLHW/u19QHQ9ZJ79+2V5FzEW2pDOsObKx\nstKxpuWi3LFxs9dhDAiM8u/0wvef0U2dnGrfDIzajODDArTzvSk="

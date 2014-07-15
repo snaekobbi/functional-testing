@@ -1,0 +1,200 @@
+@namespace x url(http://www.daisy.org/ns/xprocspec);
+@namespace pef url(http://www.daisy.org/ns/2008/pef);
+
+@font-face {
+	font-family: odt2braille;
+	src: url(odt2braille8.ttf);
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.requirement {
+	list-style-type: none;
+	margin: 30px 60px 30px 20px;
+}
+
+.requirement h3 {
+	color: #005A9C;
+	font-weight: normal;
+}
+
+.requirement::before {
+	content: attr(id);
+	display: block;
+	float: left;
+	margin-left: -20px;
+	margin-right: 11px;
+	padding: 3px;
+	color: #000080;
+	background-color: #FCFAEE;
+	font-weight: bold;
+}
+
+.test {
+	display: block;
+	position: relative;
+	padding: 7px;
+	padding-right: 110px;
+}
+
+.test-passed {
+	border-left: 7px solid #52E052;
+	background-color: #E9FBE9;
+}
+
+.test-failed {
+	border-left: 7px solid #FFA500;
+	background-color: #FFEECC;
+}
+
+.test > a.test-src,
+.test > a.test-report {
+	display: block;
+	position: absolute;
+	width: 45px;
+	top: 7px;
+	font-size: 90%;
+}
+
+.test > a.test-src {
+	right: 60px;
+}
+
+.test > a.test-report {
+	right: 5px;
+}
+
+code {
+	display: block;
+	max-height: 300px;
+	overflow: auto;
+	margin: 15px 0;
+	white-space: pre;
+	tab-size: 4;
+	border-left: 7px solid #AAAAAA;
+}
+
+.document.pef {
+	display: block;
+	position: relative;
+}
+
+.document.pef > a.pef-xml,
+.document.pef > a.pef-unicode,
+.document.pef > a.pef-ascii {
+	display: block;
+	position: absolute;
+	width: 45px;
+	top: 7px;
+	font-size: 90%;
+}
+
+.document.pef > code {
+	display: none;
+}
+
+.document.pef-xml > code {
+	display: block;
+}
+
+.document.pef > a.pef-xml {
+	right: 0;
+}
+
+.document.pef > a.pef-unicode {
+	right: 100px;
+}
+
+.document.pef > a.pef-ascii {
+	right: 40px;
+}
+
+/*********/
+/*  PEF  */
+/*********/
+
+pef|pef {
+	display: block;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 3px #eee;
+	margin: 1em 0;
+	padding: 0 15px 15px 0;
+}
+
+.document.pef-xml pef|pef {
+	display: none;
+}
+
+pef|head {
+	display: none;
+}
+
+pef|page {
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 3px #eee;
+	padding: 0.5em;
+	margin: 15px 0 0 15px;
+}
+
+pef|row {
+	display: block;
+	font-family: odt2braille;
+	letter-spacing: 0px;
+	font-size: 125%;
+}
+
+pef|row[class~=ascii] {
+	display: none;
+	white-space: pre;
+}
+
+.document.pef-ascii pef|row {
+	display: none;
+}
+
+.document.pef-ascii pef|row[class~=ascii] {
+	display: block;
+}
+
+/***************/
+/*  XPROCSPEC  */
+/***************/
+
+x|description {
+	display: block;
+	margin: 10px;
+}
+
+x|description h1 {
+	display: block;
+	font-family: monospace;
+}
+
+x|scenario {
+	display: block;
+	margin: 30px 60px 30px 20px;
+	font-family: sans-serif;
+}
+
+x|scenario h2 {
+	color: #005A9C;
+	font-weight: normal;
+	font-size: 19px;
+}
+
+x|scenario::before {
+	content: attr(id) ". " attr(label);
+	color: #005A9C;
+	font-weight: normal;
+	font-size: 19px;
+	display: block;
+	margin-left: -20px;
+	margin-right: 11px;
+}
+
+x|document {
+	display: none;
+}
