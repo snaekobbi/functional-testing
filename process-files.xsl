@@ -26,7 +26,7 @@
 			<xsl:apply-templates select="." mode="process-index"/>
 		</xsl:result-document>
 		<xsl:for-each select="$xprocspec-tests-doc">
-			<xsl:result-document href="{resolve-uri(substring-after(base-uri(/*), $source-dir), $result)}" format="xml">
+			<xsl:result-document href="{x:rename-xprocspec-file(resolve-uri(substring-after(base-uri(/*), $source-dir), $result))}" format="xml">
 				<xsl:apply-templates select="." mode="process-xprocspec-test"/>
 			</xsl:result-document>
 		</xsl:for-each>
@@ -65,7 +65,7 @@
 			                        'pending:0 / failed:0 / errors:0')"/>
 			<div class="test xprocspec {if ($passed) then 'test-passed' else 'test-failed'}">
 				<xsl:value-of select="concat($id, '. ', $label)"/>
-				<a class="test-src" href="{@href}">source</a>
+				<a class="test-src" href="{x:rename-xprocspec-file(@href)}">source</a>
 				<xsl:if test="$report">
 					<a class="test-report" href="{replace(base-uri($report/*),'^.*/([^/]*)$','xprocspec-reports/$1')}">report</a>
 				</xsl:if>
@@ -242,7 +242,7 @@
 				<xsl:copy>
 					<xsl:variable name="new-href" select="concat('../', substring-after(@href, $source-dir))"/>
 					<xsl:apply-templates select="@*[not(name(.)='href')]" mode="#current"/>
-					<xsl:attribute name="href" select="$new-href"/>
+					<xsl:attribute name="href" select="x:rename-xprocspec-file($new-href)"/>
 					<xsl:choose>
 						<xsl:when test="string(.)=string(@href)">
 							<xsl:value-of select="$new-href"/>
@@ -285,5 +285,10 @@
 			</xsl:for-each>
 		</xsl:copy>
 	</xsl:template>
+	
+	<xsl:function name="x:rename-xprocspec-file">
+		<xsl:param name="uri"/>
+		<xsl:sequence select="replace($uri, '(\.xprocspec)(#.+)?$', '$1.xhtml$2')"/>
+	</xsl:function>
 	
 </xsl:stylesheet>

@@ -219,7 +219,6 @@
         <directory>src</directory>
         <excludes>
           <exclude>index.xhtml</exclude>
-          <exclude>xprocspec/**/*.xprocspec</exclude>
         </excludes>
       </resource>
     </resources>
