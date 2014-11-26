@@ -8,11 +8,13 @@
                 version="2.0">
 	
 	<xsl:param name="xprocspec-reports" as="xs:anyURI*" required="yes"/>
+	<xsl:param name="xspec-reports" as="xs:anyURI*" required="yes"/>
 	<xsl:param name="result-base" as="xs:anyURI" required="yes"/>
 	
 	<xsl:include href="http://www.daisy.org/pipeline/modules/file-utils/uri-functions.xsl"/>
 	
 	<xsl:variable name="xprocspec-reports-doc" select="document($xprocspec-reports)"/>
+	<xsl:variable name="xspec-reports-doc" select="document($xspec-reports)"/>
 	
 	<xsl:template match="@*|node()">
 		<xsl:copy>
@@ -31,6 +33,9 @@
 				<xsl:when test="ends-with($uri,'.xprocspec')">
 					<xsl:sequence select="$xprocspec-reports-doc[.//html:body/html:p[1][string(html:a[1])=$abs-uri]]"/>
 				</xsl:when>
+				<xsl:when test="ends-with($uri,'.xspec')">
+					<xsl:sequence select="$xspec-reports-doc[.//html:body/html:table[1]/html:tbody/html:tr[normalize-space(string(html:th[1]))=$label]]"/>
+				</xsl:when>
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="passed" as="xs:boolean">
@@ -39,6 +44,9 @@
 					<xsl:sequence select="contains(
 					                        $report//html:th[string()=$label]/following-sibling::html:th,
 					                        'pending:0 / failed:0 / errors:0')"/>
+				</xsl:when>
+				<xsl:when test="ends-with($uri,'.xspec')">
+					<xsl:sequence select="boolean($report//html:body/html:table[1]/html:tbody/html:tr[not(@class='failed')][normalize-space(string(html:th[1]))=$label])"/>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:sequence select="false()"/>

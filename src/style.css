@@ -1,4 +1,5 @@
-@namespace x url(http://www.daisy.org/ns/xprocspec);
+@namespace xspec url(http://www.jenitennison.com/xslt/xspec);
+@namespace xprocspec url(http://www.daisy.org/ns/xprocspec);
 @namespace pef url(http://www.daisy.org/ns/2008/pef);
 
 @font-face {
@@ -159,33 +160,38 @@ pef|row[class~=ascii] {
 	display: block;
 }
 
-/***************/
-/*  XPROCSPEC  */
-/***************/
+/***********************/
+/*  XPROCSPEC & XSPEC  */
+/***********************/
 
-x|description {
+xspec|description,
+xprocspec|description {
 	display: block;
 	margin: 10px;
 }
 
-x|description h1 {
+xspec|description h1,
+xprocspec|description h1 {
 	display: block;
 	font-family: monospace;
 }
 
-x|scenario {
+xspec|scenario,
+xprocspec|scenario {
 	display: block;
 	margin: 30px 60px 30px 20px;
 	font-family: sans-serif;
 }
 
-x|scenario h2 {
+xspec|scenario h2,
+xprocspec|scenario h2 {
 	color: #005A9C;
 	font-weight: normal;
 	font-size: 19px;
 }
 
-x|scenario::before {
+xspec|scenario::before,
+xprocspec|scenario::before {
 	content: attr(id) ". " attr(label);
 	color: #005A9C;
 	font-weight: normal;
@@ -195,6 +201,6 @@ x|scenario::before {
 	margin-right: 11px;
 }
 
-x|document {
+xprocspec|document {
 	display: none;
 }

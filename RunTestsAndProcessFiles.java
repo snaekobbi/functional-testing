@@ -12,6 +12,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Iterables;
 
 import net.sf.saxon.s9api.Processor;
 import net.sf.saxon.s9api.QName;
@@ -25,6 +26,7 @@ import net.sf.saxon.s9api.XsltCompiler;
 import net.sf.saxon.s9api.XsltTransformer;
 
 import org.daisy.maven.xproc.xprocspec.XProcSpecRunner;
+import org.daisy.maven.xspec.XSpecRunner;
 
 import static org.daisy.pipeline.pax.exam.Options.brailleModule;
 import static org.daisy.pipeline.pax.exam.Options.domTraversalPackage;
@@ -34,6 +36,7 @@ import static org.daisy.pipeline.pax.exam.Options.logbackBundles;
 import static org.daisy.pipeline.pax.exam.Options.pipelineModule;
 import static org.daisy.pipeline.pax.exam.Options.spiflyBundles;
 import static org.daisy.pipeline.pax.exam.Options.xprocspecBundles;
+import static org.daisy.pipeline.pax.exam.Options.xspecBundles;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -85,6 +88,7 @@ public class RunTestsAndProcessFiles {
 			brailleModule("pef-utils"),
 			pipelineModule("file-utils"),
 			xprocspecBundles(),
+			xspecBundles(),
 			mavenBundle().groupId("org.daisy.pipeline").artifactId("saxon-adapter").versionAsInProject(),
 			junitBundles()
 		);
@@ -92,6 +96,9 @@ public class RunTestsAndProcessFiles {
 	
 	@Inject
 	private XProcSpecRunner xprocspecRunner;
+	
+	@Inject
+	private XSpecRunner xspecRunner;
 	
 	@Inject
 	private Processor processor;
@@ -106,15 +113,20 @@ public class RunTestsAndProcessFiles {
 		File testsDir = new File(srcDir, testsPath);
 		File reportsDir = new File(destDir, reportsPath);
 		File xprocspecReportsDir = new File(reportsDir, "xprocspec");
+		File xspecReportsDir = new File(reportsDir, "xspec");
 		xprocspecRunner.run(testsDir,
 		                    xprocspecReportsDir,
 		                    xprocspecReportsDir,
 		                    new File(baseDir, "target/xprocspec"),
 		                    new XProcSpecRunner.Reporter.DefaultReporter());
+		xspecReportsDir.mkdirs();
+		xspecRunner.run(testsDir, xspecReportsDir);
 		XsltCompiler compiler = processor.newXsltCompiler();
 		Collection<File> xprocspecFiles = listFilesRecursively(testsDir, Pattern.compile(".+\\.xprocspec"));
+		Collection<File> xspecFiles = listFilesRecursively(testsDir, Pattern.compile(".+\\.xspec"));
 		Collection<File> xprocspecReports = listFilesRecursively(xprocspecReportsDir, Pattern.compile(".+(?<!^index)\\.html"));
-		for (File f : xprocspecFiles) {
+		Collection<File> xspecReports = listFilesRecursively(xspecReportsDir, Pattern.compile(".+(?<!^index)\\.html"));
+		for (File f : Iterables.<File>concat(xprocspecFiles, xspecFiles)) {
 			File xslt = new File(f + ".xsl");
 			if (xslt.exists())
 				transform(compiler.compile(new StreamSource(xslt)).load(), f, renameTestSourceFile(f, srcDir, destDir));
@@ -123,13 +135,15 @@ public class RunTestsAndProcessFiles {
 		XsltTransformer processIndex = compiler.compile(new StreamSource(new File(baseDir, "process-index.xsl"))).load();
 		processIndex.setParameter(new QName("xprocspec-reports"), new XdmValue(
 				Collections2.<File,XdmItem>transform(xprocspecReports, fileAsXdmItem)));
+		processIndex.setParameter(new QName("xspec-reports"), new XdmValue(
+				Collections2.<File,XdmItem>transform(xspecReports, fileAsXdmItem)));
 		processIndex.setParameter(new QName("result-base"), new XdmAtomicValue(
 				new File(destDir, "index.xhtml").toURI()));
 		transform(processIndex, new File(srcDir, "index.xhtml"), new File(destDir, "index.xhtml"));
 		XsltTransformer processReport = compiler.compile(new StreamSource(new File(baseDir, "process-report.xsl"))).load();
 		processReport.setParameter(new QName("src-dir_"), new XdmAtomicValue(srcDir.toURI()));
 		processReport.setParameter(new QName("dest-dir_"), new XdmAtomicValue(destDir.toURI()));
-		for (File f : xprocspecReports) {
+		for (File f : Iterables.<File>concat(xprocspecReports, xspecReports)) {
 			processReport.setParameter(new QName("result-base"), new XdmAtomicValue(f.toURI()));
 			transform(processReport, f, f); }
 	}
