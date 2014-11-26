@@ -104,10 +104,22 @@ code {
 	display: block;
 	max-height: 300px;
 	overflow: auto;
-	margin: 15px 0;
 	white-space: pre;
 	tab-size: 4;
-	border-left: 7px solid #AAAAAA;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 10px;
+	width: 100%;
+}
+
+table, th, td {
+	border: 1px solid #CCCCCC;
+}
+
+.document {
+	margin: 15px 0;
 }
 
 .document.pef {
