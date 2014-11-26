@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
-               xmlns:louis="http://liblouis.org/liblouis"
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                xmlns:html="http://www.w3.org/1999/xhtml"
-               script="css_inline_and_louis_format.xpl">
+               xmlns:p="http://www.w3.org/ns/xproc"
+               xmlns:pef="http://www.daisy.org/ns/2008/pef"
+               xmlns:dotify="http://code.google.com/p/dotify/"
+               xmlns:css="http://www.daisy.org/ns/pipeline/braille-css">
+  
+  <x:script>
+    <p:declare-step type="pxi:css-inline-and-dotify-format" version="1.0">
+      <p:input port="source"/>
+      <p:output port="result"/>
+      <p:option name="stylesheet" required="true"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/dotify-formatter/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-calabash/library.xpl"/>
+      <css:inline>
+        <p:with-option name="default-stylesheet" select="resolve-uri($stylesheet)"/>
+      </css:inline>
+      <dotify:format/>
+    </p:declare-step>
+  </x:script>
   
   <x:scenario id="46.1" label="The system shall have support for top, right, bottom and left margins on blocks.">
-    <x:call step="pxi:css-inline-and-louis-format">
+    <x:call step="pxi:css-inline-and-dotify-format">
       <x:input port="source">
-        <x:document type="file" href="../resources/47.1/source.xml"/>
+        <x:document type="file" href="../../resources/47.1/source.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="'46.1/style.css'"/>
-      <x:option name="temp-dir" select="$temp-dir"/>
+      <x:option name="stylesheet" select="'../46.1/style.css'"/>
     </x:call>
     <x:context label="result">
       <x:document type="port" port="result"/>
     </x:context>
     <x:expect label="result" type="custom" href="pef-compare.xpl" step="pxi:pef-compare">
-      <x:document type="file" href="../resources/47.1/result.pef"/>
+      <x:document type="file" href="../../resources/47.1/result.pef"/>
     </x:expect>
   </x:scenario>
   
   <x:scenario id="47.1" label="The system shall have support for top, right, bottom and left borders and padding on blocks.">
-    <x:call step="pxi:css-inline-and-louis-format">
+    <x:call step="pxi:css-inline-and-dotify-format">
       <x:input port="source">
         <x:document type="inline"><doc>
   <body>
@@ -33,8 +48,7 @@
 </doc>
         </x:document>
       </x:input>
-      <x:option name="stylesheet" select="'47.1/style.css'"/>
-      <x:option name="temp-dir" select="$temp-dir"/>
+      <x:option name="stylesheet" select="'../47.1/style.css'"/>
     </x:call>
     <x:context label="result">
       <x:document type="port" port="result"/>
@@ -47,7 +61,7 @@
     </meta>
   </head>
   <body>
-    <volume rows="5" cols="20" rowgap="0" duplex="true">
+    <volume rows="5" cols="20" rowgap="0" duplex="false">
       <section>
         <page>
           <row>⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤</row>

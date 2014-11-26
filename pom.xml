@@ -27,6 +27,11 @@
         <scope>import</scope>
       </dependency>
       <dependency>
+        <groupId>org.daisy.pipeline</groupId>
+        <artifactId>calabash-adapter</artifactId>
+        <version>2.0.0-p1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
         <groupId>org.daisy.pipeline.modules</groupId>
         <artifactId>common-utils-aggregator</artifactId>
         <version>${common-utils.version}</version>
@@ -47,28 +52,66 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline.modules.braille</groupId>
+        <artifactId>pef-utils</artifactId>
+        <version>1.1.2-SNAPSHOT</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.xprocspec</groupId>
+        <artifactId>xprocspec</artifactId>
+        <version>1.1.0</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.maven</groupId>
+        <artifactId>xprocspec-runner</artifactId>
+        <version>1.0.0</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.maven</groupId>
+        <artifactId>xproc-engine-daisy-pipeline</artifactId>
+        <version>1.8-p1</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline</groupId>
+        <artifactId>saxon-adapter</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline</groupId>
+        <artifactId>pax-exam-helper</artifactId>
+        <version>1.8-SNAPSHOT</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>liblouis-formatter</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>liblouis-calabash</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>liblouis-native</artifactId>
-      <classifier>linux</classifier>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>css-utils</artifactId>
+      <artifactId>dotify-formatter</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -82,110 +125,33 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>pef-saxon</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>pef-to-html</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>pef-calabash</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>common-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.daisy.pipeline.modules</groupId>
       <artifactId>file-utils</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.daisy.pipeline.modules</groupId>
-      <artifactId>common-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules</groupId>
-      <artifactId>html-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules</groupId>
-      <artifactId>fileset-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules</groupId>
-      <artifactId>zip-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline.modules</groupId>
-      <artifactId>mediatype-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.servicemix.bundles</groupId>
-      <artifactId>org.apache.servicemix.bundles.antlr-runtime</artifactId>
-      <version>3.2_2</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.libs</groupId>
-      <artifactId>brailleutils-core</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.libs</groupId>
-      <artifactId>brailleutils-catalog</artifactId>
+      <groupId>org.daisy.pipeline</groupId>
+      <artifactId>saxon-adapter</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.daisy.xprocspec</groupId>
       <artifactId>xprocspec</artifactId>
-      <version>1.1.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.daisy.maven</groupId>
       <artifactId>xprocspec-runner</artifactId>
-      <version>1.0.0</version>
       <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>com.google.guava</groupId>
-          <artifactId>guava</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.daisy.maven</groupId>
       <artifactId>xproc-engine-daisy-pipeline</artifactId>
-      <version>1.8.1-SNAPSHOT</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.daisy.pipeline</groupId>
-      <artifactId>saxon-adapter</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.daisy.pipeline</groupId>
       <artifactId>pax-exam-helper</artifactId>
-      <version>1.8-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -214,14 +180,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>index.xhtml</exclude>
-        </excludes>
-      </resource>
-    </resources>
     <testSourceDirectory>.</testSourceDirectory>
     <plugins>
       <plugin>
@@ -242,8 +200,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
         <executions>
           <execution>
@@ -281,9 +239,21 @@
         <artifactId>maven-resources-plugin</artifactId>
         <executions>
           <execution>
+            <phase>test</phase>
             <goals>
-              <goal>resources</goal>
+              <goal>copy-resources</goal>
             </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>src</directory>
+                  <excludes>
+                    <exclude>index.xhtml</exclude>
+                  </excludes>
+                </resource>
+              </resources>
+              <outputDirectory>target/site</outputDirectory>
+            </configuration>
           </execution>
         </executions>
       </plugin>

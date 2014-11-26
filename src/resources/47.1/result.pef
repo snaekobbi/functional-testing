@@ -5,7 +5,7 @@
 		</meta>
 	</head>
 	<body>
-		<volume rows="5" cols="20" rowgap="0" duplex="true">
+		<volume rows="5" cols="20" rowgap="0" duplex="false">
 			<section>
 				<page>
 					<row>⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤</row>
