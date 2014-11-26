@@ -13,7 +13,8 @@ body {
 
 .requirement {
 	list-style-type: none;
-	margin: 30px 60px 30px 20px;
+	margin: 30px 60px 30px 50px;
+	position: relative;
 }
 
 .requirement h3 {
@@ -24,13 +25,45 @@ body {
 .requirement::before {
 	content: attr(id);
 	display: block;
-	float: left;
-	margin-left: -20px;
-	margin-right: 11px;
+	position: absolute;
+	left: -70px;
 	padding: 3px;
 	color: #000080;
 	background-color: #FCFAEE;
 	font-weight: bold;
+}
+
+.requirement.priority_1::after,
+.requirement.priority_2::after,
+.requirement.priority_3::after {
+	position: absolute;
+	right: -35px;
+	top: -5px;
+	font-size: 180%;
+	color: #000080;
+}
+
+.requirement.priority_1::after {
+	content: "①";
+}
+
+.requirement.priority_2::after {
+	content: "②";
+}
+
+.requirement.priority_3::after {
+	content: "③";
+}
+
+.todo::before {
+	content: "TODO";
+	font-weight: bold;
+	font-style: normal;
+}
+
+.todo {
+	color: #FF0000;
+	font-style: italic;
 }
 
 .test {

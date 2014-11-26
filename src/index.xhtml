@@ -14,10 +14,127 @@
         Translation/mapping: support for languages used in the countries of the interested parties
       </h2>
       <ul>
-        <li class="requirement" id="4.3:34">
+        <li class="requirement priority_1" id="4.3:34">
           <h3>
-            The system shall support the braille code used in Denmark, Finland, Norway, Sweden and Switzerland for uncontracted braille.
+            The system shall support the braille code used in Denmark, Finland, Norway, Sweden and
+            Switzerland for uncontracted braille.
           </h3>
+          <p class="todo">
+            liblouis tests: text --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:34B">
+          <h3>
+            The system shall be easily extended with new languages - for uncontracted braille - to
+            make the system work globally in the long term.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.3:35">
+          <h3>
+            The system shall support the braille code used in Denmark, Finland, Norway, Sweden and
+            Switzerland for 8-dot braille.
+          </h3>
+          <p class="todo">
+            liblouis tests: text --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_2" id="4.3:36">
+          <h3>
+            The system shall support double letter spacing, meaning adding a space between
+            characters. Some characters should be kept together such as a capital sign and a
+            letter.
+          </h3>
+          <p class="todo">
+            liblouis-core tests: text --> braille translation with letter spacing
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:37">
+          <h3>
+            The system shall support the braille code used in Denmark, Norway, Sweden and
+            Switzerland for contracted braille.
+          </h3>
+          <p class="todo">
+            liblouis tests: text --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:37B">
+          <h3>
+            The system shall be easily extended with new languages - for contracted braille - to
+            make the system work globally in the long term.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.3:38">
+          <h3>
+            The system shall support marking of text-level semantics (i.e. em, strong) with braille
+            indicators.
+          </h3>
+          <p class="todo">
+            tests: text with text-level semantics (xml) --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:39">
+          <h3>
+            The system shall support marking of visual text styling/typography (i.e. span[@class])
+            with braille indicators. This is because we are often dealing with input files that are
+            marked up according to visual features of the print text instead of semantic meaning.
+          </h3>
+          <p class="todo">
+            tests: text with visual styling (xml+css) --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:40">
+          <h3>
+            The system shall have a flexible and configurable mapping from markup to braille
+            indicators. Because there is only a limited set of braille indicators they must be
+            reused for different semantic meanings or typography depending on document and
+            context. It must be possible to ignore certain styles that don't convey any useful
+            information for the braille version.
+          </h3>
+          <p class="todo">
+            tests: text with text-level semantics (xml) + configuration (css) --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:41">
+          <h3>
+            The system shall be able to perform automatic hyphenation for uncontracted and
+            contracted braille.
+          </h3>
+          <p class="todo">
+            tests: text --> hyphenated text --> hyphenated braille
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.3:42">
+          <h3>
+            The system shall support non-standard hyphenation. By non-standard hyphenation we mean
+            that the spelling of a word can change when it is hyphenated. The braille translation of
+            a hyphenated word can only change because the spelling changes, not e.g. because it is
+            contracted in some other way. In other words the definition of non-standard hyphenation
+            is not “extrapolated to braille”.
+          </h3>
+          <p class="todo">
+            tests: text --> hyphenated text --> hyphenated braille
+          </p>
+        </li>
+        <li class="requirement priority_2" id="4.3:43">
+          <h3>
+            When automatic hyphenation is enabled, it shall be possible to exclude certain elements
+            such as hyperlinks (based on markup).
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.3:44">
+          <h3>
+            The user shall be able to make a top-level configuration, e.g. toggle hyphenation.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.3:45">
+          <h3>
+            The user shall have fine-grained control over the translation (on element-level) by
+            means of configuration in those cases where markup of the input is inadequate or
+            undesirable.
+          </h3>
+          <p class="todo">
+            tests: text with markup (xml) + configuration (css) --> braille translation
+          </p>
         </li>
       </ul>
     </section>
@@ -26,7 +143,7 @@
         Support for layout/formatting of paragraphs/text blocks
       </h2>
       <ul>
-        <li class="requirement" id="4.4:46">
+        <li class="requirement priority_1" id="4.4:46">
           <h3>
             The system shall have support for top, right, bottom and left margins on blocks.
           </h3>
@@ -34,13 +151,484 @@
             <a class="test-src" href="test/common/css_inline_and_dotify_format.xprocspec#46.1"/>
           </div>
         </li>
-        <li class="requirement" id="4.4:47">
+        <li class="requirement priority_1" id="4.4:47">
           <h3>
             The system shall have support for top, right, bottom and left borders and padding on blocks.
           </h3>
           <div>
             <a class="test-src" href="test/common/css_inline_and_dotify_format.xprocspec#47.1"/>
           </div>
+        </li>
+        <li class="requirement priority_2" id="4.4:48">
+          <h3>
+            By default margins shall be collapsing. However there shall be a way to override this
+            behaviour.
+          </h3>
+          <p class="todo">
+            test margin vs. padding
+          </p>
+        </li>
+        <li class="requirement priority_2" id="4.4:49">
+          <h3>
+            By default empty lines at the top and bottom of a page shall be suppressed. However
+            there shall be a way to override this behaviour.
+          </h3>
+          <p class="todo">
+            test margin vs. padding
+          </p>
+        </li>
+        <li class="requirement priority_2" id="4.4:50">
+          <h3>
+            There shall be the possibility of shrinking a block with a border to the size of its
+            contents. This feature shall be supported at least for blocks with left-aligned text and
+            no nested blocks.
+          </h3>
+          <p class="todo">
+            implement
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.4:51">
+          <h3>
+            The system shall have support for first line indentation.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:52">
+          <h3>
+            Besides left-aligned text, the system shall have support for centered and right-aligned
+            text.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:53">
+          <h3>
+            The system shall support block alignment relative to a vertical position on the page.
+          </h3>
+          <p class="todo">
+            implement
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.4:54">
+          <h3>
+            The system shall by default handle whitespace characters (spaces, tabs, line feeds) in the source XML according to the following rules:
+            <ul>
+              <li> Comments are removed entirely and do not affect whitespace handling. </li>
+              <li> All whitespace surrounding block elements is removed. </li>
+              <li> Leading and trailing whitespace inside block elements are removed. </li>
+              <li>
+                Sequences of whitespace characters are reduced to a single space character. Newline
+                characters are handled as other whitespace.
+              </li>
+            </ul>
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.4:55">
+          <h3>
+            The user shall be able to override the default handling of whitespace for certain elements:
+            <ul>
+              <li> Prevent collapsing of sequences of whitespace. </li>
+              <li> Preserve leading and trailing whitespace inside block elements. </li>
+              <li> Preserve newline characters as forced line breaks. </li>
+            </ul>
+          </h3>
+          <p class="todo">
+            tests: text with significant white space and markup (xml) --> braille translation
+          </p>
+        </li>
+        <li class="requirement priority_1" id="4.4:57">
+          <h3>
+            There shall be the option to reformat a table into a list,
+            <ul>
+              <li> either by linearizing the table row-by-row with delimiters between cells, </li>
+              <li>
+                or by rendering each row as a sublist, where the cells are the list items. It must
+                be possible to set off cells with a left margin according to their column, so that a
+                stairstep format can be accomplished.
+              </li>
+              <li> It must be possible to prepend cells with their column header. </li>
+            </ul>
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:58">
+          <h3>
+            There shall be the option to render a table in matrix format, thereby mimicking the
+            original form. This feature shall be supported at least for small tables that fit on a
+            page horizontally without the need for text wrapping in cells, and that have no column-
+            or rowspan. The matrix format supports borders and padding on rows, columns and cells.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.4:56">
+          <h3>
+            The system shall provide a way to control the layout of each table separately.
+          </h3>
+          <p class="todo">
+            tests: xml + configuration (css) --> formatted braille (pef)
+          </p>
+        </li>
+        <li class="requirement priority_2" id="4.4:59">
+          <h3>
+            When a table in matrix format spans multiple pages, there shall be the possibility of
+            repeating the table heading at the top of each page.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.4:60">
+          <h3>
+            There shall be the possibility of transposing tables, that is, treat rows as if they
+            were columns and columns as if they were rows.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.4:61">
+          <h3>
+            The system shall provide a table layout fallback mechanism that determines the best way
+            to render a certain table by trying several alternatives.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:62">
+          <h3>
+            The system shall be able to cope with column- and rowspan in tables (in a yet undefined
+            way).
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:63">
+          <h3>
+            There shall be the option to render a big or complex table in matrix format through
+            wrapping of text in cells and automatic computing of optimal column widths.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:64">
+          <h3>
+            There shall be the option to render a wide table on facing pages.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:65">
+          <h3>
+            The system shall be able to render tables of contents, list of images, index,
+            glossaries, etc. in a two-column format with the entries on the left and other content
+            such as page numbers aligned on the right. Optionally leaders may be used to connect the
+            two columns.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:66">
+          <h3>
+            The system shall support positioning of notes at the bottom of the page on which they
+            are being referenced.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:67">
+          <h3>
+            The system shall support collecting of notes either at the end of each volume, or at the
+            end of the entire book.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:68">
+          <h3>
+            The system shall provide a notes layout fallback mechanism that determines the best way
+            to render notes. Notes of a certain type (e.g. footnote or endnote) shall be handled
+            consistently throughout the whole document.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:69">
+          <h3>
+            The system shall support inline rendering of notes right after the note reference,
+            possibly surrounded by brackets or the like. This feature shall be supported at least
+            for very small notes. As an option, notes may be floated to the end of sentences.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:70">
+          <h3>
+            The system shall support rendering of certain elements such as line numbers in the left
+            margin, taking them out of the normal text flow so that text that follows the element
+            can continue on the same line.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:71">
+          <h3>
+            The system shall provide the possibility of moving certain content that hinders
+            readability, such as large tables, to a later position in the document.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:72">
+          <h3>
+            The system shall provide the possibility of omitting certain content.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.4:73">
+          <h3>
+            There shall be the possibility of rendering certain elements such as line numbers in the
+            left margin, thereby reducing the area for normal text. A line break is inserted first
+            whenever such an element is placed in the left margin, text that follows the element
+            starts on the new line as well. In other words, the element is not taken out of the
+            normal flow of the text.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:74">
+          <h3>
+            The system shall support single and double line spacing.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.4:75">
+          <h3>
+            When printing double-sided with line spacing greater than 1, printed lines shall
+            alternate on odd and even pages.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.4:76">
+          <h3>
+            The system shall support line spacing between single and double.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for pagination
+      </h2>
+      <ul>
+        <li class="requirement priority_1" id="4.5:78">
+          <h3>
+            The user shall have control over page breaking by means of
+            <ul>
+              <li> inserting hard page breaks, </li>
+              <li> protecting blocks from being split across multiple pages, </li>
+              <li>
+                avoiding page breaks within blocks leaving only the first line(s) on the first page
+                (orphan control),
+              </li>
+              <li>
+                avoiding page breaks within blocks leaving only the last line(s) on the second
+                page (widow control), and
+              </li>
+              <li> keeping a block’s first line(s) on the same page as the preceding block. </li>
+            </ul>
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.5:79">
+          <h3>
+            The system shall provide the option to disable page breaking for the purpose of
+            producing digital documents (for reading on a refreshable braille display).
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.5:80">
+          <h3>
+            The user shall have control over the page dimensions and the size of page margins.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.5:81">
+          <h3>
+            There shall be support for content in the header and footer of pages. Content can be
+            rendered in the left corner, the center and the right corner.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.5:82">
+          <h3>
+            The header and footer layout shall be able to change between sections within the
+            document.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.5:83">
+          <h3>
+            The system shall support flowing of text into the header or footer. With this is meant
+            normal text that wraps around content in the right corner of the header or footer, not
+            text that simply extends to the top or bottom of the page because there is no content in
+            the header/footer. When there is content in either the left corner or the center,
+            flowing into the header/footer is not allowed.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.5:84">
+          <h3>
+            When printing double-sided, there shall be support for hard page breaks that jump to the
+            next right- or left-hand page.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.5:85">
+          <h3>
+            When printing double-sided, the system shall allow the page layout (page margins as well
+            as header and footer layout) to differ between left- and right-hand pages.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.5:86">
+          <h3>
+            Support for mixed braille and ink on the cover page, the main purpose being to help
+            sighted people in finding a specific volume of a specific title. This feature doesn't
+            require the text in ink to be exactly that of the original (so back-translation would be
+            a possibility).
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.5:87">
+          <h3>
+            Support for interlining braille and ink, or combining braille and ink on facing
+            pages. This feature requires synchronization between the source and the braille with
+            medium (for facing pages) to high (for interlining) precision.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.6:88">
+          <h3>
+            The system shall be able to perform automatic volume breaking with constraints. It shall
+            be possible to precisely tweak the algorithm. It shall take values for minimal and
+            maximal number of pages per volume. It shall support special ranges for the first and
+            last volume of sections. The algorithm shall take into account that certain points in
+            the book are better suited for being the start of a new volume than other points and
+            that certain sections belong in certain volumes.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.6:89">
+          <h3>
+            The system shall provide the possibility of repeating certain content, such as title
+            pages, in several volumes.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.6:90">
+          <h3>
+            The system shall support trimming down of a table of contents to a volume-scope table of
+            contents that includes only the entries that reference items present in the current
+            volume.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.6:91">
+          <h3>
+            In the case of an extended table of contents that is not trimmed down (e.g. in the first
+            volume), it shall be possible to group entries according to volume and insert a heading
+            before each group.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.6:92">
+          <h3>
+            In the case of endnotes being collected at the end of a book, it shall be possible to
+            group the notes according to volume and insert a heading before each group.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.6:93">
+          <h3>
+            The user shall have some form of manual control over volume breaking.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for generated content
+      </h2>
+      <ul>
+        <li class="requirement priority_1" id="4.7:94">
+          <h3>
+            The system shall support formatting of numbers and other variables in a wide selection
+            of formats. Supported formats shall include at least arabic, roman (small and capital),
+            alpha (small and capital), downshifted, written out, and various date formats. It shall
+            be possible to specify number prefixes and suffixes too. Some numbers might need
+            specialized translation, such as ranges of print pages.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.7:96">
+          <h3>
+            The system shall support automatic insertion of content that is not present in the source. Examples include:
+            <ul>
+              <li> boilerplate text inserted e.g. on the title page, </li>
+              <li> metadata and details about the production process, </li>
+              <li>
+                automatic transcriber notes that give information about omitted or moved content,
+                about how tables are rendered, </li>
+              <li> etc. </li>
+            </ul>
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.7:95">
+          <h3>
+            The system shall support insertion of content that is not present in the source, through configuration. Examples include:
+            <ul>
+              <li> boilerplate text inserted e.g. on the title pages/colophons, </li>
+              <li>
+                freely definable one-character marks inserted in the left margin at certain
+                elements,
+              </li>
+              <li> configurable titles for sidebars, figures, </li>
+              <li> etc. </li>
+            </ul>
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.7:97">
+          <h3>
+            The system shall be able to perform automatic numbering of braille pages and volumes.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.7:98">
+          <h3>
+            The system shall be able to perform automatic numbering on type "ol" lists. This
+            includes advanced numbering of nested lists.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.7:99">
+          <h3>
+            The system shall support resetting of braille page numbering at the start of major
+            sections (frontmatter, bodymatter, rearmatter). Resetting numbering for each volume is
+            not part of this requirement.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.7:100">
+          <h3>
+            The system shall be able to perform automatic numbering (i.e. re-numbering) of
+            notes. This feature relies on markup of the original numbering. The numbering shall be
+            resettable for each page or for each volume.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.7:101">
+          <h3>
+            The system shall support resetting braille page numbering for each volume.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.7:102">
+          <h3>
+            The system shall be able to evaluate certain variables and counters at so-called
+            "fields", for example on the title page or in the page header or footer. Supported
+            variables shall include at least the current braille page number, the current print page
+            number or range of print pages contained in the current braille page, the current volume
+            number, the total number of volumes, the total number of braille pages or sheets
+            contained in the current volume or book, the current chapter title, the current chapter
+            number, and the date.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.7:103">
+          <h3>
+            The system shall support insertion of certain variables and counters at references
+            evaluated at the target. An example is references in a table of contents. Supported
+            variables shall include the print page number at the target, the braille page number at
+            the target, and the note number if the target is a renumbered note. This feature relies
+            on explicit markup of references.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.7:104">
+          <h3>
+            The system shall support insertion of certain variables and counters at referenced items
+            evaluated at the reference. Supported variables shall include the volume number at the
+            reference and the braille page number at the reference.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for indication of original pagination
+      </h2>
+      <ul>
+        <li class="requirement priority_1" id="4.8:105">
+          <h3>
+            The system shall provide the possibility of rendering print page breaks as full lines
+            across the width of the page, optionally with the page number of the new print page
+            incorporated in the line. A line break is inserted first whenever a print page break
+            indicator is rendered, and following text continues on the line below the indicator. In
+            other words, the print page break is not taken out of the normal flow of the text in
+            order not to lose precision.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.8:106">
+          <h3>
+            The system shall provide the possibility of rendering print page breaks as marks in the
+            left margin, taking them out of the normal text flow so that text that follows the
+            element can continue on the same line.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.8:107">
+          <h3>
+            The system shall support skipping print page breaks when no text precedes or follows on
+            the same braille page.
+          </h3>
         </li>
       </ul>
     </section>
