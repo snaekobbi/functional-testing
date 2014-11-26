@@ -74,13 +74,13 @@ body {
 }
 
 .test-passed {
-	border-left: 7px solid #52E052;
-	background-color: #E9FBE9;
+	border-left: 7px solid #60E050;
+	background-color: #99FF99;
 }
 
 .test-failed {
-	border-left: 7px solid #FFA500;
-	background-color: #FFEECC;
+	border-left: 7px solid #EE6622;
+	background-color: #FF8833;
 }
 
 .test > a.test-src,
