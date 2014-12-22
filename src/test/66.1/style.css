@@ -1,0 +1,18 @@
+@page {
+	size: 25 15;
+}
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+aside[type="footnote"] {
+	flow: normal footnotes;
+	content: "⠔⠔";
+}
+
+aside[type="footnote"]:flow(footnotes) {
+	display: block;
+	text-indent: 2;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:epub="http://www.idpf.org/2007/ops">
+	<body>
+		<p>
+			⠰⠁ ⠝⠕⠞⠑ ⠗⠑⠋⠑⠗⠑⠝⠉⠑<a href="#fn1" epub:type="noteref footnote"/> ⠁⠝⠙ ⠁⠝⠕⠞⠓⠑⠗ ⠝⠕⠞⠑
+			⠗⠑⠋⠑⠗⠑⠝⠉⠑<a href="#fn2" epub:type="noteref footnote"/>⠲
+		</p>
+		<p>
+			⠰⠁ ⠝⠕⠞⠑ ⠗⠑⠋⠑⠗⠑⠝⠉⠑<a href="#fn3" epub:type="noteref footnote"/> ⠕⠝ ⠰⠁ ⠝⠑⠺ ⠏⠁⠛⠑⠲
+		</p>
+		<aside id="fn1" type="footnote">
+			<p>
+				⠞⠓⠊⠎ ⠊⠎ ⠞⠓⠑ ⠋⠊⠗⠎⠞ ⠋⠕⠕⠞⠝⠕⠞⠑⠲
+			</p>
+		</aside>
+		<aside id="fn2" type="footnote">
+			<p>
+				⠞⠓⠊⠎ ⠊⠎ ⠞⠓⠑ ⠎⠑⠉⠕⠝⠙ ⠋⠕⠕⠞⠝⠕⠞⠑⠲
+			</p>
+		</aside>
+		<aside id="fn3" type="footnote">
+			<p>
+				⠞⠓⠊⠎ ⠊⠎ ⠞⠓⠑ ⠞⠓⠊⠗⠙ ⠋⠕⠕⠞⠝⠕⠞⠑⠲
+			</p>
+		</aside>
+	</body>
+</html>

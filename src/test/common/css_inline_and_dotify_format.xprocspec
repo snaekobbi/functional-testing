@@ -78,4 +78,79 @@
     </x:expect>
   </x:scenario>
   
+  <x:scenario id="66.1" label="Positioning a note at the bottom of the page on which the text surrounding the note is rendered.">
+    <x:call step="pxi:css-inline-and-dotify-format">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/66.1/source.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'../66.1/style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="pef-compare.xpl" step="pxi:pef-compare">
+      <x:document type="file" href="../../resources/66.1/result.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="66.2" label="Positioning a note at the bottom of the page on which it is being referenced." pending="not implemented yet">
+    <x:call step="pxi:css-inline-and-dotify-format">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/66.2/source.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'../66.2/style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="pef-compare.xpl" step="pxi:pef-compare">
+      <x:document type="file" href="../../resources/66.2/result.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="66.3" label="Separating the footnotes area from regular text with a horizontal line.">
+    <x:call step="pxi:css-inline-and-dotify-format">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/66.3/source.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'../66.3/style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="pef-compare.xpl" step="pxi:pef-compare">
+      <x:document type="file" href="../../resources/66.3/result.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="100.1" label="Automatic numbering of footnotes.">
+    <x:call step="pxi:css-inline-and-dotify-format">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/100.1/source.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'../100.1/style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="pef-compare.xpl" step="pxi:pef-compare">
+      <x:document type="file" href="../../resources/100.1/result.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="100.2" label="Resetting footnote numbers on each page." pending="not implemented yet">
+    <x:call step="pxi:css-inline-and-dotify-format">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/100.2/source.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'../100.2/style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="pef-compare.xpl" step="pxi:pef-compare">
+      <x:document type="file" href="../../resources/100.2/result.pef"/>
+    </x:expect>
+  </x:scenario>
+  
 </x:description>
