@@ -3,7 +3,7 @@
                xmlns:louis="http://liblouis.org/liblouis"
                stylesheet="translate.xsl">
   
-  <x:scenario id="43.1" label="When automatic hyphenation is enabled, it shall be possible to exclude certain elements such as hyperlinks (based on markup).">
+  <x:scenario id="43.1" label="Exclude certain elements from automatic hyphenation.">
     <x:context href="../../resources/43.1/data.xml" select="//input"/>
     <x:expect label="expect" href="../../resources/43.1/data.xml" select="//expect"/>
   </x:scenario>

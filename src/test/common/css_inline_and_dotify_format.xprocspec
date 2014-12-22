@@ -21,7 +21,7 @@
     </p:declare-step>
   </x:script>
   
-  <x:scenario id="46.1" label="The system shall have support for top, right, bottom and left margins on blocks.">
+  <x:scenario id="46.1" label="Top, right, bottom and left margins.">
     <x:call step="pxi:css-inline-and-dotify-format">
       <x:input port="source">
         <x:document type="file" href="../../resources/47.1/source.xml"/>
@@ -36,7 +36,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="47.1" label="The system shall have support for top, right, bottom and left borders and padding on blocks.">
+  <x:scenario id="47.1" label="Top, right, bottom and left borders and padding.">
     <x:call step="pxi:css-inline-and-dotify-format">
       <x:input port="source">
         <x:document type="inline"><doc>
