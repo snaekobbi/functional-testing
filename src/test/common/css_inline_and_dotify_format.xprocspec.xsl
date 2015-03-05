@@ -55,24 +55,30 @@
 					<xsl:variable name="ul">
 						<wrap xml:base="{base-uri(.)}">
 							<ul>
-								<li>
-									<xsl:call-template name="x:document-as-code">
-										<xsl:with-param name="x:document" select="x:call/x:input[@port='source']/x:document"/>
-										<xsl:with-param name="with-title">source</xsl:with-param>
-									</xsl:call-template>
-								</li>
-								<li>
-									<a class="code" href="{replace(x:call/x:option[@name='stylesheet']/@select, '^.(.*).$', '$1')}">stylesheet</a>
-								</li>
-								<li>
-									<xsl:call-template name="x:document-as-code">
-										<xsl:with-param name="x:document"
-										                select="x:expect[preceding-sibling::x:context[1]/x:document[@port='result']
-										                                 and @step='pxi:pef-compare']/x:document"/>
-										<xsl:with-param name="with-title">result</xsl:with-param>
-										<xsl:with-param name="with-class">pef</xsl:with-param>
-									</xsl:call-template>
-								</li>
+								<xsl:variable name="source" select="x:call/x:input[@port='source']/x:document"/>
+								<xsl:if test="$source">
+									<li>
+										<xsl:call-template name="x:document-as-code">
+											<xsl:with-param name="x:document" select="$source"/>
+											<xsl:with-param name="with-title">source</xsl:with-param>
+										</xsl:call-template>
+									</li>
+								</xsl:if>
+								<xsl:if test="x:call/x:option[@name='stylesheet']">
+									<li>
+										<a class="code" href="{replace(x:call/x:option[@name='stylesheet']/@select, '^.(.*).$', '$1')}">stylesheet</a>
+									</li>
+								</xsl:if>
+								<xsl:variable name="result" select="x:expect[preceding-sibling::x:context[1]/x:document[@port='result']]/x:document"/>
+								<xsl:if test="$result">
+									<li>
+										<xsl:call-template name="x:document-as-code">
+											<xsl:with-param name="x:document" select="$result"/>
+											<xsl:with-param name="with-title">result</xsl:with-param>
+											<xsl:with-param name="with-class" select="if ($result/parent::*/@step='x:pef-compare') then 'pef' else ''"/>
+										</xsl:call-template>
+									</li>
+								</xsl:if>
 							</ul>
 						</wrap>
 					</xsl:variable>
