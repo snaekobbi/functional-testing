@@ -19,7 +19,7 @@
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
 			<link rel="stylesheet" type="text/css" href="../../style.css"/>
-			<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css"/>
+			<link rel="stylesheet" href="../../github.min.css"/>
 			<script type="text/javascript" src="../../jquery.min.js"/>
 			<script type="text/javascript" src="../../highlight.min.js"/>
 			<script type="text/javascript">
