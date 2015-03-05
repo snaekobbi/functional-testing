@@ -8,141 +8,131 @@
 	<!-- 2.1 - Punctuation -->
 
 	<entry>
-		<expect>⠠⠓⠕⠝ ⠅⠪⠏⠞⠑ ⠎⠍⠪⠗⠂ ⠞⠑ ⠕⠉⠓ ⠕⠎⠞⠄</expect>
+		<expect>⠠⠓⠕⠝⠀⠅⠪⠏⠞⠑⠀⠎⠍⠪⠗⠂⠀⠞⠑⠀⠕⠉⠓⠀⠕⠎⠞⠄</expect>
 		<input>Hon köpte smör, te och ost.</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠅⠕⠍⠍⠑⠗ ⠙⠥⠢</expect>
+		<expect>⠠⠅⠕⠍⠍⠑⠗⠀⠙⠥⠢</expect>
 		<input>Kommer du?</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠓⠪⠗ ⠥⠏⠏⠖</expect>
+		<expect>⠠⠓⠪⠗⠀⠥⠏⠏⠖</expect>
 		<input>Hör upp!</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠓⠕⠝ ⠎⠁⠒ ⠠⠠⠙⠝⠒⠎ ⠗⠑⠙⠁⠅⠞⠊⠕⠝ ⠜⠗ ⠎⠞⠕⠗⠄</expect>
+		<expect>⠠⠓⠕⠝⠀⠎⠁⠒⠀⠠⠠⠙⠝⠒⠎⠀⠗⠑⠙⠁⠅⠞⠊⠕⠝⠀⠜⠗⠀⠎⠞⠕⠗⠄</expect>
 		<input>Hon sa: DN:s redaktion är stor.</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠎⠅⠊⠇⠇⠝⠁⠙⠑⠝ ⠍⠑⠇⠇⠁⠝ ⠁⠗⠃⠑⠞⠎- ⠕⠉⠓ ⠧⠊⠇⠕⠙⠁⠛⠁⠗ ⠃⠇⠑⠧ ⠍⠊⠝⠙⠗⠑ ⠎⠅⠁⠗⠏⠆
-			⠓⠕⠝ ⠅⠥⠝⠙⠑ ⠞⠊⠇⠇⠡⠞⠁ ⠎⠊⠛ ⠧⠊⠇⠕⠙⠁⠛⠁⠗ ⠍⠊⠞⠞ ⠊ ⠧⠑⠉⠅⠁⠝⠄</expect>
-		<input>Skillnaden mellan arbets- och vilodagar blev mindre skarp; hon
-			kunde tillåta sig vilodagar mitt i veckan.</input>
+		<expect>⠠⠎⠅⠊⠇⠇⠝⠁⠙⠑⠝⠀⠍⠑⠇⠇⠁⠝⠀⠁⠗⠃⠑⠞⠎-⠀⠕⠉⠓⠀⠧⠊⠇⠕⠙⠁⠛⠁⠗⠀⠃⠇⠑⠧⠀⠍⠊⠝⠙⠗⠑⠀⠎⠅⠁⠗⠏⠆⠀⠓⠕⠝⠀⠅⠥⠝⠙⠑⠀⠞⠊⠇⠇⠡⠞⠁⠀⠎⠊⠛⠀⠧⠊⠇⠕⠙⠁⠛⠁⠗⠀⠍⠊⠞⠞⠀⠊⠀⠧⠑⠉⠅⠁⠝⠄</expect>
+		<input>Skillnaden mellan arbets- och vilodagar blev mindre skarp; hon kunde tillåta sig vilodagar mitt i veckan.</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠍⠌⠠⠎ ⠠⠅⠗⠕⠝⠁⠝</expect>
+		<expect>⠠⠍⠌⠠⠎⠀⠠⠅⠗⠕⠝⠁⠝</expect>
 		<input>M/S Kronan</input>
 	</entry>
 
 	<entry>
-		<expect>⠼⠚⠂⠑⠑ ⠇⠊⠞⠑⠗⠌⠍⠊⠇</expect>
+		<expect>⠼⠚⠂⠑⠑⠀⠇⠊⠞⠑⠗⠌⠍⠊⠇</expect>
 		<input>0,55 liter/mil</input>
 	</entry>
 
 	<entry>
-		<expect>⠍⠡⠝⠁⠙⠎⠎⠅⠊⠋⠞⠑⠞ ⠁⠏⠗⠊⠇⠌⠍⠁⠚</expect>
+		<expect>⠍⠡⠝⠁⠙⠎⠎⠅⠊⠋⠞⠑⠞⠀⠁⠏⠗⠊⠇⠌⠍⠁⠚</expect>
 		<input>månadsskiftet april/maj</input>
 	</entry>
 
 	<entry>
-		<expect>⠰⠠⠧⠊⠇⠇ ⠙⠥ ⠇⠑⠅⠁⠢⠰</expect>
-		<input>\"Vill du leka?\"</input>
+		<expect>⠰⠠⠧⠊⠇⠇⠀⠙⠥⠀⠇⠑⠅⠁⠢⠰</expect>
+		<input>"Vill du leka?"</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠙⠑⠞ ⠧⠁⠗ ⠠⠊⠗⠊⠎⠐ ⠃⠇⠕⠍⠍⠕⠗⠄</expect>
+		<expect>⠠⠙⠑⠞⠀⠧⠁⠗⠀⠠⠊⠗⠊⠎⠐⠀⠃⠇⠕⠍⠍⠕⠗⠄</expect>
 		<input>Det var Iris' blommor.</input>
 	</entry>
 
 	<entry>
-		<expect>⠰⠠⠧⠁⠙ ⠃⠑⠞⠽⠙⠑⠗ ⠐⠁⠃⠎⠞⠗⠥⠎⠐⠢⠰ ⠋⠗⠡⠛⠁⠙⠑ ⠓⠁⠝⠄</expect>
-		<input>\"Vad betyder 'abstrus'?\" frågade han.</input>
+		<expect>⠰⠠⠧⠁⠙⠀⠃⠑⠞⠽⠙⠑⠗⠀⠐⠁⠃⠎⠞⠗⠥⠎⠐⠢⠰⠀⠋⠗⠡⠛⠁⠙⠑⠀⠓⠁⠝⠄</expect>
+		<input>"Vad betyder 'abstrus'?" frågade han.</input>
 	</entry>
 	<!-- 2.2 - Dashes -->
 
 	<entry>
-		<expect>⠠⠁⠝⠝⠑-⠠⠍⠁⠗⠊⠑ ⠓⠁⠗ ⠛⠥⠇- ⠕⠉⠓ ⠧⠊⠞⠗⠁⠝⠙⠊⠛ ⠅⠚⠕⠇⠄</expect>
+		<expect>⠠⠁⠝⠝⠑-⠠⠍⠁⠗⠊⠑⠀⠓⠁⠗⠀⠛⠥⠇-⠀⠕⠉⠓⠀⠧⠊⠞⠗⠁⠝⠙⠊⠛⠀⠅⠚⠕⠇⠄</expect>
 		<input>Anne-Marie har gul- och vitrandig kjol.</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠑⠞⠞ ⠋⠑⠃⠗⠊⠇⠞ ⠎⠽⠎⠎⠇⠁⠝⠙⠑ ⠍⠑⠙ ⠤⠤ ⠊⠝⠛⠑⠝⠞⠊⠝⠛ ⠁⠇⠇⠎⠄</expect>
-		<input>Ett febrilt sysslande med \u2013 ingenting alls.</input>
+		<expect>⠠⠑⠞⠞⠀⠋⠑⠃⠗⠊⠇⠞⠀⠎⠽⠎⠎⠇⠁⠝⠙⠑⠀⠍⠑⠙⠀⠤⠤⠀⠊⠝⠛⠑⠝⠞⠊⠝⠛⠀⠁⠇⠇⠎⠄</expect>
+		<input>Ett febrilt sysslande med &#x2013; ingenting alls.</input>
 	</entry>
 
 	<entry>
-		<expect>⠤⠤ ⠠⠧⠁⠙ ⠓⠑⠞⠑⠗ ⠓⠥⠝⠙⠑⠝⠢</expect>
-		<input>\u2013 Vad heter hunden?</input>
+		<expect>⠤⠤⠀⠠⠧⠁⠙⠀⠓⠑⠞⠑⠗⠀⠓⠥⠝⠙⠑⠝⠢</expect>
+		<input>&#x2013; Vad heter hunden?</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠓⠁⠝ ⠞⠕⠛ ⠞⠡⠛⠑⠞ ⠠⠎⠞⠕⠉⠅⠓⠕⠇⠍⠤⠤⠠⠛⠪⠞⠑⠃⠕⠗⠛⠄</expect>
-		<input>Han tog tåget Stockholm\u2013Göteborg.</input>
+		<expect>⠠⠓⠁⠝⠀⠞⠕⠛⠀⠞⠡⠛⠑⠞⠀⠠⠎⠞⠕⠉⠅⠓⠕⠇⠍⠤⠤⠠⠛⠪⠞⠑⠃⠕⠗⠛⠄</expect>
+		<input>Han tog tåget Stockholm&#x2013;Göteborg.</input>
 	</entry>
 	<!-- 2.3.1 - Parentheses -->
 
 	<entry>
-		<expect>⠠⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠎ ⠠⠗⠊⠅⠎⠋⠪⠗⠃⠥⠝⠙ ⠦⠠⠠⠎⠗⠋⠴</expect>
+		<expect>⠠⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠎⠀⠠⠗⠊⠅⠎⠋⠪⠗⠃⠥⠝⠙⠀⠦⠠⠠⠎⠗⠋⠴</expect>
 		<input>Synskadades Riksförbund (SRF)</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠗⠁⠏⠏⠕⠗⠞⠑⠗ ⠁⠴ ⠋⠗⠡⠝ ⠋⠪⠗⠃⠥⠝⠙⠎⠍⠪⠞⠑⠞ ⠃⠴ ⠅⠁⠎⠎⠁⠜⠗⠑⠝⠙⠑⠝</expect>
+		<expect>⠠⠗⠁⠏⠏⠕⠗⠞⠑⠗⠀⠁⠴⠀⠋⠗⠡⠝⠀⠋⠪⠗⠃⠥⠝⠙⠎⠍⠪⠞⠑⠞⠀⠃⠴⠀⠅⠁⠎⠎⠁⠜⠗⠑⠝⠙⠑⠝</expect>
 		<input>Rapporter a) från förbundsmötet b) kassaärenden</input>
 	</entry>
 	<!-- 2.3.2 - Brackets -->
 
 	<entry>
-		<expect>⠠⠅⠗⠁⠧⠑⠞ ⠓⠁⠗ ⠎⠞⠜⠇⠇⠞⠎ ⠋⠗⠡⠝ ⠕⠇⠊⠅⠁ ⠛⠗⠥⠏⠏⠑⠗ ⠦⠃⠇⠄⠁⠄
-			⠷⠓⠪⠛⠎⠅⠕⠇⠑⠾⠎⠞⠥⠙⠑⠗⠁⠝⠙⠑ ⠕⠉⠓ ⠙⠑⠇⠞⠊⠙⠎⠁⠗⠃⠑⠞⠁⠝⠙⠑⠴ ⠍⠑⠝ ⠙⠑⠞ ⠓⠁⠗ ⠁⠇⠇⠞⠊⠙
-			⠁⠧⠧⠊⠎⠁⠞⠎⠄</expect>
-		<input>Kravet har ställts från olika grupper (bl.a.
-			[högskole]studerande och deltidsarbetande) men det har alltid
-			avvisats.</input>
+		<expect>⠠⠅⠗⠁⠧⠑⠞⠀⠓⠁⠗⠀⠎⠞⠜⠇⠇⠞⠎⠀⠋⠗⠡⠝⠀⠕⠇⠊⠅⠁⠀⠛⠗⠥⠏⠏⠑⠗⠀⠦⠃⠇⠄⠁⠄⠀⠷⠓⠪⠛⠎⠅⠕⠇⠑⠾⠎⠞⠥⠙⠑⠗⠁⠝⠙⠑⠀⠕⠉⠓⠀⠙⠑⠇⠞⠊⠙⠎⠁⠗⠃⠑⠞⠁⠝⠙⠑⠴⠀⠍⠑⠝⠀⠙⠑⠞⠀⠓⠁⠗⠀⠁⠇⠇⠞⠊⠙⠀⠁⠧⠧⠊⠎⠁⠞⠎⠄</expect>
+		<input>Kravet har ställts från olika grupper (bl.a. [högskole]studerande och deltidsarbetande) men det har alltid avvisats.</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠗⠑⠙ ⠠⠏⠕⠗⠞ ⠷⠗⠜⠙ ⠏⠡⠗⠞⠾</expect>
+		<expect>⠠⠗⠑⠙⠀⠠⠏⠕⠗⠞⠀⠷⠗⠜⠙⠀⠏⠡⠗⠞⠾</expect>
 		<input>Red Port [räd pårt]</input>
 	</entry>
 	<!-- COULDDO 2.3.4 -->
 	<!-- 2.3.5 - Braces -->
 
 	<entry>
-		<expect>⠠⠷⠼⠁⠂ ⠼⠉⠂ ⠼⠑⠠⠾ ⠥⠞⠇⠜⠎⠑⠎ ⠍⠜⠝⠛⠙⠑⠝ ⠁⠧ ⠞⠁⠇⠑⠝ ⠑⠞⠞⠂ ⠞⠗⠑ ⠕⠉⠓ ⠋⠑⠍⠄
-		</expect>
-		<input>
-			<entry>1, 3, 5</entry>
-			utläses mängden av talen ett, tre och fem.
-		</input>
+		<expect>⠠⠷⠼⠁⠂⠀⠼⠉⠂⠀⠼⠑⠠⠾⠀⠥⠞⠇⠜⠎⠑⠎⠀⠍⠜⠝⠛⠙⠑⠝⠀⠁⠧⠀⠞⠁⠇⠑⠝⠀⠑⠞⠞⠂⠀⠞⠗⠑⠀⠕⠉⠓⠀⠋⠑⠍⠄</expect>
+		<input>{1, 3, 5} utläses mängden av talen ett, tre och fem.</input>
 	</entry>
 	<!-- 2.4.1 (ex 2) COULDDO ex 1, 3 -->
 
 	<entry>
-		<expect>⠎⠑ ⠬ ⠼⠛⠤⠤⠼⠊</expect>
-		<input>se § 7\u20139</input>
+		<expect>⠎⠑⠀⠬⠀⠼⠛⠤⠤⠼⠊</expect>
+		<input>se § 7&#x2013;9</input>
 	</entry>
 	<!-- 2.4.2 -->
 
 	<entry>
-		<expect>⠠⠁⠇⠍⠟⠧⠊⠎⠞ ⠯ ⠠⠺⠊⠅⠎⠑⠇⠇</expect>
+		<expect>⠠⠁⠇⠍⠟⠧⠊⠎⠞⠀⠯⠀⠠⠺⠊⠅⠎⠑⠇⠇</expect>
 		<input>Almqvist &amp; Wiksell</input>
 	</entry>
 	<!-- 2.4.3 COULDDO ex 2, 3 -->
 
 	<entry>
-		<expect>⠠⠇⠁⠗⠎ ⠠⠛⠥⠎⠞⠁⠋⠎⠎⠕⠝ ⠔⠼⠁⠊⠉⠋</expect>
+		<expect>⠠⠇⠁⠗⠎⠀⠠⠛⠥⠎⠞⠁⠋⠎⠎⠕⠝⠀⠔⠼⠁⠊⠉⠋</expect>
 		<input>Lars Gustafsson *1936</input>
 	</entry>
 	<!-- 2.4.4 -->
 
 	<entry>
-		<expect>⠞⠗⠽⠉⠅ ⠘⠼⠼⠃⠁⠘⠼</expect>
+		<expect>⠞⠗⠽⠉⠅⠀⠘⠼⠼⠃⠁⠘⠼</expect>
 		<input>tryck #21#</input>
 	</entry>
 	<!-- 2.4.5, 2.4.7 -->
@@ -155,7 +145,7 @@
 
 	<entry>
 		<expect>⠠⠉⠒⠘⠌⠠⠠⠺⠊⠝⠙⠕⠺⠎⠘⠌⠎⠽⠎⠞⠑⠍⠘⠌⠇⠕⠛⠊⠝⠺⠼⠉⠁⠄⠙⠇⠇</expect>
-		<input>C:\\WINDOWS\\system\\loginw31.dll</input>
+		<input>C:\WINDOWS\system\loginw31.dll</input>
 	</entry>
 	<!-- 2.4.8 -->
 
@@ -166,13 +156,13 @@
 	<!-- 2.4.9 -->
 
 	<entry>
-		<expect>⠎⠥⠃⠎⠞⠄ ⠘⠒⠝ ⠘⠒⠁⠗</expect>
+		<expect>⠎⠥⠃⠎⠞⠄⠀⠘⠒⠝⠀⠘⠒⠁⠗</expect>
 		<input>subst. ~n ~ar</input>
 	</entry>
 	<!-- 2.5 -->
 
 	<entry>
-		<expect>⠠⠏⠗⠊⠎⠑⠞ ⠧⠁⠗ ⠼⠑⠚⠚ ⠘⠑⠄</expect>
+		<expect>⠠⠏⠗⠊⠎⠑⠞⠀⠧⠁⠗⠀⠼⠑⠚⠚⠀⠘⠑⠄</expect>
 		<input>Priset var 500 €.</input>
 	</entry>
 	<!-- COULDDO 2.6, 2.7 -->
@@ -180,7 +170,7 @@
 	<!-- 3.2.1 -->
 
 	<entry>
-		<expect>⠠⠓⠁⠝ ⠓⠑⠞⠑⠗ ⠠⠓⠁⠝⠎ ⠕⠉⠓ ⠃⠗⠕⠗ ⠓⠁⠝⠎ ⠓⠑⠞⠑⠗ ⠠⠃⠗⠕⠗⠄</expect>
+		<expect>⠠⠓⠁⠝⠀⠓⠑⠞⠑⠗⠀⠠⠓⠁⠝⠎⠀⠕⠉⠓⠀⠃⠗⠕⠗⠀⠓⠁⠝⠎⠀⠓⠑⠞⠑⠗⠀⠠⠃⠗⠕⠗⠄</expect>
 		<input>Han heter Hans och bror hans heter Bror.</input>
 	</entry>
 	<!-- 3.2.2 -->
@@ -191,59 +181,59 @@
 	</entry>
 
 	<entry>
-		<expect>⠠⠠⠊⠅⠑⠁⠱⠎ ⠅⠁⠞⠁⠇⠕⠛</expect>
+		<expect>⠠⠠⠊⠅⠑⠁⠱⠎⠀⠅⠁⠞⠁⠇⠕⠛</expect>
 		<input>IKEAs katalog</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠎⠧⠑⠝⠎⠅⠁ ⠠⠠⠊⠎⠃⠝⠱-⠉⠑⠝⠞⠗⠁⠇⠑⠝</expect>
+		<expect>⠠⠎⠧⠑⠝⠎⠅⠁⠀⠠⠠⠊⠎⠃⠝⠱-⠉⠑⠝⠞⠗⠁⠇⠑⠝</expect>
 		<input>Svenska ISBN-centralen</input>
 	</entry>
 	<!-- 3.2.3 -->
 
 	<entry>
-		<expect>⠠⠠⠠⠇⠕⠌⠞⠉⠕⠌⠎⠁⠉⠕⠱⠒⠎ ⠠⠃⠗⠽⠎⠎⠑⠇⠅⠕⠝⠞⠕⠗</expect>
+		<expect>⠠⠠⠠⠇⠕⠌⠞⠉⠕⠌⠎⠁⠉⠕⠱⠒⠎⠀⠠⠃⠗⠽⠎⠎⠑⠇⠅⠕⠝⠞⠕⠗</expect>
 		<input>LO/TCO/SACO:s Brysselkontor</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠠⠠⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠎ ⠗⠊⠅⠎⠋⠪⠗⠃⠥⠝⠙⠱</expect>
+		<expect>⠠⠠⠠⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠎⠀⠗⠊⠅⠎⠋⠪⠗⠃⠥⠝⠙⠱</expect>
 		<input>SYNSKADADES RIKSFÖRBUND</input>
 	</entry>
 
 	<entry>
-		<expect>⠅⠠⠺⠓⠂ ⠠⠚⠜⠍⠠⠕</expect>
+		<expect>⠅⠠⠺⠓⠂⠀⠠⠚⠜⠍⠠⠕</expect>
 		<input>kWh, JämO</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠇⠪⠎⠑⠝⠕⠗⠙⠒ ⠕⠠⠧⠃⠠⠑⠠⠛⠚</expect>
+		<expect>⠠⠇⠪⠎⠑⠝⠕⠗⠙⠒⠀⠕⠠⠧⠃⠠⠑⠠⠛⠚</expect>
 		<input>Lösenord: oVbEGj</input>
 	</entry>
 	<!-- 3.3.1 -->
 
 	<entry>
-		<expect>⠠⠇⠪⠎⠑⠝⠕⠗⠙⠒ ⠇⠧⠃⠼⠑⠛⠱⠚</expect>
+		<expect>⠠⠇⠪⠎⠑⠝⠕⠗⠙⠒⠀⠇⠧⠃⠼⠑⠛⠱⠚</expect>
 		<input>Lösenord: lvb57j</input>
 	</entry>
 
 	<entry>
-		<expect>⠘⠦⠎⠞⠚⠜⠗⠝⠁⠘⠴ ⠘⠦⠃⠇⠊⠭⠞⠘⠴ ⠘⠦⠒⠦⠘⠴ ⠘⠦⠒⠴⠘⠴ ⠬⠕</expect>
-		<input>\u066d \u2607 \u2639 \u263a \u00ba</input>
+		<expect>⠘⠦⠎⠞⠚⠜⠗⠝⠁⠘⠴⠀⠘⠦⠃⠇⠊⠭⠞⠘⠴⠀⠘⠦⠒⠦⠘⠴⠀⠘⠦⠒⠴⠘⠴⠀⠬⠕</expect>
+		<input>&#x066d; &#x2607; &#x2639; &#x263a; &#x00ba;</input>
 	</entry>
 
 	<entry>
-		<expect>⠠⠝⠑⠛⠁⠞⠊⠧⠁ ⠞⠁⠇⠒ -⠼⠙⠑⠋⠙⠑</expect>
+		<expect>⠠⠝⠑⠛⠁⠞⠊⠧⠁⠀⠞⠁⠇⠒⠀-⠼⠙⠑⠋⠙⠑</expect>
 		<input>Negativa tal: -45645</input>
 	</entry>
 
 	<entry>
 		<expect>⠘⠦⠓⠚⠜⠗⠞⠑⠗⠘⠴</expect>
-		<input>\u2665</input> <!-- hjärter -->
+		<input>&#x2665;</input> <!-- hjärter -->
 	</entry>
 
 	<entry>
-		<expect>⠼⠃⠼⠁⠌⠼⠙⠂ ⠼⠁⠼⠁⠌⠼⠃⠂ ⠼⠉⠼⠉⠌⠼⠙</expect>
+		<expect>⠼⠃⠼⠁⠌⠼⠙⠂⠀⠼⠁⠼⠁⠌⠼⠃⠂⠀⠼⠉⠼⠉⠌⠼⠙</expect>
 		<input>2¼, 1½, 3¾</input>
 	</entry>
 

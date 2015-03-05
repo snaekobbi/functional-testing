@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+               stylesheet="translate.xsl">
+  
+  <x:scenario id="34.1" label="Swedish uncontracted">
+    <x:context href="../../resources/swedish/data.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/swedish/data.xml" select="//expect"/>
+  </x:scenario>
+  
+</x:description>
