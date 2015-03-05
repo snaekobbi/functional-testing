@@ -44,7 +44,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<xsl:for-each select="document(resolve-uri(x:context/@href))//entry">
+					<xsl:for-each select="document(resolve-uri(x:call/x:param[@name='input']/@href))//entry">
 						<tr>
 							<td>
 								<code class="xml">
