@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<level4>
+<level4 xml:lang="no">
     <h4>Ledelse av den politiske prosessen</h4>
     <p>Den politiske prosessen er koblingen mellom koalisjonssystemet og ledelsessystemet. Etter at vi kort definerer koalisjonssystemet, ledelsessystemet og den politiske prosessen, vil vi g&#x00E5; n&#x00E6;rmere inn p&#x00E5; sentrale aspekter ved ledelse av den politiske prosessen. Sentrale aspekter er ledelsens arbeid med n&#x00F8;kkelinteressentene, arbeidet med stabiliteten i koalisjonen, h&#x00E5;ndteringen av maktforhold og bruk av formelle og psykologiske kontrakter mellom interessentene og virksomheten.</p>
     <imggroup>
@@ -9,3 +9,6 @@
     <level5>
         <h5>Koalisjonssystemet</h5>
         <p>En organisasjon kan forst&#x00E5;s som en samling eller en koalisjon av ulike interessegrupper &#x2014; s&#x00E5;kalte interessenter &#x2014; som g&#x00E5;r sammen for &#x00E5; 
+        </p>
+    </level5>
+</level4>

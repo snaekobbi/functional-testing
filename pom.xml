@@ -145,7 +145,7 @@
     </dependency>
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>liblouis-tables</artifactId>
+      <artifactId>dotify-formatter</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
