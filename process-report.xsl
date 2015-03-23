@@ -45,4 +45,15 @@
 		</xsl:choose>
 	</xsl:template>
 	
+	<xsl:template match="/testFile/@href">
+		<xsl:choose>
+			<xsl:when test="starts-with(., $src-dir)">
+				<xsl:attribute name="href" select="pf:relativize-uri(resolve-uri(pf:relativize-uri(., $src-dir), $dest-dir), $result-base)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:next-match/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
 </xsl:stylesheet>

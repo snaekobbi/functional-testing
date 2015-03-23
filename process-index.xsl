@@ -7,12 +7,14 @@
                 exclude-result-prefixes="#all"
                 version="2.0">
 	
+	<xsl:param name="junit-reports" as="xs:anyURI*" required="yes"/>
 	<xsl:param name="xprocspec-reports" as="xs:anyURI*" required="yes"/>
 	<xsl:param name="xspec-reports" as="xs:anyURI*" required="yes"/>
 	<xsl:param name="result-base" as="xs:anyURI" required="yes"/>
 	
 	<xsl:include href="http://www.daisy.org/pipeline/modules/file-utils/uri-functions.xsl"/>
 	
+	<xsl:variable name="junit-reports-doc" select="document($junit-reports)"/>
 	<xsl:variable name="xprocspec-reports-doc" select="document($xprocspec-reports)"/>
 	<xsl:variable name="xspec-reports-doc" select="document($xspec-reports)"/>
 	
@@ -26,9 +28,13 @@
 		<xsl:variable name="uri" select="replace(@href, '^(.+)#(.+)$', '$1')"/>
 		<xsl:variable name="abs-uri" select="resolve-uri($uri, base-uri(/*))"/>
 		<xsl:variable name="id" select="replace(@href, '^(.+)#(.+)$', '$2')"/>
-		<xsl:variable name="label" select="document($abs-uri)//*[@id=$id]/@label"/>
+		<xsl:variable name="label" select="if (ends-with($uri, '.java')) then $id
+		                                   else document($abs-uri)//*[@id=$id]/@label"/>
 		<xsl:variable name="report" as="node()?">
 			<xsl:choose>
+				<xsl:when test="ends-with($uri,'.java')">
+					<xsl:sequence select="$junit-reports-doc[/testFile[@href=$abs-uri]]"/>
+				</xsl:when>
 				<xsl:when test="ends-with($uri,'.xprocspec')">
 					<xsl:sequence select="$xprocspec-reports-doc[.//html:body/html:p[1][string(html:a[1])=$abs-uri]]"/>
 				</xsl:when>
@@ -39,6 +45,9 @@
 		</xsl:variable>
 		<xsl:variable name="passed" as="xs:boolean">
 			<xsl:choose>
+				<xsl:when test="ends-with($uri,'.java')">
+					<xsl:sequence select="not($report//testCase[@name=$id and @result='failed'])"/>
+				</xsl:when>
 				<xsl:when test="ends-with($uri,'.xprocspec')">
 					<xsl:sequence select="contains(
 					                        $report//html:th[string()=$label]/following-sibling::html:th,
@@ -47,13 +56,10 @@
 				<xsl:when test="ends-with($uri,'.xspec')">
 					<xsl:sequence select="boolean($report//html:body/html:table[1]/html:tbody/html:tr[not(@class='failed')][normalize-space(string(html:th[1]))=$label])"/>
 				</xsl:when>
-				<xsl:otherwise>
-					<xsl:sequence select="false()"/>
-				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
 		<div class="test {if ($passed) then 'test-passed' else 'test-failed'}">
-			<xsl:value-of select="concat($id, '. ', $label)"/>
+			<xsl:value-of select="$label"/>
 			<a class="test-src" href="{concat($uri,'.xhtml#',$id)}">source</a>
 			<xsl:if test="$report">
 				<a class="test-report" href="{pf:relativize-uri(base-uri($report/*), $result-base)}">report</a>
