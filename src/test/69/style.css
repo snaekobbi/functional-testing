@@ -1,0 +1,17 @@
+@page { size: 32 28; }
+
+pagenum { display: none }
+
+p {
+	display: block;
+	margin-left: 2;
+	text-indent: 2;
+}
+
+h3 {
+	display: block;
+	margin-left: 2;
+	text-indent: 5;
+	margin-top: 2;
+	margin-bottom: 1;
+}
