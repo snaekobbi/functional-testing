@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:css="http://www.daisy.org/ns/pipeline/braille-css"
                 xmlns:pf="http://www.daisy.org/ns/pipeline/functions"
                 xmlns:dotify="http://code.google.com/p/dotify/"
                 version="2.0">
@@ -22,13 +23,18 @@
 			-->
 			<xsl:choose>
 				<xsl:when test="matches($query,'(translator:dotify)')">
-					<xsl:value-of select="dotify:translate($query, string(.))"/>
+					<xsl:value-of select="css:normalize-space(dotify:translate($query, string(.)))"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="pf:text-transform($query, string(.))"/>
+					<xsl:value-of select="css:normalize-space(pf:text-transform($query, string(.)))"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</expect>
 	</xsl:template>
+	
+	<xsl:function name="css:normalize-space" as="xs:string">
+		<xsl:param name="text" as="xs:string"/>
+		<xsl:sequence select="translate(normalize-space(translate($text,'⠀',' ')),' ','⠀')"/>
+	</xsl:function>
 	
 </xsl:stylesheet>
