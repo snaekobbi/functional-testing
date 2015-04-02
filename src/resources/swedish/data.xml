@@ -28,7 +28,7 @@
 	</entry>
 
 	<entry>
-		<expect>⠠⠎⠅⠊⠇⠇⠝⠁⠙⠑⠝⠀⠍⠑⠇⠇⠁⠝⠀⠁⠗⠃⠑⠞⠎-⠀⠕⠉⠓⠀⠧⠊⠇⠕⠙⠁⠛⠁⠗⠀⠃⠇⠑⠧⠀⠍⠊⠝⠙⠗⠑⠀⠎⠅⠁⠗⠏⠆⠀⠓⠕⠝⠀⠅⠥⠝⠙⠑⠀⠞⠊⠇⠇⠡⠞⠁⠀⠎⠊⠛⠀⠧⠊⠇⠕⠙⠁⠛⠁⠗⠀⠍⠊⠞⠞⠀⠊⠀⠧⠑⠉⠅⠁⠝⠄</expect>
+		<expect>⠠⠎⠅⠊⠇⠇⠝⠁⠙⠑⠝⠀⠍⠑⠇⠇⠁⠝⠀⠁⠗⠃⠑⠞⠎⠤⠀⠕⠉⠓⠀⠧⠊⠇⠕⠙⠁⠛⠁⠗⠀⠃⠇⠑⠧⠀⠍⠊⠝⠙⠗⠑⠀⠎⠅⠁⠗⠏⠆⠀⠓⠕⠝⠀⠅⠥⠝⠙⠑⠀⠞⠊⠇⠇⠡⠞⠁⠀⠎⠊⠛⠀⠧⠊⠇⠕⠙⠁⠛⠁⠗⠀⠍⠊⠞⠞⠀⠊⠀⠧⠑⠉⠅⠁⠝⠄</expect>
 		<input>Skillnaden mellan arbets- och vilodagar blev mindre skarp; hon kunde tillåta sig vilodagar mitt i veckan.</input>
 	</entry>
 
@@ -64,7 +64,7 @@
 	<!-- 2.2 - Dashes -->
 
 	<entry>
-		<expect>⠠⠁⠝⠝⠑-⠠⠍⠁⠗⠊⠑⠀⠓⠁⠗⠀⠛⠥⠇-⠀⠕⠉⠓⠀⠧⠊⠞⠗⠁⠝⠙⠊⠛⠀⠅⠚⠕⠇⠄</expect>
+		<expect>⠠⠁⠝⠝⠑⠤⠠⠍⠁⠗⠊⠑⠀⠓⠁⠗⠀⠛⠥⠇⠤⠀⠕⠉⠓⠀⠧⠊⠞⠗⠁⠝⠙⠊⠛⠀⠅⠚⠕⠇⠄</expect>
 		<input>Anne-Marie har gul- och vitrandig kjol.</input>
 	</entry>
 
@@ -186,7 +186,7 @@
 	</entry>
 
 	<entry>
-		<expect>⠠⠎⠧⠑⠝⠎⠅⠁⠀⠠⠠⠊⠎⠃⠝⠱-⠉⠑⠝⠞⠗⠁⠇⠑⠝</expect>
+		<expect>⠠⠎⠧⠑⠝⠎⠅⠁⠀⠠⠠⠊⠎⠃⠝⠱⠤⠉⠑⠝⠞⠗⠁⠇⠑⠝</expect>
 		<input>Svenska ISBN-centralen</input>
 	</entry>
 	<!-- 3.2.3 -->
@@ -223,7 +223,7 @@
 	</entry>
 
 	<entry>
-		<expect>⠠⠝⠑⠛⠁⠞⠊⠧⠁⠀⠞⠁⠇⠒⠀-⠼⠙⠑⠋⠙⠑</expect>
+		<expect>⠠⠝⠑⠛⠁⠞⠊⠧⠁⠀⠞⠁⠇⠒⠀⠤⠼⠙⠑⠋⠙⠑</expect>
 		<input>Negativa tal: -45645</input>
 	</entry>
 
