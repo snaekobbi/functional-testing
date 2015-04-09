@@ -132,7 +132,7 @@
       <ul>
         <li class="requirement priority_1" id="4.1:25">
           <h3>
-            <span class="req-nr">4.1:25</span>
+            <a class="req-nr" href="#4.1:25">4.1:25</a>
             The system shall support editing on block level in order to fix wrong translations,
             e.g. in the case of complex material such as mathematics. It is assumed that all other
             improvements outside blocks can be accomplished by changing the input document.
@@ -140,14 +140,14 @@
         </li>
         <li class="requirement priority_2" id="4.1:26">
           <h3>
-            <span class="req-nr">4.1:26</span>
+            <a class="req-nr" href="#4.1:26">4.1:26</a>
             The system shall support editing beyond block level, e.g. in order to change the layout
             of tables or to manually alter the volume breaking.
           </h3>
         </li>
         <li class="requirement priority_3" id="4.1:27">
           <h3>
-            <span class="req-nr">4.1:27</span>
+            <a class="req-nr" href="#4.1:27">4.1:27</a>
             The system shall be able to merge changes made in the original text with changes made
             previously in the braille version (possibly independently by another person). This
             ensures that the transcriber is not condemned to keeping on editing in the braille
@@ -156,7 +156,7 @@
         </li>
         <li class="requirement priority_3" id="4.1:28">
           <h3>
-            <span class="req-nr">4.1:28</span>
+            <a class="req-nr" href="#4.1:28">4.1:28</a>
             The system shall be able to produce “synchronization data” for various intermediary and
             output files, which can be used for finding a location in one file that corresponds to a
             location in another file.
@@ -164,14 +164,14 @@
         </li>
         <li class="requirement priority_3" id="4.1:29">
           <h3>
-            <span class="req-nr">4.1:29</span>
+            <a class="req-nr" href="#4.1:29">4.1:29</a>
             The system shall provide a graphical user interface for editing an intermediary braille
             file.
           </h3>
         </li>
         <li class="requirement priority_3" id="4.1:30">
           <h3>
-            <span class="req-nr">4.1:30</span>
+            <a class="req-nr" href="#4.1:30">4.1:30</a>
             The user interface shall provide a side-by-side view of the original text and braille
             with synchronized cursor positions. For any position in the braille view, the user shall
             instantly see the corresponding original text, so that he/she is encouraged to do
@@ -180,7 +180,7 @@
         </li>
         <li class="requirement priority_3" id="4.1:31">
           <h3>
-            <span class="req-nr">4.1:31</span>
+            <a class="req-nr" href="#4.1:31">4.1:31</a>
             There shall be support for inserting braille characters using 6/8 keys on the keyboard.
           </h3>
         </li>
@@ -193,14 +193,14 @@
       <ul>
         <li class="requirement priority_1" id="4.2:32">
           <h3>
-            <span class="req-nr">4.2:32</span>
+            <a class="req-nr" href="#4.2:32">4.2:32</a>
             The system shall be able to output various e-braille formats.
           </h3>
         </li>
-        <li class="requirement priority_1" id="4.2:33">
+        <li class="requirement priority_1 changed" id="4.2:33">
           <h3>
-            <span class="req-nr">4.2:33</span>
-            The system shall support a new e-braille format (to be defined within the project).
+            <a class="req-nr" href="#4.2:33">4.2:33</a>
+            The system shall support a new e-braille format.
           </h3>
         </li>
       </ul>
@@ -210,7 +210,7 @@
         Support for languages used in the countries of the interested parties
       </h2>
       <ul>
-        <li class="requirement priority_1" id="4.3:34">
+        <li class="requirement priority_1 changed" id="4.3:34">
           <h3>
             <a class="req-nr" href="#4.3:34">4.3:34</a>
             The system shall support the braille code used in Denmark, Finland, Norway, Sweden and
@@ -237,12 +237,6 @@
           <div>
             <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/54850ff448ef52d6e57a19960558a416c36d1558/tests/harness/no_harness.txt"/>
           </div>
-          <p>
-            The system shall support Dutch uncontracted braille.
-          </p>
-          <div>
-            <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/07d63dbc069f8b1e4f1ee379c117c621015991fc/tests/harness/nl-NL-g0_harness.txt"/>
-          </div>
         </li>
         <li class="requirement priority_1" id="4.3:34B">
           <h3>
@@ -250,6 +244,16 @@
             The system shall be easily extended with new languages - for uncontracted braille - to
             make the system work globally in the long term.
           </h3>
+        </li>
+        <li class="requirement priority_1 changed" id="4.3:34C">
+          <h3>
+            <a class="req-nr" href="#4.3:34C">4.3:34C</a>
+            The system shall support the braille code used in the Netherlands for uncontracted
+            braille.
+          </h3>
+          <div>
+            <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/07d63dbc069f8b1e4f1ee379c117c621015991fc/tests/harness/nl-NL-g0_harness.txt"/>
+          </div>
         </li>
         <li class="requirement priority_1" id="4.3:35">
           <h3>
@@ -260,6 +264,18 @@
           <p class="todo">
             liblouis tests: text --> braille translation
           </p>
+        </li>
+        <li class="requirement priority_1 changed" id="4.3:35B">
+          <h3>
+            <a class="req-nr" href="#4.3:35B">4.3:35B</a>
+            The system shall support the braille code used in the Netherlands for 8-dot braille.
+          </h3>
+        </li>
+        <li class="requirement priority_1 changed" id="4.3:35C">
+          <h3>
+            <a class="req-nr" href="#4.3:35C">4.3:35C</a>
+            The system shall support the possibility to leave out capital signs in some products.
+          </h3>
         </li>
         <li class="requirement priority_2" id="4.3:36">
           <h3>
@@ -287,6 +303,13 @@
             <a class="req-nr" href="#4.3:37B">4.3:37B</a>
             The system shall be easily extended with new languages - for contracted braille - to
             make the system work globally in the long term.
+          </h3>
+        </li>
+        <li class="requirement priority_1 changed" id="4.3:37C">
+          <h3>
+            <a class="req-nr" href="#4.3:37C">4.3:37C</a>
+            The system shall support the braille code used in the Netherlands for contracted
+            braille.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.3:38">
@@ -930,6 +953,13 @@
             reference and the braille page number at the reference.
           </h3>
         </li>
+        <li class="requirement priority_3 changed" id="4.7:118">
+          <h3>
+            <a class="req-nr" href="#4.7:118">4.7:118</a>
+            The system shall support the creation of symbols lists, when characters have different
+            meaning than normally (e.g. in mathematics).
+          </h3>
+        </li>
       </ul>
     </section>
     <section>
@@ -972,52 +1002,79 @@
       <ul>
         <li class="requirement priority_1" id="4.9:108">
           <h3>
-            <span class="req-nr">4.9:108</span>
+            <a class="req-nr" href="#4.9:108">4.9:108</a>
             The system shall support templates for different products, e.g. books vs. magazines.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.9:109">
           <h3>
-            <span class="req-nr">4.9:109</span>
+            <a class="req-nr" href="#4.9:109">4.9:109</a>
             The system shall support templates for different end user groups.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.9:110">
           <h3>
-            <span class="req-nr">4.9:110</span>
+            <a class="req-nr" href="#4.9:110">4.9:110</a>
             Users shall be able to reuse templates.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.9:111">
           <h3>
-            <span class="req-nr">4.9:111</span>
+            <a class="req-nr" href="#4.9:111">4.9:111</a>
             Certain users shall be able to create templates.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.9:112">
           <h3>
-            <span class="req-nr">4.9:112</span>
+            <a class="req-nr" href="#4.9:112">4.9:112</a>
             The system shall save jobs so that e.g. a job history can be showed, and jobs can be
             rerun.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.9:113">
           <h3>
-            <span class="req-nr">4.9:113</span>
+            <a class="req-nr" href="#4.9:113">4.9:113</a>
             The user shall be able to monitor jobs: get an overview of the jobs waiting, running,
             finished, etc., and receive notifications of certain events.
           </h3>
         </li>
         <li class="requirement priority_2" id="4.9:114">
           <h3>
-            <span class="req-nr">4.9:114</span>
+            <a class="req-nr" href="#4.9:114">4.9:114</a>
             The system shall provide the user with help and guidance for creating templates.
           </h3>
         </li>
         <li class="requirement priority_1" id="4.9:115">
           <h3>
-            <span class="req-nr">4.9:115</span>
+            <a class="req-nr" href="#4.9:115">4.9:115</a>
             The system shall provide a graphical user interface for creating and monitoring jobs.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for mathematics
+      </h2>
+      <ul>
+        <li class="requirement priority_3 changed" id="4.10:119">
+          <h3>
+            <a class="req-nr" href="#4.10:119">4.10:119</a>
+            The system shall support giving marked up mathematics code in ASCII-Math an output
+            according to the mathematical braille code in the Netherlands.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Miscellaneous
+      </h2>
+      <ul>
+        <li class="requirement priority_3 changed" id="4.7:117">
+          <h3>
+            <a class="req-nr" href="#4.7:117">4.7:117</a>
+            The system shall support the possibility to integrate tactile drawings in braille.
           </h3>
         </li>
       </ul>
