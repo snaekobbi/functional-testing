@@ -1,9 +1,6 @@
 script: mvn test
 after_success: 
   - source upload_with_ftp.sh
-branches:
-  only:
-  - master
 env:
   global:
     - secure: "FbotqK6NJPnZj5ecT0N8jO30+SggF0656F5qKbjePq4Y+bVL8+a6wqlMtcay\nRG7mniLt4IbvxS2o+t1BXkPiUa0dH1tLTnLS7tJFazXBC9xUVKJiUcVQfohv\nz+PpqmeaIdlOO06BZd1LWycH22jSjULVO3wRSQr+8qao8afPB6M="
