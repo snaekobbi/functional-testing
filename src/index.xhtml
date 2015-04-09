@@ -7,11 +7,82 @@
   </head>
   <body>
     <h1>
-      Requirements
+      Functional Requirements
     </h1>
     <section>
       <h2>
-        Translation/mapping: support for languages used in the countries of the interested parties
+        Support for effective and flexible production of braille on paper/embosser files
+      </h2>
+      <ul>
+        <li class="requirement priority_1" id="4.1:25">
+          <h3>
+            The system shall support editing on block level in order to fix wrong translations,
+            e.g. in the case of complex material such as mathematics. It is assumed that all other
+            improvements outside blocks can be accomplished by changing the input document.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.1:26">
+          <h3>
+            The system shall support editing beyond block level, e.g. in order to change the layout
+            of tables or to manually alter the volume breaking.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.1:27">
+          <h3>
+            The system shall be able to merge changes made in the original text with changes made
+            previously in the braille version (possibly independently by another person). This
+            ensures that the transcriber is not condemned to keeping on editing in the braille
+            version after the smallest change.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.1:28">
+          <h3>
+            The system shall be able to produce “synchronization data” for various intermediary and
+            output files, which can be used for finding a location in one file that corresponds to a
+            location in another file.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.1:29">
+          <h3>
+            The system shall provide a graphical user interface for editing an intermediary braille
+            file.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.1:30">
+          <h3>
+            The user interface shall provide a side-by-side view of the original text and braille
+            with synchronized cursor positions. For any position in the braille view, the user shall
+            instantly see the corresponding original text, so that he/she is encouraged to do
+            changes in the original whenever possible.
+          </h3>
+        </li>
+        <li class="requirement priority_3" id="4.1:31">
+          <h3>
+            There shall be support for inserting braille characters using 6/8 keys on the keyboard.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for effective and flexible production of braille in electronic form
+      </h2>
+      <ul>
+        <li class="requirement priority_1" id="4.2:32">
+          <h3>
+            The system shall be able to output various e-braille formats.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.2:33">
+          <h3>
+            The system shall support a new e-braille format (to be defined within the project).
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for languages used in the countries of the interested parties
       </h2>
       <ul>
         <li class="requirement priority_1" id="4.3:34">
@@ -631,6 +702,55 @@
           <h3>
             The system shall support skipping print page breaks when no text precedes or follows on
             the same braille page.
+          </h3>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>
+        Support for ordering and monitoring of braille production
+      </h2>
+      <ul>
+        <li class="requirement priority_1" id="4.9:108">
+          <h3>
+            The system shall support templates for different products, e.g. books vs. magazines.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.9:109">
+          <h3>
+            The system shall support templates for different end user groups.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.9:110">
+          <h3>
+            Users shall be able to reuse templates.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.9:111">
+          <h3>
+            Certain users shall be able to create templates.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.9:112">
+          <h3>
+            The system shall save jobs so that e.g. a job history can be showed, and jobs can be
+            rerun.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.9:113">
+          <h3>
+            The user shall be able to monitor jobs: get an overview of the jobs waiting, running,
+            finished, etc., and receive notifications of certain events.
+          </h3>
+        </li>
+        <li class="requirement priority_2" id="4.9:114">
+          <h3>
+            The system shall provide the user with help and guidance for creating templates.
+          </h3>
+        </li>
+        <li class="requirement priority_1" id="4.9:115">
+          <h3>
+            The system shall provide a graphical user interface for creating and monitoring jobs.
           </h3>
         </li>
       </ul>
