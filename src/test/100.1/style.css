@@ -1,0 +1,22 @@
+@namespace epub "http://www.idpf.org/2007/ops"
+
+@page {
+	size: 25 10;
+}
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+a[epub|type~="footnote noteref"] {
+	flow: normal footnotes;
+	counter-increment: footnote;
+	content: "⠶" counter(footnote) "⠶"
+}
+
+a[epub|type~="footnote noteref"]:flow(footnotes) {
+	content: target-content(attr(href url));
+	display: block;
+	text-indent: 2;
+}
