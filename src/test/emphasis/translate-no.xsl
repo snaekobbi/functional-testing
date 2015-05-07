@@ -3,6 +3,7 @@
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:louis="http://liblouis.org/liblouis"
                 xmlns:html="http://www.w3.org/1999/xhtml"
+                xmlns:css="http://www.daisy.org/ns/pipeline/braille-css"
                 version="2.0">
 	
 	<xsl:variable name="query" select="'(table:&quot;unicode.dis,no-no-g0.utb&quot;)'"/>
@@ -56,6 +57,27 @@
 		<xsl:apply-templates select="following-sibling::node()[1]" mode="#current">
 			<xsl:with-param name="new-text-nodes" select="$new-text-nodes[position()&gt;1]"/>
 		</xsl:apply-templates>
+	</xsl:template>
+	
+	<xsl:function name="css:normalize-space">
+		<xsl:param name="x" as="element()"/>
+		<xsl:apply-templates select="$x" mode="css:normalize-space"/>
+	</xsl:function>
+	
+	<xsl:template match="*" mode="css:normalize-space">
+		<xsl:copy>
+			<xsl:sequence select="@*"/>
+			<xsl:apply-templates select="node()" mode="#current"/>
+		</xsl:copy>
+	</xsl:template>
+	
+	<xsl:template match="text()" mode="css:normalize-space">
+		<xsl:value-of select="replace(
+		                        normalize-space(
+		                          translate(
+		                            concat('|',string(.),'|'),
+		                            '⠀',' ')),
+		                        '^.|.$','')"/>
 	</xsl:template>
 	
 </xsl:stylesheet>

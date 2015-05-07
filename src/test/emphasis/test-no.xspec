@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
                xmlns:louis="http://liblouis.org/liblouis"
+               xmlns:css="http://www.daisy.org/ns/pipeline/braille-css"
                stylesheet="translate-no.xsl">
   
   <x:scenario id="38.1" label="Marking of text-level semantics with braille indicators for Norwegian.">
     <x:context href="../../resources/emphasis/data_norwegian.xml" select="//input"/>
-    <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml" select="//expect"/>
+    <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml"
+              select="for $x in //expect return css:normalize-space($x)"
+              test="for $x in /expect return css:normalize-space($x)"/>
   </x:scenario>
   
 </x:description>
