@@ -3,42 +3,74 @@
 		<!--
 		    Always use dots 23 (⠆) in front of bold and dots 56 (⠰) after bold.
 		-->
-		<input>hund hund<html:strong>en</html:strong> hund<html:strong>er</html:strong> hund<html:strong>ene</html:strong></input>
-		<expect>⠓⠥⠝⠙ ⠓⠥⠝⠙<html:strong>⠆⠑⠝⠰</html:strong> ⠓⠥⠝⠙<html:strong>⠆⠑⠗⠰</html:strong> ⠓⠥⠝⠙<html:strong>⠆⠑⠝⠑⠰</html:strong></expect>
+		<input>
+			hund hund<html:strong>en</html:strong> hund<html:strong>er</html:strong>
+			hund<html:strong>ene</html:strong>
+		</input>
+		<expect>
+			⠓⠥⠝⠙ ⠓⠥⠝⠙<html:strong>⠆⠑⠝⠰</html:strong> ⠓⠥⠝⠙<html:strong>⠆⠑⠗⠰</html:strong>
+			⠓⠥⠝⠙<html:strong>⠆⠑⠝⠑⠰</html:strong>
+		</expect>
 	</entry>
 	<entry>
 		<!--
 		    Opening/closing marks are never placed immediately before/after a white space character.
 		-->
-		<input>hund hund<html:strong>en </html:strong>hund<html:strong>er </html:strong>hund<html:strong>ene</html:strong></input>
-		<expect>⠓⠥⠝⠙ ⠓⠥⠝⠙<html:strong>⠆⠑⠝⠰ </html:strong>⠓⠥⠝⠙<html:strong>⠆⠑⠗⠰ </html:strong>⠓⠥⠝⠙<html:strong>⠆⠑⠝⠑⠰</html:strong></expect>
+		<input>
+			hund hund<html:strong>en </html:strong>hund<html:strong>er
+			</html:strong>hund<html:strong>ene</html:strong>
+		</input>
+		<expect>
+			⠓⠥⠝⠙ ⠓⠥⠝⠙<html:strong>⠆⠑⠝⠰ </html:strong>⠓⠥⠝⠙<html:strong>⠆⠑⠗⠰
+			</html:strong>⠓⠥⠝⠙<html:strong>⠆⠑⠝⠑⠰</html:strong>
+		</expect>
 	</entry>
 	<entry>
-		<input>Det var bare det at hun også <html:strong>mis</html:strong>unte ham det</input>
-		<expect>⠠⠙⠑⠞ ⠧⠁⠗ ⠃⠁⠗⠑ ⠙⠑⠞ ⠁⠞ ⠓⠥⠝ ⠕⠛⠎⠡ <html:strong>⠆⠍⠊⠎⠰</html:strong>⠥⠝⠞⠑ ⠓⠁⠍ ⠙⠑⠞⠄</expect>
+		<input>
+			Det var bare det at hun også <html:strong>mis</html:strong>unte ham det
+		</input>
+		<expect>
+			⠠⠙⠑⠞ ⠧⠁⠗ ⠃⠁⠗⠑ ⠙⠑⠞ ⠁⠞ ⠓⠥⠝ ⠕⠛⠎⠡ <html:strong>⠆⠍⠊⠎⠰</html:strong>⠥⠝⠞⠑ ⠓⠁⠍ ⠙⠑⠞⠄
+		</expect>
 	</entry>
 	<entry>
-		<input>Jeg verken <html:strong>vil </html:strong>eller <html:strong>kan </html:strong>gjøre dette for deg!</input>
-		<expect>⠠⠚⠑⠛ ⠧⠑⠗⠅⠑⠝ <html:strong>⠆⠧⠊⠇⠰ </html:strong>⠑⠇⠇⠑⠗ <html:strong>⠆⠅⠁⠝⠰ </html:strong>⠛⠚⠪⠗⠑ ⠙⠑⠞⠞⠑ ⠋⠕⠗ ⠙⠑⠛⠖</expect>
+		<input>
+			Jeg verken <html:strong>vil </html:strong>eller <html:strong>kan </html:strong>gjøre
+			dette for deg!
+		</input>
+		<expect>
+			⠠⠚⠑⠛ ⠧⠑⠗⠅⠑⠝ <html:strong>⠆⠧⠊⠇⠰ </html:strong>⠑⠇⠇⠑⠗ <html:strong>⠆⠅⠁⠝⠰
+			</html:strong>⠛⠚⠪⠗⠑ ⠙⠑⠞⠞⠑ ⠋⠕⠗ ⠙⠑⠛⠖
+		</expect>
 	</entry>
 	<entry>
-		<input>Karin Fossum slo gjennom som krimforfatter med romanen <html:strong>Evas øye</html:strong>, som kom ut i 1995.</input>
-		<expect>⠠⠅⠁⠗⠊⠝ ⠠⠋⠕⠎⠎⠥⠍ ⠎⠇⠕ ⠛⠚⠑⠝⠝⠕⠍ ⠎⠕⠍ ⠅⠗⠊⠍⠋⠕⠗⠋⠁⠞⠞⠑⠗ ⠍⠑⠙ ⠗⠕⠍⠁⠝⠑⠝ <html:strong>⠆⠑⠧⠁⠎ ⠪⠽⠑⠰</html:strong>⠂ ⠎⠕⠍ ⠅⠕⠍ ⠥⠞ ⠊ ⠼⠁⠊⠊⠑⠄</expect>
+		<input>
+			Karin Fossum slo gjennom som krimforfatter med romanen <html:strong>Evas
+			øye</html:strong>, som kom ut i 1995.
+		</input>
+		<expect>
+			⠠⠅⠁⠗⠊⠝ ⠠⠋⠕⠎⠎⠥⠍ ⠎⠇⠕ ⠛⠚⠑⠝⠝⠕⠍ ⠎⠕⠍ ⠅⠗⠊⠍⠋⠕⠗⠋⠁⠞⠞⠑⠗ ⠍⠑⠙ ⠗⠕⠍⠁⠝⠑⠝ <html:strong>⠆⠑⠧⠁⠎
+			⠪⠽⠑⠰</html:strong>⠂ ⠎⠕⠍ ⠅⠕⠍ ⠥⠞ ⠊ ⠼⠁⠊⠊⠑⠄
+		</expect>
 	</entry>
 	<entry>
 		<!--
 		    Always use dots 456 (⠸) in front of and after underline.
 		-->
-		<input>"Hør her: <html:strong>du <html:u>må </html:u>gjøre det</html:strong>!"</input>
-		<expect>⠲⠠⠓⠪⠗ ⠓⠑⠗⠒ <html:strong>⠆⠙⠥ <html:u>⠸⠍⠡⠸ </html:u>⠛⠚⠪⠗⠑ ⠙⠑⠞⠰</html:strong>⠖⠲</expect>
+		<input>
+			"Hør her: <html:strong>du <html:u>må </html:u>gjøre det</html:strong>!"
+		</input>
+		<expect>
+			⠲⠠⠓⠪⠗ ⠓⠑⠗⠒ <html:strong>⠆⠙⠥ <html:u>⠸⠍⠡⠸ </html:u>⠛⠚⠪⠗⠑ ⠙⠑⠞⠰</html:strong>⠖⠲
+		</expect>
 	</entry>
 	<entry>
 		<!--
 		    Always use dots 6-3 (⠆⠠) in front of and after italics.
 		-->
 		<input>
-			Romanen <html:strong>Tusen strålende soler </html:strong>av den afghansk-amerikanske forfatteren
-			Khaled Hosseini tyder på å bli en like stor suksess som den forrige romanen,
+			Romanen <html:strong>Tusen strålende soler </html:strong>av den afghansk-amerikanske
+			forfatteren Khaled Hosseini tyder på å bli en like stor suksess som den forrige romanen,
 			<html:strong>Drageløperen</html:strong>. I bokanmeldelsen fra <html:strong>Dagbladet
 			</html:strong>06.06.07 forklares dette med: <html:em>Ikke fordi Hosseini er en spesielt
 			god forfatter. Men fordi tematikken til den USA-bosatte Hosseini, har en spesiell
@@ -47,22 +79,34 @@
 		<expect>
 			⠠⠗⠕⠍⠁⠝⠑⠝ <html:strong>⠆⠠⠞⠥⠎⠑⠝ ⠎⠞⠗⠡⠇⠑⠝⠙⠑ ⠎⠕⠇⠑⠗⠰ </html:strong>⠁⠧ ⠙⠑⠝ ⠁⠋⠛⠓⠁⠝⠎⠅⠁⠍⠑⠗⠊⠅⠁⠝⠎⠅⠑
 			⠋⠕⠗⠋⠁⠞⠞⠑⠗⠑⠝ ⠠⠅⠓⠁⠇⠑⠙ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠞⠽⠙⠑⠗ ⠏⠡ ⠡ ⠃⠇⠊ ⠑⠝ ⠇⠊⠅⠑ ⠎⠞⠕⠗ ⠎⠥⠅⠎⠑⠎⠎ ⠎⠕⠍ ⠙⠑⠝ ⠋⠕⠗⠗⠊⠛⠑
-			⠗⠕⠍⠁⠝⠑⠝⠂ <html:strong>⠆⠠⠙⠗⠁⠛⠑⠇⠪⠏⠑⠗⠑⠝⠰</html:strong>⠄ ⠠⠊ ⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑⠝ ⠋⠗⠁ <html:strong>⠆⠠⠙⠁⠛⠃⠇⠁⠙⠑⠞⠰
-			</html:strong>⠼⠚⠋⠄⠚⠋⠄⠚⠛ ⠋⠕⠗⠅⠇⠁⠗⠑⠎ ⠙⠑⠞⠞⠑ ⠍⠑⠙⠒ <html:em>⠠⠄⠊⠅⠅⠑ ⠋⠕⠗⠙⠊ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠑⠗ ⠑⠝
-			⠎⠏⠑⠎⠊⠑⠇⠞ ⠛⠕⠙ ⠋⠕⠗⠋⠁⠞⠞⠑⠗⠄ ⠠⠍⠑⠝ ⠋⠕⠗⠙⠊ ⠞⠑⠍⠁⠞⠊⠅⠅⠑⠝ ⠞⠊⠇ ⠙⠑⠝ ⠠⠠⠥⠎⠁⠃⠕⠎⠁⠞⠞⠑ ⠠⠓⠕⠎⠎⠑⠊⠝⠊⠂ ⠓⠁⠗ ⠑⠝
-			⠎⠏⠑⠎⠊⠑⠇⠇ ⠙⠗⠁⠛⠝⠊⠝⠛ ⠏⠡ ⠑⠞ ⠧⠑⠎⠞⠇⠊⠛ ⠏⠥⠃⠇⠊⠅⠥⠍⠄⠠⠄</html:em>
+			⠗⠕⠍⠁⠝⠑⠝⠂ <html:strong>⠆⠠⠙⠗⠁⠛⠑⠇⠪⠏⠑⠗⠑⠝⠰</html:strong>⠄ ⠠⠊ ⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑⠝ ⠋⠗⠁
+			<html:strong>⠆⠠⠙⠁⠛⠃⠇⠁⠙⠑⠞⠰ </html:strong>⠼⠚⠋⠄⠚⠋⠄⠚⠛ ⠋⠕⠗⠅⠇⠁⠗⠑⠎ ⠙⠑⠞⠞⠑ ⠍⠑⠙⠒ <html:em>⠠⠄⠊⠅⠅⠑
+			⠋⠕⠗⠙⠊ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠑⠗ ⠑⠝ ⠎⠏⠑⠎⠊⠑⠇⠞ ⠛⠕⠙ ⠋⠕⠗⠋⠁⠞⠞⠑⠗⠄ ⠠⠍⠑⠝ ⠋⠕⠗⠙⠊ ⠞⠑⠍⠁⠞⠊⠅⠅⠑⠝ ⠞⠊⠇ ⠙⠑⠝ ⠠⠠⠥⠎⠁⠃⠕⠎⠁⠞⠞⠑
+			⠠⠓⠕⠎⠎⠑⠊⠝⠊⠂ ⠓⠁⠗ ⠑⠝ ⠎⠏⠑⠎⠊⠑⠇⠇ ⠙⠗⠁⠛⠝⠊⠝⠛ ⠏⠡ ⠑⠞ ⠧⠑⠎⠞⠇⠊⠛ ⠏⠥⠃⠇⠊⠅⠥⠍⠄⠠⠄</html:em>
 		</expect>
 	</entry>
 	<entry>
-		<input>Vinje, Finn-Erik. 2004. <html:em>Skriveregler</html:em>. 8. utg. Oslo</input>
-		<expect>⠠⠧⠊⠝⠚⠑⠂ ⠠⠋⠊⠝⠝⠤⠠⠑⠗⠊⠅⠄ ⠼⠃⠚⠚⠙⠄ <html:em>⠠⠄⠠⠎⠅⠗⠊⠧⠑⠗⠑⠛⠇⠑⠗⠠⠄</html:em>⠄ ⠼⠓⠄ ⠥⠞⠛⠄⠠⠕⠎⠇⠕</expect>
+		<input>
+			Vinje, Finn-Erik. 2004. <html:em>Skriveregler</html:em>. 8. utg. Oslo
+		</input>
+		<expect>
+			⠠⠧⠊⠝⠚⠑⠂ ⠠⠋⠊⠝⠝⠤⠠⠑⠗⠊⠅⠄ ⠼⠃⠚⠚⠙⠄ <html:em>⠠⠄⠠⠎⠅⠗⠊⠧⠑⠗⠑⠛⠇⠑⠗⠠⠄</html:em>⠄ ⠼⠓⠄ ⠥⠞⠛⠄⠠⠕⠎⠇⠕
+		</expect>
 	</entry>
 	<entry>
-		<input>Hellevik, Alf. 1970. <html:em>God nynorsk</html:em>.  Oslo</input>
-		<expect>⠠⠓⠑⠇⠇⠑⠧⠊⠅⠂ ⠠⠁⠇⠋⠄ ⠼⠁⠊⠛⠚⠄ <html:em>⠠⠄⠛⠕⠙ ⠝⠽⠝⠕⠗⠎⠅⠠⠄</html:em>⠄ ⠠⠕⠎⠇⠕</expect>
+		<input>
+			Hellevik, Alf. 1970. <html:em>God nynorsk</html:em>.  Oslo
+		</input>
+		<expect>
+			⠠⠓⠑⠇⠇⠑⠧⠊⠅⠂ ⠠⠁⠇⠋⠄ ⠼⠁⠊⠛⠚⠄ <html:em>⠠⠄⠛⠕⠙ ⠝⠽⠝⠕⠗⠎⠅⠠⠄</html:em>⠄ ⠠⠕⠎⠇⠕
+		</expect>
 	</entry>
 	<entry>
-		<input>Ny afghansk bestselger. Bokanmeldelse <html:em>Dagbladet </html:em>06.06.07</input>
-		<expect>⠠⠝⠽ ⠁⠋⠛⠓⠁⠝⠎⠅ ⠃⠑⠎⠞⠎⠑⠇⠛⠑⠗⠄⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑ <html:em>⠠⠄⠙⠁⠛⠃⠇⠁⠙⠑⠞⠠⠄</html:em>⠼⠚⠋⠄⠚⠋⠄⠚⠛</expect>
+		<input>
+			Ny afghansk bestselger. Bokanmeldelse <html:em>Dagbladet </html:em>06.06.07
+		</input>
+		<expect>
+			⠠⠝⠽ ⠁⠋⠛⠓⠁⠝⠎⠅ ⠃⠑⠎⠞⠎⠑⠇⠛⠑⠗⠄⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑ <html:em>⠠⠄⠙⠁⠛⠃⠇⠁⠙⠑⠞⠠⠄</html:em>⠼⠚⠋⠄⠚⠋⠄⠚⠛
+		</expect>
 	</entry>
 </test>

@@ -20,6 +20,11 @@
 			<xsl:apply-templates select="@*"/>
 			<link rel="stylesheet" type="text/css" href="../../style.css"/>
 			<link rel="stylesheet" href="../../github.min.css"/>
+			<style TYPE="text/css">
+				code.xml-inline {
+					white-space: normal;
+				}
+			</style>
 			<script type="text/javascript" src="../../jquery.min.js"/>
 			<script type="text/javascript" src="../../highlight.min.js"/>
 			<script type="text/javascript">
@@ -47,12 +52,12 @@
 					<xsl:for-each select="document(resolve-uri(x:context/@href))//entry">
 						<tr>
 							<td>
-								<code class="xml">
+								<code class="xml xml-inline">
 									<xsl:apply-templates select="input/node()" mode="serialize"/>
 								</code>
 							</td>
 							<td>
-								<code class="xml">
+								<code class="xml xml-inline">
 									<xsl:apply-templates select="expect/node()" mode="serialize"/>
 								</code>
 							</td>
