@@ -24,6 +24,12 @@
 				code.xml-inline {
 					white-space: normal;
 				}
+				td.comment {
+					padding: 8px;
+					font-style: italic;
+					font-size: 90%;
+					color: #888888;
+				}
 			</style>
 			<script type="text/javascript" src="../../jquery.min.js"/>
 			<script type="text/javascript" src="../../highlight.min.js"/>
@@ -50,6 +56,13 @@
 				</thead>
 				<tbody>
 					<xsl:for-each select="document(resolve-uri(x:context/@href))//entry">
+						<xsl:if test="child::comment()">
+							<tr>
+								<td colspan="2" class="comment">
+									<xsl:value-of select="child::comment()[1]"/>
+								</td>
+							</tr>
+						</xsl:if>
 						<tr>
 							<td>
 								<code class="xml xml-inline">
