@@ -45,6 +45,7 @@
 	</xsl:template>
 	
 	<xsl:template match="x:scenario">
+		<xsl:param name="flatten" as="xs:boolean" select="false()"/>
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
 			<table>
@@ -71,7 +72,14 @@
 							</td>
 							<td>
 								<code class="xml xml-inline">
-									<xsl:apply-templates select="expect/node()" mode="serialize"/>
+									<xsl:choose>
+										<xsl:when test="$flatten">
+											<xsl:value-of select="string(expect)"/>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:apply-templates select="expect/node()" mode="serialize"/>
+										</xsl:otherwise>
+									</xsl:choose>
 								</code>
 							</td>
 						</tr>
@@ -80,6 +88,12 @@
 			</table>
 			<xsl:apply-templates select="node()"/>
 		</xsl:copy>
+	</xsl:template>
+	
+	<xsl:template match="x:scenario[@id='38.2']">
+		<xsl:next-match>
+			<xsl:with-param name="flatten" select="true()"/>
+		</xsl:next-match>
 	</xsl:template>
 	
 </xsl:stylesheet>

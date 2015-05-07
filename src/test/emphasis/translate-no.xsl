@@ -80,4 +80,16 @@
 		                        '^.|.$','')"/>
 	</xsl:template>
 	
+	<xsl:function name="html:flatten">
+		<xsl:param name="x" as="element()"/>
+		<xsl:apply-templates select="$x" mode="html:flatten"/>
+	</xsl:function>
+	
+	<xsl:template match="*" mode="html:flatten">
+		<xsl:copy>
+			<xsl:sequence select="@*"/>
+			<xsl:value-of select="string(.)"/>
+		</xsl:copy>
+	</xsl:template>
+	
 </xsl:stylesheet>
