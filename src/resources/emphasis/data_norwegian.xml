@@ -1,0 +1,56 @@
+<test xmlns:html="http://www.w3.org/1999/xhtml">
+	<entry>
+		<input>hund hund<html:em>en</html:em> hund<html:em>er</html:em> hund<html:em>ene</html:em></input>
+		<expect>⠓⠥⠝⠙ ⠓⠥⠝⠙<html:em>⠆⠑⠝⠰</html:em> ⠓⠥⠝⠙<html:em>⠆⠑⠗⠰</html:em> ⠓⠥⠝⠙<html:em>⠆⠑⠝⠑⠰</html:em></expect>
+	</entry>
+	<entry>
+		<input>hund hund<html:em>en </html:em>hund<html:em>er </html:em>hund<html:em>ene</html:em></input>
+		<expect>⠓⠥⠝⠙ ⠓⠥⠝⠙<html:em>⠆⠑⠝⠰ </html:em>⠓⠥⠝⠙<html:em>⠆⠑⠗⠰ </html:em>⠓⠥⠝⠙<html:em>⠆⠑⠝⠑⠰</html:em></expect>
+	</entry>
+	<entry>
+		<input>Det var bare det at hun også <html:em>mis</html:em>unte ham det</input>
+		<expect>⠠⠙⠑⠞ ⠧⠁⠗ ⠃⠁⠗⠑ ⠙⠑⠞ ⠁⠞ ⠓⠥⠝ ⠕⠛⠎⠡ <html:em>⠆⠍⠊⠎⠰</html:em>⠥⠝⠞⠑ ⠓⠁⠍ ⠙⠑⠞⠄</expect>
+	</entry>
+	<entry>
+		<input>Jeg verken <html:em>vil </html:em>eller <html:em>kan </html:em>gjøre dette for deg!</input>
+		<expect>⠠⠚⠑⠛ ⠧⠑⠗⠅⠑⠝ <html:em>⠆⠧⠊⠇⠰ </html:em>⠑⠇⠇⠑⠗ <html:em>⠆⠅⠁⠝⠰ </html:em>⠛⠚⠪⠗⠑ ⠙⠑⠞⠞⠑ ⠋⠕⠗ ⠙⠑⠛⠖</expect>
+	</entry>
+	<entry>
+		<input>Karin Fossum slo gjennom som krimforfatter med romanen <html:em>Evas øye</html:em>, som kom ut i 1995.</input>
+		<expect>⠠⠅⠁⠗⠊⠝ ⠠⠋⠕⠎⠎⠥⠍ ⠎⠇⠕ ⠛⠚⠑⠝⠝⠕⠍ ⠎⠕⠍ ⠅⠗⠊⠍⠋⠕⠗⠋⠁⠞⠞⠑⠗ ⠍⠑⠙ ⠗⠕⠍⠁⠝⠑⠝ <html:em>⠆⠑⠧⠁⠎ ⠪⠽⠑⠰</html:em>⠂ ⠎⠕⠍ ⠅⠕⠍ ⠥⠞ ⠊ ⠼⠁⠊⠊⠑⠄</expect>
+	</entry>
+	<entry>
+		<input>"Hør her: <html:em>du <html:u>må </html:u>gjøre det</html:em>!"</input>
+		<expect>⠲⠠⠓⠪⠗ ⠓⠑⠗⠒ <html:em>⠆⠙⠥ <html:u>⠸⠍⠡⠸ </html:u>⠛⠚⠪⠗⠑ ⠙⠑⠞⠰</html:em>⠖⠲</expect>
+	</entry>
+	<entry>
+		<input>
+			Romanen <html:em>Tusen strålende soler </html:em>av den afghansk-amerikanske forfatteren
+			Khaled Hosseini tyder på å bli en like stor suksess som den forrige romanen,
+			<html:em>Drageløperen</html:em>. I bokanmeldelsen fra <html:em>Dagbladet
+			</html:em>06.06.07 forklares dette med: <html:strong>Ikke fordi Hosseini er en spesielt
+			god forfatter. Men fordi tematikken til den USA-bosatte Hosseini, har en spesiell
+			dragning på et vestlig publikum.</html:strong>
+		</input>
+		<expect>
+			⠠⠗⠕⠍⠁⠝⠑⠝ <html:em>⠆⠠⠞⠥⠎⠑⠝ ⠎⠞⠗⠡⠇⠑⠝⠙⠑ ⠎⠕⠇⠑⠗⠰ </html:em>⠁⠧ ⠙⠑⠝ ⠁⠋⠛⠓⠁⠝⠎⠅⠁⠍⠑⠗⠊⠅⠁⠝⠎⠅⠑
+			⠋⠕⠗⠋⠁⠞⠞⠑⠗⠑⠝ ⠠⠅⠓⠁⠇⠑⠙ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠞⠽⠙⠑⠗ ⠏⠡ ⠡ ⠃⠇⠊ ⠑⠝ ⠇⠊⠅⠑ ⠎⠞⠕⠗ ⠎⠥⠅⠎⠑⠎⠎ ⠎⠕⠍ ⠙⠑⠝ ⠋⠕⠗⠗⠊⠛⠑
+			⠗⠕⠍⠁⠝⠑⠝⠂ <html:em>⠆⠠⠙⠗⠁⠛⠑⠇⠪⠏⠑⠗⠑⠝⠰</html:em>⠄ ⠠⠊ ⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑⠝ ⠋⠗⠁ <html:em>⠆⠠⠙⠁⠛⠃⠇⠁⠙⠑⠞⠰
+			</html:em>⠼⠚⠋⠄⠚⠋⠄⠚⠛ ⠋⠕⠗⠅⠇⠁⠗⠑⠎ ⠙⠑⠞⠞⠑ ⠍⠑⠙⠒ <html:strong>⠠⠄⠊⠅⠅⠑ ⠋⠕⠗⠙⠊ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠑⠗ ⠑⠝
+			⠎⠏⠑⠎⠊⠑⠇⠞ ⠛⠕⠙ ⠋⠕⠗⠋⠁⠞⠞⠑⠗⠄ ⠠⠍⠑⠝ ⠋⠕⠗⠙⠊ ⠞⠑⠍⠁⠞⠊⠅⠅⠑⠝ ⠞⠊⠇ ⠙⠑⠝ ⠠⠠⠥⠎⠁⠃⠕⠎⠁⠞⠞⠑ ⠠⠓⠕⠎⠎⠑⠊⠝⠊⠂ ⠓⠁⠗ ⠑⠝
+			⠎⠏⠑⠎⠊⠑⠇⠇ ⠙⠗⠁⠛⠝⠊⠝⠛ ⠏⠡ ⠑⠞ ⠧⠑⠎⠞⠇⠊⠛ ⠏⠥⠃⠇⠊⠅⠥⠍⠄⠠⠄</html:strong>
+		</expect>
+	</entry>
+	<entry>
+		<input>Vinje, Finn-Erik. 2004. <html:em>Skriveregler</html:em>. 8. utg. Oslo</input>
+		<expect>⠠⠧⠊⠝⠚⠑⠂ ⠠⠋⠊⠝⠝⠤⠠⠑⠗⠊⠅⠄ ⠼⠃⠚⠚⠙⠄ <html:em>⠠⠄⠠⠎⠅⠗⠊⠧⠑⠗⠑⠛⠇⠑⠗⠠⠄</html:em>⠄ ⠼⠓⠄ ⠥⠞⠛⠄⠠⠕⠎⠇⠕</expect>
+	</entry>
+	<entry>
+		<input>Hellevik, Alf. 1970. <html:em>God nynorsk</html:em>.  Oslo</input>
+		<expect>⠠⠓⠑⠇⠇⠑⠧⠊⠅⠂ ⠠⠁⠇⠋⠄ ⠼⠁⠊⠛⠚⠄ <html:em>⠠⠄⠛⠕⠙ ⠝⠽⠝⠕⠗⠎⠅⠠⠄</html:em>⠄ ⠠⠕⠎⠇⠕</expect>
+	</entry>
+	<entry>
+		<input>Ny afghansk bestselger. Bokanmeldelse <html:em>Dagbladet </html:em>06.06.07</input>
+		<expect>⠠⠝⠽ ⠁⠋⠛⠓⠁⠝⠎⠅ ⠃⠑⠎⠞⠎⠑⠇⠛⠑⠗⠄⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑ <html:em>⠠⠄⠙⠁⠛⠃⠇⠁⠙⠑⠞⠠⠄</html:em>⠼⠚⠋⠄⠚⠋⠄⠚⠛</expect>
+	</entry>
+</test>

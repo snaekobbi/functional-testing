@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+               xmlns:louis="http://liblouis.org/liblouis"
+               stylesheet="translate-no.xsl">
+  
+  <x:scenario id="38.1" label="Marking of text-level semantics with braille indicators for Norwegian.">
+    <x:context href="../../resources/emphasis/data_norwegian.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml" select="//expect"/>
+  </x:scenario>
+  
+</x:description>
