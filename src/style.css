@@ -183,13 +183,31 @@ pef|page {
 	box-shadow: 3px 3px 3px #eee;
 	padding: 0.5em;
 	margin: 15px 0 0 15px;
+	vertical-align: top;
 }
 
 pef|row {
 	display: block;
-	font-family: odt2braille;
+	font-family: "odt2braille 8 dot", odt2braille;
 	letter-spacing: 0px;
 	font-size: 125%;
+	height: 1em;
+}
+
+pef|row[rowgap="1"] {
+	height: 1.25em;
+}
+
+pef|row[rowgap="2"] {
+	height: 1.5em;
+}
+
+pef|row[rowgap="3"] {
+	height: 1.75em;
+}
+
+pef|row[rowgap="4"] {
+	height: 2em;
 }
 
 pef|row[class~=ascii] {

@@ -147,6 +147,7 @@
 	<xsl:template match="pef:page">
 		<xsl:variable name="rows" select="xs:integer(number(ancestor::*[@rows][1]/@rows))"/>
 		<xsl:variable name="cols" select="xs:integer(number(ancestor::*[@cols][1]/@cols))"/>
+		<xsl:variable name="rowgap" select="xs:integer(number(ancestor-or-self::*[@rowgap][1]/@rowgap))"/>
 		<!--
 		    TODO: depends on pef:pef/@xml:lang?
 		-->
@@ -155,14 +156,18 @@
 			<xsl:sequence select="@*"/>
 			<xsl:for-each select="pef:row">
 				<xsl:variable name="row" select="string-join((string(.), for $x in string-length(string(.)) + 1 to $cols return '&#x2800;'), '')"/>
-				<pef:row>
+				<xsl:variable name="rowgap" select="xs:integer(number(ancestor-or-self::*[@rowgap][1]/@rowgap))"/>
+				<pef:row rowgap="{format-number($rowgap,'0')}">
 					<xsl:sequence select="$row"/>
 				</pef:row>
-				<pef:row class="ascii">
+				<pef:row class="ascii" rowgap="{format-number($rowgap,'0')}">
 					<xsl:sequence select="pef:encode($table, $row)"/>
 				</pef:row>
 			</xsl:for-each>
-			<xsl:for-each select="count(pef:row) + 1 to $rows">
+			<xsl:for-each select="1 to (($rows * 4
+			                             - sum(for $row in pef:row
+			                                   return 4 + xs:integer(number($row/ancestor-or-self::*[@rowgap][1]/@rowgap))))
+			                             idiv 4)">
 				<xsl:variable name="row" select="string-join(for $x in 1 to $cols return '&#x2800;', '')"/>
 				<pef:row>
 					<xsl:sequence select="$row"/>
