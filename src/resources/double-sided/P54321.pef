@@ -74,9 +74,6 @@
                <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠠⠑⠝⠀⠧⠕⠇⠽⠍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
                <row>⠀⠀⠧⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠼</row>
             </page>
-            <page>
-               <row/>
-            </page>
          </section>
          <section rowgap="4">
             <page>
@@ -91,9 +88,6 @@
                <row>⠀⠀⠀⠀⠠⠪⠧⠑⠗⠎⠜⠞⠞⠝⠊⠝⠛⠀⠠⠊⠝⠛⠍⠁⠗</row>
                <row>⠀⠀⠠⠺⠑⠝⠝⠑⠗⠃⠑⠗⠛</row>
                <row rowgap="0">⠀⠀⠀⠀⠨⠠⠃⠸⠠⠠⠺⠁⠓⠇⠎⠞⠗⠪⠍⠎</row>
-            </page>
-            <page>
-               <row/>
             </page>
          </section>
          <section rowgap="4">
@@ -598,9 +592,6 @@
                <row/>
                <row>⠀⠀⠠⠞⠑⠎⠞</row>
                <row rowgap="0">⠀⠀⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒</row>
-            </page>
-            <page>
-               <row/>
             </page>
          </section>
       </volume>

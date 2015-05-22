@@ -168,6 +168,31 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	<xsl:template match="pef:section">
+		<xsl:variable name="duplex" select="ancestor-or-self::*[@duplex][1]/@duplex='true'"/>
+		<xsl:choose>
+			<xsl:when test="$duplex
+			                and (count(child::pef:page) mod 2 = 1)
+			                and (following::pef:page intersect ancestor::pef:pef/descendant::pef:page)">
+				<xsl:variable name="section" as="element()">
+					<pef:section rows="{ancestor-or-self::*[@rows][1]/@rows}"
+					             cols="{ancestor-or-self::*[@cols][1]/@cols}"
+					             rowgap="{ancestor-or-self::*[@rowgap][1]/@rowgap}">
+						<pef:page/>
+					</pef:section>
+				</xsl:variable>
+				<xsl:copy>
+					<xsl:sequence select="@*"/>
+					<xsl:apply-templates select="*"/>
+					<xsl:apply-templates select="$section/pef:page"/>
+				</xsl:copy>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:next-match/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
 	<xsl:template match="pef:page">
 		<xsl:param name="ascii-table" as="xs:string" tunnel="yes"
 		           select="'(id:&quot;org.daisy.braille.impl.table.DefaultTableProvider.TableType.EN_US&quot;)'"/>
