@@ -15,3 +15,6 @@ shopt -s globstar
 for file in target/site/**/*; do
     [ -f $file ] && curl --ftp-create-dirs -T $file $FTP_HOST/$BRANCH/${file#target/site/} --user $FTP_USER:$FTP_SECRET
 done
+( curl $FTP_HOST/branches.json --user $FTP_USER:$FTP_SECRET || echo "[]" ) \
+    | jq ". |= .+ [\"${BRANCH}\"] | unique" \
+    | curl -T - $FTP_HOST/branches.json --user $FTP_USER:$FTP_SECRET

@@ -1,5 +1,7 @@
 script: mvn test
 after_success: 
+  - sudo apt-get update
+  - sudo apt-get install -y jq
   - source upload_with_ftp.sh
 env:
   global:

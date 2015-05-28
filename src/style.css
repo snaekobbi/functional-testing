@@ -11,47 +11,69 @@ body {
 	font-family: sans-serif;
 }
 
+#header {
+	position: fixed;
+	top: 0;
+	padding-top: 9px;
+	height: 30px;
+	width: 100%;
+	background: white;
+	border-bottom: 1px solid gray;
+	z-index: 1;
+}
+
+#header + * {
+	margin-top: 52px;
+}
+
 .requirement {
 	list-style-type: none;
 	margin: 30px 60px 30px 50px;
-	position: relative;
 }
 
 .requirement h3 {
 	color: #005A9C;
 	font-weight: normal;
+	position: relative;
+	margin-top: 0;
 }
 
 .requirement::before {
-	content: attr(id);
+	display: block;
+	content: " ";
+	margin-top: -52px;
+	height: 52px;
+	visibility: hidden;
+}
+
+.requirement h3 .req-nr {
 	display: block;
 	position: absolute;
-	left: -70px;
+	top: -3px;
+	left: -82px;
 	padding: 3px;
 	color: #000080;
-	background-color: #FCFAEE;
 	font-weight: bold;
 }
 
-.requirement.priority_1::after,
-.requirement.priority_2::after,
-.requirement.priority_3::after {
+.requirement h3::after {
+	content: "";
 	position: absolute;
-	right: -35px;
+	right: -48px;
 	top: -5px;
-	font-size: 180%;
+	font-size: 130%;
 	color: #000080;
 }
 
-.requirement.priority_1::after {
+.requirement.priority_1 h3::after {
 	content: "①";
 }
 
-.requirement.priority_2::after {
+.requirement.priority_2 h3::after {
 	content: "②";
 }
 
-.requirement.priority_3::after {
+.requirement.priority_3 h3::after {
 	content: "③";
 }
 
