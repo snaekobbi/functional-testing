@@ -7,19 +7,66 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"/> 
     <script type="text/javascript">
       $(document).ready(function() {
-        $.getJSON("../branches.json", function(data) {
-          var select = $("#branches");
-          $.each(data, function(i, branch) {
-            select.append("&lt;option value=\"" + branch + "\"&gt;" + branch + "&lt;/option&gt;");
-          });
-          var path = location.pathname.split('/');
-          var branch = path[path.length-2];
-          select.val(branch);
-          select.change(function() {
-            window.location.href = "http://dev.pef-format.org/dp2/"
-              + select.val() + "/index.xhtml" + window.location.hash;
-          });
-        });
+        var select = $("#branches");
+        var path = location.pathname.split('/');
+        var branch = path[path.length-2];
+        if (branch != "master") {
+          select.after(
+            $("&lt;a/&gt;", {
+              href: "https://github.com/snaekobbi/functional-testing/compare/" + branch,
+              title: "View diff",
+              text: "View diff"
+            })
+          );
+        }
+        $.get(
+          "https://api.travis-ci.org/repos/snaekobbi/functional-testing/branches/" + branch,
+          function(data) {
+            select.after(
+              $("&lt;a/&gt;", {
+                href: "https://travis-ci.org/snaekobbi/functional-testing/builds/" + data.branch.id,
+                title: "Re-run tests",
+                text: "Re-run tests"
+              })
+            );
+          }
+        );
+        $.get(
+          "https://api.github.com/repos/snaekobbi/functional-testing/branches",
+          function(data) {
+            $.each(data, function(i, branch) {
+              select.append(
+                $("&lt;option/&gt;", {
+                  value: branch.name,
+                  text: branch.name
+                })
+              );
+            });
+            select.val(branch);
+            select.change(function() {
+              window.location.href = "http://dev.pef-format.org/dp2/" + select.val() + "/index.xhtml" + window.location.hash;
+            });
+          }
+        );
+        $.get(
+          "https://api.github.com/repos/snaekobbi/functional-testing/pulls",
+          {
+            state: "open",
+            head: "snaekobbi:" + branch,
+            base: "master"
+          },
+          function(data) {
+            $(data).first().each(function(i, pull) {
+              select.after(
+                $("&lt;a/&gt;", {
+                  href: "http://github.com/snaekobbi/functional-testing/issues/" + pull.number,
+                  title: "Go to discussion",
+                  text: "Go to discussion"
+                })
+              );
+            });
+          }
+        )
       });
     </script>
   </head>

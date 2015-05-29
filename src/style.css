@@ -14,12 +14,22 @@ body {
 #header {
 	position: fixed;
 	top: 0;
-	padding-top: 9px;
-	height: 30px;
-	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	height: 19px;
 	background: white;
 	border-bottom: 1px solid gray;
 	z-index: 1;
+}
+
+#header a {
+	display: block;
+	float: right;
+	padding-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 90%;
 }
 
 #header + * {
