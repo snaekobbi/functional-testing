@@ -64,6 +64,7 @@ body {
 	padding: 3px;
 	color: #000080;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .requirement h3::after {
