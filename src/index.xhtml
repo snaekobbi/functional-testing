@@ -67,6 +67,22 @@
             });
           }
         )
+        var changed = $(".changed.requirement");
+        if (changed[0]) {
+          var list = $("&lt;ul/&gt;", { class: "changes" });
+          changed.each(function(i, req) {
+            list.append(
+              $("&lt;li/&gt;").append(
+                $("&lt;a/&gt;", {
+                  href: "#" + req.id,
+                  title: req.id,
+                  text: req.id
+                })
+              )
+            );
+          });
+          $("h1").first().append(list);
+        }
       });
     </script>
   </head>

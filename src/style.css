@@ -36,6 +36,44 @@ body {
 	margin-top: 52px;
 }
 
+h1 {
+	position: relative;
+}
+
+ul.changes {
+	font-size: 55%;
+	font-weight: normal;
+	position: absolute;
+	top: -10px;
+	right: 20px;
+}
+
+ul.changes li {
+	display: inline;
+}
+
+ul.changes::before {
+	content: "[ changes: ";
+}
+
+ul.changes::after {
+	content: " ]";
+}
+
+ul.changes li a {
+	color: #000080;
+	font-weight: bold;
+	background-color: #FFEE77;
+}
+
+ul.changes li::after {
+	content: ", ";
+}
+
+ul.changes li:last-child::after {
+	content: "";
+}
+
 .requirement {
 	list-style-type: none;
 	margin: 30px 60px 30px 50px;
@@ -65,6 +103,10 @@ body {
 	color: #000080;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.changed.requirement h3 .req-nr {
+	background-color: #FFEE77;
 }
 
 .requirement h3::after {
