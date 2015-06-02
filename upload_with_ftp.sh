@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 set -e
 if [ -n "$TRAVIS_PULL_REQUEST" ] && ! [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo "Skipping pull request"
