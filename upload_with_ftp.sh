@@ -13,5 +13,5 @@ FTP_HOST=ftp://ftpcluster.loopia.se
 [ -z "$FTP_SECRET" ] && read -s -p "ftp secret: " FTP_SECRET
 shopt -s globstar
 for file in target/site/**/*; do
-    [ -f $file ] && curl --ftp-create-dirs -T $file $FTP_HOST/$BRANCH/${file#target/site/} --user $FTP_USER:$FTP_SECRET
+    [ -f "$file" ] && curl --ftp-create-dirs -T "$file" "$FTP_HOST/$BRANCH/${file#target/site/}" --user $FTP_USER:$FTP_SECRET
 done
