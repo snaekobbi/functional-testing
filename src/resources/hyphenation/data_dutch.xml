@@ -2,66 +2,66 @@
 	<!-- Examples taken from http://woordenlijst.org/leidraad/18/ -->
 	<entry>
 		<input>wafel</input>
-		<expect>wa|fel</expect>
+		<expect>wa­fel</expect>
 	</entry>
 	<entry>
 		<input>laster</input>
-		<expect>las|ter</expect>
+		<expect>las­ter</expect>
 	</entry>
 	<entry>
 		<input>sokkel</input>
-		<expect>sok|kel</expect>
+		<expect>sok­kel</expect>
 	</entry>
 	<entry>
 		<input>aula</input>
-		<expect>au|la</expect>
+		<expect>au­la</expect>
 	</entry>
 	<entry>
 		<input>euthanasie</input>
-		<expect>eu|tha|na|sie</expect>
+		<expect>eu­tha­na­sie</expect>
 	</entry>
 	<entry>
 		<input>ouder</input>
-		<expect>ou|der</expect>
+		<expect>ou­der</expect>
 	</entry>
 	<entry>
 		<input>Nederland</input>
-		<expect>Ne|der|land</expect>
+		<expect>Ne­der­land</expect>
 	</entry>
 	<entry>
 		<input>boomstam</input>
-		<expect>boom|stam</expect>
+		<expect>boom­stam</expect>
 	</entry>
 	<entry>
 		<input>beveiligen</input>
-		<expect>be|vei|li|gen</expect>
+		<expect>be­vei­li­gen</expect>
 	</entry>
 	<entry>
 		<input>tevredenheid</input>
-		<expect>te|vre|den|heid</expect>
+		<expect>te­vre­den­heid</expect>
 	</entry>
 	<entry>
 		<input>hoofdregel</input>
-		<expect>hoofd|regel</expect>
+		<expect>hoofd­regel</expect>
 	</entry>
 	<entry>
 		<input>geregeld</input>
-		<expect>ge|re|geld</expect>
+		<expect>ge­re­geld</expect>
 	</entry>
 	<entry>
 		<input>werkster</input>
-		<expect>werk|ster</expect>
+		<expect>werk­ster</expect>
 	</entry>
 	<entry>
 		<input>publiek</input>
-		<expect>pu|bliek</expect>
+		<expect>pu­bliek</expect>
 	</entry>
 	<entry>
 		<input>herfstig</input>
-		<expect>herf|stig</expect>
+		<expect>herf­stig</expect>
 	</entry>
 	<entry>
 		<input>programma</input>
-		<expect>pro|gramma</expect>
+		<expect>pro­gramma</expect>
 	</entry>
 </test>
