@@ -34,7 +34,6 @@ import static org.daisy.pipeline.pax.exam.Options.felixDeclarativeServices;
 import static org.daisy.pipeline.pax.exam.Options.forThisPlatform;
 import static org.daisy.pipeline.pax.exam.Options.logbackBundles;
 import static org.daisy.pipeline.pax.exam.Options.pipelineModule;
-import static org.daisy.pipeline.pax.exam.Options.spiflyBundles;
 import static org.daisy.pipeline.pax.exam.Options.xprocspecBundles;
 import static org.daisy.pipeline.pax.exam.Options.xspecBundles;
 
@@ -67,9 +66,8 @@ public class RunTestsAndProcessFiles {
 			domTraversalPackage(),
 			logbackBundles(),
 			felixDeclarativeServices(),
-			spiflyBundles(),
 			mavenBundle().groupId("org.apache.servicemix.bundles").artifactId("org.apache.servicemix.bundles.antlr-runtime").versionAsInProject(),
-			mavenBundle().groupId("org.daisy.libs").artifactId("brailleutils-core").versionAsInProject(),
+			mavenBundle().groupId("org.daisy.braille").artifactId("brailleUtils-core").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.libs").artifactId("jing").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.libs").artifactId("jstyleparser").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.dotify").artifactId("dotify.api").versionAsInProject(),
@@ -84,9 +82,11 @@ public class RunTestsAndProcessFiles {
 			brailleModule("liblouis-core"),
 			brailleModule("liblouis-saxon"),
 			forThisPlatform(brailleModule("liblouis-native")),
+			brailleModule("liblouis-pef"),
 			brailleModule("css-core"),
 			brailleModule("css-calabash"),
 			brailleModule("css-utils"),
+			brailleModule("pef-core"),
 			brailleModule("pef-calabash"),
 			brailleModule("pef-saxon"),
 			brailleModule("pef-to-html"),
