@@ -84,7 +84,7 @@
             });
           }
         )
-        var changed = $(".changed.requirement");
+        var changed = $(".changed.requirement,.dropped.requirement");
         if (changed[0]) {
           var list = $("&lt;ul/&gt;", { id: "changes" });
           changed.each(function(i, req) {
@@ -723,7 +723,7 @@
             <a class="test-src" href="test/line-spacing/test.xprocspec#75"/>
           </div>
         </li>
-        <li class="requirement priority_3" id="4.4:76">
+        <li class="requirement priority_3 dropped" id="4.4:76">
           <h3>
             <a class="req-nr" href="#4.4:76">4.4:76</a>
             The system shall support line spacing between single and double.
