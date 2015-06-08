@@ -13,18 +13,18 @@
         if (branch != "master") {
           select.after(
             $("&lt;a/&gt;", {
-              href: "https://github.com/snaekobbi/functional-testing/compare/" + branch,
+              href: "https://github.com/snaekobbi/requirements/compare/" + branch,
               title: "View diff",
               text: "View diff"
             })
           );
         }
         $.get(
-          "https://api.travis-ci.org/repos/snaekobbi/functional-testing/branches/" + branch,
+          "https://api.travis-ci.org/repos/snaekobbi/requirements/branches/" + branch,
           function(data) {
             select.after(
               $("&lt;a/&gt;", {
-                href: "https://travis-ci.org/snaekobbi/functional-testing/builds/" + data.branch.id,
+                href: "https://travis-ci.org/snaekobbi/requirements/builds/" + data.branch.id,
                 title: "Re-run tests",
                 text: "Re-run tests"
               })
@@ -32,7 +32,7 @@
           }
         );
         $.get(
-          "https://api.github.com/repos/snaekobbi/functional-testing/branches",
+          "https://api.github.com/repos/snaekobbi/requirements/branches",
           function(data) {
             $.each(data, function(i, branch) {
               select.append(
@@ -49,7 +49,7 @@
           }
         );
         $.get(
-          "https://api.github.com/repos/snaekobbi/functional-testing/pulls",
+          "https://api.github.com/repos/snaekobbi/requirements/pulls",
           {
             state: "open",
             head: "snaekobbi:" + branch,
@@ -59,7 +59,7 @@
             $(data).first().each(function(i, pull) {
               select.after(
                 $("&lt;a/&gt;", {
-                  href: "http://github.com/snaekobbi/functional-testing/issues/" + pull.number,
+                  href: "http://github.com/snaekobbi/requirements/issues/" + pull.number,
                   title: "Go to discussion",
                   text: "Go to discussion"
                 })
