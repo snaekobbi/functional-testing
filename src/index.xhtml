@@ -1051,7 +1051,7 @@
         Support for indication of original pagination
       </h2>
       <ul>
-        <li class="requirement priority_1" id="4.8:105">
+        <li class="requirement priority_1 changed" id="4.8:105">
           <h3>
             <a class="req-nr" href="#4.8:105">4.8:105</a>
             The system shall provide the possibility of rendering print page breaks as full lines
@@ -1061,6 +1061,9 @@
             other words, the print page break is not taken out of the normal flow of the text in
             order not to lose precision.
           </h3>
+          <div>
+            <a class="test-src" href="test/print-pages/test.xprocspec#105+107"/>
+          </div>
         </li>
         <li class="requirement priority_2 changed" id="4.8:106">
           <h3>
@@ -1073,12 +1076,19 @@
             <a class="test-src" href="test/original-pagination/test.xprocspec#106"/>
           </div>
         </li>
-        <li class="requirement priority_2" id="4.8:107">
+        <li class="requirement priority_2 changed" id="4.8:107">
           <h3>
             <a class="req-nr" href="#4.8:107">4.8:107</a>
             The system shall support skipping print page breaks when no text precedes or follows on
             the same braille page.
           </h3>
+          <p>
+            Also, several consecutive print page breaks can be combined into a single break
+            indicator.
+          </p>
+          <div>
+            <a class="test-src" href="test/print-pages/test.xprocspec#105+107"/>
+          </div>
         </li>
       </ul>
     </section>
