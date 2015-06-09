@@ -6,9 +6,9 @@
   <x:scenario id="105+107" label="Print page breaks are indicated with a full line followed by the page number of the new print page. Several consecutive print page breaks are combined into a single indicator.">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
-        <x:document type="file" href="../../resources/original-pagination/sbs_page_break_line.xml"/>
+        <x:document type="file" href="../../resources/print-pages/sbs_page_break_line.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
@@ -16,7 +16,41 @@
       <x:document type="port" port="result"/>
     </x:context>
     <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
-      <x:document type="file" href="../../resources/original-pagination/sbs_page_break_line.pef"/>
+      <x:document type="file" href="../../resources/print-pages/sbs_page_break_line.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="106.1" label="Rendering print page breaks as marks in the left margin">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/Test.DTBook.Indication of original pagination.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-nlb.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+          <x:document type="file" href="../../resources/print-pages/Test.PEF.Indication of original pagination.pef"/>
+        </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="106.2" label="Rendering print page breaks as marks in the left margin. The mark is taken out of the normal text flow, and appears at the same line as the word that comes after the pagenum tag.">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/Test.DTBook.Indication-of-original-pagination2.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-nlb.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/print-pages/Test.PEF.Indication-of-original-pagination.2.pef"/>
     </x:expect>
   </x:scenario>
   
