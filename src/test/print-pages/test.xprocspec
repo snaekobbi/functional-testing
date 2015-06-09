@@ -3,6 +3,40 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
+  <x:scenario label="The footer contains the range of print pages, expressed in 'downshifted number format'.">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/downshifted-print-page-numbers.xml"/>
+      </x:input>
+    </x:call>
+    <x:scenario id="102.2" label="If both right and left hand pages have a footer, it's the range of print pages contained in the current braille page.">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+        <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+        <x:option name="temp-dir" select="$temp-dir"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/print-pages/downshifted-print-page-numbers-2.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="102.1" label="If only right hand pages have a footer, it's the range of print pages contained in the previous and current braille pages.">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+        <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+        <x:option name="temp-dir" select="$temp-dir"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/print-pages/downshifted-print-page-numbers-1.pef"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
   <x:scenario id="105+107" label="Print page breaks are indicated with a full line followed by the page number of the new print page. Several consecutive print page breaks are combined into a single indicator.">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
