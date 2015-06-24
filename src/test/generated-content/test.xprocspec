@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="96" label="Optional text 'Margtekst:' preceding sidebar">
+  <x:scenario id="96.1" label="Optional text preceding sidebar (&quot;Margin text:&quot;)">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/generated-content/Test.DTBook.Generated content.xml"/>
@@ -17,6 +17,24 @@
     </x:context>
     <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
       <x:document type="file" href="../../resources/generated-content/Test.PEF.Generated content.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="96.2" label="Boilerplate text on the title page (&quot;NLB, Norge 2015 and Volume x of y&quot;)
+                               and optional text preceding sidebar (&quot;Margin text:&quot;)">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/generated-content/Test.DTBook.4.7.96.Automatic-insertion-of-content.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/generated-content/Test.PEF.4.7.96.Automatic-insertion-of-content.pef"/>
     </x:expect>
   </x:scenario>
   
