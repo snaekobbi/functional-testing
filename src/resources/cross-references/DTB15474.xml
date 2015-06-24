@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE dtbook PUBLIC "-//NISO//DTD dtbook 2005-3//EN" "http://www.daisy.org/z3986/2005/dtbook-2005-3.dtd" []>
+<dtbook xmlns="http://www.daisy.org/z3986/2005/dtbook/" version="2005-3" xml:lang="sv">
+<head>
+<meta name="dtb:uid" content="DTB15474" />
+<meta name="dc:Title" content="På tal om Sherlock Holmes" />
+<meta name="dc:Creator" content="Sayers, Dorothy" />
+<meta name="dc:Date" content="2014-06-03" />
+<meta name="dc:Publisher" content="MTM" />
+<meta name="dc:Language" content="sv" />
+<meta name="track:Supplier" content="Contentra" />
+<meta name="track:SuppliedDate" content="2014-08-20" />
+<meta name="track:Signum" content="" />
+<meta name="track:Guidelines" content="2011-2" />
+</head>
+<book>
+<frontmatter>
+<doctitle>På tal om sherlock holmes</doctitle>
+<docauthor>Dorothy Sayers</docauthor>
+<level1 class="jacketcopy">
+<prodnote render="optional" class="rearcover">
+<p>Boken.</p>
+
+</prodnote>
+</level1>
+<level1 class="colophon">
+	<p>hej</p>
+</level1>
+</frontmatter>
+<bodymatter>
+	<level1>
+		<p>När jag först kom till London bodde jag vid Montague Street ... och där bidade jag min tid, fyllde min <pagenum id="page-10" page="normal">10</pagenum>alldeles för ymnigt lediga tid med att studera alla de olika vetenskapsgrenar som kunde göra mig mer effektiv. Stundom kom fall i min väg, framför allt genom att gamla gemensamma studentbekanta introducerade mig, för under mina sista år vid universitetet talade man ganska mycket om mig och mina metoder. Det tredje av dessa fall<noteref idref="#fn_1_1">1</noteref> var <em>The Musgrave ritual ...</em> Reginald Musgrave hade gått på samma college som jag och vi var en smula bekanta... Han såg i högsta grad aristokratisk ut ... Han var faktiskt medlem av en av kungadömets äldsta familjer ... Ibland samtalade vi med varandra och jag minns att han vid mer än ett tillfälle visade upp ett livligt intresse för mina metoder ... Jag hade inte träffat honom på fyra år när han en morgon kom till min bostad vid Montague Street.</p>
+</level1>
+</bodymatter>
+<rearmatter>
+<level1>
+<note id="fn_1_1"><p><sup>1</sup> Det är inte klart om Holmes faktiskt menar "mitt tredje fall" eller, mer specifikt, "det tredje fallet på detta sätt". Den första tolkningen har funnit större gillande hos kännarna, men den senare är i alla fall möjlig, och erbjuder mer utrymme för den som studerar Holmeskronologin. Se nedan, s. 13.</p></note>
+</level1>
+</rearmatter>
+</book>
+</dtbook>
