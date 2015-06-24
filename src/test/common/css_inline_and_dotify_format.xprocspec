@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               xmlns:px="http://www.daisy.org/ns/pipeline/xproc"
                xmlns:html="http://www.w3.org/1999/xhtml"
                xmlns:p="http://www.w3.org/ns/xproc"
                xmlns:pef="http://www.daisy.org/ns/2008/pef"
@@ -12,12 +13,15 @@
       <p:input port="source"/>
       <p:output port="result"/>
       <p:option name="stylesheet" required="true"/>
-      <p:import href="http://www.daisy.org/pipeline/modules/braille/dotify-formatter/library.xpl"/>
-      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-calabash/library.xpl"/>
+      <p:option name="temp-dir" required="true"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/common-utils/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-utils/library.xpl"/>
       <css:inline>
         <p:with-option name="default-stylesheet" select="resolve-uri($stylesheet)"/>
       </css:inline>
-      <dotify:format/>
+      <px:transform type="css" query="(formatter:dotify)(translator:bypass)">
+        <p:with-option name="temp-dir" select="$temp-dir"/>
+      </px:transform>
     </p:declare-step>
   </x:script>
   
@@ -27,6 +31,7 @@
         <x:document type="file" href="../../resources/47.1/source.xml"/>
       </x:input>
       <x:option name="stylesheet" select="'../46.1/style.css'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
       <x:document type="port" port="result"/>
@@ -49,6 +54,7 @@
         </x:document>
       </x:input>
       <x:option name="stylesheet" select="'../47.1/style.css'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
       <x:document type="port" port="result"/>

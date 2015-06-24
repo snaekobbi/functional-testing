@@ -2,13 +2,17 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.Collection;
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.regex.Pattern;
 import javax.inject.Inject;
 import javax.xml.transform.stream.StreamSource;
 
 import com.google.common.base.Function;
+import com.google.common.base.Optional;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -28,6 +32,12 @@ import net.sf.saxon.s9api.XsltTransformer;
 import org.daisy.maven.xproc.xprocspec.XProcSpecRunner;
 import org.daisy.maven.xspec.XSpecRunner;
 
+import org.daisy.pipeline.braille.common.CSSBlockTransform;
+import org.daisy.pipeline.braille.common.Transform;
+import static org.daisy.pipeline.braille.common.util.Tuple3;
+import static org.daisy.pipeline.braille.common.util.URIs.asURI;
+import org.daisy.pipeline.braille.common.XProcTransform;
+
 import static org.daisy.pipeline.pax.exam.Options.brailleModule;
 import static org.daisy.pipeline.pax.exam.Options.domTraversalPackage;
 import static org.daisy.pipeline.pax.exam.Options.felixDeclarativeServices;
@@ -37,6 +47,7 @@ import static org.daisy.pipeline.pax.exam.Options.pipelineModule;
 import static org.daisy.pipeline.pax.exam.Options.xprocspecBundles;
 import static org.daisy.pipeline.pax.exam.Options.xspecBundles;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -53,6 +64,10 @@ import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
 import static org.ops4j.pax.exam.CoreOptions.options;
 import static org.ops4j.pax.exam.CoreOptions.systemProperty;
 
+import org.osgi.framework.BundleContext;
+
+import org.slf4j.Logger;
+
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerClass.class)
 public class RunTestsAndProcessFiles {
@@ -67,7 +82,9 @@ public class RunTestsAndProcessFiles {
 			logbackBundles(),
 			felixDeclarativeServices(),
 			mavenBundle().groupId("org.apache.servicemix.bundles").artifactId("org.apache.servicemix.bundles.antlr-runtime").versionAsInProject(),
-			mavenBundle().groupId("org.daisy.braille").artifactId("brailleUtils-core").versionAsInProject(),
+			mavenBundle().groupId("org.daisy.braille").artifactId("braille-utils.api").versionAsInProject(),
+			mavenBundle().groupId("org.daisy.braille").artifactId("braille-utils.pef-tools").versionAsInProject(),
+			mavenBundle().groupId("org.daisy.braille").artifactId("brailleUtils-catalog").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.libs").artifactId("jing").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.libs").artifactId("jstyleparser").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.dotify").artifactId("dotify.api").versionAsInProject(),
@@ -76,20 +93,22 @@ public class RunTestsAndProcessFiles {
 			mavenBundle().groupId("org.daisy.dotify").artifactId("dotify.formatter.impl").versionAsInProject(),
 			mavenBundle().groupId("net.java.dev.jna").artifactId("jna").versionAsInProject(),
 			mavenBundle().groupId("org.liblouis").artifactId("liblouis-java").versionAsInProject(),
+			mavenBundle().groupId("org.daisy.braille").artifactId("braille-css").versionAsInProject(),
 			brailleModule("common-utils"),
+			brailleModule("dotify-core"),
+			brailleModule("dotify-saxon"),
 			brailleModule("dotify-calabash"),
+			brailleModule("dotify-utils"),
 			brailleModule("dotify-formatter"),
 			brailleModule("liblouis-core"),
 			brailleModule("liblouis-saxon"),
 			forThisPlatform(brailleModule("liblouis-native")),
-			brailleModule("liblouis-pef"),
 			brailleModule("css-core"),
 			brailleModule("css-calabash"),
 			brailleModule("css-utils"),
 			brailleModule("pef-core"),
 			brailleModule("pef-calabash"),
 			brailleModule("pef-saxon"),
-			brailleModule("pef-to-html"),
 			brailleModule("pef-utils"),
 			pipelineModule("file-utils"),
 			xprocspecBundles(),
@@ -97,6 +116,34 @@ public class RunTestsAndProcessFiles {
 			mavenBundle().groupId("org.daisy.pipeline").artifactId("saxon-adapter").versionAsInProject(),
 			junitBundles()
 		);
+	}
+	
+	@Inject
+	private BundleContext context;
+	
+	@Before
+	public void registerBypassBlockTransformProvider() {
+		BypassBlockTransform.Provider provider = new BypassBlockTransform.Provider();
+		Hashtable<String,Object> properties = new Hashtable<String,Object>();
+		context.registerService(CSSBlockTransform.Provider.class.getName(), provider, properties);
+		context.registerService(XProcTransform.Provider.class.getName(), provider, properties);
+	}
+	
+	private static class BypassBlockTransform implements CSSBlockTransform, XProcTransform {
+		private final URI href = asURI(new File(new File(PathUtils.getBaseDir()), "identity.xpl"));
+		public Tuple3<URI,javax.xml.namespace.QName,Map<String,String>> asXProc() {
+			return new Tuple3<URI,javax.xml.namespace.QName,Map<String,String>>(href, null, null);
+		}
+		private static final Iterable<BypassBlockTransform> instance = Optional.of(new BypassBlockTransform()).asSet();
+		private static final Iterable<BypassBlockTransform> empty = Optional.<BypassBlockTransform>absent().asSet();
+		public static class Provider implements CSSBlockTransform.Provider<BypassBlockTransform>, XProcTransform.Provider<BypassBlockTransform> {
+			public Iterable<BypassBlockTransform> get(String query) {
+				return query.equals("(translator:bypass)") ? instance : empty;
+			}
+			public Transform.Provider<BypassBlockTransform> withContext(Logger context) {
+				return this;
+			}
+		}
 	}
 	
 	@Inject

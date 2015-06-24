@@ -151,7 +151,7 @@
 		<!--
 		    TODO: depends on pef:pef/@xml:lang?
 		-->
-		<xsl:variable name="table" select="'(id:&quot;org.daisy.braille.table.DefaultTableProvider.TableType.EN_US&quot;)'"/>
+		<xsl:variable name="table" select="'(id:&quot;org.daisy.braille.impl.table.DefaultTableProvider.TableType.EN_US&quot;)'"/>
 		<xsl:copy>
 			<xsl:sequence select="@*"/>
 			<xsl:for-each select="pef:row">

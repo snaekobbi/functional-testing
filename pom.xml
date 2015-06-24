@@ -46,12 +46,6 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>org.daisy.pipeline.modules.braille</groupId>
-        <artifactId>pef-utils</artifactId>
-        <version>1.1.2-SNAPSHOT</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
         <groupId>org.daisy.xprocspec</groupId>
         <artifactId>xprocspec</artifactId>
         <version>1.1.0</version>
@@ -127,7 +121,7 @@
     </dependency>
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>css-calabash</artifactId>
+      <artifactId>css-utils</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -137,7 +131,7 @@
     </dependency>
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>liblouis-pef</artifactId>
+      <artifactId>liblouis-core</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
