@@ -7,7 +7,7 @@
                 exclude-result-prefixes="#all"
                 version="2.0">
 	
-	<xsl:include href="../common/serialize.xsl"/>
+	<xsl:include href="../serialize.xsl"/>
 	
 	<xsl:template match="@*|node()">
 		<xsl:copy>

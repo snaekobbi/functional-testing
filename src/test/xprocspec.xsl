@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:x="http://www.daisy.org/ns/xprocspec"
+                xmlns:pf="http://www.daisy.org/ns/pipeline/functions"
                 xmlns:pef="http://www.daisy.org/ns/2008/pef"
                 xmlns:html="http://www.w3.org/1999/xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
@@ -10,6 +11,7 @@
 	
 	<xsl:include href="serialize.xsl"/>
 	<xsl:include href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xsl"/>
+	<xsl:include href="http://www.daisy.org/pipeline/modules/file-utils/uri-functions.xsl"/>
 	
 	<xsl:template match="@*|node()">
 		<xsl:copy>
@@ -20,10 +22,20 @@
 	<xsl:template match="x:description">
 		<xsl:copy>
 			<xsl:apply-templates select="@*"/>
-			<link rel="stylesheet" type="text/css" href="../../style.css"/>
-			<link rel="stylesheet" href="../../github.min.css"/>
-			<script type="text/javascript" src="../../jquery.min.js"/>
-			<script type="text/javascript" src="../../highlight.min.js"/>
+			<link rel="stylesheet" type="text/css" href="{pf:relativize-uri(resolve-uri('../style.css'),base-uri(/*))}"/>
+			<link rel="stylesheet" type="text/css" href="{pf:relativize-uri(resolve-uri('../github.min.css'),base-uri(/*))}"/>
+			<style type="text/css">
+				@namespace x url(http://www.daisy.org/ns/xprocspec);
+				x|scenario x|documentation ul li {
+				  margin-top: 10px;
+				  margin-bottom: 10px;
+				}
+				code.xpath {
+				  display: inline;
+				}
+			</style>
+			<script type="text/javascript" src="{pf:relativize-uri(resolve-uri('../jquery.min.js'),base-uri(/*))}"/>
+			<script type="text/javascript" src="{pf:relativize-uri(resolve-uri('../highlight.min.js'),base-uri(/*))}"/>
 			<script type="text/javascript">
 				$(document).ready(function() {
 				  $("code").each(function(i, block) {
@@ -55,30 +67,9 @@
 					<xsl:variable name="ul">
 						<wrap xml:base="{base-uri(.)}">
 							<ul>
-								<xsl:variable name="source" select="x:call/x:input[@port='source']/x:document"/>
-								<xsl:if test="$source">
-									<li>
-										<xsl:call-template name="x:document-as-code">
-											<xsl:with-param name="x:document" select="$source"/>
-											<xsl:with-param name="with-title">source</xsl:with-param>
-										</xsl:call-template>
-									</li>
-								</xsl:if>
-								<xsl:if test="x:call/x:option[@name='stylesheet']">
-									<li>
-										<a class="code" href="{replace(x:call/x:option[@name='stylesheet']/@select, '^.(.*).$', '$1')}">stylesheet</a>
-									</li>
-								</xsl:if>
-								<xsl:variable name="result" select="x:expect[preceding-sibling::x:context[1]/x:document[@port='result']]/x:document"/>
-								<xsl:if test="$result">
-									<li>
-										<xsl:call-template name="x:document-as-code">
-											<xsl:with-param name="x:document" select="$result"/>
-											<xsl:with-param name="with-title">result</xsl:with-param>
-											<xsl:with-param name="with-class" select="if ($result/parent::*/@step='x:pef-compare') then 'pef' else ''"/>
-										</xsl:call-template>
-									</li>
-								</xsl:if>
+								<xsl:apply-templates select="x:call/x:input" mode="html"/>
+								<xsl:apply-templates select="x:call/x:option" mode="html"/>
+								<xsl:apply-templates select="x:expect" mode="html"/>
 							</ul>
 						</wrap>
 					</xsl:variable>
@@ -88,6 +79,30 @@
 			<xsl:apply-templates select="node()"/>
 		</xsl:copy>
 	</xsl:template>
+	
+	<xsl:template match="x:call/x:input" mode="html">
+		<xsl:if test="x:document">
+			<li>
+				<xsl:call-template name="x:document-as-code">
+					<xsl:with-param name="x:document" select="x:document"/>
+					<xsl:with-param name="with-title">
+						<xsl:value-of select="@port"/>
+					</xsl:with-param>
+				</xsl:call-template>
+			</li>
+		</xsl:if>
+	</xsl:template>
+	
+	<xsl:template match="x:call/x:option" mode="html">
+		<li>
+			<xsl:value-of select="concat(@name,': ')"/>
+			<code class="xpath">
+				<xsl:value-of select="@select"/>
+			</code>
+		</li>
+	</xsl:template>
+	
+	<xsl:template match="x:expect" mode="html"/>
 	
 	<xsl:template name="x:document-as-code">
 		<xsl:param name="x:document"/>
@@ -145,13 +160,11 @@
 	</xsl:template>
 	
 	<xsl:template match="pef:page">
+		<xsl:param name="brf-table" as="xs:string" tunnel="yes"
+		           select="'(id:&quot;org.daisy.braille.impl.table.DefaultTableProvider.TableType.EN_US&quot;)'"/>
 		<xsl:variable name="rows" select="xs:integer(number(ancestor::*[@rows][1]/@rows))"/>
 		<xsl:variable name="cols" select="xs:integer(number(ancestor::*[@cols][1]/@cols))"/>
 		<xsl:variable name="rowgap" select="xs:integer(number(ancestor-or-self::*[@rowgap][1]/@rowgap))"/>
-		<!--
-		    TODO: depends on pef:pef/@xml:lang?
-		-->
-		<xsl:variable name="table" select="'(id:&quot;org.daisy.braille.impl.table.DefaultTableProvider.TableType.EN_US&quot;)'"/>
 		<xsl:copy>
 			<xsl:sequence select="@*"/>
 			<xsl:for-each select="pef:row">
@@ -161,7 +174,7 @@
 					<xsl:sequence select="$row"/>
 				</pef:row>
 				<pef:row class="ascii" rowgap="{format-number($rowgap,'0')}">
-					<xsl:sequence select="pef:encode($table, $row)"/>
+					<xsl:sequence select="pef:encode($brf-table, $row)"/>
 				</pef:row>
 			</xsl:for-each>
 			<xsl:for-each select="1 to (($rows * 4
@@ -173,7 +186,7 @@
 					<xsl:sequence select="$row"/>
 				</pef:row>
 				<pef:row class="ascii">
-					<xsl:sequence select="pef:encode($table, $row)"/>
+					<xsl:sequence select="pef:encode($brf-table, $row)"/>
 				</pef:row>
 			</xsl:for-each>
 		</xsl:copy>

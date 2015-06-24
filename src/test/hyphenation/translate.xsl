@@ -4,7 +4,7 @@
                 xmlns:louis="http://liblouis.org/liblouis"
                 version="2.0">
 	
-	<xsl:variable name="query" select="concat('(table:&quot;',resolve-uri('../../resources/43.1/translate.cti'),',',resolve-uri('../../resources/43.1/hyphenate.dic'),'&quot;)')"/>
+	<xsl:variable name="query" select="concat('(table:&quot;',resolve-uri('../../resources/hyphenation/translate.cti'),',',resolve-uri('../../resources/hyphenation/hyphenate.dic'),'&quot;)')"/>
 	
 	<xsl:template match="input">
 		<xsl:variable name="text" as="text()*" select=".//text()"/>

@@ -4,8 +4,8 @@
                stylesheet="translate.xsl">
   
   <x:scenario id="43.1" label="Exclude certain elements from automatic hyphenation.">
-    <x:context href="../../resources/43.1/data.xml" select="//input"/>
-    <x:expect label="expect" href="../../resources/43.1/data.xml" select="//expect"/>
+    <x:context href="../../resources/hyphenation/data.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/hyphenation/data.xml" select="//expect"/>
   </x:scenario>
   
 </x:description>
