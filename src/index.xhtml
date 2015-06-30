@@ -7,11 +7,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"/> 
     <script type="text/javascript">
       $(document).ready(function() {
-        var select = $("#branches");
+        var branches = $("#branches");
         var path = location.pathname.split('/');
         var branch = path[path.length-2];
         if (branch != "master") {
-          select.after(
+          branches.after(
             $("&lt;a/&gt;", {
               href: "https://github.com/snaekobbi/requirements/compare/" + branch,
               title: "View diff",
@@ -22,7 +22,7 @@
         $.get(
           "https://api.travis-ci.org/repos/snaekobbi/requirements/branches/" + branch,
           function(data) {
-            select.after(
+            branches.after(
               $("&lt;a/&gt;", {
                 href: "https://travis-ci.org/snaekobbi/requirements/builds/" + data.branch.id,
                 title: "Re-run tests",
@@ -35,19 +35,33 @@
           "https://api.github.com/repos/snaekobbi/requirements/branches",
           function(data) {
             $.each(data, function(i, branch) {
-              select.append(
+              $(branches.children()[1]).append(
                 $("&lt;option/&gt;", {
                   value: branch.name,
                   text: branch.name
                 })
               );
             });
-            select.val(branch);
-            select.change(function() {
-              window.location.href = "http://dev.pef-format.org/dp2/" + select.val() + "/index.xhtml" + window.location.hash;
-            });
+            branches.val(branch);
           }
         );
+        $.get(
+          "https://api.github.com/repos/snaekobbi/requirements/tags",
+          function(data) {
+            $.each(data, function(i, tag) {
+              $(branches.children()[0]).append(
+                $("&lt;option/&gt;", {
+                  value: tag.name,
+                  text: tag.name
+                })
+              );
+            });
+            branches.val(branch);
+          }
+        );
+        branches.change(function() {
+          window.location.href = "http://dev.pef-format.org/dp2/" + branches.val() + "/index.xhtml" + window.location.hash;
+        });
         $.get(
           "https://api.github.com/repos/snaekobbi/requirements/pulls",
           {
@@ -57,7 +71,7 @@
           },
           function(data) {
             $(data).first().each(function(i, pull) {
-              select.after(
+              branches.after(
                 $("&lt;a/&gt;", {
                   href: "http://github.com/snaekobbi/requirements/issues/" + pull.number,
                   title: "Go to discussion",
@@ -89,6 +103,8 @@
   <body>
     <div id="header">
       <select id="branches" name="Select a branch">
+        <optgroup label="Tags"/>
+        <optgroup label="Branches"/>
       </select>
     </div>
     <h1>
