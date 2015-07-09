@@ -311,9 +311,9 @@ pef|row[class~=ascii] {
 	display: block;
 }
 
-/***********************/
-/*  XPROCSPEC & XSPEC  */
-/***********************/
+/*****************************/
+/*  XPROCSPEC, XSPEC, JUNIT  */
+/*****************************/
 
 xspec|description,
 xprocspec|description {
@@ -328,14 +328,16 @@ xprocspec|description h1 {
 }
 
 xspec|scenario,
-xprocspec|scenario {
+xprocspec|scenario,
+.junit-test {
 	display: block;
 	margin: 30px 60px 30px 20px;
 	font-family: sans-serif;
 }
 
 xspec|scenario h2,
-xprocspec|scenario h2 {
+xprocspec|scenario h2,
+.junit-test h2 {
 	color: #005A9C;
 	font-weight: normal;
 	font-size: 19px;
