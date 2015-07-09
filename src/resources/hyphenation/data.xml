@@ -1,10 +1,10 @@
 <test>
 	<entry>
 		<input>foobar www.foobar.org</input>
-		<expect>FOO|BAR WWW.FOO|BAR.ORG</expect>
+		<expect>⠋⠕⠕|⠃⠁⠗ ⠺⠺⠺⠨⠋⠕⠕|⠃⠁⠗⠨⠕⠗⠛</expect>
 	</entry>
 	<entry>
 		<input>foobar <a>www.foobar.org</a></input>
-		<expect>FOO|BAR <a>WWW.FOOBAR.ORG</a></expect>
+		<expect>⠋⠕⠕|⠃⠁⠗ <a>⠺⠺⠺⠨⠋⠕⠕⠃⠁⠗⠨⠕⠗⠛</a></expect>
 	</entry>
 </test>
