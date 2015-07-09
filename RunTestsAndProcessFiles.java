@@ -105,6 +105,8 @@ public class RunTestsAndProcessFiles {
 			brailleModule("dotify-formatter"),
 			brailleModule("liblouis-core"),
 			brailleModule("liblouis-saxon"),
+			brailleModule("liblouis-calabash"),
+			brailleModule("liblouis-utils"),
 			brailleModule("liblouis-tables"),
 			brailleModule("libhyphen-core"),
 			forThisPlatform(brailleModule("liblouis-native")),
