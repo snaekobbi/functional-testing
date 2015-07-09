@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
                xmlns:louis="http://liblouis.org/liblouis"
-               stylesheet="translate.xsl">
+               stylesheet="translate-43.xsl">
   
   <x:scenario id="43.1" label="Exclude certain elements from automatic hyphenation.">
     <x:context href="../../resources/hyphenation/data.xml" select="//input"/>

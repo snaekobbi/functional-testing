@@ -167,8 +167,8 @@ ul#changes li:last-child::after {
 }
 
 .external-test {
-	border-left: 7px solid #777777;
-	background-color: #AAAAAA;
+	border-left: 7px solid #999999;
+	background-color: #CCCCCC;
 }
 
 .test > a.test-src,
