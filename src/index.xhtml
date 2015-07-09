@@ -10,7 +10,8 @@
         var branches = $("#branches");
         var path = location.pathname.split('/');
         var branch = path[path.length-2];
-        if (branch != "master") {
+        var version = $("#version").text().replace(/^\s+|\s+$/g,'');
+        if (branch != "master" &amp;&amp; branch != "v" + version) {
           branches.after(
             $("&lt;a/&gt;", {
               href: "https://github.com/snaekobbi/requirements/compare/" + branch,
@@ -83,7 +84,7 @@
         )
         var changed = $(".changed.requirement");
         if (changed[0]) {
-          var list = $("&lt;ul/&gt;", { class: "changes" });
+          var list = $("&lt;ul/&gt;", { id: "changes" });
           changed.each(function(i, req) {
             list.append(
               $("&lt;li/&gt;").append(
@@ -95,8 +96,14 @@
               )
             );
           });
-          $("h1").first().append(list);
+          list.appendTo($("&lt;li/&gt;").appendTo("#version_section"));
         }
+        $("#version").empty();
+        $("#version").append(
+          $("&lt;a/&gt;", { href: "#" }).text(version).click(function() {
+            window.location.href = "http://dev.pef-format.org/dp2/v" + version + "/index.xhtml";
+          })
+        );
       });
     </script>
   </head>
@@ -110,6 +117,14 @@
     <h1>
       Functional Requirements
     </h1>
+    <ul id="version_section">
+      <li>
+        <span id="version"> 1.0 </span>
+      </li>
+      <li>
+        <span id="date"></span>
+      </li>
+    </ul>
     <section>
       <h2>
         Support for effective and flexible production of braille on paper/embosser files

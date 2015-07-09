@@ -62,4 +62,11 @@
 		</div>
 	</xsl:template>
 	
+	<xsl:template match="html:span[@id='date']">
+		<xsl:copy>
+			<xsl:sequence select="@*"/>
+			<xsl:value-of select="format-date(current-date(), '[M01]/[D01]/[Y0001]')"/>
+		</xsl:copy>
+	</xsl:template>
+	
 </xsl:stylesheet>
