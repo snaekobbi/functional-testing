@@ -166,6 +166,11 @@ ul#changes li:last-child::after {
 	background-color: #FF8833;
 }
 
+.external-test {
+	border-left: 7px solid #777777;
+	background-color: #AAAAAA;
+}
+
 .test > a.test-src,
 .test > a.test-report {
 	display: block;

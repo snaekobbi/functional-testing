@@ -135,7 +135,7 @@
     </dependency>
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
-      <artifactId>liblouis-core</artifactId>
+      <artifactId>liblouis-tables</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

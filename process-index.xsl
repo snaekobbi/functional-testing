@@ -23,7 +23,6 @@
 	</xsl:template>
 	
 	<xsl:template match="html:a[@class='test-src']">
-		<xsl:next-match/>
 		<xsl:variable name="uri" select="replace(@href, '^(.+)#(.+)$', '$1')"/>
 		<xsl:variable name="abs-uri" select="resolve-uri($uri, base-uri(/*))"/>
 		<xsl:variable name="id" select="replace(@href, '^(.+)#(.+)$', '$2')"/>
@@ -59,6 +58,15 @@
 			<xsl:if test="$report">
 				<a class="test-report" href="{pf:relativize-uri(base-uri($report/*), $result-base)}">report</a>
 			</xsl:if>
+		</div>
+	</xsl:template>
+	
+	<xsl:template match="html:a[@class='test-src' and matches(@href, '^https?://')]">
+		<div class="test external-test">
+			<a href="{@href}">
+				<xsl:value-of select="@href"/>
+			</a>
+			<a class="test-src" href="{@href}">source</a>
 		</div>
 	</xsl:template>
 	
