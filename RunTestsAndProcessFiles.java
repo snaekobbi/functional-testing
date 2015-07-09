@@ -34,6 +34,7 @@ import org.daisy.maven.xspec.XSpecRunner;
 
 import org.daisy.pipeline.braille.common.CSSBlockTransform;
 import org.daisy.pipeline.braille.common.Transform;
+import org.daisy.pipeline.braille.common.Transform.AbstractTransform;
 import static org.daisy.pipeline.braille.common.util.Tuple3;
 import static org.daisy.pipeline.braille.common.util.URIs.asURI;
 import org.daisy.pipeline.braille.common.XProcTransform;
@@ -87,6 +88,7 @@ public class RunTestsAndProcessFiles {
 			mavenBundle().groupId("org.daisy.braille").artifactId("braille-utils.impl").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.libs").artifactId("jing").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.libs").artifactId("jstyleparser").versionAsInProject(),
+			mavenBundle().groupId("org.unbescape").artifactId("unbescape").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.dotify").artifactId("dotify.api").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.dotify").artifactId("dotify.common").versionAsInProject(),
 			mavenBundle().groupId("org.daisy.dotify").artifactId("dotify.translator.impl").versionAsInProject(),
@@ -129,7 +131,7 @@ public class RunTestsAndProcessFiles {
 		context.registerService(XProcTransform.Provider.class.getName(), provider, properties);
 	}
 	
-	private static class BypassBlockTransform implements CSSBlockTransform, XProcTransform {
+	private static class BypassBlockTransform extends AbstractTransform implements CSSBlockTransform, XProcTransform {
 		private final URI href = asURI(new File(new File(PathUtils.getBaseDir()), "identity.xpl"));
 		public Tuple3<URI,javax.xml.namespace.QName,Map<String,String>> asXProc() {
 			return new Tuple3<URI,javax.xml.namespace.QName,Map<String,String>>(href, null, null);
