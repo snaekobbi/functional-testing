@@ -210,7 +210,7 @@
         Support for languages used in the countries of the interested parties
       </h2>
       <ul>
-        <li class="requirement priority_1" id="4.3:34">
+        <li class="requirement priority_1 changed" id="4.3:34">
           <h3>
             <a class="req-nr" href="#4.3:34">4.3:34</a>
             The system shall support the braille code used in Denmark, Finland, Norway, Sweden and
@@ -236,6 +236,12 @@
           </p>
           <div>
             <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/54850ff448ef52d6e57a19960558a416c36d1558/tests/harness/no_harness.txt"/>
+          </div>
+          <p>
+            The system shall support Danish uncontracted braille.
+          </p>
+          <div>
+            <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/7113a591e8eeda2a4b9786205b10ea534fa7f1a4/tests/harness/da-dk-g16-nota_harness.txt"/>
           </div>
           <p>
             The system shall support Dutch uncontracted braille.
@@ -272,15 +278,18 @@
             liblouis-core tests: text --> braille translation with letter spacing
           </p>
         </li>
-        <li class="requirement priority_1" id="4.3:37">
+        <li class="requirement priority_1 changed" id="4.3:37">
           <h3>
             <a class="req-nr" href="#4.3:37">4.3:37</a>
             The system shall support the braille code used in Denmark, Norway, Sweden and
             Switzerland for contracted braille.
           </h3>
-          <p class="todo">
-            liblouis tests: text --> braille translation
+          <p>
+            The system shall support Danish contracted braille.
           </p>
+          <div>
+            <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/7113a591e8eeda2a4b9786205b10ea534fa7f1a4/tests/harness/da-dk-g26-nota_harness.txt"/>
+          </div>
         </li>
         <li class="requirement priority_1" id="4.3:37B">
           <h3>
@@ -289,7 +298,7 @@
             make the system work globally in the long term.
           </h3>
         </li>
-        <li class="requirement priority_1" id="4.3:38">
+        <li class="requirement priority_1 changed" id="4.3:38">
           <h3>
             <a class="req-nr" href="#4.3:38">4.3:38</a>
             The system shall support marking of text-level semantics (i.e. em, strong) with braille
@@ -307,6 +316,12 @@
            </p>
           <div>
             <a class="test-src" href="test/emphasis/test-no.xspec#38.1"/>
+          </div>
+          <p>
+            The system shall handle text-level semantics for Danish uncontracted braille.
+          </p>
+          <div>
+            <a class="test-src" href="https://github.com/snaekobbi/pipeline-mod-nota/blob/a58bfcc9223553a51d78a0d763630330d82d92cd/src/test/xprocspec/test_translator.xprocspec#L67"/>
           </div>
         </li>
         <li class="requirement priority_1" id="4.3:39">
