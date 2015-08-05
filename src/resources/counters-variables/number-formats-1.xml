@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<_ xmlns="http://www.daisy.org/z3986/2005/dtbook/" xmlns:brl="http://www.daisy.org/z3986/2009/braille/">
+	<level1>
+		<h1>regular</h1>
+		<level2>
+			<h2>arabic numbers</h2>
+			<p>1 2 3 4 5 6 7 8 9 0 1234567890</p>
+		</level2>
+		<level2>
+			<h2>roman numbers</h2>
+			<p><brl:num role="roman">I</brl:num>
+			<brl:num role="roman">V</brl:num>
+			<brl:num role="roman">X</brl:num>
+			<brl:num role="roman">L</brl:num>
+			<brl:num role="roman">C</brl:num>
+			<brl:num role="roman">D</brl:num>
+			<brl:num role="roman">M</brl:num>
+			<brl:num role="roman">II</brl:num>
+			<brl:num role="roman">VI</brl:num>
+			<brl:num role="roman">VIII</brl:num>
+			<brl:num role="roman">IX</brl:num>
+			<brl:num role="roman">MCMLI</brl:num></p>
+			<p><brl:num role="roman">i</brl:num>
+			<brl:num role="roman">v</brl:num>
+			<brl:num role="roman">x</brl:num>
+			<brl:num role="roman">l</brl:num>
+			<brl:num role="roman">c</brl:num>
+			<brl:num role="roman">d</brl:num>
+			<brl:num role="roman">m</brl:num>
+			<brl:num role="roman">ii</brl:num>
+			<brl:num role="roman">vi</brl:num>
+			<brl:num role="roman">viii</brl:num>
+			<brl:num role="roman">ix</brl:num>
+			<brl:num role="roman">mcmli</brl:num></p>
+		</level2>
+	</level1>
+	<level1>
+		<h1>downshifted</h1>
+		<level2>
+			<h2>ordinal numbers</h2>
+			<p><brl:num role="ordinal">1.</brl:num>
+			<brl:num role="ordinal">2.</brl:num>
+			<brl:num role="ordinal">3.</brl:num>
+			<brl:num role="ordinal">4.</brl:num>
+			<brl:num role="ordinal">5.</brl:num>
+			<brl:num role="ordinal">6.</brl:num>
+			<brl:num role="ordinal">7.</brl:num>
+			<brl:num role="ordinal">8.</brl:num>
+			<brl:num role="ordinal">9.</brl:num>
+			<brl:num role="ordinal">0.</brl:num>
+			<brl:num role="ordinal">1234567890.</brl:num></p>
+		</level2>
+		<level2>
+			<h2>dates</h2>
+			<p><brl:date value="1982-12-06">06.12.1982</brl:date>
+			<brl:date value="1982-12-06">6.12.1982</brl:date></p>
+		</level2>
+		<level2>
+			<h2>ranges of print pages</h2>
+			<p><brl:select>
+				<brl:when-braille><brl:literal>_#AC,=</brl:literal></brl:when-braille>
+				<brl:otherwise>13-17</brl:otherwise>
+			</brl:select></p>
+		</level2>
+	</level1>
+</_>

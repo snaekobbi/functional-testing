@@ -39,4 +39,63 @@
     </x:scenario>
   </x:scenario>
   
+  <x:scenario id="94.1" label="Number formats: regular/downshifted">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-1.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/counters-variables/number-formats-1.pef"/>
+    </x:expect>
+  </x:scenario>
+  <x:scenario label="Number formats: written out">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-2-4.xml"/>
+      </x:input>
+      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:scenario id="94.2" label="grade 0">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-2.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="94.3" label="grade 1">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-3.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="94.4" label="grade 2">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-4.pef"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
 </x:description>
