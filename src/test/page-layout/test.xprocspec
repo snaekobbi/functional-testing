@@ -117,4 +117,21 @@
     </x:expect>
   </x:scenario>
   
+  <x:scenario id="83" label="Flowing of text into the footer. At least 4 cells before the braille page number must remain empty.">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/page-layout/test_4.5.83.xml"/>
+      </x:input>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/page-layout/test_4.5.83.pef"/>
+    </x:expect>
+  </x:scenario>
+  
 </x:description>
