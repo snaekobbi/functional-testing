@@ -342,6 +342,10 @@ xprocspec|scenario,
 
 xspec|scenario h2,
 xprocspec|scenario h2,
+xspec|scenario::before,
+xprocspec|scenario::before,
+xspec|scenario h3,
+xprocspec|scenario h3,
 .junit-test h2 {
 	color: #005A9C;
 	font-weight: normal;
@@ -350,13 +354,8 @@ xprocspec|scenario h2,
 
 xspec|scenario::before,
 xprocspec|scenario::before {
-	content: attr(id) ". " attr(label);
-	color: #005A9C;
-	font-weight: normal;
-	font-size: 19px;
+	content: attr(label);
 	display: block;
-	margin-left: -20px;
-	margin-right: 11px;
 }
 
 xprocspec|document {
