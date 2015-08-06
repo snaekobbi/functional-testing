@@ -1,0 +1,16 @@
+@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+sidebar {
+	display: block;
+	border: ⠒ ⠸ ⠒ ⠇;
+	padding: 0 1;
+}
+
+sidebar > hd {
+	display: block;
+}

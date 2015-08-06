@@ -8,7 +8,7 @@
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-1.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
@@ -25,7 +25,7 @@
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-2.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
@@ -42,7 +42,7 @@
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-3.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
@@ -59,7 +59,7 @@
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-4.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
