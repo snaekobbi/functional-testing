@@ -61,7 +61,7 @@
           }
         );
         branches.change(function() {
-          window.location.href = "http://dev.pef-format.org/dp2/" + branches.val() + "/index.xhtml" + window.location.hash;
+          window.location.href = "http://snaekobbi.github.io/requirements/" + branches.val() + "/index.xhtml" + window.location.hash;
         });
         $.get(
           "https://api.github.com/repos/snaekobbi/requirements/pulls",
@@ -101,7 +101,7 @@
         $("#version").empty();
         $("#version").append(
           $("&lt;a/&gt;", { href: "#" }).text(version).click(function() {
-            window.location.href = "http://dev.pef-format.org/dp2/v" + version + "/index.xhtml";
+            window.location.href = "http://snaekobbi.github.io/requirements/v" + version + "/index.xhtml";
           })
         );
       });

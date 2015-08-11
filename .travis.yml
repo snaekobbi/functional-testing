@@ -1,7 +1,9 @@
 script: mvn test
 after_success:
-  - source upload_with_ftp.sh
-env:
-  global:
-    - secure: "FbotqK6NJPnZj5ecT0N8jO30+SggF0656F5qKbjePq4Y+bVL8+a6wqlMtcay\nRG7mniLt4IbvxS2o+t1BXkPiUa0dH1tLTnLS7tJFazXBC9xUVKJiUcVQfohv\nz+PpqmeaIdlOO06BZd1LWycH22jSjULVO3wRSQr+8qao8afPB6M="
-    - secure: "jRLwe+S6msT6yT8uTgV8n6LzJSt8xAAl5uu4VbvG+vh89b+e4+NH5yKgdP1tWxgVlq1oGd/xpNbzkv//zsCmS0JkNVG8nCjqUltRJ0xwa5S3UwQAkhf9yc9wQSAk+jGoFGOs24AP//j2XkeooRJNqx1PxhHGrKEs5qq1Cjr8l2k="
+- openssl aes-256-cbc -K $encrypted_47edfc36d970_key -iv $encrypted_47edfc36d970_iv -in deploy_key.enc -out deploy_key -d
+- chmod 600 deploy_key
+- eval `ssh-agent -s`
+- ssh-add deploy_key
+- git config --global user.name "travis-ci"
+- git config --global user.email "noreply@travis-ci.org"
+- source publish-on-gh-pages.sh
