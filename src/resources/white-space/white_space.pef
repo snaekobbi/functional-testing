@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
   <!--
-      Generated from white_space.txt using table "sbs.dis"
+      Generated from white_space.txt using table "sbs.dis".
+      Edits:
+      - removed the border
+      - removed the ellipsis
   -->
   <head>
     <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -15,10 +18,9 @@
           <row/>
           <row>⠀⠀⠀⠀⠀⠹⠴⠇⠿⠀⠋⠻⠙⠔⠖⠙⠀⠗⠁⠍⠥⠵⠒</row>
           <row>⠀⠀⠀⠀⠀⠀⠀⠀⠤⠀⠝⠑⠃⠽⠀⠤⠇⠢⠉</row>
-          <row>⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤</row>
           <row/>
           <row>⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁</row>
-          <row>⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠄⠄⠄</row>
+          <row>⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁</row>
         </page>
       </section>
     </volume>
