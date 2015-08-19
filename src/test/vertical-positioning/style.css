@@ -1,5 +1,52 @@
-@page { size: 28 28; }
+@page {
+	size: 28 28;
+	@top-center {
+		content: ' ';
+	}
+}
 
 p {
 	display: block;
+}
+
+p.author {
+	-obfl-vertical-position: 5;
+	text-align: center;
+}
+
+p.title {
+	-obfl-vertical-position: 8;
+	text-align: center;
+	border-bottom: ⠤;
+}
+
+p.band-info {
+	-obfl-vertical-position: 16;
+	text-align: center;
+}
+
+p.sbs {
+	-obfl-vertical-position: 25;
+	text-align: center;
+}
+
+p.sbs + * {
+	page-break-before: always;
+}
+
+p.sbs-info {
+	-obfl-vertical-position: 20;
+}
+
+p.publisher {
+	-obfl-vertical-position: 25;
+	text-align: center;
+}
+
+publisher + * {
+	page-break-before: always;
+}
+
+p.publish-info {
+	-obfl-vertical-position: 23;
 }
