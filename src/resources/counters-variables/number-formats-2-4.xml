@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level1 xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+	<h1>written out</h1>
+	<level2>
+		<h2>arabic numbers</h2>
+		<p>eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf dreizehn vierzehn
+		fünfzehn sechzehn siebzehn achtzehn neunzehn zwanzig einundzwanzig zweiundzwanzig
+		dreiundzwanzig vierundzwanzig fünfundzwanzig sechsundzwanzig siebenundzwanzig
+		achtundzwanzig neunundzwanzig</p>
+	</level2>
+	<level2>
+		<h2>ordinal numbers</h2>
+		<p>erster zweiter dritter vierter fünfter sechster siebter achter neunter zehnter elfter
+		zwölfter dreizehnter vierzehnter fünfzehnter sechzehnter siebzehnter achtzehnter
+		neunzehnter zwanzigster einundzwanzigster zweiundzwanzigster dreiundzwanzigster
+		vierundzwanzigster fünfundzwanzigster sechsundzwanzigster siebenundzwanzigster
+		achtundzwanzigster neunundzwanzigster</p>
+	</level2>
+</level1>

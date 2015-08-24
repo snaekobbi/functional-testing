@@ -1,0 +1,58 @@
+p
+           REGULAR
+           -------
+
+
+ ARABIC NUMBERS
+ ::::::::::::::
+   #A #B #C #D #E #F #G #H #I
+ #J #ABCDEFGHIJ
+
+
+ ROMAN NUMBERS
+ :::::::::::::
+   >I >V >X >L >C >D >M >II
+ >VI >VIII >IX >MCMLI
+   'I 'V 'X 'L 'C 'D 'M 'II
+ 'VI 'VIII 'IX 'MCMLI
+
+
+
+
+
+
+
+
+
+
+                           #A
+p
+         DOWNSHIFTED
+         -----------
+
+
+ ORDINAL NUMBERS
+ :::::::::::::::
+   #, #; #: #/ #? #+ #= #( #*
+ #) #,;:/?+=(*)
+
+
+ DATES
+ :::::
+   #+AB#AIHB #+AB#AIHB
+
+
+ RANGES OF PRINT PAGES
+ :::::::::::::::::::::
+   _#AC,=
+
+
+
+
+
+
+
+
+
+p
+p
