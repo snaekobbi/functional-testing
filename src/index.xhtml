@@ -36,12 +36,14 @@
           "https://api.github.com/repos/snaekobbi/requirements/branches",
           function(data) {
             $.each(data, function(i, branch) {
-              $(branches.children()[1]).append(
-                $("&lt;option/&gt;", {
-                  value: branch.name,
-                  text: branch.name
-                })
-              );
+              if (branch.name != 'gh-pages') {
+                $(branches.children()[1]).append(
+                  $("&lt;option/&gt;", {
+                    value: branch.name,
+                    text: branch.name
+                  })
+                );
+              }
             });
             branches.val(branch);
           }
