@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="10" failures="5" time="32.168" errors="0" name="test"><testsuite timestamp="2015-08-24T12:33:57.037Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12921e1" name="TheFooterContainsTheRangeOfPrintPagesExpressedInDownshiftedNumberFormatIfBothRightAndLeftHandPagesHaveAFooterItsTheRangeOfPrintPagesContainedInTheCurrentBraillePage" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="8.846">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/style-sbs.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec/tmp/xprocspec-20150824123328178/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-09&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_782141367&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠁⠁⠂⠆⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠃⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠉⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠁⠃⠂⠲⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠙⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠑⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠁⠙⠂⠖⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠋⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠁⠋⠂⠔⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠙&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠊⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠃⠚⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠁⠊⠆⠴⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠑&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠃⠚⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠀⠼⠋&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠼⠁⠁
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠽⠀⠼⠁
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠁⠄
+⠼⠁⠃
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠃⠄
+⠼⠁⠉
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠉⠄
+⠼⠁⠙
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠙⠄
+⠼⠁⠑
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠑⠄
+⠼⠁⠋
+
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠋⠄
+⠼⠁⠛⠀⠼⠁⠓⠀⠼⠁⠊
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠊⠄
+⠼⠃⠚
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠃⠚⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T12:33:57.094Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12929e1" name="TheFooterContainsTheRangeOfPrintPagesExpressedInDownshiftedNumberFormatIfOnlyRightHandPagesHaveAFooterItsTheRangeOfPrintPagesContainedInThePreviousAndCurrentBraillePages" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="4.254">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/style-sbs.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec/tmp/xprocspec-20150824123328178/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-09&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_286617876&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠁⠁⠂⠆⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠃⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠉⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠙⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠑⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠁⠃⠂⠖⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠋⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠁⠊⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠑⠝⠙⠑⠀⠎⠑⠊⠞⠑⠀⠼⠃⠚⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠁⠋⠆⠴⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁⠀⠀⠀⠀⠀⠼⠑&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠼⠁⠁
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠽⠀⠼⠁
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠁⠄
+⠼⠁⠃
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠃⠄
+⠼⠁⠉
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠉⠄
+⠼⠁⠙
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠙⠄
+⠼⠁⠑
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠑⠄
+⠼⠁⠋
+
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠋⠄
+⠼⠁⠛⠀⠼⠁⠓⠀⠼⠁⠊
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠁⠊⠄
+⠼⠃⠚
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠉⠙⠑⠀⠎⠩⠦⠀⠼⠃⠚⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T12:33:57.146Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12936e1" name="PrintPageBreaksAreIndicatedWithAFullLineFollowedByThePageNumberOfTheNewPrintPageSeveralConsecutivePrintPageBreaksAreCombinedIntoASingleIndicator" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.968">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/style-sbs.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec/tmp/xprocspec-20150824123328178/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-09&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_629460089&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠭⠽⠵&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠸⠼⠁⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠸⠼⠁⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠀⠀⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠸⠼⠁⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠸⠼⠁⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠸⠼⠁⠋&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠼⠙&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠸⠼⠁⠛⠤⠸⠼⠁⠊&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠑&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠼⠁⠁
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠭⠠⠽⠵
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠼⠁⠃
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠼⠁⠉
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠼⠁⠙
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠼⠁⠑
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠼⠁⠋
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠼⠁⠛⠀⠼⠁⠓⠀⠼⠁⠊
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T12:33:57.181Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12943e1" name="RenderingPrintPageBreaksAsMarksInTheLeftMargin" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.978">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/style-nlb.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:no)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec/tmp/xprocspec-20150824123328178/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠧⠊⠀⠓⠁⠗⠀⠑⠞⠀⠎⠽⠎⠞⠑⠍⠀⠓⠧⠕⠗⠀⠧⠊⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠑⠇⠑⠗⠀⠙⠑⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠑⠗⠅⠕⠗⠞⠑⠝⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠊⠝⠝⠀⠊⠀⠅⠇⠁⠎⠎⠑⠗⠄⠀⠠⠎⠅⠚⠑⠍⠁⠑⠞⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠑⠙⠑⠝⠋⠕⠗⠀⠛⠊⠗⠀⠑⠝⠀⠕⠧⠑⠗⠎⠊⠅⠞⠀⠕⠧⠑⠗⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠑⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠑⠗⠅⠕⠗⠞⠅⠇⠁⠎⠎⠑⠝⠑⠄⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠊⠝⠛⠑⠝⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠊⠝⠛⠑⠝⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠑⠗⠀⠁⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠥⠀⠎⠅⠁⠇⠀⠞⠊⠇⠑⠛⠝⠑⠀⠙⠑⠛⠀⠙⠑⠀⠓⠕⠇⠙⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠊⠝⠛⠑⠝⠑⠂⠀⠅⠥⠝⠝⠎⠅⠁⠏⠑⠝⠑⠀⠕⠛⠀⠋⠑⠗⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠊⠛⠓⠑⠞⠑⠝⠑⠀⠎⠕⠍⠀⠑⠗⠀⠝⠪⠙⠧⠑⠝⠙⠊⠛⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠕⠗⠀⠁⠞⠀⠙⠥⠀⠎⠅⠁⠇⠀⠅⠥⠝⠝⠑⠀⠅⠚⠪⠗⠑⠒⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠍⠑⠙⠀⠎⠞⠪⠗⠎⠞⠀⠍⠥⠇⠊⠛⠀⠎⠊⠅⠅⠑⠗⠓⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠍⠑⠙⠀⠞⠁⠝⠅⠑⠀⠏⠡⠀⠛⠕⠙⠀⠎⠁⠍⠓⠁⠝⠙⠇⠊⠝⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠋⠕⠗⠀⠃⠑⠎⠞⠀⠍⠥⠇⠊⠛⠀⠋⠗⠁⠍⠅⠕⠍⠍⠑⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠇⠊⠛⠓⠑⠞⠀⠕⠛⠀⠞⠗⠁⠋⠊⠅⠅⠁⠧⠧⠊⠅⠇⠊⠝⠛⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠍⠑⠎⠞⠀⠍⠥⠇⠊⠛⠀⠓⠑⠝⠎⠽⠝⠎⠋⠥⠇⠇⠞⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠕⠧⠑⠗⠋⠕⠗⠀⠁⠝⠙⠗⠑⠎⠀⠞⠗⠽⠛⠛⠓⠑⠞⠂⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠓⠑⠇⠎⠑⠀⠕⠛⠀⠍⠊⠇⠚⠪⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠊⠀⠎⠁⠍⠎⠧⠁⠗⠀⠍⠑⠙⠀⠧⠑⠛⠞⠗⠁⠋⠊⠅⠅⠑⠝⠎⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠇⠕⠧⠑⠗⠂⠀⠗⠑⠛⠇⠑⠗⠂⠀⠋⠕⠗⠎⠅⠗⠊⠋⠞⠑⠗⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠕⠛⠀⠁⠝⠙⠗⠑⠀⠃⠑⠎⠞⠑⠍⠍⠑⠇⠎⠑⠗⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠞⠀⠞⠗⠁⠋⠊⠅⠁⠇⠑⠀⠛⠗⠥⠝⠝⠅⠥⠗⠎⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠚&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠀⠀⠀⠀⠠⠧⠊⠀⠗⠀⠬⠀⠎⠽⠎⠞⠑⠍⠀⠺⠀⠧⠊⠀⠹⠇⠱⠀⠹⠀
+⠀⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠱⠅⠕⠗⠞⠑⠮⠀⠊⠝⠝⠀⠊⠀⠅⠇⠁⠎⠎⠱⠄
+⠀⠀⠠⠶⠚⠑⠍⠁⠬⠀⠝⠫⠀⠛⠊⠗⠀⠣⠀⠭⠎⠊⠅⠞⠀⠭⠀⠹⠀
+⠀⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠱⠅⠕⠗⠞⠅⠇⠁⠎⠎⠑⠮⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠒⠊⠣⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇
+
+⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠒⠊⠣⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠱⠀⠁⠀⠙⠀⠿
+⠀⠀⠞⠊⠒⠛⠮⠀⠙⠛⠀⠹⠀⠓⠕⠇⠙⠝⠢⠊⠮⠂⠀⠅⠥⠝⠝⠢⠏⠮⠀⠉
+⠀⠀⠋⠱⠙⠊⠛⠦⠑⠮⠀⠎⠀⠱⠀⠝⠧⠑⠀⠫⠀⠁⠀⠙⠀⠿⠀⠅⠝⠀
+⠀⠀⠅⠚⠪⠷⠒
+
+⠀⠀⠐⠂⠭⢃⢚⢃⢃⠐⠀⠩⠀⠴⠪⠗⠎⠞⠀⠍⠥⠒⠇⠀⠎⠊⠅⠅⠱⠓⠬
+⠀⠀⠐⠂⠭⢃⢚⢃⢃⠐⠀⠩⠀⠞⠁⠝⠅⠑⠀⠏⠀⠛⠕⠙⠀
+⠀⠀⠀⠀⠎⠁⠍⠓⠁⠝⠙⠇⠒⠊
+⠀⠀⠐⠂⠭⢃⢚⢃⢃⠐⠀⠫⠀⠃⠑⠎⠞⠀⠍⠥⠒⠇⠀
+⠀⠀⠀⠀⠋⠍⠅⠕⠍⠍⠑⠒⠇⠦⠀⠉⠀⠢⠁⠋⠊⠅⠅⠁⠧⠧⠊⠅⠇⠒⠊
+⠀⠀⠐⠂⠭⢃⢚⢃⢃⠐⠀⠍⠑⠎⠞⠀⠍⠥⠒⠇⠀⠓⠣⠎⠽⠝⠎⠋⠥⠇⠇⠞
+⠀⠀⠀⠀⠭⠫⠀⠁⠷⠎⠀⠢⠽⠛⠛⠦⠂⠀⠓⠢⠑⠀⠉⠀⠍⠊⠇⠚⠪
+⠀⠀⠐⠂⠭⢃⢚⢃⢃⠐⠀⠊⠀⠎⠁⠍⠎⠧⠼⠀⠩⠀
+⠀⠀⠀⠀⠧⠑⠛⠞⠗⠁⠋⠊⠅⠅⠣⠎⠀⠇⠕⠧⠱⠂⠀⠗⠑⠛⠇⠱⠂⠀
+⠀⠀⠀⠀⠫⠎⠅⠗⠊⠋⠞⠱⠀⠉⠀⠁⠷⠀⠃⠑⠎⠞⠑⠍⠍⠒⠑⠱
+
+⠀⠀⠀⠀⠠⠙⠬⠀⠢⠁⠋⠊⠅⠁⠇⠑⠀⠛⠗⠥⠝⠝⠅⠥⠗⠎⠬
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T12:33:57.216Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12950e1" name="RenderingPrintPageBreaksAsMarksInTheLeftMarginTheMarkIsTakenOutOfTheNormalTextFlowAndAppearsAtTheSameLineAsTheWordThatComesAfterThePagenumTag" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="2.047">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/print-pages/style-nlb.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:no)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec/tmp/xprocspec-20150824123328178/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠠⠙⠑⠞⠀⠞⠕⠅⠀⠇⠁⠝⠛⠀⠞⠊⠙⠀⠋⠪⠗⠀⠃⠑⠞⠁⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠊⠝⠛⠑⠝⠀⠛⠊⠅⠅⠀⠊⠛⠚⠑⠝⠝⠕⠍⠂⠀⠧⠊⠀⠎⠞⠕⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠑⠝⠀⠃⠗⠑⠞⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠞⠀⠎⠁⠍⠍⠑⠝⠀⠅⠇⠥⠞⠑⠝⠂⠀⠙⠑⠝⠀⠧⠁⠗⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠥⠇⠄⠀⠠⠚⠑⠛⠀⠓⠁⠗⠀⠁⠇⠙⠗⠊⠀⠎⠑⠞⠞⠀⠝⠕⠑⠝⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠗⠑⠞⠞⠑⠀⠎⠁⠍⠍⠑⠝⠀⠑⠝⠀⠕⠏⠏⠧⠁⠎⠅⠅⠇⠥⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠪⠗⠄⠀⠠⠓⠥⠝⠀⠋⠕⠇⠙⠑⠞⠀⠙⠑⠝⠀⠎⠕⠍⠀⠑⠝⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠥⠅⠂⠀⠓⠥⠝⠀⠛⠇⠁⠞⠞⠑⠞⠀⠙⠑⠝⠀⠥⠞⠀⠕⠛⠎⠡⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀⠙⠑⠗⠋⠗⠁⠀⠍⠑⠙⠀⠎⠅⠕⠑⠝⠑⠀⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠝⠀⠏⠕⠎⠑⠂⠀⠚⠑⠛⠀⠛⠊⠅⠅⠀⠗⠥⠝⠙⠞⠀⠊⠀⠛⠁⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠝⠑⠄⠀⠠⠙⠑⠞⠀⠎⠅⠥⠇⠇⠑⠀⠧⠊⠎⠎⠞⠀⠧⠜⠗⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠝⠀⠃⠁⠅⠑⠗⠀⠙⠑⠗⠄⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀⠊⠝⠝⠀⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠁⠎⠚⠕⠝⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠂⠀⠋⠕⠗⠙⠊⠀⠛⠁⠞⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠇⠥⠞⠞⠑⠞⠄⠀⠠⠑⠞⠀⠏⠁⠗⠀⠥⠝⠛⠑⠀⠍⠑⠝⠝⠑⠎⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠑⠗⠀⠍⠑⠙⠀⠏⠇⠁⠎⠞⠋⠇⠁⠎⠅⠑⠗⠀⠎⠡⠀⠕⠏⠏⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠪⠗⠀⠙⠑⠀⠃⠑⠧⠑⠛⠑⠞⠀⠎⠑⠛⠀⠧⠊⠙⠑⠗⠑⠄⠀⠠⠏⠡&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠑⠗⠗⠕⠝⠛⠑⠝⠀⠧⠊⠎⠞⠑⠀⠎⠅⠊⠇⠞⠑⠞⠀⠋⠪⠗⠞⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠍⠊⠝⠥⠞⠞⠑⠗⠀⠞⠊⠇⠀⠝⠑⠎⠞⠑⠀⠞⠕⠛⠂⠀⠙⠑⠞⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠁⠗⠀⠞⠕⠛⠑⠞⠀⠝⠕⠗⠙⠕⠧⠑⠗⠄⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠗⠥⠝⠙⠞⠀⠃⠽⠛⠝⠊⠝⠛⠑⠝⠂⠀⠇⠥⠋⠞⠑⠝⠀⠧⠁⠗⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠥⠗⠀⠕⠛⠀⠅⠁⠇⠙⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠑⠝⠀⠅⠕⠍&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠝⠑⠙⠕⠧⠑⠗⠀⠋⠕⠗⠞⠁⠥⠑⠞⠀⠍⠑⠙⠀⠙⠑⠝⠀⠇⠊⠇⠇⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠥⠝⠙⠑⠝⠂⠀⠝⠡⠀⠊⠋⠪⠗⠞⠀⠙⠑⠅⠅⠑⠝⠄⠀⠠⠓⠥⠝⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠕⠞⠀⠙⠑⠝⠀⠎⠝⠥⠎⠑⠀⠏⠡⠀⠝⠕⠑⠀⠥⠝⠙⠑⠗⠀⠑⠝⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠑⠝⠅⠂⠀⠓⠥⠝⠀⠎⠞⠕⠀⠕⠛⠀⠎⠞⠥⠙⠑⠗⠞⠑⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠡⠝⠙⠋⠇⠁⠞⠑⠝⠀⠎⠊⠝⠀⠊⠍⠑⠝⠎⠄⠀⠠⠙⠁⠀⠚⠑⠛⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠜⠗⠍⠑⠞⠀⠍⠑⠛⠂⠀⠇⠪⠋⠞⠑⠞⠀⠓⠥⠝⠀⠓⠕⠙⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠁&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠠⠕⠗⠊⠛⠊⠝⠁⠇⠀⠏⠁⠛⠊⠝⠁⠞⠊⠕⠝⠀⠳⠎⠞⠀⠠⠅⠁⠗⠊⠀
+⠼⠉
+⠀⠀⠀⠀⠠⠚⠀⠛⠗⠀⠊⠅⠀⠓⠱⠀⠩⠀⠣⠀⠅⠧⠊⠝⠮⠀⠊⠋⠪⠗⠞⠀
+⠀⠀⠏⠁⠝⠝⠑⠃⠡⠝⠙⠀⠊⠀⠬⠀⠗⠁⠎⠅⠞⠀⠞⠊⠇⠞⠁⠛⠣⠹⠀
+⠀⠀⠞⠥⠎⠎⠍⠪⠗⠅⠑⠀⠥⠞⠣⠀⠍⠡⠇⠀⠉⠀⠍⠑⠝⠒⠊⠄⠀⠠⠊⠀
+⠀⠀⠶⠕⠀⠋⠀⠃⠽⠣⠀⠠⠁⠗⠙⠣⠂⠀⠚⠀⠅⠚⠪⠏⠳⠀⠙⠍⠀⠊⠀
+⠀⠀⠫⠛⠡⠗⠎⠄⠀⠠⠹⠀⠇⠡⠀⠊⠀⠣⠀⠢⠡⠙⠅⠥⠗⠧⠀⠥⠫⠀
+⠀⠀⠠⠖⠕⠗⠞⠀⠉⠀⠠⠏⠁⠗⠋⠽⠍⠑⠗⠊⠂⠀⠙⠬⠀⠼⠀⠃⠁⠷⠀
+⠀⠀⠙⠬⠀⠑⠮⠀⠏⠁⠗⠬⠄⠀⠠⠙⠎⠧⠀⠞⠕⠀⠫⠉⠊⠛⠑⠀
+⠀⠀⠴⠪⠗⠗⠒⠑⠱⠂⠀⠙⠬⠀⠍⠱⠅⠬⠀⠚⠀⠊⠅⠀⠊⠀⠋⠁⠗⠞⠣⠄
+⠀⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠣⠀⠅⠕⠍⠀⠥⠞⠀⠏⠀⠫⠞⠁⠥⠬⠀⠩⠀
+⠀⠀⠣⠀⠕⠏⠏⠧⠁⠎⠅⠅⠇⠥⠞⠂⠀⠥⠀⠞⠪⠗⠅⠬⠀⠁⠧⠀
+⠀⠀⠢⠡⠙⠅⠥⠗⠧⠣⠄⠀⠠⠚⠀⠋⠛⠳⠀⠵⠀⠑⠑⠀⠊⠝⠝⠀⠊⠀
+⠀⠀⠃⠥⠞⠊⠅⠅⠣⠀⠊⠛⠚⠣⠀⠩⠀⠶⠕⠑⠮⠀⠊⠀⠓⠡⠝⠙⠣⠂⠀⠹
+⠀⠀⠼⠀⠓⠑⠋⠞⠬⠀⠎⠍⠣⠂⠀⠥⠀⠅⠇⠊⠏⠏⠬⠀⠙⠍⠀⠋⠀
+⠀⠀⠺⠁⠷⠄⠀⠠⠙⠬⠀⠼⠀⠬⠀⠏⠕⠙⠊⠥⠍⠀⠊⠀⠙⠬⠀⠑⠮⠀
+⠀⠀⠧⠊⠝⠙⠥⠬⠂⠀⠙⠬⠀⠎⠁⠞⠞⠀⠣⠀⠇⠊⠞⠣⠀⠓⠥⠝⠙⠀⠏⠀
+⠀⠀⠙⠬⠂⠀⠙⠣⠀⠎⠡⠀⠇⠣⠛⠑⠀⠏⠀⠍⠛⠀⠪⠀⠙⠣⠀⠎⠝⠥⠙⠹
+⠀⠀⠎⠛⠀⠃⠕⠗⠞⠄⠀⠠⠚⠀⠃⠑⠞⠁⠇⠳⠀⠩⠀⠅⠕⠗⠞⠄⠀⠠⠙⠬
+⠀⠀⠞⠕⠅⠀⠇⠁⠝⠛⠀⠞⠊⠙⠀⠪⠀⠃⠑⠞⠁⠇⠒⠊⠣⠀⠛⠅⠀⠊⠻⠂
+⠀⠀⠧⠊⠀⠴⠕⠀⠉⠀⠧⠣⠞⠬⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠣⠀
+⠀⠀⠃⠗⠑⠞⠞⠬⠀⠎⠍⠣⠀⠅⠇⠥⠞⠣⠂⠀⠙⠣⠀⠼⠀⠛⠥⠇⠄⠀⠠⠚
+⠀⠀⠗⠀⠁⠊⠀⠎⠬⠞⠀⠝⠝⠀⠃⠗⠬⠳⠀⠎⠍⠣⠀⠣⠀
+⠀⠀⠕⠏⠏⠧⠁⠎⠅⠅⠇⠥⠞⠀⠪⠄⠀⠠⠥⠀⠋⠕⠇⠙⠬⠀⠙⠣⠀⠎⠀⠣
+⠀⠀⠙⠥⠅⠂⠀⠥⠀⠛⠇⠁⠞⠞⠬⠀⠙⠣⠀⠥⠞⠀⠉⠎⠄⠀⠠⠚⠀⠛⠅⠀
+⠀⠀⠾⠋⠀⠩⠀⠶⠕⠑⠮⠀⠊⠀⠣⠀⠏⠕⠎⠑⠂⠀⠚⠀⠛⠅⠀⠗⠥⠝⠙⠞
+⠀⠀⠊⠀⠛⠁⠞⠑⠮⠄⠀⠠⠙⠬⠀⠿⠑⠀⠧⠎⠞⠀⠜⠀⠣⠀⠃⠁⠅⠱⠀
+⠀⠀⠾⠄⠀⠠⠚⠀⠛⠅⠀⠊⠝⠝⠀⠊⠀⠴⠁⠎⠚⠕⠝⠎⠃⠽⠛⠝⠒⠊⠣⠂
+
+
+⠀⠀⠫⠙⠊⠀⠛⠁⠞⠣⠀⠎⠇⠥⠞⠞⠬⠄⠀⠠⠬⠀⠏⠼⠀⠥⠝⠛⠑⠀
+⠀⠀⠍⠣⠝⠑⠎⠅⠱⠀⠩⠀⠏⠇⠁⠎⠞⠋⠇⠁⠎⠅⠱⠀⠎⠡⠀⠕⠏⠏⠀⠪
+⠀⠀⠹⠀⠃⠑⠧⠑⠛⠬⠀⠎⠛⠀⠧⠊⠙⠑⠷⠄⠀⠠⠏⠀⠏⠱⠗⠕⠝⠛⠣⠀
+⠀⠀⠧⠊⠎⠳⠀⠶⠊⠇⠞⠬⠀⠋⠪⠗⠞⠊⠀⠍⠊⠝⠥⠞⠞⠱⠀⠞⠀⠮⠎⠳
+⠀⠀⠞⠕⠛⠂⠀⠙⠬⠀⠼⠀⠞⠕⠛⠬⠀⠝⠕⠗⠙⠕⠧⠱⠄⠀⠠⠚⠀⠛⠅⠀
+⠀⠀⠗⠥⠝⠙⠞⠀⠃⠽⠛⠝⠒⠊⠣⠂⠀⠇⠥⠋⠞⠣⠀⠼⠀⠎⠥⠗⠀⠉⠀
+⠀⠀⠅⠁⠇⠙⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠣⠀⠅⠕⠍⠀⠮⠙⠕⠧⠱⠀
+⠀⠀⠫⠞⠁⠥⠬⠀⠩⠀⠙⠣⠀⠇⠊⠇⠇⠑⠀⠓⠥⠝⠙⠣⠂⠀⠝⠡⠀
+⠀⠀⠊⠋⠪⠗⠞⠀⠹⠅⠅⠣⠄⠀⠠⠥⠀⠇⠕⠞⠀⠙⠣⠀⠎⠝⠥⠎⠑⠀⠏⠀
+⠀⠀⠝⠕⠑⠀⠟⠀⠣⠀⠃⠣⠅⠂⠀⠥⠀⠴⠕⠀⠉⠀⠴⠥⠙⠱⠳⠀
+⠀⠀⠓⠡⠝⠙⠋⠇⠁⠞⠣⠀⠎⠝⠀⠊⠍⠣⠎⠄⠀⠠⠙⠁⠀⠚⠀⠝⠜⠗⠍⠬
+⠀⠀⠍⠛⠂⠀⠇⠪⠋⠞⠬⠀⠥⠀⠓⠕⠙⠬⠀⠉⠀⠎⠡⠀⠗⠬⠞⠀⠏⠀⠍⠛
+⠀⠀⠩⠀⠬⠀⠞⠕⠍⠞⠀⠥⠞⠞⠗⠽⠅⠅⠀⠊⠀⠁⠝⠎⠊⠅⠞⠬⠄⠀⠠⠚
+⠀⠀⠫⠃⠑⠗⠑⠙⠳⠀⠍⠛⠀⠏⠀⠣⠀⠓⠊⠇⠎⠣⠄⠀⠠⠍⠣⠀⠪⠀⠙⠣
+⠀⠀⠃⠀⠞⠀⠝⠕⠑⠂⠀⠗⠑⠞⠞⠬⠀⠥⠀⠊⠛⠚⠣⠀
+⠀⠀⠕⠏⠏⠍⠱⠅⠎⠕⠍⠦⠣⠀⠍⠕⠞⠀⠓⠡⠝⠙⠋⠇⠁⠞⠣⠀⠎⠝⠄
+⠀⠀⠀⠀⠠⠙⠬⠀⠼⠀⠣⠀⠑⠊⠣⠙⠕⠍⠎⠍⠑⠛⠇⠱⠀⠭⠫⠀
+⠀⠀⠴⠁⠒⠝⠣⠄⠀⠠⠚⠀⠎⠡⠀⠏⠀⠓⠥⠎⠀⠊⠀⠧⠊⠝⠙⠥⠬⠂⠀⠚
+⠀⠀⠇⠑⠎⠳⠀⠓⠧⠱⠀⠣⠅⠑⠇⠞⠀⠃⠊⠇⠙⠑⠞⠑⠅⠎⠞⠀⠩⠀⠁⠑
+⠀⠀⠃⠑⠇⠪⠏⠀⠉⠀⠋⠊⠝⠁⠝⠎⠊⠑⠗⠒⠊⠎⠋⠕⠗⠎⠇⠁⠛⠄⠀
+⠀⠀⠠⠚⠀⠼⠀⠙⠣⠀⠎⠊⠎⠳⠀⠧⠀⠃⠊⠇⠣⠂⠀⠎⠕⠇⠣⠀⠓⠹⠀
+⠀⠀⠵⠇⠁⠞⠞⠀⠬⠀⠛⠇⠪⠙⠣⠹⠀⠕⠗⠁⠝⠎⠚⠑⠀⠖⠕⠗⠀⠭⠀
+⠀⠀⠏⠁⠗⠅⠑⠗⠒⠊⠎⠏⠇⠁⠎⠎⠣⠄
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

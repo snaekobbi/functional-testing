@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" script="../css_inline_and_px_transform_type_css.xpl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../github.min.css"/><style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+				@namespace x url(http://www.daisy.org/ns/xprocspec);
+				x|scenario x|documentation ul li {
+				  margin-top: 10px;
+				  margin-bottom: 10px;
+				}
+				code.xpath {
+				  display: inline;
+				}
+			</style><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+    
+    <x:scenario id="47.1" label="Top, right, bottom and left borders and padding."><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span>source<div class="document "><code>&lt;doc&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      ⠿⠿⠿⠿
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/doc&gt;</code></div></span></li><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 20 5; }
+
+div {
+	display: block;
+	text-align: center;
+	margin-left: 1;
+	margin-right: 1;
+	padding-left: 1;
+	padding-right: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	border-left: ⠇;
+	border-right: ⠸;
+	border-top: ⠤;
+	border-bottom: ⠉
+}</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(translator:bypass)'</code></li><li><span>result<div class="document pef"><code class="pef">&lt;pef version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="5" cols="20" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="5" cols="20" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> ------------------ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> L                _ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠇⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> L      ====      _ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> L                _ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> CCCCCCCCCCCCCCCCCC </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline"><doc>
+  <body>
+    <div>
+      ⠿⠿⠿⠿
+    </div>
+  </body>
+</doc>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:bypass)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="inline"><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="5" cols="20" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> ------------------ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> L                _ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠇⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> L      ====      _ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> L                _ </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0"> CCCCCCCCCCCCCCCCCC </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef>
+      </x:document>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

@@ -1,0 +1,24 @@
+@page {
+	size: 32 28;
+}
+head {
+	display: none;
+}
+level1 {
+	padding: 1 1;
+	border: ⠛ ⠿ ⠶ ⠿;
+}
+p {
+	display: block;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+h1 {
+	display: block;
+}
+.center {
+	text-align: center;
+}
+.preformatted {
+	white-space: pre-wrap;
+}

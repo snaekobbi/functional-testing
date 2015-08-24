@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               script="../css_inline_and_px_transform_type_css.xpl">
+  
+  <x:scenario id="test1" label="[4.3:36] double letter spacing, small sample (type 1, 2 and 3)">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline">
+          <_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+# All caps, for early primary education. No hyphenation.
+ENNI UI
+ONNI UI
+
+# Pre-hyphenated, with majuscules and minuscules. No hyphenation.
+En-ni lau-laa. On-ni ui.
+
+Luo-kas-sa on 3 las-ta.
+
+# Literate braille learner's books. Hyphenation allowed.
+Läpi näkyy, lämpimän pitää?
+
+Hinta on 30 markkaa.</_>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-celia.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:celia)'"/>
+      <x:option name="ascii-table" select="'(id:&quot;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/letter-spacing/braille-guide/examples.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test2" label="[4.3:36] double letter spacing, big sample 1 (type 3)">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline">
+          <_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+            todo
+          </_>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-celia.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:celia)'"/>
+      <x:option name="ascii-table" select="'(id:&quot;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/letter-spacing/Mies rannalla/319921_1.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test3" label="[4.3:36] double letter spacing, big sample 2 (type 3)">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline">
+          <_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+            todo
+          </_>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-celia.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:celia)'"/>
+      <x:option name="ascii-table" select="'(id:&quot;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/letter-spacing/Miina ja Manu kirjastossa/319141_1.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test4" label="[4.3:36] double letter spacing, big example 3 (type 3)">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline">
+          <_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+            todo
+          </_>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-celia.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:celia)'"/>
+      <x:option name="ascii-table" select="'(id:&quot;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/letter-spacing/Taskuvaras/320945.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

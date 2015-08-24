@@ -1,0 +1,67 @@
+pA=
+   $VORSICHT ........... $WIE?
+   8BERQUERT ........... $VERB
+   DIE $KATZE .......... $WER?
+   VOR DEM $SCHULHAUS .. $WO?
+   DIE $STRASSE. ....... $WEN!,$WAS?
+ B=
+   $GEGEN $ABEND ....... ---
+   BEKAM ............... ---
+   --- ................. ---
+   --- ................. ---
+   --- ................. ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   
+p  
+p                                  
+
+
+
+source-code (SBSBrl):
+
+i b=36
+I T=j
+i T=25
+T | ="."
+vb1
+
+i f=3 l=5 w=1 W=3
+w
+ a)
+
+ Vorsicht | Wie?
+
+ ¸berquert | Verb
+
+ die Katze | Wer?
+
+ vor dem Schulhaus | Wo?
+
+ die Strasse.  | Wen/Was?
+
+w
+ b)
+
+ Gegen Abend | {---}
+
+ bekam | {---}
+
+ {---} | {---}
+
+ {---} | {---}
+
+ {---} | {---}  

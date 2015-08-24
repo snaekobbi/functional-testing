@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE dtbook PUBLIC "-//NISO//DTD dtbook 2005-3//EN" "http://www.daisy.org/z3986/2005/dtbook-2005-3.dtd">
+<dtbook xml:lang="nl" version="2005-3" xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+<head>
+</head>
+<book>
+<frontmatter>
+<doctitle></doctitle>
+<docauthor></docauthor>
+</frontmatter>
+<bodymatter>
+<level1>
+<h1>Rijtjes</h1>
+<p>Woordjes gescheiden door 4 spaties in &lt;code&gt;</p>
+<p><code>
+bel    del    hel    tel
+bal    dal    hal    tal
+bol    dol    hol    tol
+bil    dil    hil    til</code></p>
+</level1>
+</bodymatter>
+<rearmatter>
+</rearmatter>
+</book>
+</dtbook>

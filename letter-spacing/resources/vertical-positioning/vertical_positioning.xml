@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level1 xmlns="http://www.daisy.org/z3986/2005/dtbook/"
+        xmlns:brl="http://www.daisy.org/z3986/2009/braille/">
+	<p class="author">Peter Bichsel</p>
+	<p class="title">Über das Wetter reden</p>
+	<p class="band-info">In zwei Braillebänden</p>
+	<p>Erster Band</p>
+	<p class="sbs"><abbr>SBS</abbr> Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte</p>
+	<p>Dieses Braillebuch ist die ausschliesslich für die Nutzung durch seh- und lesebehinderte
+	Menschen bestimmte zugängliche Version eines urheberrechtlich geschützten Werks. <brl:v-form>Sie</brl:v-form> können
+	es im Rahmen des Urheberrechts persönlich nutzen, dürfen es aber nicht weiter verbreiten oder
+	öffentlich zugänglich machen.</p>
+	<p class="sbs-info">Verlag, Satz und Druck</p>
+	<p><abbr>SBS</abbr> Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte, Zürich</p>
+	<p><a href="http://www.sbs.ch" external="true"><brl:computer>www.sbs.ch</brl:computer></a></p>
+	<p class="sbs"><abbr>SBS</abbr> 2015</p>
+	<p class="author">Peter Bichsel</p>
+	<p class="title">Über das Wetter reden</p>
+	<p>Kolumnen 2012-2015</p>
+	<p class="publisher">Suhrkamp</p>
+	<p>Die in diesem Band versammelten Kolumnen erschienen erstmals in der »Schweizer
+	Illustrierten«.</p>
+	<p class="publish-info">Erste Auflage 2015</p>
+	<p>© Suhrkamp Verlag 2015</p>
+	<p><abbr>ISBN</abbr> <brl:num role="isbn">978-3-518-42470-4</brl:num></p>
+</level1>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" xmlns:p="http://www.w3.org/ns/xproc" xmlns:css="http://www.daisy.org/ns/pipeline/braille-css" xmlns:dotify="http://code.google.com/p/dotify/" xmlns:px="http://www.daisy.org/ns/pipeline/xproc"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../../github.min.css"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+  
+  <x:script>
+    <p:declare-step type="pxi:translate" version="1.0">
+      <p:input port="source"/>
+      <p:output port="result"/>
+      <p:option name="stylesheet" required="true"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/dotify-formatter/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-calabash/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/common-utils/library.xpl"/>
+      <css:inline>
+        <p:with-option name="default-stylesheet" select="resolve-uri($stylesheet)"/>
+      </css:inline>
+      <px:transform type="css-block" query="(locale:de_CH)"/>
+      <dotify:format/>
+    </p:declare-step>
+  </x:script>
+  
+  <x:scenario id="65.1" label="Two-column table with second column left-aligned and with leaders"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/horizontal-positioning/example_1.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;list xmlns="http://www.daisy.org/z3986/2005/dtbook/"&gt;
+	&lt;li&gt;
+		a)
+		&lt;list&gt;
+			&lt;li&gt;
+				&lt;lic&gt;Vorsicht&lt;/lic&gt;
+				&lt;lic&gt;Wie?&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;¸berquert&lt;/lic&gt;
+				&lt;lic&gt;Verb&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;die Katze&lt;/lic&gt;
+				&lt;lic&gt;Wer?&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;vor dem Schulhaus&lt;/lic&gt;
+				&lt;lic&gt;Wo?&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;die Strasse.&lt;/lic&gt;
+				&lt;lic&gt;Wen/Was?&lt;/lic&gt;
+			&lt;/li&gt;
+		&lt;/list&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		b)
+		&lt;list&gt;
+			&lt;li&gt;
+				&lt;lic&gt;Gegen Abend&lt;/lic&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;bekam&lt;/lic&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+				&lt;lic&gt;&lt;/lic&gt;
+			&lt;/li&gt;
+		&lt;/list&gt;
+	&lt;/li&gt;
+&lt;/list&gt;
+</code></div></span></li><li><span><a class="code" href="style.css">stylesheet</a><div class="document "><code>@page { size: 28 28; }
+
+list, li {
+	display: block;
+}</code></div></span></li><li><span><a href="../../resources/horizontal-positioning/example_1.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-03&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_865467957&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="35" rows="12" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠁⠶&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠨⠧⠕⠗⠎⠊⠉⠓⠞⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠨⠺⠊⠑⠢&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠳⠃⠑⠗⠟⠥⠑⠗⠞⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠨⠧⠑⠗⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠊⠑⠀⠨⠅⠁⠞⠵⠑⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠨⠺⠑⠗⠢&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠕⠗⠀⠙⠑⠍⠀⠨⠎⠉⠓⠥⠇⠓⠁⠥⠎⠀⠄⠄⠀⠨⠺⠕⠢&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠊⠑⠀⠨⠎⠞⠗⠁⠎⠎⠑⠄⠀⠄⠄⠄⠄⠄⠄⠄⠀⠨⠺⠑⠝⠐⠂⠨⠺⠁⠎⠢&lt;/row&gt;
+          &lt;row&gt;⠃⠶&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠨⠛⠑⠛⠑⠝⠀⠨⠁⠃⠑⠝⠙⠀⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠑⠅⠁⠍⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠤⠤⠤⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠤⠤⠤⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠤⠤⠤⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-06-03</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_865467957</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="35" rows="12" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">A=                                 </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠨⠧⠕⠗⠎⠊⠉⠓⠞⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠨⠺⠊⠑⠢⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  $VORSICHT ........... $WIE?      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠳⠃⠑⠗⠟⠥⠑⠗⠞⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠨⠧⠑⠗⠃⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  8BERQUERT ........... $VERB      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠙⠊⠑⠀⠨⠅⠁⠞⠵⠑⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠨⠺⠑⠗⠢⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  DIE $KATZE .......... $WER?      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠧⠕⠗⠀⠙⠑⠍⠀⠨⠎⠉⠓⠥⠇⠓⠁⠥⠎⠀⠄⠄⠀⠨⠺⠕⠢⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  VOR DEM $SCHULHAUS .. $WO?       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠙⠊⠑⠀⠨⠎⠞⠗⠁⠎⠎⠑⠄⠀⠄⠄⠄⠄⠄⠄⠄⠀⠨⠺⠑⠝⠐⠂⠨⠺⠁⠎⠢</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  DIE $STRASSE. ....... $WEN!,$WAS?</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">B=                                 </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠨⠛⠑⠛⠑⠝⠀⠨⠁⠃⠑⠝⠙⠀⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  $GEGEN $ABEND ....... ---        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠑⠅⠁⠍⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BEKAM ............... ---        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠤⠤⠤⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  --- ................. ---        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠤⠤⠤⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  --- ................. ---        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠤⠤⠤⠀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠀⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  --- ................. ---        </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:translate">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/horizontal-positioning/example_1.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/horizontal-positioning/example_1.pef"/>
+    </x:expect>
+  </x:scenario>
+    
+</x:description>

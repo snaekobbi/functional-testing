@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="6" failures="3" time="8.718" errors="0" name="test"><testsuite timestamp="2015-08-24T11:10:03.608Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6411e1" name="WhiteSpaceIsNormalised" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="2.678">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/white-space/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/white-space/nlb-style.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:no)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824110955484/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;!--
+      Generated with NorBraille
+      TODO: need to adapt to new preferences
+  --&gt;
+  &lt;head&gt;&lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;&lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;&lt;dc:identifier&gt;NorBraille NLB 2010&lt;/dc:identifier&gt;&lt;/meta&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="32" rows="28" rowgap="0" duplex="true"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠠⠅⠑⠗⠎⠞⠊⠝⠀⠠⠑⠅⠍⠁⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠓⠥⠝⠀⠀⠙⠑⠝⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠠⠝⠇⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠠⠝⠕⠗⠛⠑⠂⠀⠼⠃⠚⠁⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠠⠃⠊⠝⠙⠀⠼⠁⠀⠁⠧⠀⠼⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠠⠕⠗⠛⠊⠝⠁⠇⠞⠊⠞⠞⠑⠇⠒⠀⠠⠓⠥⠝⠙⠑⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠉⠕⠏⠽⠀⠀⠀⠗⠊⠛⠓⠞⠀⠦⠉⠴⠀⠠⠅⠑⠗⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠎⠞⠊⠝⠀⠀⠀⠠⠑⠅⠍⠁⠝⠂⠀⠼⠁⠊⠓⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠞⠓⠊⠎⠀⠑⠙⠊⠞⠊⠕⠝⠀⠺⠁⠎⠀⠏⠥⠃⠇⠊⠎⠓⠑⠙⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠦⠉⠴⠀⠠⠓⠑⠊⠝⠑⠎⠑⠝⠀⠠⠋⠕⠗⠇⠁⠛⠂⠀⠼⠃⠚⠚⠊⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠕⠧⠑⠗⠎⠑⠞⠞⠑⠇⠎⠑⠒⠀⠠⠑⠇⠊⠝⠀⠠⠃⠗⠕⠙⠊⠝⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠊⠎⠃⠝⠒⠀⠼⠊⠛⠓⠓⠃⠓⠁⠛⠛⠚⠁⠙⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row/&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠠⠕⠍⠀⠃⠕⠅⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠋⠥⠇⠇⠎⠅⠗⠊⠋⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠠⠃⠡⠙⠑⠀⠏⠥⠝⠅⠞⠀⠕⠛⠀⠎⠕⠗⠞⠎⠊⠙⠑⠞⠁⠇⠇&lt;/row&gt;
+          &lt;row&gt;⠠⠃⠕⠅⠁⠀⠎⠅⠁⠇⠀⠊⠅⠅⠑⠀⠗⠑⠞⠥⠗⠝⠑⠗⠑⠎⠄&lt;/row&gt;
+          &lt;row&gt;⠠⠋⠑⠊⠇⠀⠑⠇⠇⠑⠗⠀⠍⠁⠝⠛⠇⠑⠗⠀⠅⠁⠝⠀⠍⠑⠇⠙⠑⠎&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠊⠇⠀⠏⠥⠝⠅⠞⠈⠝⠇⠃⠄⠝⠕⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠠⠝⠡⠗⠀⠃⠑⠛⠽⠝⠝⠑⠗⠀⠑⠝⠀⠓⠑⠝⠙⠑⠇⠎⠑⠢⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠋⠕⠗⠓⠡⠝⠙⠄⠀⠈⠀⠠⠙⠑⠝⠀⠃⠑⠛⠽⠝⠝⠑⠗⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠇⠊⠅⠀⠃⠑⠅⠅⠑⠝⠀⠃⠑⠛⠽⠝⠝⠑⠗⠀⠎⠕⠍⠀⠏⠗⠪⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠑⠝⠙⠑⠀⠀⠀⠀⠀⠀⠀⠀⠎⠊⠇⠙⠗⠊⠝⠛⠄⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠞⠁⠃⠀⠀⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠓⠧⠕⠗⠀⠃⠑⠛⠽⠝⠝⠑⠗⠀⠑⠝⠀⠋⠕⠗⠞⠑⠇⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠊⠝⠛⠢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠥⠝⠙⠑⠗⠀⠑⠝⠀⠛⠗⠁⠝⠗⠕⠞⠂⠀⠅⠁⠝⠎⠅⠚⠑⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠊⠝⠛⠑⠝⠀⠁⠝⠝⠑⠝⠀⠧⠁⠗⠍⠑⠀⠑⠝⠝⠀⠙⠑⠝⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠎⠕⠍⠀⠋⠁⠝⠞⠑⠎⠀⠊⠀⠅⠗⠕⠏⠏⠑⠝⠀⠓⠁⠙⠙⠑⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠁⠝⠄⠀⠠⠊⠝⠝⠊⠀⠧⠁⠗⠀⠙⠑⠞⠀⠑⠞⠀⠓⠥⠇⠇⠄⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠓⠁⠝⠀⠅⠥⠝⠝⠑⠀⠊⠅⠅⠑⠀⠞⠑⠝⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠑⠒⠀⠧⠁⠗⠍⠑⠂⠀⠚⠥⠗⠂⠀⠎⠏⠑⠝⠑⠗⠂⠀⠍⠑⠇⠅⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠑⠀⠁⠇⠇⠑⠀⠎⠁⠍⠍⠑⠝⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠥⠛⠙⠑⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠞⠀⠓⠥⠎⠅⠑⠞⠀⠓⠁⠝⠀⠊⠅⠅⠑⠂⠀⠕⠛⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠥⠁⠝⠎⠑⠞⠞⠀⠧⠊⠇⠇⠑⠀⠓⠁⠝⠀⠊⠅⠅⠑⠀⠓⠁⠀⠅⠥⠝⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠑⠞⠀⠋⠕⠗⠞⠑⠇⠇⠑⠀⠕⠍⠀⠙⠑⠞⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠋&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠀⠠⠙⠑⠞⠀⠧⠁⠗⠀⠑⠞⠀⠃⠗⠑⠙⠞⠀⠎⠉⠕⠕⠞⠑⠗⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠏⠕⠗⠂⠀⠅⠝⠥⠙⠗⠑⠞⠑⠀⠁⠧⠀⠍⠁⠞⠞⠑⠍⠪⠝⠎⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠗⠑⠞⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠛&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠠⠥⠀⠙⠣⠀⠠⠅⠱⠎⠞⠊⠝⠀⠠⠑⠅⠍⠁⠝
+⠀⠀⠀⠀⠠⠕⠗⠛⠊⠝⠁⠇⠞⠊⠞⠞⠑⠇⠒⠀⠠⠓⠥⠝⠙⠣
+⠀⠀⠀⠀⠠⠉⠕⠏⠽⠀⠗⠊⠛⠓⠞⠀⠦⠉⠴⠀⠠⠅⠱⠎⠞⠊⠝⠀
+⠀⠀⠠⠑⠅⠍⠁⠝⠂⠀⠼⠁⠊⠓⠋
+⠀⠀⠀⠀⠠⠞⠓⠊⠎⠀⠑⠙⠊⠞⠊⠕⠝⠀⠺⠁⠎⠀⠏⠥⠃⠇⠊⠎⠓⠑⠙⠀
+⠀⠀⠦⠉⠴⠀⠠⠓⠑⠊⠝⠑⠎⠣⠀⠠⠫⠇⠁⠛⠂⠀⠼⠃⠚⠚⠊
+⠀⠀⠀⠀⠭⠎⠑⠞⠞⠢⠑⠒⠀⠠⠑⠇⠊⠝⠀⠠⠃⠗⠕⠙⠊⠝
+⠀⠀⠀⠀⠊⠎⠃⠝⠒⠀⠼⠊⠛⠓⠓⠃⠓⠁⠛⠛⠚⠁⠙⠚
+⠀⠀⠀⠀⠕⠍⠎⠇⠁⠛⠒⠀⠠⠛⠑⠊⠗⠀⠠⠓⠣⠗⠊⠅⠎⠣⠀⠤⠤⠀
+⠀⠀⠠⠃⠇⠜⠎⠞
+⠀⠀⠀⠀⠛⠗⠁⠋⠊⠶⠀⠒⠕⠙⠥⠅⠒⠝⠒⠀⠠⠕⠇⠑⠀⠠⠁⠗⠝⠞⠀
+⠀⠀⠠⠞⠓⠕⠍⠎⠣
+⠀⠀⠀⠀⠿⠊⠋⠞⠒⠀⠠⠉⠓⠁⠗⠞⠱
+⠀⠀⠀⠀⠏⠁⠏⠊⠗⠒⠀⠠⠇⠑⠎⠎⠑⠃⠕⠀⠠⠇⠊⠝⠮
+⠀⠀⠀⠀⠢⠽⠅⠅⠀⠉⠀⠊⠝⠝⠃⠊⠝⠙⠒⠊⠒⠀⠠⠠⠁⠊⠞⠀
+⠀⠀⠠⠕⠞⠞⠁
+⠀⠀⠀⠀⠠⠎⠏⠍⠀⠕⠍⠀⠙⠮⠀⠃⠕⠅⠣⠀⠅⠀
+⠀⠀⠠⠠⠨⠎⠨⠎⠨⠎⠨⠎⠰⠗⠑⠞⠳⠎⠀⠏⠀⠑⠤⠏⠕⠎⠞⠀⠞⠀
+⠀⠀⠣⠏⠕⠎⠞⠈⠓⠑⠊⠝⠑⠎⠑⠝⠄⠝⠕⠜
+⠀⠀⠀⠀⠣⠺⠺⠺⠄⠓⠑⠊⠝⠑⠎⠑⠝⠄⠝⠕⠜
+⠼⠑
+⠀⠀⠀⠀⠠⠝⠀⠃⠑⠛⠽⠝⠝⠱⠀⠣⠀⠓⠣⠙⠢⠑⠢
+⠀⠀⠀⠀⠠⠫⠓⠡⠝⠙⠄⠀⠰⠠⠨⠎⠀⠠⠙⠣⠀⠃⠑⠛⠽⠝⠝⠱⠀
+⠀⠀⠎⠇⠊⠅⠀⠃⠑⠅⠅⠣⠀⠃⠑⠛⠽⠝⠝⠱⠀⠎⠀⠒⠪⠧⠣⠹⠀
+⠀⠀⠎⠊⠇⠙⠗⠒⠊⠄⠀⠞⠁⠃⠀⠱⠀⠾
+⠀⠀⠀⠀⠠⠺⠀⠃⠑⠛⠽⠝⠝⠱⠀⠣⠀⠫⠞⠑⠇⠇⠒⠊⠢
+⠀⠀⠀⠀⠠⠟⠀⠣⠀⠛⠗⠁⠝⠗⠕⠞⠂⠀⠅⠅⠄
+⠀⠀⠀⠀⠠⠊⠑⠀⠁⠣⠀⠧⠁⠗⠍⠑⠀⠣⠝⠀⠙⠣⠀⠎⠀⠋⠁⠝⠳⠎⠀⠊
+
+
+⠀⠀⠅⠗⠕⠏⠏⠣⠀⠼⠋⠀⠓⠹⠀⠓⠄⠀⠠⠊⠝⠝⠊⠀⠼⠀⠙⠬⠀⠬⠀
+⠀⠀⠓⠥⠇⠇⠄⠀⠠⠓⠀⠅⠝⠀⠊⠅⠀⠳⠝⠅⠑⠒⠀⠧⠁⠗⠍⠑⠂⠀
+⠀⠀⠚⠥⠗⠂⠀⠖⠑⠝⠱⠂⠀⠍⠑⠇⠅⠄⠀⠹⠀⠁⠑⠀⠎⠍⠣⠀
+⠀⠀⠎⠥⠛⠹⠄
+⠀⠀⠀⠀⠠⠙⠬⠀⠓⠥⠎⠅⠬⠀⠓⠀⠊⠅⠂⠀⠉⠀⠥⠁⠝⠎⠬⠞⠀⠧⠇⠑
+⠀⠀⠓⠀⠊⠅⠀⠓⠁⠀⠅⠝⠬⠀⠫⠞⠑⠇⠇⠑⠀⠕⠍⠀⠙⠬⠄
+⠼⠛
+⠀⠀⠀⠀⠠⠙⠬⠀⠼⠀⠬⠀⠃⠗⠑⠙⠞⠀⠎⠉⠕⠕⠞⠱⠎⠏⠕⠗⠂⠀
+⠀⠀⠅⠝⠥⠙⠗⠑⠳⠀⠁⠧⠀⠍⠁⠞⠞⠑⠍⠪⠝⠎⠞⠑⠗⠬⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:10:03.626Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6419e1" name="PreserveNewlineCharactersBrElementsAsForcedLineBreaks" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.103">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/white-space/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/white-space/sbs-style.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824110955484/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;!--
+      Generated from white_space.txt using table "sbs.dis".
+      Edits:
+      - removed the border
+      - removed the ellipsis
+  --&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠹⠴⠇⠿⠀⠋⠻⠙⠔⠖⠙⠀⠗⠁⠍⠥⠵⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠀⠝⠑⠃⠽⠀⠤⠇⠢⠉&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠹⠴⠇⠿⠀⠋⠻⠙⠔⠖⠙⠀⠗⠁⠍⠥⠵⠒
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠀⠝⠑⠃⠽⠀⠤⠇⠢⠉
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:10:03.645Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6426e1" name="PreserveTwoSpacesBeforeAndAfterMathematicalExpressionsButNotAtTheBeginningOrEndOfALine" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.19">
+<properties><property name="input: source" value="&lt;list xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/list&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/white-space/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/white-space/sbs-style.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824110955484/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-03&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_538977723&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠼⠆⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠁⠃⠾⠀⠀⠤⠀⠏⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠘⠏⠂&lt;/row&gt;
+          &lt;row&gt;⠼⠒⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠉⠙⠾⠀⠀⠤⠀⠏⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠘⠟⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠼⠃⠄⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗⠀
+⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠁⠃⠾⠀⠀⠤⠀⠏⠞⠀⠠⠏⠂
+⠼⠉⠄⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗⠀
+⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠉⠙⠾⠀⠀⠤⠀⠏⠞⠀⠠⠟⠄
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

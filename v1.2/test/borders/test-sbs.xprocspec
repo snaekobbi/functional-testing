@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               script="../css_inline_and_px_transform_type_css.xpl">
+  
+  <x:scenario id="47.1" label="Block start/end indicator lines">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/borders/borders.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-1.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/borders/borders_1.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="47.2" label="Thin left border">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/borders/borders.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-2.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/borders/borders_2.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="47.3" label="Thick left border">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/borders/borders.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-3.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/borders/borders_3.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="47.4" label="Full box">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/borders/borders.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style-4.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/borders/borders_4.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="50" label="Simple underlinings where the blocks are shrinked to the width of their contents">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/borders/shrinking-a-block-with-a-border.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/borders/shrinking-a-block-with-a-border.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

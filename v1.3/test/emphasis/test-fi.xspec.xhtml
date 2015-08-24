@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:louis="http://liblouis.org/liblouis" stylesheet="translate-fi.xsl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../../github.min.css"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				});
+			</script>
+  
+  <x:scenario id="test1" label="[4.3:38] Finnish"><table xmlns="http://www.w3.org/1999/xhtml"><thead><tr><th>input</th><th>expect</th></tr></thead><tbody><tr><td><code class="xml">Tietoa saa &lt;html:strong&gt;Näkövammaisten Keskusliitosta&lt;/html:strong&gt;.</code></td><td><code class="xml">⠠⠞⠊⠑⠞⠕⠁ ⠎⠁⠁ &lt;html:strong&gt;⠬⠠⠝⠜⠅⠪⠧⠁⠍⠍⠁⠊⠎⠞⠑⠝ ⠬⠠⠅⠑⠎⠅⠥⠎⠇⠊⠊⠞⠕⠎⠞⠁&lt;/html:strong&gt;⠄</code></td></tr><tr><td><code class="xml">Hän kiinnitti huomiota &lt;html:strong&gt;järjestysluvun&lt;/html:strong&gt; taivutukseen sanassa tuhan&lt;html:strong&gt;nen&lt;/html:strong&gt;nen.</code></td><td><code class="xml">⠠⠓⠜⠝ ⠅⠊⠊⠝⠝⠊⠞⠞⠊ ⠓⠥⠕⠍⠊⠕⠞⠁ &lt;html:strong&gt;⠬⠚⠜⠗⠚⠑⠎⠞⠽⠎⠇⠥⠧⠥⠝&lt;/html:strong&gt; ⠞⠁⠊⠧⠥⠞⠥⠅⠎⠑⠑⠝ ⠎⠁⠝⠁⠎⠎⠁ ⠞⠥⠓⠁⠝&lt;html:strong&gt;⠬⠝⠑⠝&lt;/html:strong&gt;⠬⠝⠑⠝⠄</code></td></tr><tr><td><code class="xml">Ei &lt;html:em&gt;kaikki&lt;/html:em&gt; ole kultaa, &lt;html:em&gt;mikä&lt;/html:em&gt; kiiltää.</code></td><td><code class="xml">⠠⠑⠊ &lt;html:em&gt;⠨⠅⠁⠊⠅⠅⠊&lt;/html:em&gt; ⠕⠇⠑ ⠅⠥⠇⠞⠁⠁⠂ &lt;html:em&gt;⠨⠍⠊⠅⠜&lt;/html:em&gt; ⠅⠊⠊⠇⠞⠜⠜⠄</code></td></tr><tr><td><code class="xml">Tämä &lt;html:strong&gt;on yli kolmen sanan testi&lt;/html:strong&gt;.</code></td><td><code class="xml">⠠⠞⠜⠍⠜ &lt;html:strong&gt;⠬⠬⠕⠝ ⠽⠇⠊ ⠅⠕⠇⠍⠑⠝ ⠎⠁⠝⠁⠝ ⠬⠞⠑⠎⠞⠊&lt;/html:strong&gt;⠄</code></td></tr></tbody></table>
+    <x:context href="../../resources/emphasis/data_finnish.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/emphasis/data_finnish.xml" select="//expect"/>
+  </x:scenario>
+  
+</x:description>

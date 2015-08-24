@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               script="../css_inline_and_px_transform_type_css.xpl">
+  
+  <x:scenario label="[4.7:94] downshifted number format
+                     [4.7:102] range of print pages">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/downshifted-print-page-numbers.xml"/>
+      </x:input>
+    </x:call>
+    <x:scenario id="test1" label="[4.7:94] [4.7:102] footer on right and left pages">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+        <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+        <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+        <x:option name="temp-dir" select="$temp-dir"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/print-pages/downshifted-print-page-numbers-2.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="test2" label="[4.7:94] [4.5:85] [4.7:102] footer only on right pages">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+        <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+        <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+        <x:option name="temp-dir" select="$temp-dir"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/print-pages/downshifted-print-page-numbers-1.pef"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+  <x:scenario id="test3" label="[4.8:105] full line indicator
+                                [4.8:107] consecutive print page breaks combined">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/sbs_page_break_line.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/print-pages/sbs_page_break_line.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test4" label="[4.8:106] mark in left margin">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/Test.DTBook.Indication of original pagination.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-nlb.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+          <x:document type="file" href="../../resources/print-pages/Test.PEF.Indication of original pagination.pef"/>
+        </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test5" label="[4.8:106] mark in left margin + text continues">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/print-pages/Test.DTBook.Indication-of-original-pagination2.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-nlb.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/print-pages/Test.PEF.Indication-of-original-pagination.2.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

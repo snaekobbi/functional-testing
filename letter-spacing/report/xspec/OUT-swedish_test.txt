@@ -1,0 +1,8 @@
+Running swedish_test
+Testing with SAXON HE 9.5.1.5
+[4.3:34] Swedish (Dotify)
+expect
+[4.3:34] Swedish (Liblouis)
+expect
+      FAILED
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 573.0 ms <<< FAILURE!

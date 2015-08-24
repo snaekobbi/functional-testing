@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:test="http://www.jenitennison.com/xslt/unit-test"
+           xmlns:x="http://www.jenitennison.com/xslt/xspec"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           name="xslt.hyphenation_test-43"
+           errors="0"
+           failures="0"
+           skipped="count(//x:test[@pending='true'])"
+           time="0.04">
+   <testcase classname="xslt.hyphenation_test-43"
+             name="Exclude certain elements from automatic hyphenation. expect"/>
+</testsuite>

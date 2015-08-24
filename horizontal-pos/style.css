@@ -1,0 +1,344 @@
+@namespace xspec url(http://www.jenitennison.com/xslt/xspec);
+@namespace xprocspec url(http://www.daisy.org/ns/xprocspec);
+@namespace pef url(http://www.daisy.org/ns/2008/pef);
+
+@font-face {
+	font-family: odt2braille;
+	src: url(odt2braille8.ttf);
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	height: 19px;
+	background: white;
+	border-bottom: 1px solid gray;
+	z-index: 1;
+}
+
+#header a {
+	display: block;
+	float: right;
+	padding-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 90%;
+}
+
+#header + * {
+	margin-top: 52px;
+}
+
+h1 {
+	position: relative;
+}
+
+ul.changes {
+	font-size: 55%;
+	font-weight: normal;
+	position: absolute;
+	top: -10px;
+	right: 20px;
+}
+
+ul.changes li {
+	display: inline;
+}
+
+ul.changes::before {
+	content: "[ changes: ";
+}
+
+ul.changes::after {
+	content: " ]";
+}
+
+ul.changes li a {
+	color: #000080;
+	font-weight: bold;
+	background-color: #FFEE77;
+}
+
+ul.changes li::after {
+	content: ", ";
+}
+
+ul.changes li:last-child::after {
+	content: "";
+}
+
+.requirement {
+	list-style-type: none;
+	margin: 30px 60px 30px 50px;
+}
+
+.requirement h3 {
+	color: #005A9C;
+	font-weight: normal;
+	position: relative;
+	margin-top: 0;
+}
+
+.requirement::before {
+	display: block;
+	content: " ";
+	margin-top: -52px;
+	height: 52px;
+	visibility: hidden;
+}
+
+.requirement h3 .req-nr {
+	display: block;
+	position: absolute;
+	top: -3px;
+	left: -82px;
+	padding: 3px;
+	color: #000080;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.changed.requirement h3 .req-nr {
+	background-color: #FFEE77;
+}
+
+.requirement h3::after {
+	content: "";
+	position: absolute;
+	right: -48px;
+	top: -5px;
+	font-size: 130%;
+	color: #000080;
+}
+
+.requirement.priority_1 h3::after {
+	content: "①";
+}
+
+.requirement.priority_2 h3::after {
+	content: "②";
+}
+
+.requirement.priority_3 h3::after {
+	content: "③";
+}
+
+.todo::before {
+	content: "TODO";
+	font-weight: bold;
+	font-style: normal;
+}
+
+.todo {
+	color: #FF0000;
+	font-style: italic;
+}
+
+.test {
+	display: block;
+	position: relative;
+	padding: 7px;
+	padding-right: 110px;
+}
+
+.test-passed {
+	border-left: 7px solid #60E050;
+	background-color: #99FF99;
+}
+
+.test-failed {
+	border-left: 7px solid #EE6622;
+	background-color: #FF8833;
+}
+
+.test > a.test-src,
+.test > a.test-report {
+	display: block;
+	position: absolute;
+	width: 45px;
+	top: 7px;
+	font-size: 90%;
+}
+
+.test > a.test-src {
+	right: 60px;
+}
+
+.test > a.test-report {
+	right: 5px;
+}
+
+code {
+	display: block;
+	max-height: 300px;
+	overflow: auto;
+	white-space: pre;
+	tab-size: 4;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 10px;
+	width: 100%;
+}
+
+table, th, td {
+	border: 1px solid #CCCCCC;
+}
+
+.document {
+	margin: 15px 0;
+}
+
+.document.pef {
+	display: block;
+	position: relative;
+}
+
+.document.pef > a.pef-xml,
+.document.pef > a.pef-unicode,
+.document.pef > a.pef-ascii {
+	display: block;
+	position: absolute;
+	width: 45px;
+	top: 7px;
+	font-size: 90%;
+}
+
+.document.pef > code {
+	display: none;
+}
+
+.document.pef-xml > code {
+	display: block;
+}
+
+.document.pef > a.pef-xml {
+	right: 0;
+}
+
+.document.pef > a.pef-unicode {
+	right: 100px;
+}
+
+.document.pef > a.pef-ascii {
+	right: 40px;
+}
+
+/*********/
+/*  PEF  */
+/*********/
+
+pef|pef {
+	display: block;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 3px #eee;
+	margin: 1em 0;
+	padding: 0 15px 15px 0;
+}
+
+.document.pef-xml pef|pef {
+	display: none;
+}
+
+pef|head {
+	display: none;
+}
+
+pef|page {
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 3px #eee;
+	padding: 0.5em;
+	margin: 15px 0 0 15px;
+	vertical-align: top;
+}
+
+pef|row {
+	display: block;
+	font-family: "odt2braille 8 dot", odt2braille;
+	letter-spacing: 0px;
+	font-size: 125%;
+	height: 1em;
+}
+
+pef|row[rowgap="1"] {
+	height: 1.25em;
+}
+
+pef|row[rowgap="2"] {
+	height: 1.5em;
+}
+
+pef|row[rowgap="3"] {
+	height: 1.75em;
+}
+
+pef|row[rowgap="4"] {
+	height: 2em;
+}
+
+pef|row[class~=ascii] {
+	display: none;
+	white-space: pre;
+}
+
+.document.pef-ascii pef|row {
+	display: none;
+}
+
+.document.pef-ascii pef|row[class~=ascii] {
+	display: block;
+}
+
+/***********************/
+/*  XPROCSPEC & XSPEC  */
+/***********************/
+
+xspec|description,
+xprocspec|description {
+	display: block;
+	margin: 10px;
+}
+
+xspec|description h1,
+xprocspec|description h1 {
+	display: block;
+	font-family: monospace;
+}
+
+xspec|scenario,
+xprocspec|scenario {
+	display: block;
+	margin: 30px 60px 30px 20px;
+	font-family: sans-serif;
+}
+
+xspec|scenario h2,
+xprocspec|scenario h2 {
+	color: #005A9C;
+	font-weight: normal;
+	font-size: 19px;
+}
+
+xspec|scenario::before,
+xprocspec|scenario::before {
+	content: attr(id) ". " attr(label);
+	color: #005A9C;
+	font-weight: normal;
+	font-size: 19px;
+	display: block;
+	margin-left: -20px;
+	margin-right: 11px;
+}
+
+xprocspec|document {
+	display: none;
+}

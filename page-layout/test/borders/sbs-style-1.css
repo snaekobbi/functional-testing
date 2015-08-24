@@ -1,0 +1,27 @@
+@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+sidebar {
+	display: block;
+	margin-left: 1;
+}
+
+sidebar::before {
+	display: block;
+	margin-left: -1;
+	content: '⠏⠉⠉⠉⠉';
+}
+
+sidebar::after {
+	display: block;
+	margin-left: -1;
+	content: '⠧⠤⠤⠤⠤';
+}
+
+sidebar > hd {
+	display: block;
+}

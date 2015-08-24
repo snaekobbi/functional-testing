@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:louis="http://liblouis.org/liblouis" xmlns:css="http://www.daisy.org/ns/pipeline/braille-css" xmlns:html="http://www.w3.org/1999/xhtml" stylesheet="translate-no.xsl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../../github.min.css"/><style xmlns="http://www.w3.org/1999/xhtml" TYPE="text/css">
+				code.xml-inline {
+					white-space: normal;
+				}
+				td.comment {
+					padding: 8px;
+					font-style: italic;
+					font-size: 90%;
+					color: #888888;
+				}
+			</style><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				});
+			</script>
+  
+  <x:scenario id="test1" label="[4.3:38] Norwegian (preserving structure)"><table xmlns="http://www.w3.org/1999/xhtml"><thead><tr><th>input</th><th>expect</th></tr></thead><tbody><tr><td colspan="2" class="comment">
+		    Always use dots 23 (⠆) in front of bold and dots 56 (⠰) after bold.
+		</td></tr><tr><td><code class="xml xml-inline">
+			hund hund&lt;html:strong&gt;en&lt;/html:strong&gt; hund&lt;html:strong&gt;er&lt;/html:strong&gt;
+			hund&lt;html:strong&gt;ene&lt;/html:strong&gt;
+		</code></td><td><code class="xml xml-inline">
+			⠓⠥⠝⠙ ⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠰&lt;/html:strong&gt; ⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠗⠰&lt;/html:strong&gt;
+			⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠑⠰&lt;/html:strong&gt;
+		</code></td></tr><tr><td colspan="2" class="comment">
+		    Opening/closing marks are never placed immediately before/after a white space character.
+		</td></tr><tr><td><code class="xml xml-inline">
+			hund hund&lt;html:strong&gt;en &lt;/html:strong&gt;hund&lt;html:strong&gt;er
+			&lt;/html:strong&gt;hund&lt;html:strong&gt;ene&lt;/html:strong&gt;
+		</code></td><td><code class="xml xml-inline">
+			⠓⠥⠝⠙ ⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠰ &lt;/html:strong&gt;⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠗⠰
+			&lt;/html:strong&gt;⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠑⠰&lt;/html:strong&gt;
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Det var bare det at hun også &lt;html:strong&gt;mis&lt;/html:strong&gt;unte ham det
+		</code></td><td><code class="xml xml-inline">
+			⠠⠙⠑⠞ ⠧⠁⠗ ⠃⠁⠗⠑ ⠙⠑⠞ ⠁⠞ ⠓⠥⠝ ⠕⠛⠎⠡ &lt;html:strong&gt;⠆⠍⠊⠎⠰&lt;/html:strong&gt;⠥⠝⠞⠑ ⠓⠁⠍ ⠙⠑⠞⠄
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Jeg verken &lt;html:strong&gt;vil &lt;/html:strong&gt;eller &lt;html:strong&gt;kan &lt;/html:strong&gt;gjøre
+			dette for deg!
+		</code></td><td><code class="xml xml-inline">
+			⠠⠚⠑⠛ ⠧⠑⠗⠅⠑⠝ &lt;html:strong&gt;⠆⠧⠊⠇⠰ &lt;/html:strong&gt;⠑⠇⠇⠑⠗ &lt;html:strong&gt;⠆⠅⠁⠝⠰
+			&lt;/html:strong&gt;⠛⠚⠪⠗⠑ ⠙⠑⠞⠞⠑ ⠋⠕⠗ ⠙⠑⠛⠖
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Karin Fossum slo gjennom som krimforfatter med romanen &lt;html:strong&gt;Evas
+			øye&lt;/html:strong&gt;, som kom ut i 1995.
+		</code></td><td><code class="xml xml-inline">
+			⠠⠅⠁⠗⠊⠝ ⠠⠋⠕⠎⠎⠥⠍ ⠎⠇⠕ ⠛⠚⠑⠝⠝⠕⠍ ⠎⠕⠍ ⠅⠗⠊⠍⠋⠕⠗⠋⠁⠞⠞⠑⠗ ⠍⠑⠙ ⠗⠕⠍⠁⠝⠑⠝ &lt;html:strong&gt;⠆⠑⠧⠁⠎
+			⠪⠽⠑⠰&lt;/html:strong&gt;⠂ ⠎⠕⠍ ⠅⠕⠍ ⠥⠞ ⠊ ⠼⠁⠊⠊⠑⠄
+		</code></td></tr><tr><td colspan="2" class="comment">
+		    Always use dots 456 (⠸) in front of and after underline.
+		</td></tr><tr><td><code class="xml xml-inline">
+			"Hør her: &lt;html:strong&gt;du &lt;html:u&gt;må &lt;/html:u&gt;gjøre det&lt;/html:strong&gt;!"
+		</code></td><td><code class="xml xml-inline">
+			⠲⠠⠓⠪⠗ ⠓⠑⠗⠒ &lt;html:strong&gt;⠆⠙⠥ &lt;html:u&gt;⠸⠍⠡⠸ &lt;/html:u&gt;⠛⠚⠪⠗⠑ ⠙⠑⠞⠰&lt;/html:strong&gt;⠖⠲
+		</code></td></tr><tr><td colspan="2" class="comment">
+		    Always use dots 6-3 (⠆⠠) in front of and after italics.
+		</td></tr><tr><td><code class="xml xml-inline">
+			Romanen &lt;html:strong&gt;Tusen strålende soler &lt;/html:strong&gt;av den afghansk-amerikanske
+			forfatteren Khaled Hosseini tyder på å bli en like stor suksess som den forrige romanen,
+			&lt;html:strong&gt;Drageløperen&lt;/html:strong&gt;. I bokanmeldelsen fra &lt;html:strong&gt;Dagbladet
+			&lt;/html:strong&gt;06.06.07 forklares dette med: &lt;html:em&gt;Ikke fordi Hosseini er en spesielt
+			god forfatter. Men fordi tematikken til den USA-bosatte Hosseini, har en spesiell
+			dragning på et vestlig publikum.&lt;/html:em&gt;
+		</code></td><td><code class="xml xml-inline">
+			⠠⠗⠕⠍⠁⠝⠑⠝ &lt;html:strong&gt;⠆⠠⠞⠥⠎⠑⠝ ⠎⠞⠗⠡⠇⠑⠝⠙⠑ ⠎⠕⠇⠑⠗⠰ &lt;/html:strong&gt;⠁⠧ ⠙⠑⠝ ⠁⠋⠛⠓⠁⠝⠎⠅⠁⠍⠑⠗⠊⠅⠁⠝⠎⠅⠑
+			⠋⠕⠗⠋⠁⠞⠞⠑⠗⠑⠝ ⠠⠅⠓⠁⠇⠑⠙ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠞⠽⠙⠑⠗ ⠏⠡ ⠡ ⠃⠇⠊ ⠑⠝ ⠇⠊⠅⠑ ⠎⠞⠕⠗ ⠎⠥⠅⠎⠑⠎⠎ ⠎⠕⠍ ⠙⠑⠝ ⠋⠕⠗⠗⠊⠛⠑
+			⠗⠕⠍⠁⠝⠑⠝⠂ &lt;html:strong&gt;⠆⠠⠙⠗⠁⠛⠑⠇⠪⠏⠑⠗⠑⠝⠰&lt;/html:strong&gt;⠄ ⠠⠊ ⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑⠝ ⠋⠗⠁
+			&lt;html:strong&gt;⠆⠠⠙⠁⠛⠃⠇⠁⠙⠑⠞⠰ &lt;/html:strong&gt;⠼⠚⠋⠄⠚⠋⠄⠚⠛ ⠋⠕⠗⠅⠇⠁⠗⠑⠎ ⠙⠑⠞⠞⠑ ⠍⠑⠙⠒ &lt;html:em&gt;⠠⠄⠊⠅⠅⠑
+			⠋⠕⠗⠙⠊ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠑⠗ ⠑⠝ ⠎⠏⠑⠎⠊⠑⠇⠞ ⠛⠕⠙ ⠋⠕⠗⠋⠁⠞⠞⠑⠗⠄ ⠠⠍⠑⠝ ⠋⠕⠗⠙⠊ ⠞⠑⠍⠁⠞⠊⠅⠅⠑⠝ ⠞⠊⠇ ⠙⠑⠝ ⠠⠠⠥⠎⠁⠃⠕⠎⠁⠞⠞⠑
+			⠠⠓⠕⠎⠎⠑⠊⠝⠊⠂ ⠓⠁⠗ ⠑⠝ ⠎⠏⠑⠎⠊⠑⠇⠇ ⠙⠗⠁⠛⠝⠊⠝⠛ ⠏⠡ ⠑⠞ ⠧⠑⠎⠞⠇⠊⠛ ⠏⠥⠃⠇⠊⠅⠥⠍⠄⠠⠄&lt;/html:em&gt;
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Vinje, Finn-Erik. 2004. &lt;html:em&gt;Skriveregler&lt;/html:em&gt;. 8. utg. Oslo
+		</code></td><td><code class="xml xml-inline">
+			⠠⠧⠊⠝⠚⠑⠂ ⠠⠋⠊⠝⠝⠤⠠⠑⠗⠊⠅⠄ ⠼⠃⠚⠚⠙⠄ &lt;html:em&gt;⠠⠄⠠⠎⠅⠗⠊⠧⠑⠗⠑⠛⠇⠑⠗⠠⠄&lt;/html:em&gt;⠄ ⠼⠓⠄ ⠥⠞⠛⠄⠠⠕⠎⠇⠕
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Hellevik, Alf. 1970. &lt;html:em&gt;God nynorsk&lt;/html:em&gt;.  Oslo
+		</code></td><td><code class="xml xml-inline">
+			⠠⠓⠑⠇⠇⠑⠧⠊⠅⠂ ⠠⠁⠇⠋⠄ ⠼⠁⠊⠛⠚⠄ &lt;html:em&gt;⠠⠄⠛⠕⠙ ⠝⠽⠝⠕⠗⠎⠅⠠⠄&lt;/html:em&gt;⠄ ⠠⠕⠎⠇⠕
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Ny afghansk bestselger. Bokanmeldelse &lt;html:em&gt;Dagbladet &lt;/html:em&gt;06.06.07
+		</code></td><td><code class="xml xml-inline">
+			⠠⠝⠽ ⠁⠋⠛⠓⠁⠝⠎⠅ ⠃⠑⠎⠞⠎⠑⠇⠛⠑⠗⠄⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑ &lt;html:em&gt;⠠⠄⠙⠁⠛⠃⠇⠁⠙⠑⠞⠠⠄&lt;/html:em&gt;⠼⠚⠋⠄⠚⠋⠄⠚⠛
+		</code></td></tr></tbody></table>
+    <x:context href="../../resources/emphasis/data_norwegian.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml" select="for $x in //expect return css:normalize-space($x)" test="for $x in /expect return css:normalize-space($x)"/>
+  </x:scenario>
+  
+  <x:scenario id="test2" label="[4.3:38] Norwegian (not preserving structure)"><table xmlns="http://www.w3.org/1999/xhtml"><thead><tr><th>input</th><th>expect</th></tr></thead><tbody><tr><td colspan="2" class="comment">
+		    Always use dots 23 (⠆) in front of bold and dots 56 (⠰) after bold.
+		</td></tr><tr><td><code class="xml xml-inline">
+			hund hund&lt;html:strong&gt;en&lt;/html:strong&gt; hund&lt;html:strong&gt;er&lt;/html:strong&gt;
+			hund&lt;html:strong&gt;ene&lt;/html:strong&gt;
+		</code></td><td><code class="xml xml-inline">
+			⠓⠥⠝⠙ ⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠰&lt;/html:strong&gt; ⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠗⠰&lt;/html:strong&gt;
+			⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠑⠰&lt;/html:strong&gt;
+		</code></td></tr><tr><td colspan="2" class="comment">
+		    Opening/closing marks are never placed immediately before/after a white space character.
+		</td></tr><tr><td><code class="xml xml-inline">
+			hund hund&lt;html:strong&gt;en &lt;/html:strong&gt;hund&lt;html:strong&gt;er
+			&lt;/html:strong&gt;hund&lt;html:strong&gt;ene&lt;/html:strong&gt;
+		</code></td><td><code class="xml xml-inline">
+			⠓⠥⠝⠙ ⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠰ &lt;/html:strong&gt;⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠗⠰
+			&lt;/html:strong&gt;⠓⠥⠝⠙&lt;html:strong&gt;⠆⠑⠝⠑⠰&lt;/html:strong&gt;
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Det var bare det at hun også &lt;html:strong&gt;mis&lt;/html:strong&gt;unte ham det
+		</code></td><td><code class="xml xml-inline">
+			⠠⠙⠑⠞ ⠧⠁⠗ ⠃⠁⠗⠑ ⠙⠑⠞ ⠁⠞ ⠓⠥⠝ ⠕⠛⠎⠡ &lt;html:strong&gt;⠆⠍⠊⠎⠰&lt;/html:strong&gt;⠥⠝⠞⠑ ⠓⠁⠍ ⠙⠑⠞⠄
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Jeg verken &lt;html:strong&gt;vil &lt;/html:strong&gt;eller &lt;html:strong&gt;kan &lt;/html:strong&gt;gjøre
+			dette for deg!
+		</code></td><td><code class="xml xml-inline">
+			⠠⠚⠑⠛ ⠧⠑⠗⠅⠑⠝ &lt;html:strong&gt;⠆⠧⠊⠇⠰ &lt;/html:strong&gt;⠑⠇⠇⠑⠗ &lt;html:strong&gt;⠆⠅⠁⠝⠰
+			&lt;/html:strong&gt;⠛⠚⠪⠗⠑ ⠙⠑⠞⠞⠑ ⠋⠕⠗ ⠙⠑⠛⠖
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Karin Fossum slo gjennom som krimforfatter med romanen &lt;html:strong&gt;Evas
+			øye&lt;/html:strong&gt;, som kom ut i 1995.
+		</code></td><td><code class="xml xml-inline">
+			⠠⠅⠁⠗⠊⠝ ⠠⠋⠕⠎⠎⠥⠍ ⠎⠇⠕ ⠛⠚⠑⠝⠝⠕⠍ ⠎⠕⠍ ⠅⠗⠊⠍⠋⠕⠗⠋⠁⠞⠞⠑⠗ ⠍⠑⠙ ⠗⠕⠍⠁⠝⠑⠝ &lt;html:strong&gt;⠆⠑⠧⠁⠎
+			⠪⠽⠑⠰&lt;/html:strong&gt;⠂ ⠎⠕⠍ ⠅⠕⠍ ⠥⠞ ⠊ ⠼⠁⠊⠊⠑⠄
+		</code></td></tr><tr><td colspan="2" class="comment">
+		    Always use dots 456 (⠸) in front of and after underline.
+		</td></tr><tr><td><code class="xml xml-inline">
+			"Hør her: &lt;html:strong&gt;du &lt;html:u&gt;må &lt;/html:u&gt;gjøre det&lt;/html:strong&gt;!"
+		</code></td><td><code class="xml xml-inline">
+			⠲⠠⠓⠪⠗ ⠓⠑⠗⠒ &lt;html:strong&gt;⠆⠙⠥ &lt;html:u&gt;⠸⠍⠡⠸ &lt;/html:u&gt;⠛⠚⠪⠗⠑ ⠙⠑⠞⠰&lt;/html:strong&gt;⠖⠲
+		</code></td></tr><tr><td colspan="2" class="comment">
+		    Always use dots 6-3 (⠆⠠) in front of and after italics.
+		</td></tr><tr><td><code class="xml xml-inline">
+			Romanen &lt;html:strong&gt;Tusen strålende soler &lt;/html:strong&gt;av den afghansk-amerikanske
+			forfatteren Khaled Hosseini tyder på å bli en like stor suksess som den forrige romanen,
+			&lt;html:strong&gt;Drageløperen&lt;/html:strong&gt;. I bokanmeldelsen fra &lt;html:strong&gt;Dagbladet
+			&lt;/html:strong&gt;06.06.07 forklares dette med: &lt;html:em&gt;Ikke fordi Hosseini er en spesielt
+			god forfatter. Men fordi tematikken til den USA-bosatte Hosseini, har en spesiell
+			dragning på et vestlig publikum.&lt;/html:em&gt;
+		</code></td><td><code class="xml xml-inline">
+			⠠⠗⠕⠍⠁⠝⠑⠝ &lt;html:strong&gt;⠆⠠⠞⠥⠎⠑⠝ ⠎⠞⠗⠡⠇⠑⠝⠙⠑ ⠎⠕⠇⠑⠗⠰ &lt;/html:strong&gt;⠁⠧ ⠙⠑⠝ ⠁⠋⠛⠓⠁⠝⠎⠅⠁⠍⠑⠗⠊⠅⠁⠝⠎⠅⠑
+			⠋⠕⠗⠋⠁⠞⠞⠑⠗⠑⠝ ⠠⠅⠓⠁⠇⠑⠙ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠞⠽⠙⠑⠗ ⠏⠡ ⠡ ⠃⠇⠊ ⠑⠝ ⠇⠊⠅⠑ ⠎⠞⠕⠗ ⠎⠥⠅⠎⠑⠎⠎ ⠎⠕⠍ ⠙⠑⠝ ⠋⠕⠗⠗⠊⠛⠑
+			⠗⠕⠍⠁⠝⠑⠝⠂ &lt;html:strong&gt;⠆⠠⠙⠗⠁⠛⠑⠇⠪⠏⠑⠗⠑⠝⠰&lt;/html:strong&gt;⠄ ⠠⠊ ⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑⠝ ⠋⠗⠁
+			&lt;html:strong&gt;⠆⠠⠙⠁⠛⠃⠇⠁⠙⠑⠞⠰ &lt;/html:strong&gt;⠼⠚⠋⠄⠚⠋⠄⠚⠛ ⠋⠕⠗⠅⠇⠁⠗⠑⠎ ⠙⠑⠞⠞⠑ ⠍⠑⠙⠒ &lt;html:em&gt;⠠⠄⠊⠅⠅⠑
+			⠋⠕⠗⠙⠊ ⠠⠓⠕⠎⠎⠑⠊⠝⠊ ⠑⠗ ⠑⠝ ⠎⠏⠑⠎⠊⠑⠇⠞ ⠛⠕⠙ ⠋⠕⠗⠋⠁⠞⠞⠑⠗⠄ ⠠⠍⠑⠝ ⠋⠕⠗⠙⠊ ⠞⠑⠍⠁⠞⠊⠅⠅⠑⠝ ⠞⠊⠇ ⠙⠑⠝ ⠠⠠⠥⠎⠁⠃⠕⠎⠁⠞⠞⠑
+			⠠⠓⠕⠎⠎⠑⠊⠝⠊⠂ ⠓⠁⠗ ⠑⠝ ⠎⠏⠑⠎⠊⠑⠇⠇ ⠙⠗⠁⠛⠝⠊⠝⠛ ⠏⠡ ⠑⠞ ⠧⠑⠎⠞⠇⠊⠛ ⠏⠥⠃⠇⠊⠅⠥⠍⠄⠠⠄&lt;/html:em&gt;
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Vinje, Finn-Erik. 2004. &lt;html:em&gt;Skriveregler&lt;/html:em&gt;. 8. utg. Oslo
+		</code></td><td><code class="xml xml-inline">
+			⠠⠧⠊⠝⠚⠑⠂ ⠠⠋⠊⠝⠝⠤⠠⠑⠗⠊⠅⠄ ⠼⠃⠚⠚⠙⠄ &lt;html:em&gt;⠠⠄⠠⠎⠅⠗⠊⠧⠑⠗⠑⠛⠇⠑⠗⠠⠄&lt;/html:em&gt;⠄ ⠼⠓⠄ ⠥⠞⠛⠄⠠⠕⠎⠇⠕
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Hellevik, Alf. 1970. &lt;html:em&gt;God nynorsk&lt;/html:em&gt;.  Oslo
+		</code></td><td><code class="xml xml-inline">
+			⠠⠓⠑⠇⠇⠑⠧⠊⠅⠂ ⠠⠁⠇⠋⠄ ⠼⠁⠊⠛⠚⠄ &lt;html:em&gt;⠠⠄⠛⠕⠙ ⠝⠽⠝⠕⠗⠎⠅⠠⠄&lt;/html:em&gt;⠄ ⠠⠕⠎⠇⠕
+		</code></td></tr><tr><td><code class="xml xml-inline">
+			Ny afghansk bestselger. Bokanmeldelse &lt;html:em&gt;Dagbladet &lt;/html:em&gt;06.06.07
+		</code></td><td><code class="xml xml-inline">
+			⠠⠝⠽ ⠁⠋⠛⠓⠁⠝⠎⠅ ⠃⠑⠎⠞⠎⠑⠇⠛⠑⠗⠄⠃⠕⠅⠁⠝⠍⠑⠇⠙⠑⠇⠎⠑ &lt;html:em&gt;⠠⠄⠙⠁⠛⠃⠇⠁⠙⠑⠞⠠⠄&lt;/html:em&gt;⠼⠚⠋⠄⠚⠋⠄⠚⠛
+		</code></td></tr></tbody></table>
+    <x:context href="../../resources/emphasis/data_norwegian.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml" select="for $x in //expect return html:flatten(css:normalize-space($x))" test="for $x in /expect return html:flatten(css:normalize-space($x))"/>
+  </x:scenario>
+  
+</x:description>

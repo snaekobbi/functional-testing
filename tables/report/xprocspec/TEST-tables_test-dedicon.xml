@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="10" failures="5" time="7.821" errors="0" name="testdedicon"><testsuite timestamp="2016-01-06T19:16:23.71Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d10530e1" name="4455PreformattedTable" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.39">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/test-dedicon.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/rijtjes1.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:dedicon)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160106201616168/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2010X"&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume xmlns:ext="PEF extension" cols="32" rows="29" rowgap="0" duplex="true"&gt;
+      &lt;section&gt;
+        &lt;page ext:page-number="1"&gt;
+          &lt;row&gt;⠺⠕⠕⠗⠙⠚⠑⠎⠀⠛⠑⠎⠉⠓⠑⠊⠙⠑⠝⠀⠙⠕⠕⠗⠀⠼⠙&lt;/row&gt;
+          &lt;row&gt;⠎⠏⠁⠞⠊⠑⠎⠀⠊⠝⠀⠐⠪⠉⠕⠙⠑⠐⠕&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠑⠇⠀⠀⠀⠀⠙⠑⠇⠀⠀⠀⠀⠓⠑⠇⠀⠀⠀⠀⠞⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠁⠇⠀⠀⠀⠀⠙⠁⠇⠀⠀⠀⠀⠓⠁⠇⠀⠀⠀⠀⠞⠁⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠕⠇⠀⠀⠀⠀⠙⠕⠇⠀⠀⠀⠀⠓⠕⠇⠀⠀⠀⠀⠞⠕⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠊⠇⠀⠀⠀⠀⠙⠊⠇⠀⠀⠀⠀⠓⠊⠇⠀⠀⠀⠀⠞⠊⠇&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-06
+
+
+
+
+
+
+⠨⠗⠊⠚⠞⠚⠑⠎⠀⠨⠺⠕⠕⠗⠙⠚⠑⠎⠀⠛⠑⠎⠉⠓⠑⠊⠙⠑⠝⠀⠙⠕⠕⠗⠀⠼⠙⠀
+⠎⠏⠁⠞⠊⠑⠎⠀⠊⠝⠀⠐⠪⠉⠕⠙⠑⠐⠕
+
+⠃⠑⠇⠀⠀⠀⠀⠙⠑⠇⠀⠀⠀⠀⠓⠑⠇⠀⠀⠀⠀⠞⠑⠇
+⠃⠁⠇⠀⠀⠀⠀⠙⠁⠇⠀⠀⠀⠀⠓⠁⠇⠀⠀⠀⠀⠞⠁⠇
+⠃⠕⠇⠀⠀⠀⠀⠙⠕⠇⠀⠀⠀⠀⠓⠕⠇⠀⠀⠀⠀⠞⠕⠇
+⠃⠊⠇⠀⠀⠀⠀⠙⠊⠇⠀⠀⠀⠀⠓⠊⠇⠀⠀⠀⠀⠞⠊⠇
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-06T19:16:23.716Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d10538e1" name="4457LinearizedTableWithDelimiter" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.305">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/test-dedicon.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/rijtjes2.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:dedicon)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160106201616168/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2010X"&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume xmlns:ext="PEF extension" cols="32" rows="29" rowgap="0" duplex="true"&gt;
+      &lt;section&gt;
+        &lt;page ext:page-number="1"&gt;
+          &lt;row&gt;⠞⠊⠞⠑⠇⠀⠞⠁⠃⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠨⠗⠊⠚⠞⠚⠑⠎⠀⠺⠕⠕⠗⠙⠑⠝⠀⠊⠝⠀⠐⠪⠞⠁⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠑⠐⠕&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠞&lt;/row&gt;
+          &lt;row&gt;⠃⠑⠇⠆⠀⠙⠑⠇⠆⠀⠓⠑⠇⠆⠀⠞⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠁⠇⠆⠀⠙⠁⠇⠆⠀⠓⠁⠇⠆⠀⠞⠁⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠕⠇⠆⠀⠙⠕⠇⠆⠀⠓⠕⠇⠆⠀⠞⠕⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠊⠇⠆⠀⠙⠊⠇⠆⠀⠓⠊⠇⠆⠀⠞⠊⠇&lt;/row&gt;
+          &lt;row&gt;⠑⠞&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-06
+
+
+
+
+
+
+⠨⠗⠊⠚⠞⠚⠑⠎⠀⠺⠕⠕⠗⠙⠑⠝⠀⠊⠝⠀⠐⠪⠞⠁⠃⠇⠑⠐⠕
+⠃⠞
+⠃⠑⠇⠂⠀⠙⠑⠇⠂⠀⠓⠑⠇⠂⠀⠞⠑⠇
+⠃⠕⠇⠂⠀⠙⠕⠇⠂⠀⠓⠕⠇⠂⠀⠞⠕⠇
+⠃⠁⠇⠂⠀⠙⠁⠇⠂⠀⠓⠁⠇⠂⠀⠞⠁⠇
+⠃⠊⠇⠂⠀⠙⠊⠇⠂⠀⠓⠊⠇⠂⠀⠞⠊⠇
+⠑⠞
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-06T19:16:23.722Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d10545e1" name="4458Matrix" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.36">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/test-dedicon.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/floating.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:dedicon)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160106201616168/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+   &lt;head&gt;
+      &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+         &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+         &lt;dc:identifier&gt;identifier?&lt;/dc:identifier&gt;
+         &lt;dc:date&gt;2015-11-24&lt;/dc:date&gt;
+         &lt;dc:title&gt;Diploma&lt;/dc:title&gt;
+         &lt;dc:creator&gt;sfkjhdf&lt;/dc:creator&gt;
+         &lt;dc:language&gt;nl&lt;/dc:language&gt;
+         &lt;dc:publisher&gt;Dedicon&lt;/dc:publisher&gt;
+      &lt;/meta&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;volume cols="32" rows="28" rowgap="0" duplex="true"&gt;
+         &lt;section&gt;
+            &lt;page&gt;
+               &lt;row&gt;⠿⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠙⠊⠏⠇⠕⠍⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠨⠊⠑⠍⠁⠝⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠊⠑⠍⠁⠝⠙⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠨⠝⠁⠁⠍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠁⠝⠙⠑⠗⠎⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠦⠋⠥⠝⠉⠞⠊⠑⠴⠀⠀⠀⠀⠀⠀⠀⠦⠋⠥⠝⠉⠞⠊⠑⠴⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿&lt;/row&gt;
+               &lt;row&gt;⠿⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠶⠿&lt;/row&gt;
+            &lt;/page&gt;
+         &lt;/section&gt;
+      &lt;/volume&gt;
+   &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-06
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠙⠊⠏⠇⠕⠍⠁
+
+
+⠨⠊⠑⠍⠁⠝⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠊⠑⠍⠁⠝⠙
+⠨⠝⠁⠁⠍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠁⠝⠙⠑⠗⠎
+⠦⠋⠥⠝⠉⠞⠊⠑⠴⠀⠀⠀⠀⠀⠀⠀⠦⠋⠥⠝⠉⠞⠊⠑⠴
+
+
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-06T19:16:23.727Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d10552e1" name="4457LinearizedTableWithDelimiter2" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.344">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/test-dedicon.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/style-dedicon.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:dedicon)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160106201616168/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2016-01-06&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_386468680&lt;/dc:identifier&gt;
+      &lt;!--&lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_031_01')&lt;/dp2:ascii-table&gt;--&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="18" rows="8" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠞⠊⠞⠑⠇⠀⠞⠁⠃⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠨⠗⠊⠚⠞⠚⠑⠎⠀⠺⠕⠕⠗⠙⠑⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠞&lt;/row&gt;
+          &lt;row&gt;⠃⠑⠇⠆⠀⠛⠛⠆⠀⠛⠛⠆⠀⠞⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠃⠁⠇⠆⠀⠙⠁⠇⠆⠀⠓⠁⠇⠆⠀⠞⠁⠇&lt;/row&gt;
+          &lt;row&gt;⠛⠛⠆⠀⠛⠛⠆⠀⠛⠛⠆⠀⠛⠛&lt;/row&gt;
+          &lt;row&gt;⠑⠞&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-06
+
+
+
+
+
+
+⠨⠞⠑⠎⠞⠀⠞⠁⠃⠑⠇⠀⠼⠁⠀⠨⠙⠁⠧⠽⠀⠨⠅⠁⠛⠑⠗⠀⠼⠃
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-06T19:16:23.733Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d10559e1" name="4457LinearizedTableWithDelimiter3" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.358">
+<properties><property name="input: source" value="&lt;dtbook xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/dtbook&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/test-dedicon.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/tables/style-dedicon.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:dedicon)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160106201616168/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2016-01-06&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_476681780&lt;/dc:identifier&gt;
+      &lt;!--&lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_031_01')&lt;/dp2:ascii-table&gt;--&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="33" rows="14" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠞⠊⠞⠑⠇⠀⠞⠁⠃⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠨⠅⠕⠇⠕⠍⠍⠑⠝⠀⠍⠑⠞⠀⠇⠁⠝⠛⠑⠗⠑⠀⠎⠞⠥⠅⠅⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠅⠎⠞⠀⠑⠗⠊⠝⠀⠙⠊⠑⠀⠝⠊⠑⠞⠀⠕⠏⠀⠼⠁⠀⠗⠑⠛⠑⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠁⠎⠎⠑⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠞&lt;/row&gt;
+          &lt;row&gt;⠞⠑⠅⠎⠞⠆⠀⠇⠁⠝⠛⠑⠗⠑⠀⠞⠑⠅⠎⠞⠆⠀⠝⠕⠛⠀⠊⠑⠞⠎&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠁⠝⠛⠑⠗⠑⠀⠞⠑⠅⠎⠞⠆⠀⠓⠑⠇⠑⠀⠇⠁⠝⠛⠑⠀⠞⠑⠅⠎⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠊⠑⠀⠵⠑⠅⠑⠗⠀⠝⠊⠑⠞⠀⠍⠑⠑⠗⠀⠕⠏⠀⠑⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠝⠅⠑⠇⠑⠀⠗⠑⠛⠑⠇⠀⠵⠁⠇⠀⠏⠁⠎⠎⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠇⠁⠝⠛⠑⠀⠞⠑⠅⠎⠞⠀⠙⠊⠑⠀⠝⠊⠑⠞⠀⠕⠏⠀⠑⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠝⠅⠑⠇⠑⠀⠗⠑⠛⠑⠇⠀⠵⠁⠇⠀⠏⠁⠎⠎⠑⠝⠆⠀⠞⠑⠅⠎⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠆⠀⠞⠑⠅⠎⠞⠆⠀⠞⠑⠅⠎⠞&lt;/row&gt;
+          &lt;row&gt;⠑⠞&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-06
+
+
+
+
+
+
+⠨⠞⠑⠎⠞⠀⠞⠁⠃⠑⠇⠀⠼⠃⠀⠨⠙⠁⠧⠽⠀⠨⠅⠁⠛⠑⠗⠀⠼⠃⠀
+⠨⠅⠕⠇⠕⠍⠍⠑⠝⠀⠍⠑⠞⠀⠇⠁⠝⠛⠑⠗⠑⠀⠎⠞⠥⠅⠅⠑⠝⠀
+⠞⠑⠅⠎⠞⠀⠑⠗⠊⠝⠀⠙⠊⠑⠀⠝⠊⠑⠞⠀⠕⠏⠀⠼⠁⠀⠗⠑⠛⠑⠇⠀
+⠏⠁⠎⠎⠑⠝⠀⠞⠑⠅⠎⠞⠀⠇⠁⠝⠛⠑⠗⠑⠀⠞⠑⠅⠎⠞⠀⠝⠕⠛⠀
+⠊⠑⠞⠎⠀⠇⠁⠝⠛⠑⠗⠑⠀⠞⠑⠅⠎⠞⠀⠓⠑⠇⠑⠀⠇⠁⠝⠛⠑⠀
+⠞⠑⠅⠎⠞⠀⠙⠊⠑⠀⠵⠑⠅⠑⠗⠀⠝⠊⠑⠞⠀⠍⠑⠑⠗⠀⠕⠏⠀⠑⠑⠝
+⠑⠝⠅⠑⠇⠑⠀⠗⠑⠛⠑⠇⠀⠵⠁⠇⠀⠏⠁⠎⠎⠑⠝⠀⠇⠁⠝⠛⠑⠀
+⠞⠑⠅⠎⠞⠀⠙⠊⠑⠀⠝⠊⠑⠞⠀⠕⠏⠀⠑⠑⠝⠀⠑⠝⠅⠑⠇⠑⠀
+⠗⠑⠛⠑⠇⠀⠵⠁⠇⠀⠏⠁⠎⠎⠑⠝⠀⠞⠑⠅⠎⠞⠀⠞⠑⠅⠎⠞⠀
+⠞⠑⠅⠎⠞
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

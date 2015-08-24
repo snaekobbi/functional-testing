@@ -1,0 +1,29 @@
+@namespace brl url(http://www.daisy.org/z3986/2009/braille/);
+
+@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin: 1 3;
+}
+
+br::before {
+	content: "\A";
+	white-space: pre-line;
+}
+
+li {
+	display: block;
+	margin-left: 2;
+	text-indent: -2;
+}
+
+brl|select > brl|otherwise {
+	display: none;
+}

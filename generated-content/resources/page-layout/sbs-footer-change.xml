@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+	<frontmatter>
+		<level1>
+			<level2>
+				<h2>Klappentext 1</h2>
+				<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+			</level2>
+			<level2>
+				<h2>Klappentext 2</h2>
+				<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+			</level2>
+			<level2>
+				<h2>Zum Autor</h2>
+				<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+			</level2>
+		</level1>
+	</frontmatter>
+	<bodymatter>
+		<level1>
+			<pagenum id="page-9" page="normal">9</pagenum>
+			<h1>bla bla bla</h1>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+			<p>blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo</p>
+		</level1>
+	</bodymatter>
+</_>

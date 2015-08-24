@@ -1,0 +1,9 @@
+Running emphasis_test-no
+Testing with SAXON HE 9.5.1.5
+[4.3:38] Norwegian (preserving structure)
+expect
+      FAILED
+[4.3:38] Norwegian (not preserving structure)
+expect
+      FAILED
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 41.26 ms <<< FAILURE!

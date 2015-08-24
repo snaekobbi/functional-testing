@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="2" failures="1" time="1.268" errors="0" name="testcelia"><testsuite timestamp="2015-10-14T20:25:20.895Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d1650e1" name="4578HardPageBreakToPages4" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.399">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-breaking/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-breaking/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20151014222519957/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_250346278&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="19" rows="5" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠠⠧⠁⠇⠇⠕⠊⠞⠞⠁⠧⠁⠞⠀⠏⠕⠝⠊⠞&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠚⠁⠉⠅⠊⠑⠀⠠⠃⠥⠙⠙&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠊⠓⠅⠕⠀⠼⠁⠌⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠁⠇⠇⠕⠊⠞⠞⠁⠧⠁⠞⠀⠏⠕⠝⠊⠞&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠚⠁⠉⠅⠊⠑⠀⠠⠃⠥⠙⠙&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠊⠓⠅⠕⠀⠼⠃⠌⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-10-14
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

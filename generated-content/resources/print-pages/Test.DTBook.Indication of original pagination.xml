@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<_ xml:lang="no">
+<level2>
+<p>Vi har et system hvor vi deler de ulike f&#x00F8;rerkortene inn i klasser. Skjemaet nedenfor gir en oversikt over de ulike f&#x00F8;rerkortklassene.</p>
+<!-- NorBraille can't handle tables -->
+<table>
+    <tr>
+        <td><strong>KLASSE</strong></td>
+        <td><strong>GJELDER FOR</strong></td>
+        <td><strong>MINSTEALDER</strong></td>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>Motorsykkel</td>
+        <td>18/21 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>A1</td>
+        <td>Lett motorsykkel</td>
+        <td>16 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>Personbil, varebil, tre&#x002D; eller firehjuls moped</td>
+        <td>18 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>M 146</td>
+        <td>Moped 146</td>
+        <td>16/18 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>M 147</td>
+        <td>Tre&#x002D; og firehjuls moped</td>
+        <td>16/18 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>Lastebil</td>
+        <td>18 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>C1</td>
+        <td>Lett lastebil (ikke over 7500 kg)</td>
+        <td>18 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>Buss</td>
+        <td>21 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>D1</td>
+        <td>Minibuss (9&#x2013;16 passasjerplasser)</td>
+        <td>21 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>E</td>
+        <td>Tilhenger/tilhengerredskap over 750 kg til B, C, C1, D eller D1</td>
+        <td>18/21 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>S</td>
+        <td>Beltemotorsykkel (sn&#x00F8;scooter)</td>
+        <td>16 &#x00E5;r</td>
+    </tr>
+    <tr>
+        <td>T</td>
+        <td>Traktor</td>
+        <td>16 &#x00E5;r</td>
+    </tr>
+</table>
+</level2>
+<level2>
+    <pagenum id="page-10" page="normal">10</pagenum>
+    <h2>Oppl&#x00E6;ringens hovedm&#x00E5;l</h2>
+    <p>Oppl&#x00E6;ringens hovedm&#x00E5;l er at du skal tilegne deg de holdningene, kunnskapene og ferdighetene som er n&#x00F8;dvendige for at du skal kunne kj&#x00F8;re:</p>
+    <list type="pl">
+        <li>&#x2022; med st&#x00F8;rst mulig sikkerhet</li>
+        <li>&#x2022; med tanke p&#x00E5; god samhandling</li>
+        <li>&#x2022; for best mulig framkommelighet og trafikkavvikling</li>
+        <li>&#x2022; mest mulig hensynsfullt overfor andres trygghet, helse og milj&#x00F8;</li>
+        <li>&#x2022; i samsvar med vegtrafikkens lover, regler, forskrifter og andre bestemmelser</li>
+    </list>
+    <p>Det trafikale grunnkurset</p>
+</level2>
+</_>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:louis="http://liblouis.org/liblouis" stylesheet="translate.xsl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../../github.min.css"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				});
+			</script>
+  
+  <x:scenario id="43.1" label="Exclude certain elements from automatic hyphenation."><table xmlns="http://www.w3.org/1999/xhtml"><thead><tr><th>input</th><th>expect</th></tr></thead><tbody><tr><td><code class="xml">foobar www.foobar.org</code></td><td><code class="xml">FOO|BAR WWW.FOO|BAR.ORG</code></td></tr><tr><td><code class="xml">foobar &lt;a&gt;www.foobar.org&lt;/a&gt;</code></td><td><code class="xml">FOO|BAR &lt;a&gt;WWW.FOOBAR.ORG&lt;/a&gt;</code></td></tr></tbody></table>
+    <x:context href="../../resources/43.1/data.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/43.1/data.xml" select="//expect"/>
+  </x:scenario>
+  
+</x:description>

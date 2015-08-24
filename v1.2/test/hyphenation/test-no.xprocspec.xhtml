@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" xmlns:p="http://www.w3.org/ns/xproc" xmlns:px="http://www.daisy.org/ns/pipeline/xproc" xmlns:pef="http://www.daisy.org/ns/2008/pef" xmlns:dotify="http://code.google.com/p/dotify/" xmlns:css="http://www.daisy.org/ns/pipeline/braille-css" script="../css_inline_and_px_transform_type_css.xpl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../github.min.css"/><style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+				@namespace x url(http://www.daisy.org/ns/xprocspec);
+				x|scenario x|documentation ul li {
+				  margin-top: 10px;
+				  margin-bottom: 10px;
+				}
+				code.xpath {
+				  display: inline;
+				}
+			</style><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+  
+  <x:scenario id="41.1" label="Automatic hyphenation of Norwegian"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/hyphenation/Test.DTBook.Norwegian hyphenation.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;level4 xml:lang="no"&gt;
+    &lt;h4&gt;Ledelse av den politiske prosessen&lt;/h4&gt;
+    &lt;p&gt;Den politiske prosessen er koblingen mellom koalisjonssystemet og ledelsessystemet. Etter at vi kort definerer koalisjonssystemet, ledelsessystemet og den politiske prosessen, vil vi g&amp;#x00E5; n&amp;#x00E6;rmere inn p&amp;#x00E5; sentrale aspekter ved ledelse av den politiske prosessen. Sentrale aspekter er ledelsens arbeid med n&amp;#x00F8;kkelinteressentene, arbeidet med stabiliteten i koalisjonen, h&amp;#x00E5;ndteringen av maktforhold og bruk av formelle og psykologiske kontrakter mellom interessentene og virksomheten.&lt;/p&gt;
+    &lt;imggroup&gt;
+        &lt;img id="p027-001" src="p027-001.jpg" alt="image"/&gt;
+        &lt;caption&gt;&lt;strong&gt;Figur 1.3&lt;/strong&gt; Den konseptuelle foretaksmodellen: Den politiske prosessen&lt;/caption&gt;
+    &lt;/imggroup&gt;
+    &lt;level5&gt;
+        &lt;h5&gt;Koalisjonssystemet&lt;/h5&gt;
+        &lt;p&gt;En organisasjon kan forst&amp;#x00E5;s som en samling eller en koalisjon av ulike interessegrupper &amp;#x2014; s&amp;#x00E5;kalte interessenter &amp;#x2014; som g&amp;#x00E5;r sammen for &amp;#x00E5; 
+        &lt;/p&gt;
+    &lt;/level5&gt;
+&lt;/level4&gt;
+</code></div></span></li><li><span><a class="code" href="style-no.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style-no.css')</code></a><div class="document "><code>@page { size: 32 28; }
+
+h4 {
+	display: block;
+	margin-top: 1;
+	margin-left: 2;
+	text-indent: 5;
+}
+
+h5 {
+	display: block;
+	margin-top: 1;
+	margin-left: 2;
+}
+
+p {
+	display: block;
+	margin-left: 2;
+	text-indent: 2;
+	hyphens: auto;
+}
+
+imggroup { display: none; }</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(translator:nlb)(grade:0)'</code></li><li><span><a href="../../resources/hyphenation/Test.PEF.Norwegian hyphenation.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠠⠇⠑⠙⠑⠇⠎⠑⠀⠁⠧⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠀⠑⠗⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠕⠃⠇⠊⠝⠛⠑⠝⠀⠍⠑⠇⠇⠕⠍⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠽⠎⠞⠑⠍⠑⠞⠀⠕⠛⠀⠇⠑⠙⠑⠇⠎⠑⠎⠎⠽⠎⠞⠑⠍⠑⠞⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠑⠞⠞⠑⠗⠀⠁⠞⠀⠧⠊⠀⠅⠕⠗⠞⠀⠙⠑⠋⠊⠝⠑⠗⠑⠗⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠑⠞⠂⠀⠇⠑⠙⠑⠇⠤⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠑⠎⠎⠽⠎⠞⠑⠍⠑⠞⠀⠕⠛⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠂⠀⠧⠊⠇⠀⠧⠊⠀⠛⠡⠀⠝⠜⠗⠍⠑⠗⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠊⠝⠝⠀⠏⠡⠀⠎⠑⠝⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠑⠗⠀⠧⠑⠙⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠑⠙⠑⠇⠎⠑⠀⠁⠧⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠏⠗⠕⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠑⠎⠎⠑⠝⠄⠀⠠⠎⠑⠝⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠑⠗⠀⠑⠗⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠑⠙⠑⠇⠎⠑⠝⠎⠀⠁⠗⠃⠑⠊⠙⠀⠍⠑⠙⠀⠝⠪⠅⠅⠑⠇⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠝⠞⠑⠝⠑⠂⠀⠁⠗⠃⠑⠊⠙⠑⠞⠀⠍⠑⠙⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠁⠃⠊⠇⠊⠞⠑⠞⠑⠝⠀⠊⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠑⠝⠂⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠡⠝⠙⠞⠑⠗⠊⠝⠛⠑⠝⠀⠁⠧⠀⠍⠁⠅⠞⠋⠕⠗⠓⠕⠇⠙⠀⠕⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠗⠥⠅⠀⠁⠧⠀⠋⠕⠗⠍⠑⠇⠇⠑⠀⠕⠛⠀⠏⠎⠽⠅⠕⠇⠕⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠊⠎⠅⠑⠀⠅⠕⠝⠞⠗⠁⠅⠞⠑⠗⠀⠍⠑⠇⠇⠕⠍⠀⠊⠝⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠗⠑⠎⠎⠑⠝⠞⠑⠝⠑⠀⠕⠛⠀⠧⠊⠗⠅⠎⠕⠍⠓⠑⠞⠑⠝⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠑⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠑⠝⠀⠕⠗⠛⠁⠝⠊⠎⠁⠎⠚⠕⠝⠀⠅⠁⠝⠀⠋⠕⠗⠎⠞⠡⠎&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠕⠍⠀⠑⠝⠀⠎⠁⠍⠇⠊⠝⠛⠀⠑⠇⠇⠑⠗⠀⠑⠝⠀⠅⠕⠁⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠊⠎⠚⠕⠝⠀⠁⠧⠀⠥⠇⠊⠅⠑⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠤⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠗⠥⠏⠏⠑⠗⠀⠤⠀⠎⠡⠅⠁⠇⠞⠑⠀⠊⠝⠞⠑⠗⠑⠎⠤⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠑⠝⠞⠑⠗⠀⠤⠀⠎⠕⠍⠀⠛⠡⠗⠀⠎⠁⠍⠍⠑⠝⠀⠋⠕⠗⠀⠡⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠛⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠛&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="28" cols="32" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">                                </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠠⠇⠑⠙⠑⠇⠎⠑⠀⠁⠧⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑</pef:row><pef:row class="ascii" rowgap="0">       ,LEDELSE AV DEN POLITISKE</pef:row><pef:row rowgap="0">⠀⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  PROSESSEN                     </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠠⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠀⠑⠗⠀</pef:row><pef:row class="ascii" rowgap="0">    ,DEN POLITISKE PROSESSEN ER </pef:row><pef:row rowgap="0">⠀⠀⠅⠕⠃⠇⠊⠝⠛⠑⠝⠀⠍⠑⠇⠇⠕⠍⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠤⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  KOBLINGEN MELLOM KOALISJONS-  </pef:row><pef:row rowgap="0">⠀⠀⠎⠽⠎⠞⠑⠍⠑⠞⠀⠕⠛⠀⠇⠑⠙⠑⠇⠎⠑⠎⠎⠽⠎⠞⠑⠍⠑⠞⠄⠀</pef:row><pef:row class="ascii" rowgap="0">  SYSTEMET OG LEDELSESSYSTEMET' </pef:row><pef:row rowgap="0">⠀⠀⠠⠑⠞⠞⠑⠗⠀⠁⠞⠀⠧⠊⠀⠅⠕⠗⠞⠀⠙⠑⠋⠊⠝⠑⠗⠑⠗⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  ,ETTER AT VI KORT DEFINERER   </pef:row><pef:row rowgap="0">⠀⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠑⠞⠂⠀⠇⠑⠙⠑⠇⠤⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  KOALISJONSSYSTEMET1 LEDEL-    </pef:row><pef:row rowgap="0">⠀⠀⠎⠑⠎⠎⠽⠎⠞⠑⠍⠑⠞⠀⠕⠛⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  SESSYSTEMET OG DEN POLITISKE  </pef:row><pef:row rowgap="0">⠀⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠂⠀⠧⠊⠇⠀⠧⠊⠀⠛⠡⠀⠝⠜⠗⠍⠑⠗⠑⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  PROSESSEN1 VIL VI G* N&gt;RMERE  </pef:row><pef:row rowgap="0">⠀⠀⠊⠝⠝⠀⠏⠡⠀⠎⠑⠝⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠑⠗⠀⠧⠑⠙⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  INN P* SENTRALE ASPEKTER VED  </pef:row><pef:row rowgap="0">⠀⠀⠇⠑⠙⠑⠇⠎⠑⠀⠁⠧⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠏⠗⠕⠤⠀</pef:row><pef:row class="ascii" rowgap="0">  LEDELSE AV DEN POLITISKE PRO- </pef:row><pef:row rowgap="0">⠀⠀⠎⠑⠎⠎⠑⠝⠄⠀⠠⠎⠑⠝⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠑⠗⠀⠑⠗⠀</pef:row><pef:row class="ascii" rowgap="0">  SESSEN' ,SENTRALE ASPEKTER ER </pef:row><pef:row rowgap="0">⠀⠀⠇⠑⠙⠑⠇⠎⠑⠝⠎⠀⠁⠗⠃⠑⠊⠙⠀⠍⠑⠙⠀⠝⠪⠅⠅⠑⠇⠤⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  LEDELSENS ARBEID MED N[KKEL-  </pef:row><pef:row rowgap="0">⠀⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠝⠞⠑⠝⠑⠂⠀⠁⠗⠃⠑⠊⠙⠑⠞⠀⠍⠑⠙⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  INTERESSENTENE1 ARBEIDET MED  </pef:row><pef:row rowgap="0">⠀⠀⠎⠞⠁⠃⠊⠇⠊⠞⠑⠞⠑⠝⠀⠊⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠑⠝⠂⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  STABILITETEN I KOALISJONEN1   </pef:row><pef:row rowgap="0">⠀⠀⠓⠡⠝⠙⠞⠑⠗⠊⠝⠛⠑⠝⠀⠁⠧⠀⠍⠁⠅⠞⠋⠕⠗⠓⠕⠇⠙⠀⠕⠛</pef:row><pef:row class="ascii" rowgap="0">  H*NDTERINGEN AV MAKTFORHOLD OG</pef:row><pef:row rowgap="0">⠀⠀⠃⠗⠥⠅⠀⠁⠧⠀⠋⠕⠗⠍⠑⠇⠇⠑⠀⠕⠛⠀⠏⠎⠽⠅⠕⠇⠕⠤⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  BRUK AV FORMELLE OG PSYKOLO-  </pef:row><pef:row rowgap="0">⠀⠀⠛⠊⠎⠅⠑⠀⠅⠕⠝⠞⠗⠁⠅⠞⠑⠗⠀⠍⠑⠇⠇⠕⠍⠀⠊⠝⠤⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  GISKE KONTRAKTER MELLOM IN-   </pef:row><pef:row rowgap="0">⠀⠀⠞⠑⠗⠑⠎⠎⠑⠝⠞⠑⠝⠑⠀⠕⠛⠀⠧⠊⠗⠅⠎⠕⠍⠓⠑⠞⠑⠝⠄⠀</pef:row><pef:row class="ascii" rowgap="0">  TERESSENTENE OG VIRKSOMHETEN' </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">                                </pef:row><pef:row rowgap="0">⠀⠀⠠⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠑⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  ,KOALISJONSSYSTEMET           </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠠⠑⠝⠀⠕⠗⠛⠁⠝⠊⠎⠁⠎⠚⠕⠝⠀⠅⠁⠝⠀⠋⠕⠗⠎⠞⠡⠎</pef:row><pef:row class="ascii" rowgap="0">    ,EN ORGANISASJON KAN FORST*S</pef:row><pef:row rowgap="0">⠀⠀⠎⠕⠍⠀⠑⠝⠀⠎⠁⠍⠇⠊⠝⠛⠀⠑⠇⠇⠑⠗⠀⠑⠝⠀⠅⠕⠁⠤⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  SOM EN SAMLING ELLER EN KOA-  </pef:row><pef:row rowgap="0">⠀⠀⠇⠊⠎⠚⠕⠝⠀⠁⠧⠀⠥⠇⠊⠅⠑⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠤⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  LISJON AV ULIKE INTERESSE-    </pef:row><pef:row rowgap="0">⠀⠀⠛⠗⠥⠏⠏⠑⠗⠀⠤⠀⠎⠡⠅⠁⠇⠞⠑⠀⠊⠝⠞⠑⠗⠑⠎⠤⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  GRUPPER - S*KALTE INTERES-    </pef:row><pef:row rowgap="0">⠀⠀⠎⠑⠝⠞⠑⠗⠀⠤⠀⠎⠕⠍⠀⠛⠡⠗⠀⠎⠁⠍⠍⠑⠝⠀⠋⠕⠗⠀⠡⠀</pef:row><pef:row class="ascii" rowgap="0">  SENTER - SOM G*R SAMMEN FOR * </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠛⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠛</pef:row><pef:row class="ascii" rowgap="0">              #GE            #BG</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/hyphenation/Test.DTBook.Norwegian hyphenation.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-no.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/hyphenation/Test.PEF.Norwegian hyphenation.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dtbook xml:lang="nl" version="2005-3" xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+<book>
+<frontmatter>
+<doctitle>Test tabel 2</doctitle>
+<docauthor>Davy Kager</docauthor>
+</frontmatter>
+<bodymatter>
+<level1>
+<pagenum page="normal" id="p-2">2</pagenum>
+<p class="table-title">Kolommen met langere stukken tekst erin die niet op 1 regel passen</p>
+<table>
+<tr>
+<td>tekst</td>
+<td>langere tekst</td>
+<td>nog iets langere tekst</td>
+<td>hele lange tekst die zeker niet meer op een enkele regel zal passen</td>
+</tr>
+<tr>
+<td>lange tekst die niet op een enkele regel zal passen</td>
+<td>tekst</td>
+<td>tekst</td>
+<td>tekst</td>
+</tr>
+</table>
+</level1>
+</bodymatter>
+</book>
+</dtbook>

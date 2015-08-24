@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="2" failures="0" time="1.2" errors="0" name="test"><testsuite timestamp="2016-01-06T19:13:55.451Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d1618e1" name="4446Left+RightMargin" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.361">
+<properties><property name="input: source" value="&lt;doc xmlns=&#34;&#34; ...&gt;...&lt;/doc&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/margins/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/margins/style.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:bypass)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160106201354606/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite></testsuites>

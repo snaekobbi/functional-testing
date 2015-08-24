@@ -1,0 +1,18 @@
+<test xmlns:html="http://www.w3.org/1999/xhtml">
+	<entry>
+		<input>Tietoa saa <html:strong>Näkövammaisten Keskusliitosta</html:strong>.</input>
+		<expect>⠠⠞⠊⠑⠞⠕⠁ ⠎⠁⠁ <html:strong>⠬⠠⠝⠜⠅⠪⠧⠁⠍⠍⠁⠊⠎⠞⠑⠝ ⠬⠠⠅⠑⠎⠅⠥⠎⠇⠊⠊⠞⠕⠎⠞⠁</html:strong>⠄</expect>
+	</entry>
+	<entry>
+		<input>Hän kiinnitti huomiota <html:strong>järjestysluvun</html:strong> taivutukseen sanassa tuhan<html:strong>nen</html:strong>nen.</input>
+		<expect>⠠⠓⠜⠝ ⠅⠊⠊⠝⠝⠊⠞⠞⠊ ⠓⠥⠕⠍⠊⠕⠞⠁ <html:strong>⠬⠚⠜⠗⠚⠑⠎⠞⠽⠎⠇⠥⠧⠥⠝</html:strong> ⠞⠁⠊⠧⠥⠞⠥⠅⠎⠑⠑⠝ ⠎⠁⠝⠁⠎⠎⠁ ⠞⠥⠓⠁⠝<html:strong>⠬⠝⠑⠝</html:strong>⠬⠝⠑⠝⠄</expect>
+	</entry>
+	<entry>
+		<input>Ei <html:em>kaikki</html:em> ole kultaa, <html:em>mikä</html:em> kiiltää.</input>
+		<expect>⠠⠑⠊ <html:em>⠨⠅⠁⠊⠅⠅⠊</html:em> ⠕⠇⠑ ⠅⠥⠇⠞⠁⠁⠂ <html:em>⠨⠍⠊⠅⠜</html:em> ⠅⠊⠊⠇⠞⠜⠜⠄</expect>
+	</entry>
+	<entry>
+		<input>Tämä <html:strong>on yli kolmen sanan testi</html:strong>.</input>
+		<expect>⠠⠞⠜⠍⠜ <html:strong>⠬⠬⠕⠝ ⠽⠇⠊ ⠅⠕⠇⠍⠑⠝ ⠎⠁⠝⠁⠝ ⠬⠞⠑⠎⠞⠊</html:strong>⠄</expect>
+	</entry>
+</test>

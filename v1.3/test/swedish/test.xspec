@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+               stylesheet="translate.xsl">
+  
+  <x:scenario id="test1" label="[4.3:34] Swedish (Dotify)">
+    <x:call template="main">
+      <x:param name="query" select="'(locale:sv-SE)(translator:dotify)'"/>
+      <x:param name="input" href="../../resources/swedish/data.xml" select="//input"/>
+    </x:call>
+    <x:expect label="expect" href="../../resources/swedish/data.xml" select="//expect"/>
+  </x:scenario>
+  
+  <x:scenario id="test2" label="[4.3:34] Swedish (Liblouis)">
+    <x:call template="main">
+      <x:param name="query" select="'(locale:sv-SE)(translator:liblouis)'"/>
+      <x:param name="input" href="../../resources/swedish/data.xml" select="//input"/>
+    </x:call>
+    <x:expect label="expect" href="../../resources/swedish/data.xml" select="//expect"/>
+  </x:scenario>
+  
+</x:description>

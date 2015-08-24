@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="18" failures="9" time="38.938" errors="0" name="test"><testsuite timestamp="2016-01-27T16:14:12.062Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12630e1" name="45804580PageDimensions1" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.557">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.068Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12638e1" name="45804580PageDimensions2" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.861">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="36" rows="18" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.074Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12645e1" name="45804580PageDimensions3" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.764">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.08Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12652e1" name="4581Footer4581BraillePageNumber4583TextFlowsInFooter" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.734">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠼⠊⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+
+
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.086Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12659e1" name="4581Footer4581PrintPageNumber+BraillePageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="4.016">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠼⠊⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+
+
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.092Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12666e1" name="4581Footer4581PrintPageNumber+ChapterInfo+BraillePageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="4.054">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠼⠊⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+
+
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.098Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12673e1" name="4581Footer4581ChapterInfo+BraillePageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="4.113">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠼⠊⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+
+
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.104Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12680e1" name="4582FooterDiffersBetweenFrontmatterbodymatter" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.979">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠅⠇⠁⠏⠏⠉⠦⠠⠭⠞⠀⠼⠁&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠅⠇⠁⠏⠏⠉⠦⠠⠭⠞⠀⠼⠃&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠵⠍⠀⠡⠞⠕⠗&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠇⠁⠏⠏⠉⠦⠠⠭⠦&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠅⠇⠁⠏⠏⠉⠦⠠⠭⠞⠀⠼⠁
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁
+⠅⠇⠁⠏⠏⠉⠦⠠⠭⠞⠀⠼⠃
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁
+⠵⠍⠀⠡⠞⠕⠗
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁
+⠼⠊⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+
+
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀
+⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:14:12.11Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12687e1" name="4581BraillePageNumberInFooter4583TextFlowsInFooter+MinimumDistanceToPageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.576">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171333445/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dp2:ascii-table&gt;(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+          &lt;row&gt;⠖⠀⠖⠀⠖⠀⠖⠀⠖&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠃⠇⠁
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+
+
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀
+⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖⠀⠖
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

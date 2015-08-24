@@ -1,0 +1,116 @@
+p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           #A
+pMAL  #A   #B   #C   #D   #E
+ :::  :::  :::  :::  :::  :::
+ #A   #A   #B   #C   #D   #E
+ #B   #B   #D   #F   #H   #AJ
+ #C   #C   #F   #I   #AB  #AE
+ #D   #D   #H   #AB  #AF  #BJ
+ #E   #E   #AJ  #AE  #BJ  #BE
+ #F   #F   #AB  #AH  #BD  #CJ
+ #G   #G   #AD  #BA  #BH  #CE
+ #H   #H   #AF  #BD  #CB  #DJ
+ #I   #I   #AH  #BG  #CF  #DE
+ #AJ  #AJ  #BJ  #CJ  #DJ  #EJ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p#F   #G   #H   #I   #AJ
+ :::  :::  :::  :::  ::::
+ #F   #G   #H   #I   #AJ
+ #AB  #AD  #AF  #AH  #BJ
+ #AH  #BA  #BD  #BG  #CJ
+ #BD  #BH  #CB  #CF  #DJ
+ #CJ  #CE  #DJ  #DE  #EJ
+ #CF  #DB  #DH  #ED  #FJ
+ #DB  #DI  #EF  #FC  #GJ
+ #DH  #EF  #FD  #GB  #HJ
+ #ED  #FC  #GB  #HA  #IJ
+ #FJ  #GJ  #HJ  #IJ  #AJJ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           #C
+p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p
+p
+
+

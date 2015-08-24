@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>der 50&#x2013;100 m fra farestedet. Er det fare p&#x00E5; en bestemt strekning, blir det opplyst om det med underskilt. Underskilt kan ogs&#x00E5; gi andre opplysninger om faren. M&#x00F8;ter du et fareskilt m&#x00E5; du v&#x00E6;re klar til &#x00E5; sette ned farten.</p>
+<!-- with optional in the following sidebar NorBraille adds the text Margtekst: -->    
+<sidebar render="optional">
+        <p>Tenk over: Hvorfor er fareskilt plassert 150&#x002D;250 meter fra farestedet utenfor tettbygde str&#x00F8;k, og 50&#x002D;100 meter fra farestedet i tettbygde str&#x00F8;k?</p>
+    </sidebar>
+<level4>
+    <pagenum id="page-14" page="normal">14</pagenum>
+    <h4>Vikeplikts&#x002D; og forkj&#x00F8;rsskilt</h4>
+    <imggroup>
+        <img src="14_img01.jpg" alt="image"/>
+    </imggroup>
+    <p>Vikeplikts&#x002D; og forkj&#x00F8;rsskiltene angir hvem som har vikeplikt, og hvem som har forkj&#x00F8;rsrett p&#x00E5; en bestemt strekning eller et sted.</p>

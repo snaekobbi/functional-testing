@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" xmlns:p="http://www.w3.org/ns/xproc" xmlns:px="http://www.daisy.org/ns/pipeline/xproc" xmlns:dotify="http://code.google.com/p/dotify/" xmlns:css="http://www.daisy.org/ns/pipeline/braille-css" script="../css_inline_and_px_transform_type_css.xpl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../github.min.css"/><style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+				@namespace x url(http://www.daisy.org/ns/xprocspec);
+				x|scenario x|documentation ul li {
+				  margin-top: 10px;
+				  margin-bottom: 10px;
+				}
+				code.xpath {
+				  display: inline;
+				}
+			</style><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+  
+  <x:scenario label="The footer contains the range of chapter numbers"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/counters-variables/chapter-range.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;_ xmlns="http://www.daisy.org/z3986/2005/dtbook/"&gt;
+	&lt;level1&gt;
+		&lt;pagenum id="page-9" page="normal"&gt;9&lt;/pagenum&gt;
+		&lt;h1&gt;&lt;abbr&gt;A&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;&lt;abbr&gt;B&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;&lt;abbr&gt;C&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;&lt;abbr&gt;D&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;&lt;abbr&gt;E&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;&lt;abbr&gt;F&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;&lt;abbr&gt;G&lt;/abbr&gt;&lt;/h1&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+		&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.&lt;/p&gt;
+	&lt;/level1&gt;
+&lt;/_&gt;
+</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(locale:de)'</code></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/counters-variables/chapter-range.xml"/>
+      </x:input>
+      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:scenario id="102.2" label="If both right and left hand pages have a footer, it's the range of chapters contained in the current braille page."><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+</code></div></span></li><li><span><a href="../../resources/counters-variables/chapter-range-2.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-10&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_127439939&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠤⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠋&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⠤⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-06-10</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_127439939</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^A                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^B                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^C                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^D                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠤⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">_#I         ^A-^D         #A</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^E                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^F                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^G                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⠤⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">_#I         ^D-^G         #C</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/chapter-range-2.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="102.1" label="If only right hand pages have a footer, it's the range of chapters contained in the previous and current braille pages."><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+</code></div></span></li><li><span><a href="../../resources/counters-variables/chapter-range-1.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-10&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_450956162&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠤⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠋&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⠤⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-06-10</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_450956162</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^A                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^B                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^C                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^D                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠤⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">_#I         ^A-^D         #A</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^E                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^F                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^G                          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⠤⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">_#I         ^D-^G         #B</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA BLA BLA BLA BLA </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BLA BLA BLA'                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">_#I          ^G           #C</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">_#I          ^G           #D</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/chapter-range-1.pef"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+  <x:scenario id="94.1" label="Number formats: regular/downshifted"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/counters-variables/number-formats-1.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;_ xmlns="http://www.daisy.org/z3986/2005/dtbook/" xmlns:brl="http://www.daisy.org/z3986/2009/braille/"&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;regular&lt;/h1&gt;
+		&lt;level2&gt;
+			&lt;h2&gt;arabic numbers&lt;/h2&gt;
+			&lt;p&gt;1 2 3 4 5 6 7 8 9 0 1234567890&lt;/p&gt;
+		&lt;/level2&gt;
+		&lt;level2&gt;
+			&lt;h2&gt;roman numbers&lt;/h2&gt;
+			&lt;p&gt;&lt;brl:num role="roman"&gt;I&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;V&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;X&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;L&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;C&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;D&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;M&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;II&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;VI&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;VIII&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;IX&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;MCMLI&lt;/brl:num&gt;&lt;/p&gt;
+			&lt;p&gt;&lt;brl:num role="roman"&gt;i&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;v&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;x&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;l&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;c&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;d&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;m&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;ii&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;vi&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;viii&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;ix&lt;/brl:num&gt;
+			&lt;brl:num role="roman"&gt;mcmli&lt;/brl:num&gt;&lt;/p&gt;
+		&lt;/level2&gt;
+	&lt;/level1&gt;
+	&lt;level1&gt;
+		&lt;h1&gt;downshifted&lt;/h1&gt;
+		&lt;level2&gt;
+			&lt;h2&gt;ordinal numbers&lt;/h2&gt;
+			&lt;p&gt;&lt;brl:num role="ordinal"&gt;1.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;2.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;3.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;4.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;5.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;6.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;7.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;8.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;9.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;0.&lt;/brl:num&gt;
+			&lt;brl:num role="ordinal"&gt;1234567890.&lt;/brl:num&gt;&lt;/p&gt;
+		&lt;/level2&gt;
+		&lt;level2&gt;
+			&lt;h2&gt;dates&lt;/h2&gt;
+			&lt;p&gt;&lt;brl:date value="1982-12-06"&gt;06.12.1982&lt;/brl:date&gt;
+			&lt;brl:date value="1982-12-06"&gt;6.12.1982&lt;/brl:date&gt;&lt;/p&gt;
+		&lt;/level2&gt;
+		&lt;level2&gt;
+			&lt;h2&gt;ranges of print pages&lt;/h2&gt;
+			&lt;p&gt;&lt;brl:select&gt;
+				&lt;brl:when-braille&gt;&lt;brl:literal&gt;_#AC,=&lt;/brl:literal&gt;&lt;/brl:when-braille&gt;
+				&lt;brl:otherwise&gt;13-17&lt;/brl:otherwise&gt;
+			&lt;/brl:select&gt;&lt;/p&gt;
+		&lt;/level2&gt;
+	&lt;/level1&gt;
+&lt;/_&gt;
+</code></div></span></li><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(locale:de)'</code></li><li><span><a href="../../resources/counters-variables/number-formats-1.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_578095752&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠗⠑⠛⠥⠇⠁⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠼⠁⠀⠼⠃⠀⠼⠉⠀⠼⠙⠀⠼⠑⠀⠼⠋⠀⠼⠛⠀⠼⠓⠀⠼⠊&lt;/row&gt;
+          &lt;row&gt;⠼⠚⠀⠼⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠗⠕⠍⠁⠝⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠘⠊⠀⠘⠧⠀⠘⠭⠀⠘⠇⠀⠘⠉⠀⠘⠙⠀⠘⠍⠀⠘⠊⠊&lt;/row&gt;
+          &lt;row&gt;⠘⠧⠊⠀⠘⠧⠊⠊⠊⠀⠘⠊⠭⠀⠘⠍⠉⠍⠇⠊&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠊⠀⠠⠧⠀⠠⠭⠀⠠⠇⠀⠠⠉⠀⠠⠙⠀⠠⠍⠀⠠⠊⠊&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠊⠀⠠⠧⠊⠊⠊⠀⠠⠊⠭⠀⠠⠍⠉⠍⠇⠊&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠙⠕⠺⠝⠎⠓⠊⠋⠞⠑⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠼⠂⠀⠼⠆⠀⠼⠒⠀⠼⠲⠀⠼⠢⠀⠼⠖⠀⠼⠶⠀⠼⠦⠀⠼⠔&lt;/row&gt;
+          &lt;row&gt;⠼⠴⠀⠼⠂⠆⠒⠲⠢⠖⠶⠦⠔⠴&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠙⠁⠞⠑⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠼⠖⠁⠃⠼⠁⠊⠓⠃⠀⠼⠖⠁⠃⠼⠁⠊⠓⠃&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠗⠁⠝⠛⠑⠎⠀⠕⠋⠀⠏⠗⠊⠝⠞⠀⠏⠁⠛⠑⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠸⠼⠁⠉⠂⠶&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-08-05</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_578095752</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠗⠑⠛⠥⠇⠁⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">          REGULAR           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">          -------           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ARABIC NUMBERS              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">33333333333333              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠼⠁⠀⠼⠃⠀⠼⠉⠀⠼⠙⠀⠼⠑⠀⠼⠋⠀⠼⠛⠀⠼⠓⠀⠼⠊</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  #A #B #C #D #E #F #G #H #I</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠼⠚⠀⠼⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">#J #ABCDEFGHIJ              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠗⠕⠍⠁⠝⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ROMAN NUMBERS               </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">3333333333333               </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠘⠊⠀⠘⠧⠀⠘⠭⠀⠘⠇⠀⠘⠉⠀⠘⠙⠀⠘⠍⠀⠘⠊⠊⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ^I ^V ^X ^L ^C ^D ^M ^II  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠘⠧⠊⠀⠘⠧⠊⠊⠊⠀⠘⠊⠭⠀⠘⠍⠉⠍⠇⠊⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">^VI ^VIII ^IX ^MCMLI        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠠⠊⠀⠠⠧⠀⠠⠭⠀⠠⠇⠀⠠⠉⠀⠠⠙⠀⠠⠍⠀⠠⠊⠊⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ,I ,V ,X ,L ,C ,D ,M ,II  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠧⠊⠀⠠⠧⠊⠊⠊⠀⠠⠊⠭⠀⠠⠍⠉⠍⠇⠊⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,VI ,VIII ,IX ,MCMLI        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                          #A</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠙⠕⠺⠝⠎⠓⠊⠋⠞⠑⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">        DOWNSHIFTED         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">        -----------         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ORDINAL NUMBERS             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">333333333333333             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠼⠂⠀⠼⠆⠀⠼⠒⠀⠼⠲⠀⠼⠢⠀⠼⠖⠀⠼⠶⠀⠼⠦⠀⠼⠔</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  #1 #2 #3 #4 #5 #6 #7 #8 #9</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠼⠴⠀⠼⠂⠆⠒⠲⠢⠖⠶⠦⠔⠴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">#0 #1234567890              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠁⠞⠑⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DATES                       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">33333                       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠼⠖⠁⠃⠼⠁⠊⠓⠃⠀⠼⠖⠁⠃⠼⠁⠊⠓⠃⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  #6AB#AIHB #6AB#AIHB       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠗⠁⠝⠛⠑⠎⠀⠕⠋⠀⠏⠗⠊⠝⠞⠀⠏⠁⠛⠑⠎⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">RANGES OF PRINT PAGES       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">333333333333333333333       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠸⠼⠁⠉⠂⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  _#AC17                    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-1.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/counters-variables/number-formats-1.pef"/>
+    </x:expect>
+  </x:scenario>
+  <x:scenario label="Number formats: written out"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/counters-variables/number-formats-2-4.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;level1 xmlns="http://www.daisy.org/z3986/2005/dtbook/"&gt;
+	&lt;h1&gt;written out&lt;/h1&gt;
+	&lt;level2&gt;
+		&lt;h2&gt;arabic numbers&lt;/h2&gt;
+		&lt;p&gt;eins zwei drei vier fünf sechs sieben acht neun zehn elf zwölf dreizehn vierzehn
+		fünfzehn sechzehn siebzehn achtzehn neunzehn zwanzig einundzwanzig zweiundzwanzig
+		dreiundzwanzig vierundzwanzig fünfundzwanzig sechsundzwanzig siebenundzwanzig
+		achtundzwanzig neunundzwanzig&lt;/p&gt;
+	&lt;/level2&gt;
+	&lt;level2&gt;
+		&lt;h2&gt;ordinal numbers&lt;/h2&gt;
+		&lt;p&gt;erster zweiter dritter vierter fünfter sechster siebter achter neunter zehnter elfter
+		zwölfter dreizehnter vierzehnter fünfzehnter sechzehnter siebzehnter achtzehnter
+		neunzehnter zwanzigster einundzwanzigster zweiundzwanzigster dreiundzwanzigster
+		vierundzwanzigster fünfundzwanzigster sechsundzwanzigster siebenundzwanzigster
+		achtundzwanzigster neunundzwanzigster&lt;/p&gt;
+	&lt;/level2&gt;
+&lt;/level1&gt;
+</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(locale:de)'</code></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-2-4.xml"/>
+      </x:input>
+      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:scenario id="94.2" label="grade 0"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+</code></div></span></li><li><span><a href="../../resources/counters-variables/number-formats-2.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_308606945&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠑⠝⠀⠕⠥⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠊⠝⠎⠀⠵⠺⠑⠊⠀⠙⠗⠑⠊⠀⠧⠊⠑⠗⠀⠋⠳⠝⠋&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠉⠓⠎⠀⠎⠊⠑⠃⠑⠝⠀⠁⠉⠓⠞⠀⠝⠑⠥⠝⠀⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠑⠇⠋⠀⠵⠺⠪⠇⠋⠀⠙⠗⠑⠊⠵⠑⠓⠝⠀⠧⠊⠑⠗⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠵⠑⠓⠝⠀⠎⠑⠉⠓⠵⠑⠓⠝⠀⠎⠊⠑⠃⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠁⠉⠓⠞⠵⠑⠓⠝⠀⠝⠑⠥⠝⠵⠑⠓⠝⠀⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠑⠊⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠵⠺⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠧⠊⠑⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠉⠓⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠁⠉⠓⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠝⠑⠥⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠎⠞⠑⠗⠀⠵⠺⠑⠊⠞⠑⠗⠀⠙⠗⠊⠞⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠊⠑⠗⠞⠑⠗⠀⠋⠳⠝⠋⠞⠑⠗⠀⠎⠑⠉⠓⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠞⠑⠗⠀⠁⠉⠓⠞⠑⠗⠀⠝⠑⠥⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠑⠓⠝⠞⠑⠗⠀⠑⠇⠋⠞⠑⠗⠀⠵⠺⠪⠇⠋⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠑⠊⠵⠑⠓⠝⠞⠑⠗⠀⠧⠊⠑⠗⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠵⠑⠓⠝⠞⠑⠗⠀⠎⠑⠉⠓⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠵⠑⠓⠝⠞⠑⠗⠀⠁⠉⠓⠞⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠝⠑⠥⠝⠵⠑⠓⠝⠞⠑⠗⠀⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠑⠊⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠊⠑⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠉⠓⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠉⠓⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠝⠑⠥⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-08-05</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_308606945</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠑⠝⠀⠕⠥⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">        WRITTEN OUT         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">        -----------         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ARABIC NUMBERS              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">33333333333333              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠑⠊⠝⠎⠀⠵⠺⠑⠊⠀⠙⠗⠑⠊⠀⠧⠊⠑⠗⠀⠋⠳⠝⠋⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  EINS ZWEI DREI VIER F\NF  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠉⠓⠎⠀⠎⠊⠑⠃⠑⠝⠀⠁⠉⠓⠞⠀⠝⠑⠥⠝⠀⠵⠑⠓⠝⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SECHS SIEBEN ACHT NEUN ZEHN </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠑⠇⠋⠀⠵⠺⠪⠇⠋⠀⠙⠗⠑⠊⠵⠑⠓⠝⠀⠧⠊⠑⠗⠵⠑⠓⠝⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ELF ZW[LF DREIZEHN VIERZEHN </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠵⠑⠓⠝⠀⠎⠑⠉⠓⠵⠑⠓⠝⠀⠎⠊⠑⠃⠵⠑⠓⠝⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NFZEHN SECHZEHN SIEBZEHN  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠉⠓⠞⠵⠑⠓⠝⠀⠝⠑⠥⠝⠵⠑⠓⠝⠀⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ACHTZEHN NEUNZEHN ZWANZIG   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠑⠊⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠵⠺⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">EINUNDZWANZIG ZWEIUNDZWANZIG</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DREIUNDZWANZIG              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠊⠑⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">VIERUNDZWANZIG              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NFUNDZWANZIG              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠉⠓⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SECHSUNDZWANZIG             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠊⠑⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SIEBENUNDZWANZIG            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠉⠓⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ACHTUNDZWANZIG              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠑⠥⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">NEUNUNDZWANZIG              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                          #C</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ORDINAL NUMBERS             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">333333333333333             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠑⠗⠎⠞⠑⠗⠀⠵⠺⠑⠊⠞⠑⠗⠀⠙⠗⠊⠞⠞⠑⠗⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ERSTER ZWEITER DRITTER    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠊⠑⠗⠞⠑⠗⠀⠋⠳⠝⠋⠞⠑⠗⠀⠎⠑⠉⠓⠎⠞⠑⠗⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">VIERTER F\NFTER SECHSTER    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠊⠑⠃⠞⠑⠗⠀⠁⠉⠓⠞⠑⠗⠀⠝⠑⠥⠝⠞⠑⠗⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SIEBTER ACHTER NEUNTER      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠑⠓⠝⠞⠑⠗⠀⠑⠇⠋⠞⠑⠗⠀⠵⠺⠪⠇⠋⠞⠑⠗⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZEHNTER ELFTER ZW[LFTER     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠑⠊⠵⠑⠓⠝⠞⠑⠗⠀⠧⠊⠑⠗⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DREIZEHNTER VIERZEHNTER     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠵⠑⠓⠝⠞⠑⠗⠀⠎⠑⠉⠓⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NFZEHNTER SECHZEHNTER     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠊⠑⠃⠵⠑⠓⠝⠞⠑⠗⠀⠁⠉⠓⠞⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SIEBZEHNTER ACHTZEHNTER     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠑⠥⠝⠵⠑⠓⠝⠞⠑⠗⠀⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">NEUNZEHNTER ZWANZIGSTER     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠑⠊⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">EINUNDZWANZIGSTER           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠺⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZWEIUNDZWANZIGSTER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DREIUNDZWANZIGSTER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠊⠑⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">VIERUNDZWANZIGSTER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NFUNDZWANZIGSTER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠉⠓⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SECHSUNDZWANZIGSTER         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠊⠑⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SIEBENUNDZWANZIGSTER        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠉⠓⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ACHTUNDZWANZIGSTER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠑⠥⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">NEUNUNDZWANZIGSTER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-2.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="94.3" label="grade 1"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+</code></div></span></li><li><span><a href="../../resources/counters-variables/number-formats-3.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_641151189&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠑⠝⠀⠕⠥⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠩⠝⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠑⠝⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠑⠓⠝⠀⠑⠇⠋⠀⠵⠺⠪⠇⠋&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠵⠑⠓⠝⠀⠧⠬⠗⠵⠑⠓⠝⠀⠋⠳⠝⠋⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠵⠑⠓⠝⠀⠎⠬⠃⠵⠑⠓⠝⠀⠁⠹⠞⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠵⠑⠓⠝⠀⠵⠺⠁⠝⠵⠊⠛⠀⠩⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠙⠗⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠝⠣⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠾⠑⠗⠀⠵⠺⠩⠞⠑⠗⠀⠙⠗⠊⠞⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠞⠑⠗⠀⠋⠳⠝⠋⠞⠑⠗⠀⠎⠑⠹⠾⠑⠗⠀⠎⠬⠃⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠑⠗⠀⠝⠣⠝⠞⠑⠗⠀⠵⠑⠓⠝⠞⠑⠗⠀⠑⠇⠋⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠪⠇⠋⠞⠑⠗⠀⠙⠗⠩⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠵⠑⠓⠝⠞⠑⠗⠀⠋⠳⠝⠋⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠵⠑⠓⠝⠞⠑⠗⠀⠎⠬⠃⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠵⠑⠓⠝⠞⠑⠗⠀⠝⠣⠝⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠩⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-08-05</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_641151189</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠑⠝⠀⠕⠥⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">        WRITTEN OUT         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">        -----------         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ARABIC NUMBERS              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">33333333333333              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠩⠝⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  %NS ZW% DR% V+R F\NF SE?S </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠑⠝⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠑⠓⠝⠀⠑⠇⠋⠀⠵⠺⠪⠇⠋</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BEN A?T N&lt;N ZEHN ELF ZW[LF</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠩⠵⠑⠓⠝⠀⠧⠬⠗⠵⠑⠓⠝⠀⠋⠳⠝⠋⠵⠑⠓⠝⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DR%ZEHN V+RZEHN F\NFZEHN    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠹⠵⠑⠓⠝⠀⠎⠬⠃⠵⠑⠓⠝⠀⠁⠹⠞⠵⠑⠓⠝⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SE?ZEHN S+BZEHN A?TZEHN     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠣⠝⠵⠑⠓⠝⠀⠵⠺⠁⠝⠵⠊⠛⠀⠩⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">N&lt;NZEHN ZWANZIG %NUNDZWANZIG</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠺⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠙⠗⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZW%UNDZWANZIG DR%UNDZWANZIG </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠬⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">V+RUNDZWANZIG F\NFUNDZWANZIG</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠹⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SE?SUNDZWANZIG              </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BENUNDZWANZIG             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠹⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠝⠣⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">A?TUNDZWANZIG N&lt;NUNDZWANZIG </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                          #C</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ORDINAL NUMBERS             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">333333333333333             </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠑⠗⠾⠑⠗⠀⠵⠺⠩⠞⠑⠗⠀⠙⠗⠊⠞⠞⠑⠗⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ER)ER ZW%TER DRITTER      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠬⠗⠞⠑⠗⠀⠋⠳⠝⠋⠞⠑⠗⠀⠎⠑⠹⠾⠑⠗⠀⠎⠬⠃⠞⠑⠗</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">V+RTER F\NFTER SE?)ER S+BTER</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠹⠞⠑⠗⠀⠝⠣⠝⠞⠑⠗⠀⠵⠑⠓⠝⠞⠑⠗⠀⠑⠇⠋⠞⠑⠗⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">A?TER N&lt;NTER ZEHNTER ELFTER </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠺⠪⠇⠋⠞⠑⠗⠀⠙⠗⠩⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZW[LFTER DR%ZEHNTER         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠬⠗⠵⠑⠓⠝⠞⠑⠗⠀⠋⠳⠝⠋⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">V+RZEHNTER F\NFZEHNTER      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠹⠵⠑⠓⠝⠞⠑⠗⠀⠎⠬⠃⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SE?ZEHNTER S+BZEHNTER       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠹⠞⠵⠑⠓⠝⠞⠑⠗⠀⠝⠣⠝⠵⠑⠓⠝⠞⠑⠗⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">A?TZEHNTER N&lt;NZEHNTER       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠩⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZWANZIG)ER %NUNDZWANZIG)ER  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠺⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZW%UNDZWANZIG)ER            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DR%UNDZWANZIG)ER            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠬⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">V+RUNDZWANZIG)ER            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NFUNDZWANZIG)ER           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠹⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SE?SUNDZWANZIG)ER           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BENUNDZWANZIG)ER          </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠹⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">A?TUNDZWANZIG)ER            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠣⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">N&lt;NUNDZWANZIG)ER            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-3.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="94.4" label="grade 2"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="style.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+</code></div></span></li><li><span><a href="../../resources/counters-variables/number-formats-4.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_850172386&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠉⠀⠕⠥⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠫⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠉⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠶⠝⠀⠽⠋⠀⠵⠺⠪⠇⠋&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠵⠶⠝⠀⠧⠬⠗⠵⠶⠝⠀⠋⠳⠝⠋⠵⠶⠝⠀⠎⠑⠹⠵⠶⠝&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠵⠶⠝⠀⠁⠹⠞⠵⠶⠝⠀⠝⠣⠝⠵⠶⠝⠀⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠫⠂⠥⠵⠺⠖⠵⠘⠀⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠀⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠻⠾⠻⠀⠵⠺⠩⠞⠻⠀⠙⠗⠊⠞⠞⠻⠀⠧⠬⠗⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠞⠻⠀⠎⠑⠹⠾⠻⠀⠎⠬⠃⠞⠻⠀⠁⠹⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠞⠻⠀⠵⠶⠝⠞⠻⠀⠽⠋⠞⠻⠀⠵⠺⠪⠇⠋⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠵⠶⠝⠞⠻⠀⠧⠬⠗⠵⠶⠝⠞⠻⠀⠋⠳⠝⠋⠵⠶⠝⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠵⠶⠝⠞⠻⠀⠎⠬⠃⠵⠶⠝⠞⠻⠀⠁⠹⠞⠵⠶⠝⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠵⠶⠝⠞⠻⠀⠵⠺⠖⠵⠘⠾⠻⠀⠫⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-08-05</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_850172386</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠉⠀⠕⠥⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">         WRITTC OUT         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">         ----------         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">0ABI,C NUMB]S               </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">3333333333333               </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠫⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  $S ZW% DR% V+R F\NF SE?S  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠉⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠶⠝⠀⠽⠋⠀⠵⠺⠪⠇⠋⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BC A?T N&lt;N Z7N YF ZW[LF   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠩⠵⠶⠝⠀⠧⠬⠗⠵⠶⠝⠀⠋⠳⠝⠋⠵⠶⠝⠀⠎⠑⠹⠵⠶⠝</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DR%Z7N V+RZ7N F\NFZ7N SE?Z7N</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠵⠶⠝⠀⠁⠹⠞⠵⠶⠝⠀⠝⠣⠝⠵⠶⠝⠀⠵⠺⠖⠵⠘⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BZ7N A?TZ7N N&lt;NZ7N ZW6Z^  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠫⠂⠥⠵⠺⠖⠵⠘⠀⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">$1UZW6Z^ ZW%1UZW6Z^         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠀⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DR%1UZW6Z^ V+R1UZW6Z^       </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NF1UZW6Z^ SE?S1UZW6Z^     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BC1UZW6Z^ A?T1UZW6Z^      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">N&lt;N1UZW6Z^                  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">5D9AL NUMB]S                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">333333333333                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠻⠾⠻⠀⠵⠺⠩⠞⠻⠀⠙⠗⠊⠞⠞⠻⠀⠧⠬⠗⠞⠻⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ])] ZW%T] DRITT] V+RT]    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠞⠻⠀⠎⠑⠹⠾⠻⠀⠎⠬⠃⠞⠻⠀⠁⠹⠞⠻⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NFT] SE?)] S+BT] A?T]     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠣⠝⠞⠻⠀⠵⠶⠝⠞⠻⠀⠽⠋⠞⠻⠀⠵⠺⠪⠇⠋⠞⠻⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">N&lt;NT] Z7NT] YFT] ZW[LFT]    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠗⠩⠵⠶⠝⠞⠻⠀⠧⠬⠗⠵⠶⠝⠞⠻⠀⠋⠳⠝⠋⠵⠶⠝⠞⠻⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DR%Z7NT] V+RZ7NT] F\NFZ7NT] </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠹⠵⠶⠝⠞⠻⠀⠎⠬⠃⠵⠶⠝⠞⠻⠀⠁⠹⠞⠵⠶⠝⠞⠻⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SE?Z7NT] S+BZ7NT] A?TZ7NT]  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠣⠝⠵⠶⠝⠞⠻⠀⠵⠺⠖⠵⠘⠾⠻⠀⠫⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">N&lt;NZ7NT] ZW6Z^)] $1UZW6Z^)] </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ZW%1UZW6Z^)] DR%1UZW6Z^)]   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">V+R1UZW6Z^)]              #C</pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">F\NF1UZW6Z^)] SE?S1UZW6Z^)] </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">S+BC1UZW6Z^)] A?T1UZW6Z^)]  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">N&lt;N1UZW6Z^)]                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/counters-variables/number-formats-4.pef"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+</x:description>

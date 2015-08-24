@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dtbook xml:lang="nl" version="2005-3" xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+<book>
+<bodymatter>
+<level1>
+<h1 class="center">Diploma</h1>
+<!--
+	Currently tabular structures are achieved with pre-formatting
+	(preserving white space). TODO: use a real table
+-->
+<p class="preformatted">
+Iemand         Iemand
+Naam           Anders
+(functie)       (functie)
+</p>
+</level1>
+</bodymatter>
+</book>
+</dtbook>

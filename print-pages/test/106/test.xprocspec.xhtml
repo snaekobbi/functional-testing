@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" xmlns:p="http://www.w3.org/ns/xproc" xmlns:px="http://www.daisy.org/ns/pipeline/xproc" xmlns:pef="http://www.daisy.org/ns/2008/pef" xmlns:dotify="http://code.google.com/p/dotify/" xmlns:css="http://www.daisy.org/ns/pipeline/braille-css"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../../github.min.css"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+  
+  <x:script>
+    <p:declare-step type="pxi:translate" version="1.0">
+      <p:input port="source"/>
+      <p:output port="result"/>
+      <p:option name="stylesheet" required="true"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/dotify-formatter/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-calabash/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/common-utils/library.xpl"/>
+      <css:inline>
+        <p:with-option name="default-stylesheet" select="resolve-uri($stylesheet)"/>
+      </css:inline>
+      <px:transform type="css-block" query=""/>
+      <dotify:format/>
+    </p:declare-step>
+  </x:script>
+  
+  <x:scenario id="106.1" label="Rendering print page breaks as marks in the left margin"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/original-pagination/Test.DTBook.Indication of original pagination.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;_ xml:lang="no"&gt;
+&lt;level2&gt;
+&lt;p&gt;Vi har et system hvor vi deler de ulike f&amp;#x00F8;rerkortene inn i klasser. Skjemaet nedenfor gir en oversikt over de ulike f&amp;#x00F8;rerkortklassene.&lt;/p&gt;
+&lt;!-- NorBraille can't handle tables --&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;strong&gt;KLASSE&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;GJELDER FOR&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;MINSTEALDER&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;A&lt;/td&gt;
+        &lt;td&gt;Motorsykkel&lt;/td&gt;
+        &lt;td&gt;18/21 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;A1&lt;/td&gt;
+        &lt;td&gt;Lett motorsykkel&lt;/td&gt;
+        &lt;td&gt;16 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;B&lt;/td&gt;
+        &lt;td&gt;Personbil, varebil, tre&amp;#x002D; eller firehjuls moped&lt;/td&gt;
+        &lt;td&gt;18 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;M 146&lt;/td&gt;
+        &lt;td&gt;Moped 146&lt;/td&gt;
+        &lt;td&gt;16/18 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;M 147&lt;/td&gt;
+        &lt;td&gt;Tre&amp;#x002D; og firehjuls moped&lt;/td&gt;
+        &lt;td&gt;16/18 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;C&lt;/td&gt;
+        &lt;td&gt;Lastebil&lt;/td&gt;
+        &lt;td&gt;18 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;C1&lt;/td&gt;
+        &lt;td&gt;Lett lastebil (ikke over 7500 kg)&lt;/td&gt;
+        &lt;td&gt;18 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;D&lt;/td&gt;
+        &lt;td&gt;Buss&lt;/td&gt;
+        &lt;td&gt;21 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;D1&lt;/td&gt;
+        &lt;td&gt;Minibuss (9&amp;#x2013;16 passasjerplasser)&lt;/td&gt;
+        &lt;td&gt;21 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;E&lt;/td&gt;
+        &lt;td&gt;Tilhenger/tilhengerredskap over 750 kg til B, C, C1, D eller D1&lt;/td&gt;
+        &lt;td&gt;18/21 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;S&lt;/td&gt;
+        &lt;td&gt;Beltemotorsykkel (sn&amp;#x00F8;scooter)&lt;/td&gt;
+        &lt;td&gt;16 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;T&lt;/td&gt;
+        &lt;td&gt;Traktor&lt;/td&gt;
+        &lt;td&gt;16 &amp;#x00E5;r&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/level2&gt;
+&lt;level2&gt;
+    &lt;pagenum id="page-10" page="normal"&gt;10&lt;/pagenum&gt;
+    &lt;h2&gt;Oppl&amp;#x00E6;ringens hovedm&amp;#x00E5;l&lt;/h2&gt;
+    &lt;p&gt;Oppl&amp;#x00E6;ringens hovedm&amp;#x00E5;l er at du skal tilegne deg de holdningene, kunnskapene og ferdighetene som er n&amp;#x00F8;dvendige for at du skal kunne kj&amp;#x00F8;re:&lt;/p&gt;
+    &lt;list type="pl"&gt;
+        &lt;li&gt;&amp;#x2022; med st&amp;#x00F8;rst mulig sikkerhet&lt;/li&gt;
+        &lt;li&gt;&amp;#x2022; med tanke p&amp;#x00E5; god samhandling&lt;/li&gt;
+        &lt;li&gt;&amp;#x2022; for best mulig framkommelighet og trafikkavvikling&lt;/li&gt;
+        &lt;li&gt;&amp;#x2022; mest mulig hensynsfullt overfor andres trygghet, helse og milj&amp;#x00F8;&lt;/li&gt;
+        &lt;li&gt;&amp;#x2022; i samsvar med vegtrafikkens lover, regler, forskrifter og andre bestemmelser&lt;/li&gt;
+    &lt;/list&gt;
+    &lt;p&gt;Det trafikale grunnkurset&lt;/p&gt;
+&lt;/level2&gt;
+&lt;/_&gt;
+</code></div></span></li><li><span><a class="code" href="style.css">stylesheet</a><div class="document "><code>@page { size: 32 28; }
+
+pagenum { display: none }
+
+table { display: none }
+
+p {
+	display: block;
+	margin-left: 2;
+	text-indent: 2;
+}
+
+h2 {
+	display: block;
+	margin-left: 2;
+	text-indent: 5;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+
+list {
+	margin-top: 1;
+	margin-bottom: 1;
+	display: block;
+}
+
+li {
+	display: block;
+	margin-left: 4;
+	text-indent: -2;
+}</code></div></span></li><li><span><a href="../../resources/original-pagination/Test.PEF.Indication of original pagination.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠧⠊⠀⠓⠁⠗⠀⠑⠞⠀⠎⠽⠎⠞⠑⠍⠀⠓⠧⠕⠗⠀⠧⠊⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠑⠇⠑⠗⠀⠙⠑⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠑⠗⠅⠕⠗⠞⠑⠝⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠊⠝⠝⠀⠊⠀⠅⠇⠁⠎⠎⠑⠗⠄⠀⠠⠎⠅⠚⠑⠍⠁⠑⠞⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠑⠙⠑⠝⠋⠕⠗⠀⠛⠊⠗⠀⠑⠝⠀⠕⠧⠑⠗⠎⠊⠅⠞⠀⠕⠧⠑⠗⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠑⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠑⠗⠅⠕⠗⠞⠅⠇⠁⠎⠎⠑⠝⠑⠄⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠊⠝⠛⠑⠝⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠊⠝⠛⠑⠝⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠑⠗⠀⠁⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠥⠀⠎⠅⠁⠇⠀⠞⠊⠇⠑⠛⠝⠑⠀⠙⠑⠛⠀⠙⠑⠀⠓⠕⠇⠙⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠊⠝⠛⠑⠝⠑⠂⠀⠅⠥⠝⠝⠎⠅⠁⠏⠑⠝⠑⠀⠕⠛⠀⠋⠑⠗⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠊⠛⠓⠑⠞⠑⠝⠑⠀⠎⠕⠍⠀⠑⠗⠀⠝⠪⠙⠧⠑⠝⠙⠊⠛⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠕⠗⠀⠁⠞⠀⠙⠥⠀⠎⠅⠁⠇⠀⠅⠥⠝⠝⠑⠀⠅⠚⠪⠗⠑⠒⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠍⠑⠙⠀⠎⠞⠪⠗⠎⠞⠀⠍⠥⠇⠊⠛⠀⠎⠊⠅⠅⠑⠗⠓⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠍⠑⠙⠀⠞⠁⠝⠅⠑⠀⠏⠡⠀⠛⠕⠙⠀⠎⠁⠍⠓⠁⠝⠙⠇⠊⠝⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠋⠕⠗⠀⠃⠑⠎⠞⠀⠍⠥⠇⠊⠛⠀⠋⠗⠁⠍⠅⠕⠍⠍⠑⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠇⠊⠛⠓⠑⠞⠀⠕⠛⠀⠞⠗⠁⠋⠊⠅⠅⠁⠧⠧⠊⠅⠇⠊⠝⠛⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠍⠑⠎⠞⠀⠍⠥⠇⠊⠛⠀⠓⠑⠝⠎⠽⠝⠎⠋⠥⠇⠇⠞⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠕⠧⠑⠗⠋⠕⠗⠀⠁⠝⠙⠗⠑⠎⠀⠞⠗⠽⠛⠛⠓⠑⠞⠂⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠓⠑⠇⠎⠑⠀⠕⠛⠀⠍⠊⠇⠚⠪⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠲⠀⠊⠀⠎⠁⠍⠎⠧⠁⠗⠀⠍⠑⠙⠀⠧⠑⠛⠞⠗⠁⠋⠊⠅⠅⠑⠝⠎⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠇⠕⠧⠑⠗⠂⠀⠗⠑⠛⠇⠑⠗⠂⠀⠋⠕⠗⠎⠅⠗⠊⠋⠞⠑⠗⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠕⠛⠀⠁⠝⠙⠗⠑⠀⠃⠑⠎⠞⠑⠍⠍⠑⠇⠎⠑⠗⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠞⠀⠞⠗⠁⠋⠊⠅⠁⠇⠑⠀⠛⠗⠥⠝⠝⠅⠥⠗⠎⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠚&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="28" cols="32" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row>⠀⠀⠀⠀⠠⠧⠊⠀⠓⠁⠗⠀⠑⠞⠀⠎⠽⠎⠞⠑⠍⠀⠓⠧⠕⠗⠀⠧⠊⠀⠀⠀</pef:row><pef:row class="ascii">    ,VI HAR ET SYSTEM HVOR VI   </pef:row><pef:row>⠀⠀⠙⠑⠇⠑⠗⠀⠙⠑⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠑⠗⠅⠕⠗⠞⠑⠝⠑⠀⠀⠀</pef:row><pef:row class="ascii">  DELER DE ULIKE F[RERKORTENE   </pef:row><pef:row>⠀⠀⠊⠝⠝⠀⠊⠀⠅⠇⠁⠎⠎⠑⠗⠄⠀⠠⠎⠅⠚⠑⠍⠁⠑⠞⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">  INN I KLASSER' ,SKJEMAET      </pef:row><pef:row>⠀⠀⠝⠑⠙⠑⠝⠋⠕⠗⠀⠛⠊⠗⠀⠑⠝⠀⠕⠧⠑⠗⠎⠊⠅⠞⠀⠕⠧⠑⠗⠀</pef:row><pef:row class="ascii">  NEDENFOR GIR EN OVERSIKT OVER </pef:row><pef:row>⠀⠀⠙⠑⠀⠥⠇⠊⠅⠑⠀⠋⠪⠗⠑⠗⠅⠕⠗⠞⠅⠇⠁⠎⠎⠑⠝⠑⠄⠀⠀⠀</pef:row><pef:row class="ascii">  DE ULIKE F[RERKORTKLASSENE'   </pef:row><pef:row>⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">=                               </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                                </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠊⠝⠛⠑⠝⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠀⠀</pef:row><pef:row class="ascii">       ,OPPL&gt;RINGENS HOVEDM*L   </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                                </pef:row><pef:row>⠀⠀⠀⠀⠠⠕⠏⠏⠇⠜⠗⠊⠝⠛⠑⠝⠎⠀⠓⠕⠧⠑⠙⠍⠡⠇⠀⠑⠗⠀⠁⠞</pef:row><pef:row class="ascii">    ,OPPL&gt;RINGENS HOVEDM*L ER AT</pef:row><pef:row>⠀⠀⠙⠥⠀⠎⠅⠁⠇⠀⠞⠊⠇⠑⠛⠝⠑⠀⠙⠑⠛⠀⠙⠑⠀⠓⠕⠇⠙⠤⠀⠀</pef:row><pef:row class="ascii">  DU SKAL TILEGNE DEG DE HOLD-  </pef:row><pef:row>⠀⠀⠝⠊⠝⠛⠑⠝⠑⠂⠀⠅⠥⠝⠝⠎⠅⠁⠏⠑⠝⠑⠀⠕⠛⠀⠋⠑⠗⠤⠀⠀</pef:row><pef:row class="ascii">  NINGENE1 KUNNSKAPENE OG FER-  </pef:row><pef:row>⠀⠀⠙⠊⠛⠓⠑⠞⠑⠝⠑⠀⠎⠕⠍⠀⠑⠗⠀⠝⠪⠙⠧⠑⠝⠙⠊⠛⠑⠀⠀⠀</pef:row><pef:row class="ascii">  DIGHETENE SOM ER N[DVENDIGE   </pef:row><pef:row>⠀⠀⠋⠕⠗⠀⠁⠞⠀⠙⠥⠀⠎⠅⠁⠇⠀⠅⠥⠝⠝⠑⠀⠅⠚⠪⠗⠑⠒⠀⠀⠀</pef:row><pef:row class="ascii">  FOR AT DU SKAL KUNNE KJ[RE3   </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                                </pef:row><pef:row>⠀⠀⠲⠀⠍⠑⠙⠀⠎⠞⠪⠗⠎⠞⠀⠍⠥⠇⠊⠛⠀⠎⠊⠅⠅⠑⠗⠓⠑⠞⠀⠀</pef:row><pef:row class="ascii">  4 MED ST[RST MULIG SIKKERHET  </pef:row><pef:row>⠀⠀⠲⠀⠍⠑⠙⠀⠞⠁⠝⠅⠑⠀⠏⠡⠀⠛⠕⠙⠀⠎⠁⠍⠓⠁⠝⠙⠇⠊⠝⠛</pef:row><pef:row class="ascii">  4 MED TANKE P* GOD SAMHANDLING</pef:row><pef:row>⠀⠀⠲⠀⠋⠕⠗⠀⠃⠑⠎⠞⠀⠍⠥⠇⠊⠛⠀⠋⠗⠁⠍⠅⠕⠍⠍⠑⠤⠀⠀⠀</pef:row><pef:row class="ascii">  4 FOR BEST MULIG FRAMKOMME-   </pef:row><pef:row>⠀⠀⠀⠀⠇⠊⠛⠓⠑⠞⠀⠕⠛⠀⠞⠗⠁⠋⠊⠅⠅⠁⠧⠧⠊⠅⠇⠊⠝⠛⠀⠀</pef:row><pef:row class="ascii">    LIGHET OG TRAFIKKAVVIKLING  </pef:row><pef:row>⠀⠀⠲⠀⠍⠑⠎⠞⠀⠍⠥⠇⠊⠛⠀⠓⠑⠝⠎⠽⠝⠎⠋⠥⠇⠇⠞⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">  4 MEST MULIG HENSYNSFULLT     </pef:row><pef:row>⠀⠀⠀⠀⠕⠧⠑⠗⠋⠕⠗⠀⠁⠝⠙⠗⠑⠎⠀⠞⠗⠽⠛⠛⠓⠑⠞⠂⠀⠀⠀⠀</pef:row><pef:row class="ascii">    OVERFOR ANDRES TRYGGHET1    </pef:row><pef:row>⠀⠀⠀⠀⠓⠑⠇⠎⠑⠀⠕⠛⠀⠍⠊⠇⠚⠪⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">    HELSE OG MILJ[              </pef:row><pef:row>⠀⠀⠲⠀⠊⠀⠎⠁⠍⠎⠧⠁⠗⠀⠍⠑⠙⠀⠧⠑⠛⠞⠗⠁⠋⠊⠅⠅⠑⠝⠎⠀</pef:row><pef:row class="ascii">  4 I SAMSVAR MED VEGTRAFIKKENS </pef:row><pef:row>⠀⠀⠀⠀⠇⠕⠧⠑⠗⠂⠀⠗⠑⠛⠇⠑⠗⠂⠀⠋⠕⠗⠎⠅⠗⠊⠋⠞⠑⠗⠀⠀</pef:row><pef:row class="ascii">    LOVER1 REGLER1 FORSKRIFTER  </pef:row><pef:row>⠀⠀⠀⠀⠕⠛⠀⠁⠝⠙⠗⠑⠀⠃⠑⠎⠞⠑⠍⠍⠑⠇⠎⠑⠗⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">    OG ANDRE BESTEMMELSER       </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                                </pef:row><pef:row>⠀⠀⠀⠀⠠⠙⠑⠞⠀⠞⠗⠁⠋⠊⠅⠁⠇⠑⠀⠛⠗⠥⠝⠝⠅⠥⠗⠎⠑⠞⠀⠀</pef:row><pef:row class="ascii">    ,DET TRAFIKALE GRUNNKURSET  </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠚</pef:row><pef:row class="ascii">               #F           =#AJ</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:translate">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/original-pagination/Test.DTBook.Indication of original pagination.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/original-pagination/Test.PEF.Indication of original pagination.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="106.2" label="Rendering print page breaks as marks in the left margin. The mark is taken out of the normal text flow, and appears at the same line as the word that comes after the pagenum tag."><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/original-pagination/Test.DTBook.Indication-of-original-pagination2.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE dtbook
+  PUBLIC "-//NISO//DTD dtbook 2005-3//EN" "http://www.daisy.org/z3986/2005/dtbook-2005-3.dtd"&gt;
+&lt;dtbook xmlns="http://www.daisy.org/z3986/2005/dtbook/" xml:lang="no" version="2005-3"&gt;&lt;head&gt;
+    &lt;meta name="dtb:uid" content="test"/&gt; 
+    &lt;meta name="dc:Title" content="Original pagination"/&gt; 
+    &lt;meta name="dc:Identifier" content="test"/&gt; 
+    &lt;meta name="track:Guidelines" content="2015-1"/&gt; 
+    &lt;meta name="track:Supplier" content=""/&gt; 
+    &lt;meta name="dc:Language" content="no"/&gt; 
+    &lt;meta name="dc:Format" content="DTBook"/&gt; 
+    &lt;meta name="dc:Creator" content="Kari"/&gt;
+    &lt;meta name="dc:Contributor" content=""/&gt;
+    &lt;meta name="dc:Source" content=""/&gt; 
+    &lt;meta name="dc:Date" content="2015-06-19"/&gt; 
+    &lt;meta name="dc:Publisher" content="NLB"/&gt; 
+    &lt;meta name="dcterms:modified" content="2015-05-21T15:12:03+00:00"/&gt; 
+&lt;/head&gt;&lt;book&gt;&lt;frontmatter&gt; 
+    &lt;doctitle&gt;Original pagination test&lt;/doctitle&gt; 
+    &lt;docauthor&gt;Kari&lt;/docauthor&gt;
+    &lt;/frontmatter&gt;
+    &lt;bodymatter&gt;
+    &lt;level1 id="level1_6" class="chapter"&gt;
+    &lt;pagenum id="p10" page="normal"&gt;10&lt;/pagenum&gt;
+    &lt;h1 id="h1_3"&gt;3&lt;/h1&gt;
+    &lt;p&gt;Jeg går ikke her med en kvinne iført pannebånd i et raskt tiltagende tussmørke uten mål og mening. I sko fra byen Arden, jeg kjøpte dem i forgårs. De lå i en trådkurv utenfor Sport og Parfymeri, det var bare det ene paret. Dessverre to forskjellige størrelser, det merket jeg ikke i farten. Ekspeditøren kom ut på fortauet med en oppvaskklut, hun tørket av trådkurven. Jeg fulgte etter henne inn i butikken igjen med skoene i hånden, de var heftet sammen, hun klippet dem fra hverandre. Det var et podium i det ene vinduet, det satt en liten hund på det, den så lenge på meg før den snudde seg bort. Jeg betalte med kort. Det tok lang tid før betalingen gikk igjennom, vi sto og ventet. Ekspeditøren brettet sammen kluten, den var gul. Jeg har aldri sett noen brette sammen en oppvaskklut før. Hun foldet den som en duk, hun glattet den ut også. Jeg gikk derfra med skoene i en pose, jeg gikk rundt i gatene. Det skulle visst være en baker der. Jeg gikk inn i stasjonsbygningen, fordi gaten sluttet. Et par unge mennesker med plastflasker så opp før de beveget seg videre. På perrongen viste skiltet førti minutter til neste tog, det var toget nordover. Jeg gikk rundt bygningen, luften var sur og kald. Ekspeditøren kom nedover fortauet med den &lt;pagenum id="p11" page="normal"&gt;11&lt;/pagenum&gt;lille hunden, nå iført dekken. Hun lot den snuse på noe under en benk, hun sto og studerte håndflaten sin imens. Da jeg nærmet meg, løftet hun hodet og så rett på meg med et tomt uttrykk i ansiktet. Jeg forberedte meg på en hilsen. Men før den ble til noe, rettet hun igjen oppmerksomheten mot håndflaten sin.&lt;/p&gt;
+    &lt;p class="indented"&gt;Det var en eiendomsmegler overfor stasjonen. Jeg så på hus i vinduet, jeg leste hver enkelt bildetekst med alle beløp og finansieringsforslag. Jeg var den siste ved bilen, solen hadde etterlatt et glødende oransje spor over parkeringsplassen.&lt;/p&gt;
+&lt;/level1&gt;
+    &lt;/bodymatter&gt;
+&lt;/book&gt;
+&lt;/dtbook&gt;</code></div></span></li><li><span><a class="code" href="style.css">stylesheet</a><div class="document "><code>@page { size: 32 28; }
+
+pagenum { display: none }
+
+table { display: none }
+
+p {
+	display: block;
+	margin-left: 2;
+	text-indent: 2;
+}
+
+h2 {
+	display: block;
+	margin-left: 2;
+	text-indent: 5;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+
+list {
+	margin-top: 1;
+	margin-bottom: 1;
+	display: block;
+}
+
+li {
+	display: block;
+	margin-left: 4;
+	text-indent: -2;
+}</code></div></span></li><li><span><a href="../../resources/original-pagination/Test.PEF.Indication-of-original-pagination.2.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠠⠙⠑⠞⠀⠞⠕⠅⠀⠇⠁⠝⠛⠀⠞⠊⠙⠀⠋⠪⠗⠀⠃⠑⠞⠁⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠊⠝⠛⠑⠝⠀⠛⠊⠅⠅⠀⠊⠛⠚⠑⠝⠝⠕⠍⠂⠀⠧⠊⠀⠎⠞⠕⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠑⠝⠀⠃⠗⠑⠞⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠞⠀⠎⠁⠍⠍⠑⠝⠀⠅⠇⠥⠞⠑⠝⠂⠀⠙⠑⠝⠀⠧⠁⠗⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠥⠇⠄⠀⠠⠚⠑⠛⠀⠓⠁⠗⠀⠁⠇⠙⠗⠊⠀⠎⠑⠞⠞⠀⠝⠕⠑⠝⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠗⠑⠞⠞⠑⠀⠎⠁⠍⠍⠑⠝⠀⠑⠝⠀⠕⠏⠏⠧⠁⠎⠅⠅⠇⠥⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠪⠗⠄⠀⠠⠓⠥⠝⠀⠋⠕⠇⠙⠑⠞⠀⠙⠑⠝⠀⠎⠕⠍⠀⠑⠝⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠥⠅⠂⠀⠓⠥⠝⠀⠛⠇⠁⠞⠞⠑⠞⠀⠙⠑⠝⠀⠥⠞⠀⠕⠛⠎⠡⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀⠙⠑⠗⠋⠗⠁⠀⠍⠑⠙⠀⠎⠅⠕⠑⠝⠑⠀⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠝⠀⠏⠕⠎⠑⠂⠀⠚⠑⠛⠀⠛⠊⠅⠅⠀⠗⠥⠝⠙⠞⠀⠊⠀⠛⠁⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠝⠑⠄⠀⠠⠙⠑⠞⠀⠎⠅⠥⠇⠇⠑⠀⠧⠊⠎⠎⠞⠀⠧⠜⠗⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠝⠀⠃⠁⠅⠑⠗⠀⠙⠑⠗⠄⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀⠊⠝⠝⠀⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠁⠎⠚⠕⠝⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠂⠀⠋⠕⠗⠙⠊⠀⠛⠁⠞⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠇⠥⠞⠞⠑⠞⠄⠀⠠⠑⠞⠀⠏⠁⠗⠀⠥⠝⠛⠑⠀⠍⠑⠝⠝⠑⠎⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠑⠗⠀⠍⠑⠙⠀⠏⠇⠁⠎⠞⠋⠇⠁⠎⠅⠑⠗⠀⠎⠡⠀⠕⠏⠏⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠪⠗⠀⠙⠑⠀⠃⠑⠧⠑⠛⠑⠞⠀⠎⠑⠛⠀⠧⠊⠙⠑⠗⠑⠄⠀⠠⠏⠡&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠑⠗⠗⠕⠝⠛⠑⠝⠀⠧⠊⠎⠞⠑⠀⠎⠅⠊⠇⠞⠑⠞⠀⠋⠪⠗⠞⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠍⠊⠝⠥⠞⠞⠑⠗⠀⠞⠊⠇⠀⠝⠑⠎⠞⠑⠀⠞⠕⠛⠂⠀⠙⠑⠞⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠁⠗⠀⠞⠕⠛⠑⠞⠀⠝⠕⠗⠙⠕⠧⠑⠗⠄⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠗⠥⠝⠙⠞⠀⠃⠽⠛⠝⠊⠝⠛⠑⠝⠂⠀⠇⠥⠋⠞⠑⠝⠀⠧⠁⠗⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠥⠗⠀⠕⠛⠀⠅⠁⠇⠙⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠑⠝⠀⠅⠕⠍&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠝⠑⠙⠕⠧⠑⠗⠀⠋⠕⠗⠞⠁⠥⠑⠞⠀⠍⠑⠙⠀⠙⠑⠝⠀⠇⠊⠇⠇⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠥⠝⠙⠑⠝⠂⠀⠝⠡⠀⠊⠋⠪⠗⠞⠀⠙⠑⠅⠅⠑⠝⠄⠀⠠⠓⠥⠝⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠕⠞⠀⠙⠑⠝⠀⠎⠝⠥⠎⠑⠀⠏⠡⠀⠝⠕⠑⠀⠥⠝⠙⠑⠗⠀⠑⠝⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠑⠝⠅⠂⠀⠓⠥⠝⠀⠎⠞⠕⠀⠕⠛⠀⠎⠞⠥⠙⠑⠗⠞⠑⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠡⠝⠙⠋⠇⠁⠞⠑⠝⠀⠎⠊⠝⠀⠊⠍⠑⠝⠎⠄⠀⠠⠙⠁⠀⠚⠑⠛⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠜⠗⠍⠑⠞⠀⠍⠑⠛⠂⠀⠇⠪⠋⠞⠑⠞⠀⠓⠥⠝⠀⠓⠕⠙⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠁&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="28" cols="32" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row>⠀⠀⠠⠙⠑⠞⠀⠞⠕⠅⠀⠇⠁⠝⠛⠀⠞⠊⠙⠀⠋⠪⠗⠀⠃⠑⠞⠁⠤⠀⠀⠀</pef:row><pef:row class="ascii">  ,DET TOK LANG TID F[R BETA-   </pef:row><pef:row>⠀⠀⠇⠊⠝⠛⠑⠝⠀⠛⠊⠅⠅⠀⠊⠛⠚⠑⠝⠝⠕⠍⠂⠀⠧⠊⠀⠎⠞⠕⠀⠀</pef:row><pef:row class="ascii">  LINGEN GIKK IGJENNOM1 VI STO  </pef:row><pef:row>⠀⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠑⠝⠀⠃⠗⠑⠞⠤</pef:row><pef:row class="ascii">  OG VENTET' ,EKSPEDIT[REN BRET-</pef:row><pef:row>⠀⠀⠞⠑⠞⠀⠎⠁⠍⠍⠑⠝⠀⠅⠇⠥⠞⠑⠝⠂⠀⠙⠑⠝⠀⠧⠁⠗⠀⠀⠀⠀</pef:row><pef:row class="ascii">  TET SAMMEN KLUTEN1 DEN VAR    </pef:row><pef:row>⠀⠀⠛⠥⠇⠄⠀⠠⠚⠑⠛⠀⠓⠁⠗⠀⠁⠇⠙⠗⠊⠀⠎⠑⠞⠞⠀⠝⠕⠑⠝⠀</pef:row><pef:row class="ascii">  GUL' ,JEG HAR ALDRI SETT NOEN </pef:row><pef:row>⠀⠀⠃⠗⠑⠞⠞⠑⠀⠎⠁⠍⠍⠑⠝⠀⠑⠝⠀⠕⠏⠏⠧⠁⠎⠅⠅⠇⠥⠞⠀⠀</pef:row><pef:row class="ascii">  BRETTE SAMMEN EN OPPVASKKLUT  </pef:row><pef:row>⠀⠀⠋⠪⠗⠄⠀⠠⠓⠥⠝⠀⠋⠕⠇⠙⠑⠞⠀⠙⠑⠝⠀⠎⠕⠍⠀⠑⠝⠀⠀⠀</pef:row><pef:row class="ascii">  F[R' ,HUN FOLDET DEN SOM EN   </pef:row><pef:row>⠀⠀⠙⠥⠅⠂⠀⠓⠥⠝⠀⠛⠇⠁⠞⠞⠑⠞⠀⠙⠑⠝⠀⠥⠞⠀⠕⠛⠎⠡⠄⠀</pef:row><pef:row class="ascii">  DUK1 HUN GLATTET DEN UT OGS*' </pef:row><pef:row>⠀⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀⠙⠑⠗⠋⠗⠁⠀⠍⠑⠙⠀⠎⠅⠕⠑⠝⠑⠀⠊⠀</pef:row><pef:row class="ascii">  ,JEG GIKK DERFRA MED SKOENE I </pef:row><pef:row>⠀⠀⠑⠝⠀⠏⠕⠎⠑⠂⠀⠚⠑⠛⠀⠛⠊⠅⠅⠀⠗⠥⠝⠙⠞⠀⠊⠀⠛⠁⠤⠀</pef:row><pef:row class="ascii">  EN POSE1 JEG GIKK RUNDT I GA- </pef:row><pef:row>⠀⠀⠞⠑⠝⠑⠄⠀⠠⠙⠑⠞⠀⠎⠅⠥⠇⠇⠑⠀⠧⠊⠎⠎⠞⠀⠧⠜⠗⠑⠀⠀</pef:row><pef:row class="ascii">  TENE' ,DET SKULLE VISST V&gt;RE  </pef:row><pef:row>⠀⠀⠑⠝⠀⠃⠁⠅⠑⠗⠀⠙⠑⠗⠄⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀⠊⠝⠝⠀⠊⠀</pef:row><pef:row class="ascii">  EN BAKER DER' ,JEG GIKK INN I </pef:row><pef:row>⠀⠀⠎⠞⠁⠎⠚⠕⠝⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠂⠀⠋⠕⠗⠙⠊⠀⠛⠁⠞⠑⠝</pef:row><pef:row class="ascii">  STASJONSBYGNINGEN1 FORDI GATEN</pef:row><pef:row>⠀⠀⠎⠇⠥⠞⠞⠑⠞⠄⠀⠠⠑⠞⠀⠏⠁⠗⠀⠥⠝⠛⠑⠀⠍⠑⠝⠝⠑⠎⠤⠀</pef:row><pef:row class="ascii">  SLUTTET' ,ET PAR UNGE MENNES- </pef:row><pef:row>⠀⠀⠅⠑⠗⠀⠍⠑⠙⠀⠏⠇⠁⠎⠞⠋⠇⠁⠎⠅⠑⠗⠀⠎⠡⠀⠕⠏⠏⠀⠀⠀</pef:row><pef:row class="ascii">  KER MED PLASTFLASKER S* OPP   </pef:row><pef:row>⠀⠀⠋⠪⠗⠀⠙⠑⠀⠃⠑⠧⠑⠛⠑⠞⠀⠎⠑⠛⠀⠧⠊⠙⠑⠗⠑⠄⠀⠠⠏⠡</pef:row><pef:row class="ascii">  F[R DE BEVEGET SEG VIDERE' ,P*</pef:row><pef:row>⠀⠀⠏⠑⠗⠗⠕⠝⠛⠑⠝⠀⠧⠊⠎⠞⠑⠀⠎⠅⠊⠇⠞⠑⠞⠀⠋⠪⠗⠞⠊⠀</pef:row><pef:row class="ascii">  PERRONGEN VISTE SKILTET F[RTI </pef:row><pef:row>⠀⠀⠍⠊⠝⠥⠞⠞⠑⠗⠀⠞⠊⠇⠀⠝⠑⠎⠞⠑⠀⠞⠕⠛⠂⠀⠙⠑⠞⠀⠀⠀</pef:row><pef:row class="ascii">  MINUTTER TIL NESTE TOG1 DET   </pef:row><pef:row>⠀⠀⠧⠁⠗⠀⠞⠕⠛⠑⠞⠀⠝⠕⠗⠙⠕⠧⠑⠗⠄⠀⠠⠚⠑⠛⠀⠛⠊⠅⠅⠀</pef:row><pef:row class="ascii">  VAR TOGET NORDOVER' ,JEG GIKK </pef:row><pef:row>⠀⠀⠗⠥⠝⠙⠞⠀⠃⠽⠛⠝⠊⠝⠛⠑⠝⠂⠀⠇⠥⠋⠞⠑⠝⠀⠧⠁⠗⠀⠀⠀</pef:row><pef:row class="ascii">  RUNDT BYGNINGEN1 LUFTEN VAR   </pef:row><pef:row>⠀⠀⠎⠥⠗⠀⠕⠛⠀⠅⠁⠇⠙⠄⠀⠠⠑⠅⠎⠏⠑⠙⠊⠞⠪⠗⠑⠝⠀⠅⠕⠍</pef:row><pef:row class="ascii">  SUR OG KALD' ,EKSPEDIT[REN KOM</pef:row><pef:row>⠿⠀⠝⠑⠙⠕⠧⠑⠗⠀⠋⠕⠗⠞⠁⠥⠑⠞⠀⠍⠑⠙⠀⠙⠑⠝⠀⠇⠊⠇⠇⠑</pef:row><pef:row class="ascii">= NEDOVER FORTAUET MED DEN LILLE</pef:row><pef:row>⠀⠀⠓⠥⠝⠙⠑⠝⠂⠀⠝⠡⠀⠊⠋⠪⠗⠞⠀⠙⠑⠅⠅⠑⠝⠄⠀⠠⠓⠥⠝⠀</pef:row><pef:row class="ascii">  HUNDEN1 N* IF[RT DEKKEN' ,HUN </pef:row><pef:row>⠀⠀⠇⠕⠞⠀⠙⠑⠝⠀⠎⠝⠥⠎⠑⠀⠏⠡⠀⠝⠕⠑⠀⠥⠝⠙⠑⠗⠀⠑⠝⠀</pef:row><pef:row class="ascii">  LOT DEN SNUSE P* NOE UNDER EN </pef:row><pef:row>⠀⠀⠃⠑⠝⠅⠂⠀⠓⠥⠝⠀⠎⠞⠕⠀⠕⠛⠀⠎⠞⠥⠙⠑⠗⠞⠑⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">  BENK1 HUN STO OG STUDERTE     </pef:row><pef:row>⠀⠀⠓⠡⠝⠙⠋⠇⠁⠞⠑⠝⠀⠎⠊⠝⠀⠊⠍⠑⠝⠎⠄⠀⠠⠙⠁⠀⠚⠑⠛⠀</pef:row><pef:row class="ascii">  H*NDFLATEN SIN IMENS' ,DA JEG </pef:row><pef:row>⠀⠀⠝⠜⠗⠍⠑⠞⠀⠍⠑⠛⠂⠀⠇⠪⠋⠞⠑⠞⠀⠓⠥⠝⠀⠓⠕⠙⠑⠞⠀⠀</pef:row><pef:row class="ascii">  N&gt;RMET MEG1 L[FTET HUN HODET  </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠁</pef:row><pef:row class="ascii">               #B           =#AA</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:translate">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/original-pagination/Test.DTBook.Indication-of-original-pagination2.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/original-pagination/Test.PEF.Indication-of-original-pagination.2.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="12" failures="6" time="16.061" errors="0" name="test"><testsuite timestamp="2015-08-24T11:51:04.143Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12232e1" name="TheFooterContainsTheRangeOfChapterNumbersIfBothRightAndLeftHandPagesHaveAFooterItsTheRangeOfChaptersContainedInTheCurrentBraillePage" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="2.418">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824115049026/"/>
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-10&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_127439939&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠤⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠋&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⠤⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠼⠊
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠁
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠃
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠉
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠙
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠑
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠋
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠛
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:51:04.168Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12240e1" name="TheFooterContainsTheRangeOfChapterNumbersIfOnlyRightHandPagesHaveAFooterItsTheRangeOfChaptersContainedInThePreviousAndCurrentBraillePages" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="2.314">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824115049026/"/>
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-10&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_450956162&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠃&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠤⠘⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠋&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠘⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠙⠤⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠸⠼⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠼⠊
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠁
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠃
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠉
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠙
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠑
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠋
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠛
+
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:51:04.187Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12247e1" name="NumberFormatsRegulardownshifted" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.686">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/style.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824115049026/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_578095752&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠗⠑⠛⠥⠇⠁⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠼⠁⠀⠼⠃⠀⠼⠉⠀⠼⠙⠀⠼⠑⠀⠼⠋⠀⠼⠛⠀⠼⠓⠀⠼⠊&lt;/row&gt;
+          &lt;row&gt;⠼⠚⠀⠼⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠗⠕⠍⠁⠝⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠘⠊⠀⠘⠧⠀⠘⠭⠀⠘⠇⠀⠘⠉⠀⠘⠙⠀⠘⠍⠀⠘⠊⠊&lt;/row&gt;
+          &lt;row&gt;⠘⠧⠊⠀⠘⠧⠊⠊⠊⠀⠘⠊⠭⠀⠘⠍⠉⠍⠇⠊&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠊⠀⠠⠧⠀⠠⠭⠀⠠⠇⠀⠠⠉⠀⠠⠙⠀⠠⠍⠀⠠⠊⠊&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠊⠀⠠⠧⠊⠊⠊⠀⠠⠊⠭⠀⠠⠍⠉⠍⠇⠊&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠙⠕⠺⠝⠎⠓⠊⠋⠞⠑⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠼⠂⠀⠼⠆⠀⠼⠒⠀⠼⠲⠀⠼⠢⠀⠼⠖⠀⠼⠶⠀⠼⠦⠀⠼⠔&lt;/row&gt;
+          &lt;row&gt;⠼⠴⠀⠼⠂⠆⠒⠲⠢⠖⠶⠦⠔⠴&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠙⠁⠞⠑⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠼⠖⠁⠃⠼⠁⠊⠓⠃⠀⠼⠖⠁⠃⠼⠁⠊⠓⠃&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠗⠁⠝⠛⠑⠎⠀⠕⠋⠀⠏⠗⠊⠝⠞⠀⠏⠁⠛⠑⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠸⠼⠁⠉⠂⠶&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠗⠑⠛⠥⠇⠁⠗
+
+⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠼⠁⠀⠼⠃⠀⠼⠉⠀⠼⠙⠀⠼⠑⠀⠼⠋⠀⠼⠛⠀⠼⠓⠀⠼⠊
+⠼⠚⠀⠼⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚
+⠗⠕⠍⠁⠝⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠠⠊⠀⠠⠧⠀⠠⠭⠀⠠⠇⠀⠠⠉⠀⠠⠙⠀⠠⠍⠀⠘⠊⠊⠀
+⠘⠧⠊⠀⠘⠧⠊⠊⠊⠀⠘⠊⠭⠀⠘⠍⠉⠍⠇⠊
+⠀⠀⠠⠊⠀⠠⠧⠀⠠⠭⠀⠠⠇⠀⠠⠉⠀⠠⠙⠀⠠⠍⠀⠊⠊⠀⠧⠊
+⠧⠊⠊⠊⠀⠊⠠⠭⠀⠍⠠⠉⠍⠇⠊
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠕⠺⠝⠎⠓⠊⠋⠦⠙
+
+⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠼⠁⠄⠀⠼⠃⠄⠀⠼⠉⠄⠀⠼⠙⠄⠀⠼⠑⠄⠀⠼⠋⠄⠀
+⠼⠛⠄⠀⠼⠓⠄⠀⠼⠊⠄⠀⠼⠚⠄⠀⠼⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠄
+⠙⠁⠞⠿
+⠀⠀⠼⠚⠋⠄⠁⠃⠄⠁⠊⠓⠃⠀⠼⠋⠄⠁⠃⠄⠁⠊⠓⠃
+⠗⠖⠛⠿⠀⠕⠋⠀⠏⠗⠔⠞⠀⠏⠁⠛⠿
+⠀⠀⠈⠸⠼⠘⠁⠉⠂⠶⠀⠼⠁⠉⠤⠼⠁⠛
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:51:04.205Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12254e1" name="NumberFormatsWrittenOutGrade0" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.04">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824115049026/"/>
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_308606945&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠑⠝⠀⠕⠥⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠊⠝⠎⠀⠵⠺⠑⠊⠀⠙⠗⠑⠊⠀⠧⠊⠑⠗⠀⠋⠳⠝⠋&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠉⠓⠎⠀⠎⠊⠑⠃⠑⠝⠀⠁⠉⠓⠞⠀⠝⠑⠥⠝⠀⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠑⠇⠋⠀⠵⠺⠪⠇⠋⠀⠙⠗⠑⠊⠵⠑⠓⠝⠀⠧⠊⠑⠗⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠵⠑⠓⠝⠀⠎⠑⠉⠓⠵⠑⠓⠝⠀⠎⠊⠑⠃⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠁⠉⠓⠞⠵⠑⠓⠝⠀⠝⠑⠥⠝⠵⠑⠓⠝⠀⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠑⠊⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠵⠺⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠧⠊⠑⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠉⠓⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠁⠉⠓⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠝⠑⠥⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠎⠞⠑⠗⠀⠵⠺⠑⠊⠞⠑⠗⠀⠙⠗⠊⠞⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠊⠑⠗⠞⠑⠗⠀⠋⠳⠝⠋⠞⠑⠗⠀⠎⠑⠉⠓⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠞⠑⠗⠀⠁⠉⠓⠞⠑⠗⠀⠝⠑⠥⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠑⠓⠝⠞⠑⠗⠀⠑⠇⠋⠞⠑⠗⠀⠵⠺⠪⠇⠋⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠑⠊⠵⠑⠓⠝⠞⠑⠗⠀⠧⠊⠑⠗⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠵⠑⠓⠝⠞⠑⠗⠀⠎⠑⠉⠓⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠵⠑⠓⠝⠞⠑⠗⠀⠁⠉⠓⠞⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠝⠑⠥⠝⠵⠑⠓⠝⠞⠑⠗⠀⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠑⠊⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠑⠊⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠊⠑⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠉⠓⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠑⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠉⠓⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠝⠑⠥⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠎⠞⠑⠗&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠉⠀⠕⠥⠞
+
+⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠫⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎⠀
+⠎⠬⠃⠉⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠶⠝⠀⠽⠋⠀⠵⠺⠪⠇⠋⠀
+⠙⠗⠩⠵⠶⠝⠀⠧⠬⠗⠵⠶⠝⠀⠋⠳⠝⠋⠵⠶⠝⠀⠎⠑⠹⠵⠶⠝
+⠎⠬⠃⠵⠶⠝⠀⠁⠹⠞⠵⠶⠝⠀⠝⠣⠝⠵⠶⠝⠀⠵⠺⠖⠵⠘⠀
+⠫⠂⠥⠵⠺⠖⠵⠘⠀⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠀
+⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠀⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠀
+⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠀
+⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠀
+⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘
+⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠻⠾⠻⠀⠵⠺⠩⠞⠻⠀⠙⠗⠊⠞⠞⠻⠀⠧⠬⠗⠞⠻⠀
+⠋⠳⠝⠋⠞⠻⠀⠎⠑⠹⠾⠻⠀⠎⠬⠃⠞⠻⠀⠁⠹⠞⠻⠀
+⠝⠣⠝⠞⠻⠀⠵⠶⠝⠞⠻⠀⠽⠋⠞⠻⠀⠵⠺⠪⠇⠋⠞⠻⠀
+⠙⠗⠩⠵⠶⠝⠞⠻⠀⠧⠬⠗⠵⠶⠝⠞⠻⠀⠋⠳⠝⠋⠵⠶⠝⠞⠻⠀
+⠎⠑⠹⠵⠶⠝⠞⠻⠀⠎⠬⠃⠵⠶⠝⠞⠻⠀⠁⠹⠞⠵⠶⠝⠞⠻⠀
+⠝⠣⠝⠵⠶⠝⠞⠻⠀⠵⠺⠖⠵⠘⠾⠻⠀⠫⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠾⠻
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:51:04.223Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12261e1" name="NumberFormatsWrittenOutGrade1" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.04">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824115049026/"/>
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_641151189&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠑⠝⠀⠕⠥⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠗⠁⠃⠊⠉⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠩⠝⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠑⠝⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠑⠓⠝⠀⠑⠇⠋⠀⠵⠺⠪⠇⠋&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠵⠑⠓⠝⠀⠧⠬⠗⠵⠑⠓⠝⠀⠋⠳⠝⠋⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠵⠑⠓⠝⠀⠎⠬⠃⠵⠑⠓⠝⠀⠁⠹⠞⠵⠑⠓⠝&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠵⠑⠓⠝⠀⠵⠺⠁⠝⠵⠊⠛⠀⠩⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠙⠗⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠀⠝⠣⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠕⠗⠙⠊⠝⠁⠇⠀⠝⠥⠍⠃⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠾⠑⠗⠀⠵⠺⠩⠞⠑⠗⠀⠙⠗⠊⠞⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠞⠑⠗⠀⠋⠳⠝⠋⠞⠑⠗⠀⠎⠑⠹⠾⠑⠗⠀⠎⠬⠃⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠑⠗⠀⠝⠣⠝⠞⠑⠗⠀⠵⠑⠓⠝⠞⠑⠗⠀⠑⠇⠋⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠪⠇⠋⠞⠑⠗⠀⠙⠗⠩⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠵⠑⠓⠝⠞⠑⠗⠀⠋⠳⠝⠋⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠵⠑⠓⠝⠞⠑⠗⠀⠎⠬⠃⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠵⠑⠓⠝⠞⠑⠗⠀⠝⠣⠝⠵⠑⠓⠝⠞⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗⠀⠩⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠎⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠑⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠹⠞⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠥⠝⠙⠵⠺⠁⠝⠵⠊⠛⠾⠑⠗&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠉⠀⠕⠥⠞
+
+⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠫⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎⠀
+⠎⠬⠃⠉⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠶⠝⠀⠽⠋⠀⠵⠺⠪⠇⠋⠀
+⠙⠗⠩⠵⠶⠝⠀⠧⠬⠗⠵⠶⠝⠀⠋⠳⠝⠋⠵⠶⠝⠀⠎⠑⠹⠵⠶⠝
+⠎⠬⠃⠵⠶⠝⠀⠁⠹⠞⠵⠶⠝⠀⠝⠣⠝⠵⠶⠝⠀⠵⠺⠖⠵⠘⠀
+⠫⠂⠥⠵⠺⠖⠵⠘⠀⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠀
+⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠀⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠀
+⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠀
+⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠀
+⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘
+⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠻⠾⠻⠀⠵⠺⠩⠞⠻⠀⠙⠗⠊⠞⠞⠻⠀⠧⠬⠗⠞⠻⠀
+⠋⠳⠝⠋⠞⠻⠀⠎⠑⠹⠾⠻⠀⠎⠬⠃⠞⠻⠀⠁⠹⠞⠻⠀
+⠝⠣⠝⠞⠻⠀⠵⠶⠝⠞⠻⠀⠽⠋⠞⠻⠀⠵⠺⠪⠇⠋⠞⠻⠀
+⠙⠗⠩⠵⠶⠝⠞⠻⠀⠧⠬⠗⠵⠶⠝⠞⠻⠀⠋⠳⠝⠋⠵⠶⠝⠞⠻⠀
+⠎⠑⠹⠵⠶⠝⠞⠻⠀⠎⠬⠃⠵⠶⠝⠞⠻⠀⠁⠹⠞⠵⠶⠝⠞⠻⠀
+⠝⠣⠝⠵⠶⠝⠞⠻⠀⠵⠺⠖⠵⠘⠾⠻⠀⠫⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠾⠻
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T11:51:04.24Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d12268e1" name="NumberFormatsWrittenOutGrade2" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.025">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/test.xprocspec)"/>
+
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824115049026/"/>
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/counters-variables/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-08-05&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_850172386&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠉⠀⠕⠥⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠫⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠉⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠶⠝⠀⠽⠋⠀⠵⠺⠪⠇⠋&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠵⠶⠝⠀⠧⠬⠗⠵⠶⠝⠀⠋⠳⠝⠋⠵⠶⠝⠀⠎⠑⠹⠵⠶⠝&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠵⠶⠝⠀⠁⠹⠞⠵⠶⠝⠀⠝⠣⠝⠵⠶⠝⠀⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠫⠂⠥⠵⠺⠖⠵⠘⠀⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠀⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠻⠾⠻⠀⠵⠺⠩⠞⠻⠀⠙⠗⠊⠞⠞⠻⠀⠧⠬⠗⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠞⠻⠀⠎⠑⠹⠾⠻⠀⠎⠬⠃⠞⠻⠀⠁⠹⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠞⠻⠀⠵⠶⠝⠞⠻⠀⠽⠋⠞⠻⠀⠵⠺⠪⠇⠋⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠩⠵⠶⠝⠞⠻⠀⠧⠬⠗⠵⠶⠝⠞⠻⠀⠋⠳⠝⠋⠵⠶⠝⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠹⠵⠶⠝⠞⠻⠀⠎⠬⠃⠵⠶⠝⠞⠻⠀⠁⠹⠞⠵⠶⠝⠞⠻&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠵⠶⠝⠞⠻⠀⠵⠺⠖⠵⠘⠾⠻⠀⠫⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+          &lt;row&gt;⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠾⠻&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠗⠊⠞⠞⠉⠀⠕⠥⠞
+
+⠴⠁⠃⠊⠠⠉⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠫⠎⠀⠵⠺⠩⠀⠙⠗⠩⠀⠧⠬⠗⠀⠋⠳⠝⠋⠀⠎⠑⠹⠎⠀
+⠎⠬⠃⠉⠀⠁⠹⠞⠀⠝⠣⠝⠀⠵⠶⠝⠀⠽⠋⠀⠵⠺⠪⠇⠋⠀
+⠙⠗⠩⠵⠶⠝⠀⠧⠬⠗⠵⠶⠝⠀⠋⠳⠝⠋⠵⠶⠝⠀⠎⠑⠹⠵⠶⠝
+⠎⠬⠃⠵⠶⠝⠀⠁⠹⠞⠵⠶⠝⠀⠝⠣⠝⠵⠶⠝⠀⠵⠺⠖⠵⠘⠀
+⠫⠂⠥⠵⠺⠖⠵⠘⠀⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠀
+⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠀⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠀
+⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠀⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠀
+⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠀⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠀
+⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘
+⠢⠙⠔⠁⠇⠀⠝⠥⠍⠃⠻⠎
+⠀⠀⠻⠾⠻⠀⠵⠺⠩⠞⠻⠀⠙⠗⠊⠞⠞⠻⠀⠧⠬⠗⠞⠻⠀
+⠋⠳⠝⠋⠞⠻⠀⠎⠑⠹⠾⠻⠀⠎⠬⠃⠞⠻⠀⠁⠹⠞⠻⠀
+⠝⠣⠝⠞⠻⠀⠵⠶⠝⠞⠻⠀⠽⠋⠞⠻⠀⠵⠺⠪⠇⠋⠞⠻⠀
+⠙⠗⠩⠵⠶⠝⠞⠻⠀⠧⠬⠗⠵⠶⠝⠞⠻⠀⠋⠳⠝⠋⠵⠶⠝⠞⠻⠀
+⠎⠑⠹⠵⠶⠝⠞⠻⠀⠎⠬⠃⠵⠶⠝⠞⠻⠀⠁⠹⠞⠵⠶⠝⠞⠻⠀
+⠝⠣⠝⠵⠶⠝⠞⠻⠀⠵⠺⠖⠵⠘⠾⠻⠀⠫⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠵⠺⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠙⠗⠩⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠧⠬⠗⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠋⠳⠝⠋⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠎⠑⠹⠎⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠎⠬⠃⠉⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀
+⠁⠹⠞⠂⠥⠵⠺⠖⠵⠘⠾⠻⠀⠝⠣⠝⠂⠥⠵⠺⠖⠵⠘⠾⠻
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

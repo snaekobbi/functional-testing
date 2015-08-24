@@ -1,0 +1,21 @@
+table, tr {
+	display: block;
+}
+
+table::before {
+	display: block;
+	content: 'bt';
+}
+
+table::after {
+	display: block;
+	content: 'et';
+}
+
+td::after {
+	content: ',';
+}
+
+td:last-child::after {
+	content: none;
+}

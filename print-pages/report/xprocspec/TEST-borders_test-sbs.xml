@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="10" failures="2" time="11.585" errors="0" name="testsbs"><testsuite timestamp="2015-08-24T12:34:10.898Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d5880e1" name="BlockStartendIndicatorLines" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.859">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/borders/sbs-style-1.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824123400158/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2015-08-24T12:34:10.914Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d5886e1" name="ThinLeftBorder" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.203">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/borders/sbs-style-2.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824123400158/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2015-08-24T12:34:10.929Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d5891e1" name="ThickLeftBorder" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.47">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/borders/sbs-style-3.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824123400158/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2015-08-24T12:34:10.946Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d5896e1" name="FullBox" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.094">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/borders/sbs-style-4.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824123400158/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;!--
+      Generated from borders.txt using table "sbs.dis"
+  --&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-05-28&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_621593435&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠖⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠲&lt;/row&gt;
+          &lt;row&gt;⠇⠀⠵⠍⠀⠝⠰⠙⠉⠅⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠇⠀⠀⠀⠤⠀⠦⠙⠱⠲⠛⠽⠴⠂⠀⠊⠷⠀⠞⠋⠏⠞⠂⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠇⠀⠋⠳⠓⠇⠉⠀⠉⠀⠝⠊⠅⠕⠀⠥⠀⠪⠑⠀⠋⠙⠑⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠇⠀⠺⠇⠄⠀⠡⠀⠷⠀⠃⠊⠇⠙⠀⠾⠀⠁⠀⠞⠺⠀⠵⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠇⠀⠎⠶⠉⠂⠀⠙⠀⠤⠀⠞⠑⠠⠭⠞⠀⠝⠀⠻⠺⠜⠓⠝⠞⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠇⠀⠺⠙⠄⠀⠺⠀⠾⠀⠙⠢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠓⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠚&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠇⠀⠵⠍⠀⠝⠰⠙⠉⠅⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸
+⠇⠀⠀⠀⠤⠀⠦⠙⠱⠲⠛⠽⠴⠂⠀⠊⠷⠀⠞⠋⠏⠞⠂⠀⠀⠀⠀⠸
+⠇⠀⠋⠳⠓⠇⠉⠀⠉⠀⠝⠊⠅⠕⠀⠥⠀⠪⠑⠀⠋⠙⠑⠀⠺⠇⠄⠸
+⠇⠀⠡⠀⠷⠀⠃⠊⠇⠙⠀⠾⠀⠁⠀⠞⠺⠀⠵⠀⠎⠶⠉⠂⠀⠙⠀⠸
+⠇⠀⠤⠀⠞⠑⠠⠭⠞⠀⠝⠀⠻⠺⠜⠓⠝⠞⠀⠺⠙⠄⠀⠺⠀⠾⠀⠸
+⠇⠀⠙⠢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-08-24T12:34:10.964Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d5903e1" name="SimpleUnderliningsWhereTheBlocksAreShrinkedToTheWidthOfTheirContents" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.891">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/borders/sbs-style.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:de)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150824123400158/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-24&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_997965401&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠑&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠑⠀⠃⠇⠑⠀⠃⠇⠥⠀⠃⠇⠥⠀⠃⠇⠥&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-24
+
+
+
+
+
+
+⠅⠁⠏⠊⠞⠽⠀⠼⠁
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠑⠀
+⠃⠇⠑⠀⠃⠇⠑⠀⠃⠇⠥⠀⠃⠇⠥⠀⠃⠇⠥
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

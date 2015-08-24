@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+               xmlns:louis="http://liblouis.org/liblouis"
+               stylesheet="translate.xsl">
+  
+  <x:scenario id="43.1" label="Exclude certain elements from automatic hyphenation.">
+    <x:context href="../../resources/43.1/data.xml" select="//input"/>
+    <x:expect label="expect" href="../../resources/43.1/data.xml" select="//expect"/>
+  </x:scenario>
+  
+</x:description>

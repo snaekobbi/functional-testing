@@ -1,0 +1,415 @@
+@namespace xspec url(http://www.jenitennison.com/xslt/xspec);
+@namespace xprocspec url(http://www.daisy.org/ns/xprocspec);
+@namespace pef url(http://www.daisy.org/ns/2008/pef);
+
+@font-face {
+	font-family: odt2braille;
+	src: url(odt2braille8.ttf);
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	height: 19px;
+	background: white;
+	border-bottom: 1px solid gray;
+	z-index: 1;
+}
+
+#header a {
+	display: block;
+	float: right;
+	padding-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 90%;
+}
+
+#header + * {
+	margin-top: 52px;
+}
+
+ul#version_section {
+	list-style-type: none;
+	font-size: 120%;
+}
+
+ul#version_section li {
+	margin: 8px 0;
+}
+
+#version::before {
+	content: "Version: ";
+	font-weight: bold;
+}
+
+#date::before {
+	content: "Date: ";
+	font-weight: bold;
+}
+
+ul#changes {
+	padding-left: 0;
+}
+
+ul#changes li {
+	display: inline;
+}
+
+ul#changes::before {
+	content: "Changes: ";
+	font-weight: bold;
+}
+
+ul#changes li a {
+	color: #000080;
+	font-weight: bold;
+	background-color: #FFEE77;
+}
+
+ul#changes li::after {
+	content: ", ";
+}
+
+ul#changes li:last-child::after {
+	content: "";
+}
+
+.requirement {
+	list-style-type: none;
+	margin: 30px 60px 30px 50px;
+}
+
+.requirement h3 {
+	color: #005A9C;
+	font-weight: normal;
+	position: relative;
+	margin-top: 0;
+}
+
+.requirement::before {
+	display: block;
+	content: " ";
+	margin-top: -52px;
+	height: 52px;
+	visibility: hidden;
+}
+
+.requirement h3 .req-nr {
+	display: block;
+	position: absolute;
+	top: -3px;
+	left: -82px;
+	padding: 3px;
+	color: #000080;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.changed.requirement h3 .req-nr {
+	background-color: #FFEE77;
+}
+
+.dropped.requirement h3 {
+	text-decoration: line-through;
+}
+
+.requirement h3::after {
+	content: "";
+	position: absolute;
+	right: -48px;
+	top: -5px;
+	font-size: 130%;
+	color: #000080;
+}
+
+.requirement.priority_1 h3::after {
+	content: "①";
+}
+
+.requirement.priority_2 h3::after {
+	content: "②";
+}
+
+.requirement.priority_3 h3::after {
+	content: "③";
+}
+
+.requirement ul {
+	padding-left: 20px;
+}
+
+li.example {
+	list-style-type: none;
+	margin: 5px 0;
+}
+
+.test {
+	display: block;
+	position: relative;
+	padding: 7px 150px 7px 17px;
+	background-color: #EEE;
+}
+
+.test-passed {
+	padding-left: 7px;
+	padding-right: 115px;
+	border-right: 35px solid #60E050;
+	border-left: 10px solid #60E050;
+}
+
+.test-failed {
+	padding-left: 7px;
+	padding-right: 115px;
+	border-right: 35px solid #EE6622;
+	border-left: 10px solid #EE6622;
+}
+
+.test > a.test-src,
+.test > a.test-report {
+	display: block;
+	position: absolute;
+	top: 7px;
+	font-size: 90%;
+}
+
+.test > a.test-src {
+	width: 135px;
+	right: 5px;
+}
+
+.test-passed > a.test-src,
+.test-failed > a.test-src {
+	width: 45px;
+	right: 60px;
+}
+
+.test > a.test-report {
+	width: 45px;
+	right: 5px;
+}
+
+a[href^="http"]::after {
+	content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
+}
+
+a.noteref {
+	vertical-align: super;
+	font-size: 80%;
+}
+a.noteref::before {
+	content: "["
+}
+
+a.noteref::after {
+	content: "]"
+}
+
+section#notes {
+	border-top: 1px solid black;
+	padding-top: 5px;
+}
+
+li.note {
+	counter-increment: note;
+	list-style-type: none;
+}
+
+li.note::before {
+	content: "[" counter(note) "]";
+	margin-right: 7px;
+}
+
+code {
+	display: block;
+	max-height: 300px;
+	overflow: auto;
+	white-space: pre;
+	tab-size: 4;
+}
+
+samp {
+	background-color: #EEE;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 10px;
+	width: 100%;
+}
+
+table, th, td {
+	border: 1px solid #CCCCCC;
+}
+
+.document {
+	margin: 15px 0;
+}
+
+.document.pef {
+	display: block;
+	position: relative;
+}
+
+.document.pef > a.pef-xml,
+.document.pef > a.pef-unicode,
+.document.pef > a.pef-ascii {
+	display: block;
+	position: absolute;
+	width: 45px;
+	top: 7px;
+	font-size: 90%;
+}
+
+.document.pef > code {
+	display: none;
+}
+
+.document.pef-xml > code {
+	display: block;
+}
+
+.document.pef > a.pef-xml {
+	right: 0;
+}
+
+.document.pef > a.pef-unicode {
+	right: 100px;
+}
+
+.document.pef > a.pef-ascii {
+	right: 40px;
+}
+
+/*********/
+/*  PEF  */
+/*********/
+
+pef|pef {
+	display: block;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 3px #eee;
+	margin: 1em 0;
+	padding: 0 15px 15px 0;
+}
+
+.document.pef-xml pef|pef {
+	display: none;
+}
+
+pef|head {
+	display: none;
+}
+
+pef|section {
+	display: block;
+}
+
+pef|page {
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-shadow: 3px 3px 3px #eee;
+	padding: 0.5em;
+	margin: 15px 0 0 15px;
+	vertical-align: top;
+}
+
+pef|section[duplex=true] > pef|page:nth-child(2n + 1) {
+	margin-left: -5px;
+	border-left: 5px solid #ccc;
+}
+
+pef|section[duplex=true] > pef|page:first-child {
+	margin-left: 15px;
+	border-left: 1px solid #ccc;
+}
+
+pef|row {
+	display: block;
+	font-family: "odt2braille 8 dot", odt2braille;
+	letter-spacing: 0px;
+	font-size: 125%;
+	height: 1em;
+}
+
+pef|row[rowgap="1"] {
+	height: 1.25em;
+}
+
+pef|row[rowgap="2"] {
+	height: 1.5em;
+}
+
+pef|row[rowgap="3"] {
+	height: 1.75em;
+}
+
+pef|row[rowgap="4"] {
+	height: 2em;
+}
+
+pef|row[class~=ascii] {
+	display: none;
+	white-space: pre;
+}
+
+.document.pef-ascii pef|row {
+	display: none;
+}
+
+.document.pef-ascii pef|row[class~=ascii] {
+	display: block;
+}
+
+/*****************************/
+/*  XPROCSPEC, XSPEC, JUNIT  */
+/*****************************/
+
+xspec|description,
+xprocspec|description {
+	display: block;
+	margin: 10px;
+}
+
+xspec|description h1,
+xprocspec|description h1 {
+	display: block;
+	font-family: monospace;
+}
+
+xspec|scenario,
+xprocspec|scenario,
+.junit-test {
+	display: block;
+	margin: 30px 60px 30px 20px;
+	font-family: sans-serif;
+}
+
+xspec|scenario h2,
+xprocspec|scenario h2,
+xspec|scenario::before,
+xprocspec|scenario::before,
+xspec|scenario h3,
+xprocspec|scenario h3,
+.junit-test h2 {
+	color: #005A9C;
+	font-weight: normal;
+	font-size: 19px;
+}
+
+xspec|scenario::before,
+xprocspec|scenario::before {
+	content: attr(label);
+	display: block;
+}
+
+xprocspec|document {
+	display: none;
+}

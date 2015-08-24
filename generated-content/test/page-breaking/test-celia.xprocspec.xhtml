@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" script="../css_inline_and_px_transform_type_css.xpl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../github.min.css"/><style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+				@namespace x url(http://www.daisy.org/ns/xprocspec);
+				x|scenario x|documentation ul li {
+				  margin-top: 10px;
+				  margin-bottom: 10px;
+				}
+				code.xpath {
+				  display: inline;
+				}
+			</style><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+
+  <x:scenario id="test1" label="[4.5:78] hard page break to pages 4"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/page-breaking/EX6.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;_ xmlns="http://www.daisy.org/z3986/2005/dtbook/"&gt;
+	todo
+&lt;/_&gt;
+</code></div></span></li><li><span><a class="code" href="style-celia.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style-celia.css')</code></a><div class="document "><code>@page {
+	size: 28 28
+}
+
+p {
+	display: block;
+}
+</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(translator:celia)'</code></li><li>ascii-table: <code class="xpath">'(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")'</code></li><li><span><a href="../../resources/page-breaking/EX6.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_250346278&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="19" rows="5" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠠⠧⠁⠇⠇⠕⠊⠞⠞⠁⠧⠁⠞⠀⠏⠕⠝⠊⠞&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠚⠁⠉⠅⠊⠑⠀⠠⠃⠥⠙⠙&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠊⠓⠅⠕⠀⠼⠁⠌⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠁⠇⠇⠕⠊⠞⠞⠁⠧⠁⠞⠀⠏⠕⠝⠊⠞&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠚⠁⠉⠅⠊⠑⠀⠠⠃⠥⠙⠙&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠠⠧⠊⠓⠅⠕⠀⠼⠃⠌⠼⠃&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline">
+      <dc:date>2015-09-15</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_250346278</dc:identifier>
+      <dp2:ascii-table>(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')</dp2:ascii-table>
+    </meta>
+  </head>
+  <body>
+    <volume cols="19" rows="5" rowgap="0" duplex="false">
+      <section><page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠧⠁⠇⠇⠕⠊⠞⠞⠁⠧⠁⠞⠀⠏⠕⠝⠊⠞</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,VALLOITTAVAT PONIT</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠚⠁⠉⠅⠊⠑⠀⠠⠃⠥⠙⠙⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,JACKIE ,BUDD      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠧⠊⠓⠅⠕⠀⠼⠁⠌⠼⠃⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,VIHKO #A/#B       </pef:row></page><page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row></page><page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row></page><page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                   </pef:row></page><page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠧⠁⠇⠇⠕⠊⠞⠞⠁⠧⠁⠞⠀⠏⠕⠝⠊⠞</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,VALLOITTAVAT PONIT</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠚⠁⠉⠅⠊⠑⠀⠠⠃⠥⠙⠙⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,JACKIE ,BUDD      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠠⠧⠊⠓⠅⠕⠀⠼⠃⠌⠼⠃⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">,VIHKO #B/#B       </pef:row></page></section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/page-breaking/EX6.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-celia.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:celia)'"/>
+      <x:option name="ascii-table" select="'(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/page-breaking/EX6.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

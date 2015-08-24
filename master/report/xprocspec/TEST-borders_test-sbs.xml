@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="10" failures="1" time="24.034" errors="0" name="testsbs"><testsuite timestamp="2016-01-27T16:11:40.666Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d6107e1" name="4447TopLeft+BottomLeftCorners" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="6.473">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/sbs-style-1.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171117114/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:40.674Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d6113e1" name="4447LeftThin" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.668">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/sbs-style-2.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171117114/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:40.681Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d6118e1" name="4447LeftThick" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.572">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/sbs-style-3.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171117114/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:40.689Z" hostname="localhost" tests="2" errors="0" failures="0" skipped="0" id="d6123e1" name="4447Left+Top+Right+Bottom" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.591">
+<properties><property name="input: source" value="&lt;sidebar xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/sidebar&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/sbs-style-4.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171117114/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>result: SUCCESS</system-out>
+<system-err/></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:40.697Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6128e1" name="4450" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="3.65">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/test-sbs.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/borders/sbs-style.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: ascii-table" value="(liblouis-table:&#34;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171117114/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-24&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_997965401&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠁⠏⠊⠞⠑⠇⠀⠼⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠑&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠑⠀⠃⠇⠑⠀⠃⠇⠥⠀⠃⠇⠥⠀⠃⠇⠥&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")
+
+
+
+
+
+⠅⠁⠏⠊⠞⠽⠀⠼⠁
+⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠕⠀⠃⠇⠑⠀
+⠃⠇⠑⠀⠃⠇⠑⠀⠃⠇⠥⠀⠃⠇⠥⠀⠃⠇⠥
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

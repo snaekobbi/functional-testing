@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               script="../css_inline_and_px_transform_type_css.xpl">
+  
+  <x:scenario id="test1" label="[4.4:58] matrix + heading cells underlined">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.58_ex1_matrix/test_4.4.58.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.58_ex1_matrix/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.58_ex1_matrix/output_expected/test_4.4.58.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test2" label="[4.4:58] matrix + heading cells underlined
+                                [4.4:60] mirrored
+                                [4.4:65] leaders">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.58_ex2_matrix/test_4.4.58.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.58_ex2_matrix/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.58_ex2_matrix/output_expected/test_4.4.58.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test3" label="[4.4:57] linearized with delimiter + borders between thead/tbody/tfoot">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.57_ex1_row-by-row/test_4.4.57.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.57_ex1_row-by-row/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.57_ex1_row-by-row/output_expected/test_4.4.57.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test4" label="[4.4:58] matrix + heading cells underlined
+                                [4.4:64] facing pages">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.58_ex3_matrix/test_4.4.58.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.58_ex3_matrix/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.58_ex3_matrix/output_expected/test_4.4.58.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test5" label="[4.4:58] matrix + heading cells underlined + split with borders between parts and row headers repeated
+                                [4.4:65] leaders">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.58_ex4_matrix_split/test_4.4.58.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.58_ex4_matrix_split/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.58_ex4_matrix_split/output_expected/test_4.4.58.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test6" label="[4.4:58] matrix + heading cells underlined
+                                [4.4:62] colspan with fill pattern">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.58_ex5_matrix/test_4.4.58.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.58_ex5_matrix/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.58_ex5_matrix/output_expected/test_4.4.58.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test7" label="[4.4:65] two-column + leaders + 2nd column left aligned">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.65_ex2_leaders/test_4.4.65.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.65_ex2_leaders/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.65_ex2_leaders/output_expected/test_4.4.65.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test8" label="[4.4:58] matrix + heading cells underlined
+                                [4.4:59] table heading repeated on each page">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.59_ex1_repeating_heading/test_4.4.59.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.59_ex1_repeating_heading/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.59_ex1_repeating_heading/output_expected/test_4.4.59.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test9" label="[4.4:57] row as sublist, repeat column header">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.57_ex2_row_as_sublist/test_4.4.57.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.57_ex2_row_as_sublist/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.57_ex2_row_as_sublist/output_expected/test_4.4.57.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

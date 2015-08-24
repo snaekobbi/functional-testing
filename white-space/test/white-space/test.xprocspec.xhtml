@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" xmlns:p="http://www.w3.org/ns/xproc" xmlns:px="http://www.daisy.org/ns/pipeline/xproc" xmlns:pef="http://www.daisy.org/ns/2008/pef" xmlns:dotify="http://code.google.com/p/dotify/" xmlns:css="http://www.daisy.org/ns/pipeline/braille-css"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../../github.min.css"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+  
+  <x:script>
+    <p:declare-step type="pxi:translate" version="1.0">
+      <p:input port="source"/>
+      <p:output port="result"/>
+      <p:option name="stylesheet" required="true"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/dotify-formatter/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-calabash/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/common-utils/library.xpl"/>
+      <css:inline>
+        <p:with-option name="default-stylesheet" select="resolve-uri($stylesheet)"/>
+      </css:inline>
+      <px:transform type="css-block" query="(locale:de_CH)"/>
+      <dotify:format/>
+    </p:declare-step>
+  </x:script>
+  
+  <x:scenario id="55.1" label="Preserve newline characters (br elements) as forced line breaks"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/white-space/white_space.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;level1 xmlns="http://www.daisy.org/z3986/2005/dtbook/"&gt;
+	&lt;h1&gt;Charles Ferdinand Ramuz: &lt;br/&gt;Im Nebel verloren&lt;/h1&gt;
+	&lt;p&gt;bla bla bla bla bla bla bla bla bla bla bla&lt;/p&gt;
+&lt;/level1&gt;
+</code></div></span></li><li><span><a class="code" href="style.css">stylesheet</a><div class="document "><code>@namespace brl url(http://www.daisy.org/z3986/2009/braille/);
+
+@page { size: 28 28; }
+
+p {
+	display: block;
+}
+
+brl|select &gt; brl|otherwise {
+	display: none;
+}
+
+brl|literal {
+	text-transform: none;
+}</code></div></span></li><li><span><a href="../../resources/white-space/white_space.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;!--
+      Generated from white_space.txt using table "sbs.dis"
+  --&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠹⠴⠇⠿⠀⠋⠻⠙⠔⠖⠙⠀⠗⠁⠍⠥⠵⠒&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠤⠀⠝⠑⠃⠽⠀⠤⠇⠢⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠄⠄⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <!--
+      Generated from white_space.txt using table "sbs.dis"
+  -->
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">                            </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠹⠴⠇⠿⠀⠋⠻⠙⠔⠖⠙⠀⠗⠁⠍⠥⠵⠒⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">     4)L% F7D*+D RAMUZ:     </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠤⠀⠝⠑⠃⠽⠀⠤⠇⠢⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">        - NEBY -L?C         </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">     ------------------     </pef:row><pef:row rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">                            </pef:row><pef:row rowgap="0">⠀⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  BLA BLA BLA BLA BLA BLA   </pef:row><pef:row rowgap="0">⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠃⠇⠁⠀⠄⠄⠄⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">BLA BLA BLA BLA BLA ...     </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:translate">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/white-space/white_space.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/white-space/white_space.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="55.2" label="Preserve two spaces before and after mathematical expressions, but not at the beginning or end of a line."><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/white-space/white_space_2.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;list xmlns="http://www.daisy.org/z3986/2005/dtbook/"
+      xmlns:brl="http://www.daisy.org/z3986/2009/braille/"
+      type="pl"&gt;
+	&lt;li&gt;
+		&lt;brl:num role="ordinal"&gt;2.&lt;/brl:num&gt; die Mittelsenkrechte auf der Strecke
+		&lt;brl:select&gt;
+			&lt;brl:when-braille&gt;
+				&lt;brl:literal&gt;&amp;#x00A0;&amp;#x200B;[&amp;gt;AB]&amp;#x00A0;&lt;/brl:literal&gt;
+			&lt;/brl:when-braille&gt;
+			&lt;brl:otherwise&gt;[AB]&lt;/brl:otherwise&gt;
+		&lt;/brl:select&gt;
+		im Punkt &lt;abbr&gt;P&lt;/abbr&gt;,
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;brl:num role="ordinal"&gt;3.&lt;/brl:num&gt; die Mittelsenkrechte auf der Strecke
+		&lt;brl:select&gt;
+			&lt;brl:when-braille&gt;
+				&lt;brl:literal&gt;&amp;#x00A0;&amp;#x200B;[&amp;gt;CD]&amp;#x00A0;&lt;/brl:literal&gt;
+			&lt;/brl:when-braille&gt;
+			&lt;brl:otherwise&gt;[CD]&lt;/brl:otherwise&gt;
+		&lt;/brl:select&gt;
+		im Punkt &lt;abbr&gt;Q&lt;/abbr&gt;.
+	&lt;/li&gt;
+&lt;/list&gt;
+</code></div></span></li><li><span><a class="code" href="style.css">stylesheet</a><div class="document "><code>@namespace brl url(http://www.daisy.org/z3986/2009/braille/);
+
+@page { size: 28 28; }
+
+p {
+	display: block;
+}
+
+brl|select &gt; brl|otherwise {
+	display: none;
+}
+
+brl|literal {
+	text-transform: none;
+}</code></div></span></li><li><span><a href="../../resources/white-space/white_space_2.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:date&gt;2015-06-03&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_538977723&lt;/dc:identifier&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠼⠆⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠁⠃⠾⠀⠀⠤⠀⠏⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠘⠏⠂&lt;/row&gt;
+          &lt;row&gt;⠼⠒⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠉⠙⠾⠀⠀⠤⠀⠏⠞&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠘⠟⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:date>2015-06-03</dc:date>
+      <dc:format>application/x-pef+xml</dc:format>
+      <dc:identifier>AUTO_ID_538977723</dc:identifier>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row rowgap="0">⠼⠆⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">#; 0 MTSCKRTE 1 R           </pef:row><pef:row rowgap="0">⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠁⠃⠾⠀⠀⠤⠀⠏⠞⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  ]RE$E  [&gt;AB]  - PT        </pef:row><pef:row rowgap="0">⠀⠀⠘⠏⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  &gt;P,                       </pef:row><pef:row rowgap="0">⠼⠒⠀⠬⠀⠍⠞⠎⠉⠅⠗⠞⠑⠀⠡⠀⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">#: 0 MTSCKRTE 1 R           </pef:row><pef:row rowgap="0">⠀⠀⠾⠗⠑⠨⠑⠀⠀⠷⠘⠉⠙⠾⠀⠀⠤⠀⠏⠞⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  ]RE$E  [&gt;CD]  - PT        </pef:row><pef:row rowgap="0">⠀⠀⠘⠟⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii" rowgap="0">  &gt;Q.                       </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row><pef:row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:translate">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/white-space/white_space_2.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="'style.css'"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/white-space/white_space_2.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

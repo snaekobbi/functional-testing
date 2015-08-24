@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="2" failures="1" time="3.411" errors="0" name="testno"><testsuite timestamp="2015-08-10T09:58:03.395Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d1799e1" name="AutomaticHyphenationOfNorwegian" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.44">
+<properties><property name="input: source" value="&lt;level4 xmlns=&#34;&#34; ...&gt;...&lt;/level4&gt; (Base URI: file:/home/travis/build/snaekobbi/requirements/src/test/hyphenation/test-no.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/home/travis/build/snaekobbi/requirements/src/test/hyphenation/style-no.css"/>
+<property name="option: transform" value="(formatter:dotify)(locale:no)"/>
+<property name="option: temp-dir" value="file:/home/travis/build/snaekobbi/requirements/target/xprocspec//tmp/xprocspec-20150810095800599/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠠⠇⠑⠙⠑⠇⠎⠑⠀⠁⠧⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠀⠑⠗⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠕⠃⠇⠊⠝⠛⠑⠝⠀⠍⠑⠇⠇⠕⠍⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠽⠎⠞⠑⠍⠑⠞⠀⠕⠛⠀⠇⠑⠙⠑⠇⠎⠑⠎⠎⠽⠎⠞⠑⠍⠑⠞⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠑⠞⠞⠑⠗⠀⠁⠞⠀⠧⠊⠀⠅⠕⠗⠞⠀⠙⠑⠋⠊⠝⠑⠗⠑⠗⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠑⠞⠂⠀⠇⠑⠙⠑⠇⠤⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠑⠎⠎⠽⠎⠞⠑⠍⠑⠞⠀⠕⠛⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠏⠗⠕⠎⠑⠎⠎⠑⠝⠂⠀⠧⠊⠇⠀⠧⠊⠀⠛⠡⠀⠝⠜⠗⠍⠑⠗⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠊⠝⠝⠀⠏⠡⠀⠎⠑⠝⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠑⠗⠀⠧⠑⠙⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠑⠙⠑⠇⠎⠑⠀⠁⠧⠀⠙⠑⠝⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠏⠗⠕⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠑⠎⠎⠑⠝⠄⠀⠠⠎⠑⠝⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠑⠗⠀⠑⠗⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠑⠙⠑⠇⠎⠑⠝⠎⠀⠁⠗⠃⠑⠊⠙⠀⠍⠑⠙⠀⠝⠪⠅⠅⠑⠇⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠝⠞⠑⠝⠑⠂⠀⠁⠗⠃⠑⠊⠙⠑⠞⠀⠍⠑⠙⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠁⠃⠊⠇⠊⠞⠑⠞⠑⠝⠀⠊⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠑⠝⠂⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠡⠝⠙⠞⠑⠗⠊⠝⠛⠑⠝⠀⠁⠧⠀⠍⠁⠅⠞⠋⠕⠗⠓⠕⠇⠙⠀⠕⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠗⠥⠅⠀⠁⠧⠀⠋⠕⠗⠍⠑⠇⠇⠑⠀⠕⠛⠀⠏⠎⠽⠅⠕⠇⠕⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠊⠎⠅⠑⠀⠅⠕⠝⠞⠗⠁⠅⠞⠑⠗⠀⠍⠑⠇⠇⠕⠍⠀⠊⠝⠤⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠗⠑⠎⠎⠑⠝⠞⠑⠝⠑⠀⠕⠛⠀⠧⠊⠗⠅⠎⠕⠍⠓⠑⠞⠑⠝⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠑⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠑⠝⠀⠕⠗⠛⠁⠝⠊⠎⠁⠎⠚⠕⠝⠀⠅⠁⠝⠀⠋⠕⠗⠎⠞⠡⠎&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠕⠍⠀⠑⠝⠀⠎⠁⠍⠇⠊⠝⠛⠀⠑⠇⠇⠑⠗⠀⠑⠝⠀⠅⠕⠁⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠊⠎⠚⠕⠝⠀⠁⠧⠀⠥⠇⠊⠅⠑⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠤⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠗⠥⠏⠏⠑⠗⠀⠤⠀⠎⠡⠅⠁⠇⠞⠑⠀⠊⠝⠞⠑⠗⠑⠎⠤⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠑⠝⠞⠑⠗⠀⠤⠀⠎⠕⠍⠀⠛⠡⠗⠀⠎⠁⠍⠍⠑⠝⠀⠋⠕⠗⠀⠡⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠛⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠃⠛&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-08-10
+
+
+
+
+
+
+
+⠀⠀⠀⠀⠀⠀⠀⠠⠇⠑⠙⠢⠑⠀⠁⠧⠀⠙⠣⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀
+⠀⠀⠒⠕⠎⠑⠎⠎⠣
+⠀⠀⠀⠀⠠⠙⠣⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠒⠕⠎⠑⠎⠎⠣⠀⠱⠀
+⠀⠀⠅⠕⠃⠇⠒⠊⠣⠀⠍⠇⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠬⠀⠉
+⠀⠀⠇⠑⠙⠑⠇⠎⠑⠎⠎⠽⠎⠞⠑⠍⠬⠄⠀⠠⠵⠀⠁⠀⠧⠊⠀⠅⠕⠗⠞⠀
+⠀⠀⠹⠋⠊⠝⠑⠗⠱⠀⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠬⠂⠀
+⠀⠀⠇⠑⠙⠑⠇⠎⠑⠎⠎⠽⠎⠞⠑⠍⠬⠀⠉⠀⠙⠣⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑
+⠀⠀⠒⠕⠎⠑⠎⠎⠣⠂⠀⠧⠇⠀⠧⠊⠀⠛⠡⠀⠝⠜⠗⠍⠑⠷⠀⠊⠝⠝⠀⠏
+⠀⠀⠎⠣⠞⠗⠁⠇⠑⠀⠁⠎⠏⠑⠅⠞⠱⠀⠧⠀⠇⠑⠙⠢⠑⠀⠁⠧⠀⠙⠣⠀
+⠀⠀⠏⠕⠇⠊⠞⠊⠎⠅⠑⠀⠒⠕⠎⠑⠎⠎⠣⠄⠀⠠⠎⠣⠞⠗⠁⠇⠑⠀
+⠀⠀⠁⠎⠏⠑⠅⠞⠱⠀⠱⠀⠇⠑⠙⠒⠑⠣⠎⠀⠁⠗⠃⠑⠊⠙⠀⠩⠀
+⠀⠀⠝⠪⠅⠅⠑⠇⠊⠝⠞⠑⠗⠑⠎⠎⠣⠞⠑⠮⠂⠀⠁⠗⠃⠑⠊⠙⠬⠀⠩⠀
+⠀⠀⠴⠁⠃⠊⠇⠊⠞⠑⠞⠣⠀⠊⠀⠅⠕⠁⠇⠊⠒⠝⠣⠂⠀
+⠀⠀⠓⠡⠝⠙⠞⠑⠗⠒⠊⠣⠀⠁⠧⠀⠍⠁⠅⠞⠯⠀⠉⠀⠃⠅⠀⠁⠧⠀
+⠀⠀⠫⠍⠑⠇⠇⠑⠀⠉⠀⠏⠎⠽⠅⠕⠇⠕⠛⠊⠎⠅⠑⠀
+⠀⠀⠅⠕⠝⠞⠗⠁⠅⠞⠱⠀⠍⠇⠀⠊⠝⠞⠑⠗⠑⠎⠎⠣⠞⠑⠮⠀⠉⠀
+⠀⠀⠧⠊⠗⠅⠎⠕⠍⠦⠣⠄
+
+⠀⠀⠠⠅⠕⠁⠇⠊⠎⠚⠕⠝⠎⠎⠽⠎⠞⠑⠍⠬
+⠀⠀⠀⠀⠠⠣⠀⠕⠗⠛⠁⠝⠊⠎⠁⠒⠝⠀⠅⠀⠫⠎⠞⠡⠎⠀⠎⠀⠣⠀
+⠀⠀⠎⠁⠍⠇⠒⠊⠀⠑⠀⠣⠀⠅⠕⠁⠇⠊⠒⠝⠀⠁⠧⠀⠥⠇⠊⠅⠑⠀
+⠀⠀⠊⠝⠞⠑⠗⠑⠎⠎⠑⠛⠏⠱⠀⠤⠀⠎⠡⠅⠁⠇⠳⠀
+⠀⠀⠊⠝⠞⠑⠗⠑⠎⠎⠣⠞⠱⠀⠤⠀⠎⠀⠛⠗⠀⠎⠍⠣⠀⠫⠀⠡
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

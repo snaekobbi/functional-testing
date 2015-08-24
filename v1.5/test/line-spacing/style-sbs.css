@@ -1,0 +1,23 @@
+@page {
+	size: 28 28;
+}
+
+@page:right {
+	margin-top: 1;
+}
+
+@page:left {
+	margin-top: 2;
+}
+
+p {
+	display: block;
+	line-height: 2;
+}
+
+h1 {
+	display: block;
+	border-bottom: ⠒;
+	margin: 1 3;
+	line-height: 2;
+}

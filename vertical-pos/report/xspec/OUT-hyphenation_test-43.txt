@@ -1,0 +1,5 @@
+Running hyphenation_test-43
+Testing with SAXON HE 9.5.1.5
+Exclude certain elements from automatic hyphenation.
+expect
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.47 ms

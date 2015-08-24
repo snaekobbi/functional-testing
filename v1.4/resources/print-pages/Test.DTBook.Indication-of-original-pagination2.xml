@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dtbook
+  PUBLIC "-//NISO//DTD dtbook 2005-3//EN" "http://www.daisy.org/z3986/2005/dtbook-2005-3.dtd">
+<dtbook xmlns="http://www.daisy.org/z3986/2005/dtbook/" xml:lang="no" version="2005-3"><head>
+    <meta name="dtb:uid" content="test"/> 
+    <meta name="dc:Title" content="Original pagination"/> 
+    <meta name="dc:Identifier" content="test"/> 
+    <meta name="track:Guidelines" content="2015-1"/> 
+    <meta name="track:Supplier" content=""/> 
+    <meta name="dc:Language" content="no"/> 
+    <meta name="dc:Format" content="DTBook"/> 
+    <meta name="dc:Creator" content="Kari"/>
+    <meta name="dc:Contributor" content=""/>
+    <meta name="dc:Source" content=""/> 
+    <meta name="dc:Date" content="2015-06-19"/> 
+    <meta name="dc:Publisher" content="NLB"/> 
+    <meta name="dcterms:modified" content="2015-05-21T15:12:03+00:00"/> 
+</head><book><frontmatter> 
+    <doctitle>Original pagination test</doctitle> 
+    <docauthor>Kari</docauthor>
+    </frontmatter>
+    <bodymatter>
+    <level1 id="level1_6" class="chapter">
+    <pagenum id="p10" page="normal">10</pagenum>
+    <h1 id="h1_3">3</h1>
+    <p>Jeg går ikke her med en kvinne iført pannebånd i et raskt tiltagende tussmørke uten mål og mening. I sko fra byen Arden, jeg kjøpte dem i forgårs. De lå i en trådkurv utenfor Sport og Parfymeri, det var bare det ene paret. Dessverre to forskjellige størrelser, det merket jeg ikke i farten. Ekspeditøren kom ut på fortauet med en oppvaskklut, hun tørket av trådkurven. Jeg fulgte etter henne inn i butikken igjen med skoene i hånden, de var heftet sammen, hun klippet dem fra hverandre. Det var et podium i det ene vinduet, det satt en liten hund på det, den så lenge på meg før den snudde seg bort. Jeg betalte med kort. Det tok lang tid før betalingen gikk igjennom, vi sto og ventet. Ekspeditøren brettet sammen kluten, den var gul. Jeg har aldri sett noen brette sammen en oppvaskklut før. Hun foldet den som en duk, hun glattet den ut også. Jeg gikk derfra med skoene i en pose, jeg gikk rundt i gatene. Det skulle visst være en baker der. Jeg gikk inn i stasjonsbygningen, fordi gaten sluttet. Et par unge mennesker med plastflasker så opp før de beveget seg videre. På perrongen viste skiltet førti minutter til neste tog, det var toget nordover. Jeg gikk rundt bygningen, luften var sur og kald. Ekspeditøren kom nedover fortauet med den <pagenum id="p11" page="normal">11</pagenum>lille hunden, nå iført dekken. Hun lot den snuse på noe under en benk, hun sto og studerte håndflaten sin imens. Da jeg nærmet meg, løftet hun hodet og så rett på meg med et tomt uttrykk i ansiktet. Jeg forberedte meg på en hilsen. Men før den ble til noe, rettet hun igjen oppmerksomheten mot håndflaten sin.</p>
+    <p class="indented">Det var en eiendomsmegler overfor stasjonen. Jeg så på hus i vinduet, jeg leste hver enkelt bildetekst med alle beløp og finansieringsforslag. Jeg var den siste ved bilen, solen hadde etterlatt et glødende oransje spor over parkeringsplassen.</p>
+</level1>
+    </bodymatter>
+</book>
+</dtbook>

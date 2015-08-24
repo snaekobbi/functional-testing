@@ -1,0 +1,9 @@
+Running emphasis_test-no
+Testing with SAXON HE 9.5.1.5
+Marking of text-level semantics with braille indicators for Norwegian (preserving structure).
+expect
+      FAILED
+Marking of text-level semantics with braille indicators for Norwegian (not preserving structure).
+expect
+      FAILED
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 108.9 ms <<< FAILURE!

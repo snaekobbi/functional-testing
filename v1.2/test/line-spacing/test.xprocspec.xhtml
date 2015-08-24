@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?><x:description xmlns:x="http://www.daisy.org/ns/xprocspec" xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal" script="../css_inline_and_px_transform_type_css.xpl"><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../style.css"/><link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" type="text/css" href="../../github.min.css"/><style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+				@namespace x url(http://www.daisy.org/ns/xprocspec);
+				x|scenario x|documentation ul li {
+				  margin-top: 10px;
+				  margin-bottom: 10px;
+				}
+				code.xpath {
+				  display: inline;
+				}
+			</style><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../jquery.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../highlight.min.js"/><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+				$(document).ready(function() {
+				  $("code").each(function(i, block) {
+				    hljs.highlightBlock(block);
+				  });
+				  $(".document.pef").each(function(i, div) {
+				    var x = ["pef-xml", "pef-ascii", "pef-unicode"];
+				    x.forEach(function(clazz) {
+				      $(div).children("a." + clazz).click((function(clazz) {
+				        return function(e) {
+				          e.preventDefault();
+				          $(div).removeClass("pef-xml pef-ascii pef-unicode");
+				          $(div).addClass(clazz);
+				        }
+				      })(clazz));
+				    });
+				  });
+				});
+			</script>
+  
+  <x:scenario label="The system shall support single and double line spacing"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/line-spacing/Test.DTBook.Line spacing. Singel spacing.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;_ xml:lang="no"&gt;
+&lt;p&gt;Innesitterne forbannet de tolv minusgradene, og om noe tvang dem ut, hutret de av sted i varme pelsjakker og fôrede støvletter. Ungene var pakket inn i flere lag ull under bobledressene. Hvin og hyl hørtes fra akebakkene i barnehagene som hadde skutt opp overalt etter som stadig flere kvinner gikk ut i full jobb.&lt;/p&gt;
+&lt;pagenum page="normal" id="page-16"&gt;16&lt;/pagenum&gt;
+&lt;p&gt;Langs gjerdene på sykehusområdet kneiste høye fonner av snø som var måkt vekk fra veier og gangstier. Kulda fikk snøen til å knirke under føttene på dem som passerte den gamle sykehusbygningen nord i byen.&lt;/p&gt;
+&lt;p&gt;Det var tirsdag den trettende i årets andre måned.&lt;/p&gt;
+&lt;p&gt;Ved hovedinngangen svingte biler opp, stanset og ventet mens dører ble åpnet og vordende mødre krøp ut, støttet av menn som skulle bli fedre.
+&lt;/p&gt;
+&lt;/_&gt;
+</code></div></span></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/line-spacing/Test.DTBook.Line spacing. Singel spacing.xml"/>
+      </x:input>
+    </x:call>
+    <x:scenario id="74.1" label="The system shall support single line spacing"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="single.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('single.css')</code></a><div class="document "><code>@import url("style.css");</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(translator:nlb)(grade:0)'</code></li><li><span><a href="../../resources/line-spacing/Test.PEF.Line spacing.Singel spacing.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠊⠝⠝⠑⠎⠊⠞⠞⠑⠗⠝⠑⠀⠋⠕⠗⠃⠁⠝⠝⠑⠞⠀⠙⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠕⠇⠧⠀⠍⠊⠝⠥⠎⠛⠗⠁⠙⠑⠝⠑⠂⠀⠕⠛⠀⠕⠍⠀⠝⠕⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠧⠁⠝⠛⠀⠙⠑⠍⠀⠥⠞⠂⠀⠓⠥⠞⠗⠑⠞⠀⠙⠑⠀⠁⠧⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠈⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠚⠕⠃⠃⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀⠎⠽⠅⠑⠓⠥⠎⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠝⠪⠑⠝⠀⠞⠊⠇⠀⠡⠀⠅⠝⠊⠗⠅⠑⠀⠥⠝⠙⠑⠗⠀⠋⠪⠞⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠝⠑⠀⠏⠡⠀⠙⠑⠍⠀⠎⠕⠍⠀⠏⠁⠎⠎⠑⠗⠞⠑⠀⠙⠑⠝⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠁⠍⠇⠑⠀⠎⠽⠅⠑⠓⠥⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠀⠝⠕⠗⠙⠀⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠽⠑⠝⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠞⠀⠧⠁⠗⠀⠞⠊⠗⠎⠙⠁⠛⠀⠙⠑⠝⠀⠞⠗⠑⠞⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠝⠙⠑⠀⠊⠀⠡⠗⠑⠞⠎⠀⠁⠝⠙⠗⠑⠀⠍⠡⠝⠑⠙⠄⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠧⠑⠙⠀⠓⠕⠧⠑⠙⠊⠝⠝⠛⠁⠝⠛⠑⠝⠀⠎⠧⠊⠝⠛⠞⠑⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠊⠇⠑⠗⠀⠕⠏⠏⠂⠀⠎⠞⠁⠝⠎⠑⠞⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠍⠑⠝⠎⠀⠙⠪⠗⠑⠗⠀⠃⠇⠑⠀⠡⠏⠝⠑⠞⠀⠕⠛⠀⠧⠕⠗⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠑⠝⠙⠑⠀⠍⠪⠙⠗⠑⠀⠅⠗⠪⠏⠀⠥⠞⠂⠀⠎⠞⠪⠞⠞⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠁⠧⠀⠍⠑⠝⠝⠀⠎⠕⠍⠀⠎⠅⠥⠇⠇⠑⠀⠃⠇⠊⠀⠋⠑⠙⠗⠑⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠋&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="28" cols="32" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠠⠊⠝⠝⠑⠎⠊⠞⠞⠑⠗⠝⠑⠀⠋⠕⠗⠃⠁⠝⠝⠑⠞⠀⠙⠑⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">    ,INNESITTERNE FORBANNET DE  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠞⠕⠇⠧⠀⠍⠊⠝⠥⠎⠛⠗⠁⠙⠑⠝⠑⠂⠀⠕⠛⠀⠕⠍⠀⠝⠕⠑⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  TOLV MINUSGRADENE1 OG OM NOE  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠞⠧⠁⠝⠛⠀⠙⠑⠍⠀⠥⠞⠂⠀⠓⠥⠞⠗⠑⠞⠀⠙⠑⠀⠁⠧⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  TVANG DEM UT1 HUTRET DE AV    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  STED I VARME PELSJAKKER OG    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠋⠈⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  F@OREDE ST[VLETTER' ,UNGENE   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  VAR PAKKET INN I FLERE LAG ULL</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  UNDER BOBLEDRESSENE' ,HVIN OG </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  HYL H[RTES FRA AKEBAKKENE I   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BARNEHAGENE SOM HADDE SKUTT   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  OPP OVERALT ETTER SOM STADIG  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  FLERE KVINNER GIKK UT I FULL  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠚⠕⠃⠃⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  JOBB'                         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠿⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀⠎⠽⠅⠑⠓⠥⠎⠤⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">=   ,LANGS GJERDENE P* SYKEHUS- </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  OMR*DET KNEISTE H[YE FONNER AV</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠤</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  SN[ SOM VAR M*KT VEKK FRA VEI-</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ER OG GANGSTIER' ,KULDA FIKK  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠎⠝⠪⠑⠝⠀⠞⠊⠇⠀⠡⠀⠅⠝⠊⠗⠅⠑⠀⠥⠝⠙⠑⠗⠀⠋⠪⠞⠤⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  SN[EN TIL * KNIRKE UNDER F[T- </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠞⠑⠝⠑⠀⠏⠡⠀⠙⠑⠍⠀⠎⠕⠍⠀⠏⠁⠎⠎⠑⠗⠞⠑⠀⠙⠑⠝⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  TENE P* DEM SOM PASSERTE DEN  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠛⠁⠍⠇⠑⠀⠎⠽⠅⠑⠓⠥⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠀⠝⠕⠗⠙⠀⠊⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  GAMLE SYKEHUSBYGNINGEN NORD I </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠽⠑⠝⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BYEN'                         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠠⠙⠑⠞⠀⠧⠁⠗⠀⠞⠊⠗⠎⠙⠁⠛⠀⠙⠑⠝⠀⠞⠗⠑⠞⠤⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">    ,DET VAR TIRSDAG DEN TRET-  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠞⠑⠝⠙⠑⠀⠊⠀⠡⠗⠑⠞⠎⠀⠁⠝⠙⠗⠑⠀⠍⠡⠝⠑⠙⠄⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  TENDE I *RETS ANDRE M*NED'    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠠⠧⠑⠙⠀⠓⠕⠧⠑⠙⠊⠝⠝⠛⠁⠝⠛⠑⠝⠀⠎⠧⠊⠝⠛⠞⠑⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">    ,VED HOVEDINNGANGEN SVINGTE </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠊⠇⠑⠗⠀⠕⠏⠏⠂⠀⠎⠞⠁⠝⠎⠑⠞⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BILER OPP1 STANSET OG VENTET  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠍⠑⠝⠎⠀⠙⠪⠗⠑⠗⠀⠃⠇⠑⠀⠡⠏⠝⠑⠞⠀⠕⠛⠀⠧⠕⠗⠤⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  MENS D[RER BLE *PNET OG VOR-  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠙⠑⠝⠙⠑⠀⠍⠪⠙⠗⠑⠀⠅⠗⠪⠏⠀⠥⠞⠂⠀⠎⠞⠪⠞⠞⠑⠞⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  DENDE M[DRE KR[P UT1 ST[TTET  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠁⠧⠀⠍⠑⠝⠝⠀⠎⠕⠍⠀⠎⠅⠥⠇⠇⠑⠀⠃⠇⠊⠀⠋⠑⠙⠗⠑⠄⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  AV MENN SOM SKULLE BLI FEDRE' </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠋</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">               #D           =#AF</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+        <x:call>
+          <x:option name="stylesheet" select="resolve-uri('single.css')"/>
+          <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
+          <x:option name="temp-dir" select="$temp-dir"/>
+        </x:call>
+        <x:context label="result">
+          <x:document type="port" port="result"/>
+        </x:context>
+        <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+          <x:document type="file" href="../../resources/line-spacing/Test.PEF.Line spacing.Singel spacing.pef"/>
+        </x:expect>
+    </x:scenario>
+    <x:scenario id="74.2" label="The system shall support double line spacing"><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a class="code" href="double.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('double.css')</code></a><div class="document "><code>@import url("style.css");</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(translator:nlb)(grade:0)'</code></li><li><span><a href="../../resources/line-spacing/Test.PEF.Line spacing.Double spacing.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠈⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠚⠕⠃⠃⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀⠎⠽⠅⠑⠓⠥⠎⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠋&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta>
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume rows="28" cols="32" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  STED I VARME PELSJAKKER OG    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠋⠈⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  F@OREDE ST[VLETTER' ,UNGENE   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  VAR PAKKET INN I FLERE LAG ULL</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  UNDER BOBLEDRESSENE' ,HVIN OG </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  HYL H[RTES FRA AKEBAKKENE I   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  BARNEHAGENE SOM HADDE SKUTT   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  OPP OVERALT ETTER SOM STADIG  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  FLERE KVINNER GIKK UT I FULL  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠚⠕⠃⠃⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  JOBB'                         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠿⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀⠎⠽⠅⠑⠓⠥⠎⠤⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">=   ,LANGS GJERDENE P* SYKEHUS- </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  OMR*DET KNEISTE H[YE FONNER AV</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠤</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  SN[ SOM VAR M*KT VEKK FRA VEI-</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">  ER OG GANGSTIER' ,KULDA FIKK  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                                </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠋</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">               #E           =#AF</pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+        <x:call>
+          <x:option name="stylesheet" select="resolve-uri('double.css')"/>
+          <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
+          <x:option name="temp-dir" select="$temp-dir"/>
+        </x:call>
+        <x:context label="result">
+          <x:document type="port" port="result"/>
+        </x:context>
+        <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+          <x:document type="file" href="../../resources/line-spacing/Test.PEF.Line spacing.Double spacing.pef"/>
+        </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+  <x:scenario id="75" label="When printing double-sided with double line spacing, printed lines shall alternate on odd and even pages."><x:documentation><ul xmlns="http://www.w3.org/1999/xhtml"><li><span><a href="../../resources/line-spacing/line_spacing.xml" class="code ">source</a><div class="document "><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;level1 xmlns="http://www.daisy.org/z3986/2005/dtbook/"&gt;
+	&lt;h1&gt;Mittwoch&lt;/h1&gt;
+	&lt;p class="noindent"&gt;Das ist Ninni, als sie noch sechs Jahre alt war.&lt;/p&gt;
+	&lt;p class="noindent"&gt;Bis zu ihrem siebten Geburtstag war es nicht mehr lange hin.&lt;/p&gt;
+	&lt;p class="noindent"&gt;Ninni konnte den Tag kaum erwarten. Während sie wartete, baute sie Höhlen für
+	sich und ihre kleine Schwester.&lt;/p&gt;
+	&lt;p class="noindent"&gt;Höhlen aus Stühlen und Wolldecken und Schirmen.&lt;/p&gt;
+	&lt;p class="noindent"&gt;Die kleine Schwester heißt Dini.&lt;/p&gt;
+	&lt;p class="noindent"&gt;Aber heute wollte Dini in keiner Höhle sein. Dauernd krabbelte sie hinaus in den
+	Flur, um mit Mamas Schuhen zu spielen.&lt;/p&gt;
+&lt;/level1&gt;
+</code></div></span></li><li><span><a class="code" href="style-sbs.css">
+				stylesheet:
+				<code class="xpath">resolve-uri('style-sbs.css')</code></a><div class="document "><code>@page { size: 28 28; }
+
+p {
+	display: block;
+}
+</code></div></span></li><li>transform: <code class="xpath">'(formatter:dotify)(translator:sbs)(grade:0)'</code></li><li><span><a href="../../resources/line-spacing/line_spacing.pef" class="code pef">result</a><div class="document pef"><code class="pef">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;!--
+      Generated from line_spacing.txt using table "sbs.dis"
+  --&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠍⠊⠞⠞⠺⠕⠹&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠙⠁⠎⠀⠊⠾⠀⠝⠊⠝⠝⠊⠂⠀⠁⠇⠎⠀⠎⠬⠀⠝⠕⠹&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠎⠑⠹⠎⠀⠚⠁⠓⠗⠑⠀⠁⠇⠞⠀⠺⠁⠗⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠊⠎⠀⠵⠥⠀⠊⠓⠗⠑⠍⠀⠎⠬⠃⠞⠑⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠛⠑⠃⠥⠗⠞⠎⠞⠁⠛⠀⠺⠁⠗⠀⠑⠎⠀⠝⠊⠹⠞⠀⠍⠑⠓⠗&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠇⠁⠝⠛⠑⠀⠓⠊⠝⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠝⠊⠝⠝⠊⠀⠅⠕⠝⠝⠞⠑⠀⠙⠑⠝⠀⠞⠁⠛⠀⠅⠡⠍&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠑⠗⠺⠁⠗⠞⠑⠝⠄⠀⠺⠜⠓⠗⠑⠝⠙⠀⠎⠬&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠺⠁⠗⠞⠑⠞⠑⠂⠀⠃⠡⠞⠑⠀⠎⠬⠀⠓⠪⠓⠇⠑⠝⠀⠋⠳⠗&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠎⠊⠹⠀⠥⠝⠙⠀⠊⠓⠗⠑⠀⠅⠇⠩⠝⠑⠀⠱⠺⠑⠾⠑⠗⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠓⠪⠓⠇⠑⠝⠀⠡⠎⠀⠾⠳⠓⠇⠑⠝⠀⠥⠝⠙&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠺⠕⠇⠇⠙⠑⠉⠅⠑⠝⠀⠥⠝⠙⠀⠱⠊⠗⠍⠑⠝⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠙⠬⠀⠅⠇⠩⠝⠑⠀⠱⠺⠑⠾⠑⠗⠀⠓⠩⠮⠞⠀⠙⠊⠝⠊⠄&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠃⠑⠗⠀⠓⠣⠞⠑⠀⠺⠕⠇⠇⠞⠑⠀⠙⠊⠝⠊⠀⠊⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠅⠩⠝⠑⠗⠀⠓⠪⠓⠇⠑⠀⠎⠩⠝⠄⠀⠙⠡⠑⠗⠝⠙&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠅⠗⠁⠃⠃⠑⠇⠞⠑⠀⠎⠬⠀⠓⠊⠝⠡⠎⠀⠊⠝⠀⠙⠑⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠋⠇⠥⠗⠂⠀⠥⠍⠀⠍⠊⠞⠀⠍⠁⠍⠁⠎⠀⠱⠥⠓⠑⠝⠀⠵⠥&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠎⠏⠬⠇⠑⠝⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+</code><pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <!--
+      Generated from line_spacing.txt using table "sbs.dis"
+  -->
+  <head>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:format>application/x-pef+xml</dc:format>
+    </meta>
+  </head>
+  <body>
+    <volume cols="28" rows="28" rowgap="0" duplex="false">
+      <section>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠍⠊⠞⠞⠺⠕⠹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">          MITTWO?           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠒⠒⠒⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">          3333333           </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠁⠎⠀⠊⠾⠀⠝⠊⠝⠝⠊⠂⠀⠁⠇⠎⠀⠎⠬⠀⠝⠕⠹⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">DAS I) NINNI1 ALS S+ NO?    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠑⠹⠎⠀⠚⠁⠓⠗⠑⠀⠁⠇⠞⠀⠺⠁⠗⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SE?S JAHRE ALT WAR'         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠃⠊⠎⠀⠵⠥⠀⠊⠓⠗⠑⠍⠀⠎⠬⠃⠞⠑⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">BIS ZU IHREM S+BTEN         </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠛⠑⠃⠥⠗⠞⠎⠞⠁⠛⠀⠺⠁⠗⠀⠑⠎⠀⠝⠊⠹⠞⠀⠍⠑⠓⠗⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">GEBURTSTAG WAR ES NI?T MEHR </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠇⠁⠝⠛⠑⠀⠓⠊⠝⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">LANGE HIN'                  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠝⠊⠝⠝⠊⠀⠅⠕⠝⠝⠞⠑⠀⠙⠑⠝⠀⠞⠁⠛⠀⠅⠡⠍⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">NINNI KONNTE DEN TAG K*M    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠑⠗⠺⠁⠗⠞⠑⠝⠄⠀⠺⠜⠓⠗⠑⠝⠙⠀⠎⠬⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ERWARTEN' W&gt;HREND S+        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠺⠁⠗⠞⠑⠞⠑⠂⠀⠃⠡⠞⠑⠀⠎⠬⠀⠓⠪⠓⠇⠑⠝⠀⠋⠳⠗⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">WARTETE1 B*TE S+ H[HLEN F\R </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠊⠹⠀⠥⠝⠙⠀⠊⠓⠗⠑⠀⠅⠇⠩⠝⠑⠀⠱⠺⠑⠾⠑⠗⠄⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SI? UND IHRE KL%NE :WE)ER'  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠓⠪⠓⠇⠑⠝⠀⠡⠎⠀⠾⠳⠓⠇⠑⠝⠀⠥⠝⠙⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">H[HLEN *S )\HLEN UND        </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠺⠕⠇⠇⠙⠑⠉⠅⠑⠝⠀⠥⠝⠙⠀⠱⠊⠗⠍⠑⠝⠄⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">WOLLDECKEN UND :IRMEN'      </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠙⠬⠀⠅⠇⠩⠝⠑⠀⠱⠺⠑⠾⠑⠗⠀⠓⠩⠮⠞⠀⠙⠊⠝⠊⠄⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">D+ KL%NE :WE)ER H%!T DINI'  </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row></page>
+        <page><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠁⠃⠑⠗⠀⠓⠣⠞⠑⠀⠺⠕⠇⠇⠞⠑⠀⠙⠊⠝⠊⠀⠊⠝⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">ABER H&lt;TE WOLLTE DINI IN    </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠅⠩⠝⠑⠗⠀⠓⠪⠓⠇⠑⠀⠎⠩⠝⠄⠀⠙⠡⠑⠗⠝⠙⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">K%NER H[HLE S%N' D*ERND     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠅⠗⠁⠃⠃⠑⠇⠞⠑⠀⠎⠬⠀⠓⠊⠝⠡⠎⠀⠊⠝⠀⠙⠑⠝⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">KRABBELTE S+ HIN*S IN DEN   </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠋⠇⠥⠗⠂⠀⠥⠍⠀⠍⠊⠞⠀⠍⠁⠍⠁⠎⠀⠱⠥⠓⠑⠝⠀⠵⠥⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">FLUR1 UM MIT MAMAS :UHEN ZU </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" rowgap="0">⠎⠏⠬⠇⠑⠝⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii" rowgap="0">SP+LEN'                     </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pef:row><pef:row xmlns:pef="http://www.daisy.org/ns/2008/pef" class="ascii">                            </pef:row></page>
+      </section>
+    </volume>
+  </body>
+</pef><a class="pef-xml" href="#">xml</a><a class="pef-unicode" href="#">unicode</a><a class="pef-ascii" href="#">ascii</a></div></span></li></ul></x:documentation>
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/line-spacing/line_spacing.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/line-spacing/line_spacing.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

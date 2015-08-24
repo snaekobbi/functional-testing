@@ -1,0 +1,31 @@
+@page { size: 32 28; }
+
+pagenum { display: none }
+
+table { display: none }
+
+p {
+	display: block;
+	margin-left: 2;
+	text-indent: 2;
+}
+
+h2 {
+	display: block;
+	margin-left: 2;
+	text-indent: 5;
+	margin-top: 1;
+	margin-bottom: 1;
+}
+
+list {
+	margin-top: 1;
+	margin-bottom: 1;
+	display: block;
+}
+
+li {
+	display: block;
+	margin-left: 4;
+	text-indent: -2;
+}

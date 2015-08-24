@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="4" failures="2" time="6.382" errors="0" name="cssinlineanddotifyformat"><testsuite timestamp="2015-06-10T11:46:59.945Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d2507e1" name="TopRightBottomAndLeftMargins" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.72">
+<properties><property name="input: source" value="&lt;doc xmlns=&#34;&#34; ...&gt;...&lt;/doc&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/common/css_inline_and_dotify_format.xprocspec)"/>
+
+<property name="option: stylesheet" value="../46.1/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-dotify-format" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-dotify-format" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+	&lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+		&lt;meta&gt;
+			&lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+		&lt;/meta&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;volume rows="5" cols="20" rowgap="0" duplex="false"&gt;
+			&lt;section&gt;
+				&lt;page&gt;
+					&lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+					&lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+					&lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+					&lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+					&lt;row&gt;⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉&lt;/row&gt;
+				&lt;/page&gt;
+			&lt;/section&gt;
+		&lt;/volume&gt;
+	&lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-06-10
+
+
+
+
+
+
+
+⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤
+⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸
+⠀⠇⠀⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸
+
+
+⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉
+
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-06-10T11:46:59.964Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d2515e1" name="TopRightBottomAndLeftBordersAndPadding" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.945">
+<properties><property name="input: source" value="&lt;doc xmlns=&#34;&#34; ...&gt;...&lt;/doc&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/common/css_inline_and_dotify_format.xprocspec)"/>
+
+<property name="option: stylesheet" value="../47.1/style.css"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-dotify-format" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-dotify-format" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="5" cols="20" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸&lt;/row&gt;
+          &lt;row&gt;⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-06-10
+
+
+
+
+
+
+
+⠀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤
+⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸
+⠀⠇⠀⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠀⠀⠀⠀⠀⠀⠸
+
+
+⠀⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉
+
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

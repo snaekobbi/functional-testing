@@ -1,0 +1,13 @@
+@page { size: 28 28; }
+
+p {
+	display: block;
+	text-indent: 2;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	margin-top: 1;
+	margin-bottom: 1;
+}

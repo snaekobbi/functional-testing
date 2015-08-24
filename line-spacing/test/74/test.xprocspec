@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               xmlns:p="http://www.w3.org/ns/xproc"
+               xmlns:px="http://www.daisy.org/ns/pipeline/xproc"
+               xmlns:pef="http://www.daisy.org/ns/2008/pef"
+               xmlns:dotify="http://code.google.com/p/dotify/"
+               xmlns:css="http://www.daisy.org/ns/pipeline/braille-css">
+  
+  <x:script>
+    <p:declare-step type="pxi:translate" version="1.0">
+      <p:input port="source"/>
+      <p:output port="result"/>
+      <p:option name="stylesheet" required="true"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/dotify-formatter/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/css-calabash/library.xpl"/>
+      <p:import href="http://www.daisy.org/pipeline/modules/braille/common-utils/library.xpl"/>
+      <css:inline>
+        <p:with-option name="default-stylesheet" select="resolve-uri($stylesheet)"/>
+      </css:inline>
+      <px:transform type="css-block" query=""/>
+      <dotify:format/>
+    </p:declare-step>
+  </x:script>
+  
+  <x:scenario label="The system shall support single and double line spacing">
+    <x:call step="pxi:translate">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/layout/Test.DTBook.Line spacing. Singel spacing.xml"/>
+      </x:input>
+    </x:call>
+    <x:scenario id="74.1" label="The system shall support single line spacing">
+        <x:call>
+          <x:option name="stylesheet" select="'single.css'"/>
+        </x:call>
+        <x:context label="result">
+          <x:document type="port" port="result"/>
+        </x:context>
+        <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+          <x:document type="file" href="../../resources/layout/Test.PEF.Line spacing.Singel spacing.pef"/>
+        </x:expect>
+    </x:scenario>
+    <x:scenario id="74.2" label="The system shall support double line spacing">
+        <x:call>
+          <x:option name="stylesheet" select="'double.css'"/>
+        </x:call>
+        <x:context label="result">
+          <x:document type="port" port="result"/>
+        </x:context>
+        <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+          <x:document type="file" href="../../resources/layout/Test.PEF.Line spacing.Double spacing.pef"/>
+        </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+</x:description>

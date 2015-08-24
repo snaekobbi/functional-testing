@@ -1,0 +1,7 @@
+@page { size: 32 28; }
+
+p {
+	display: block;
+	margin-left: 2;
+	text-indent: 2;
+}

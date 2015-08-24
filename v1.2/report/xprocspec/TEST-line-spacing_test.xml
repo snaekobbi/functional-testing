@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="6" failures="3" time="13.803" errors="0" name="test"><testsuite timestamp="2015-09-15T09:35:17.448Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d4244e1" name="TheSystemShallSupportSingleAndDoubleLineSpacingTheSystemShallSupportSingleLineSpacing" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="2.077">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/line-spacing/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/line-spacing/single.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:nlb)(grade:0)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec/tmp/xprocspec-201509151135049/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠊⠝⠝⠑⠎⠊⠞⠞⠑⠗⠝⠑⠀⠋⠕⠗⠃⠁⠝⠝⠑⠞⠀⠙⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠕⠇⠧⠀⠍⠊⠝⠥⠎⠛⠗⠁⠙⠑⠝⠑⠂⠀⠕⠛⠀⠕⠍⠀⠝⠕⠑⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠧⠁⠝⠛⠀⠙⠑⠍⠀⠥⠞⠂⠀⠓⠥⠞⠗⠑⠞⠀⠙⠑⠀⠁⠧⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠈⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠚⠕⠃⠃⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀⠎⠽⠅⠑⠓⠥⠎⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠝⠪⠑⠝⠀⠞⠊⠇⠀⠡⠀⠅⠝⠊⠗⠅⠑⠀⠥⠝⠙⠑⠗⠀⠋⠪⠞⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠝⠑⠀⠏⠡⠀⠙⠑⠍⠀⠎⠕⠍⠀⠏⠁⠎⠎⠑⠗⠞⠑⠀⠙⠑⠝⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠁⠍⠇⠑⠀⠎⠽⠅⠑⠓⠥⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠀⠝⠕⠗⠙⠀⠊⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠽⠑⠝⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠙⠑⠞⠀⠧⠁⠗⠀⠞⠊⠗⠎⠙⠁⠛⠀⠙⠑⠝⠀⠞⠗⠑⠞⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠝⠙⠑⠀⠊⠀⠡⠗⠑⠞⠎⠀⠁⠝⠙⠗⠑⠀⠍⠡⠝⠑⠙⠄⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠠⠧⠑⠙⠀⠓⠕⠧⠑⠙⠊⠝⠝⠛⠁⠝⠛⠑⠝⠀⠎⠧⠊⠝⠛⠞⠑⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠊⠇⠑⠗⠀⠕⠏⠏⠂⠀⠎⠞⠁⠝⠎⠑⠞⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠍⠑⠝⠎⠀⠙⠪⠗⠑⠗⠀⠃⠇⠑⠀⠡⠏⠝⠑⠞⠀⠕⠛⠀⠧⠕⠗⠤⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠑⠝⠙⠑⠀⠍⠪⠙⠗⠑⠀⠅⠗⠪⠏⠀⠥⠞⠂⠀⠎⠞⠪⠞⠞⠑⠞⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠁⠧⠀⠍⠑⠝⠝⠀⠎⠕⠍⠀⠎⠅⠥⠇⠇⠑⠀⠃⠇⠊⠀⠋⠑⠙⠗⠑⠄⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠋&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-09-15
+
+
+
+
+
+
+⠀⠀⠀⠀⠠⠊⠝⠝⠑⠎⠊⠞⠞⠑⠗⠝⠑⠀⠋⠕⠗⠃⠁⠝⠝⠑⠞⠀⠙⠑⠀
+⠀⠀⠞⠕⠇⠧⠀⠍⠊⠝⠥⠎⠛⠗⠁⠙⠑⠝⠑⠂⠀⠕⠛⠀⠕⠍⠀⠝⠕⠑⠀
+⠀⠀⠞⠧⠁⠝⠛⠀⠙⠑⠍⠀⠥⠞⠂⠀⠓⠥⠞⠗⠑⠞⠀⠙⠑⠀⠁⠧⠀
+⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀
+⠀⠀⠋⠨⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀
+⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇
+⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀
+⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀
+⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀
+⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀
+⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀
+⠀⠀⠚⠕⠃⠃⠄
+⠀⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀
+⠀⠀⠎⠽⠅⠑⠓⠥⠎⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀
+⠀⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀
+⠀⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀
+⠀⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠎⠝⠪⠑⠝⠀⠞⠊⠇⠀⠡⠀⠅⠝⠊⠗⠅⠑
+⠀⠀⠥⠝⠙⠑⠗⠀⠋⠪⠞⠞⠑⠝⠑⠀⠏⠡⠀⠙⠑⠍⠀⠎⠕⠍⠀
+⠀⠀⠏⠁⠎⠎⠑⠗⠞⠑⠀⠙⠑⠝⠀⠛⠁⠍⠇⠑⠀
+⠀⠀⠎⠽⠅⠑⠓⠥⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠀⠝⠕⠗⠙⠀⠊⠀⠃⠽⠑⠝⠄
+⠀⠀⠀⠀⠠⠙⠑⠞⠀⠧⠁⠗⠀⠞⠊⠗⠎⠙⠁⠛⠀⠙⠑⠝⠀
+⠀⠀⠞⠗⠑⠞⠞⠑⠝⠙⠑⠀⠊⠀⠡⠗⠑⠞⠎⠀⠁⠝⠙⠗⠑⠀⠍⠡⠝⠑⠙⠄
+⠀⠀⠀⠀⠠⠧⠑⠙⠀⠓⠕⠧⠑⠙⠊⠝⠝⠛⠁⠝⠛⠑⠝⠀⠎⠧⠊⠝⠛⠞⠑⠀
+⠀⠀⠃⠊⠇⠑⠗⠀⠕⠏⠏⠂⠀⠎⠞⠁⠝⠎⠑⠞⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠀
+⠀⠀⠍⠑⠝⠎⠀⠙⠪⠗⠑⠗⠀⠃⠇⠑⠀⠡⠏⠝⠑⠞⠀⠕⠛⠀
+⠀⠀⠧⠕⠗⠙⠑⠝⠙⠑⠀⠍⠪⠙⠗⠑⠀⠅⠗⠪⠏⠀⠥⠞⠂⠀
+⠀⠀⠎⠞⠪⠞⠞⠑⠞⠀⠁⠧⠀⠍⠑⠝⠝⠀⠎⠕⠍⠀⠎⠅⠥⠇⠇⠑⠀⠃⠇⠊
+⠀⠀⠋⠑⠙⠗⠑⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-09-15T09:35:17.476Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d4252e1" name="TheSystemShallSupportSingleAndDoubleLineSpacingTheSystemShallSupportDoubleLineSpacing" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="1.374">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/line-spacing/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/line-spacing/double.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:nlb)(grade:0)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec/tmp/xprocspec-201509151135049/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+    &lt;meta&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume rows="28" cols="32" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠈⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠚⠕⠃⠃⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠿⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀⠎⠽⠅⠑⠓⠥⠎⠤⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠼⠁⠋&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-09-15
+
+
+
+
+
+
+⠀⠀⠀⠀⠠⠊⠝⠝⠑⠎⠊⠞⠞⠑⠗⠝⠑⠀⠋⠕⠗⠃⠁⠝⠝⠑⠞⠀⠙⠑⠀
+⠀⠀⠞⠕⠇⠧⠀⠍⠊⠝⠥⠎⠛⠗⠁⠙⠑⠝⠑⠂⠀⠕⠛⠀⠕⠍⠀⠝⠕⠑⠀
+⠀⠀⠞⠧⠁⠝⠛⠀⠙⠑⠍⠀⠥⠞⠂⠀⠓⠥⠞⠗⠑⠞⠀⠙⠑⠀⠁⠧⠀
+⠀⠀⠎⠞⠑⠙⠀⠊⠀⠧⠁⠗⠍⠑⠀⠏⠑⠇⠎⠚⠁⠅⠅⠑⠗⠀⠕⠛⠀
+⠀⠀⠋⠨⠕⠗⠑⠙⠑⠀⠎⠞⠪⠧⠇⠑⠞⠞⠑⠗⠄⠀⠠⠥⠝⠛⠑⠝⠑⠀
+⠀⠀⠧⠁⠗⠀⠏⠁⠅⠅⠑⠞⠀⠊⠝⠝⠀⠊⠀⠋⠇⠑⠗⠑⠀⠇⠁⠛⠀⠥⠇⠇
+⠀⠀⠥⠝⠙⠑⠗⠀⠃⠕⠃⠇⠑⠙⠗⠑⠎⠎⠑⠝⠑⠄⠀⠠⠓⠧⠊⠝⠀⠕⠛⠀
+⠀⠀⠓⠽⠇⠀⠓⠪⠗⠞⠑⠎⠀⠋⠗⠁⠀⠁⠅⠑⠃⠁⠅⠅⠑⠝⠑⠀⠊⠀
+⠀⠀⠃⠁⠗⠝⠑⠓⠁⠛⠑⠝⠑⠀⠎⠕⠍⠀⠓⠁⠙⠙⠑⠀⠎⠅⠥⠞⠞⠀
+⠀⠀⠕⠏⠏⠀⠕⠧⠑⠗⠁⠇⠞⠀⠑⠞⠞⠑⠗⠀⠎⠕⠍⠀⠎⠞⠁⠙⠊⠛⠀
+⠀⠀⠋⠇⠑⠗⠑⠀⠅⠧⠊⠝⠝⠑⠗⠀⠛⠊⠅⠅⠀⠥⠞⠀⠊⠀⠋⠥⠇⠇⠀
+⠀⠀⠚⠕⠃⠃⠄
+⠀⠀⠀⠀⠠⠇⠁⠝⠛⠎⠀⠛⠚⠑⠗⠙⠑⠝⠑⠀⠏⠡⠀
+⠀⠀⠎⠽⠅⠑⠓⠥⠎⠕⠍⠗⠡⠙⠑⠞⠀⠅⠝⠑⠊⠎⠞⠑⠀⠓⠪⠽⠑⠀
+⠀⠀⠋⠕⠝⠝⠑⠗⠀⠁⠧⠀⠎⠝⠪⠀⠎⠕⠍⠀⠧⠁⠗⠀⠍⠡⠅⠞⠀
+⠀⠀⠧⠑⠅⠅⠀⠋⠗⠁⠀⠧⠑⠊⠑⠗⠀⠕⠛⠀⠛⠁⠝⠛⠎⠞⠊⠑⠗⠄⠀
+⠀⠀⠠⠅⠥⠇⠙⠁⠀⠋⠊⠅⠅⠀⠎⠝⠪⠑⠝⠀⠞⠊⠇⠀⠡⠀⠅⠝⠊⠗⠅⠑
+⠀⠀⠥⠝⠙⠑⠗⠀⠋⠪⠞⠞⠑⠝⠑⠀⠏⠡⠀⠙⠑⠍⠀⠎⠕⠍⠀
+⠀⠀⠏⠁⠎⠎⠑⠗⠞⠑⠀⠙⠑⠝⠀⠛⠁⠍⠇⠑⠀
+⠀⠀⠎⠽⠅⠑⠓⠥⠎⠃⠽⠛⠝⠊⠝⠛⠑⠝⠀⠝⠕⠗⠙⠀⠊⠀⠃⠽⠑⠝⠄
+⠀⠀⠀⠀⠠⠙⠑⠞⠀⠧⠁⠗⠀⠞⠊⠗⠎⠙⠁⠛⠀⠙⠑⠝⠀
+⠀⠀⠞⠗⠑⠞⠞⠑⠝⠙⠑⠀⠊⠀⠡⠗⠑⠞⠎⠀⠁⠝⠙⠗⠑⠀⠍⠡⠝⠑⠙⠄
+⠀⠀⠀⠀⠠⠧⠑⠙⠀⠓⠕⠧⠑⠙⠊⠝⠝⠛⠁⠝⠛⠑⠝⠀⠎⠧⠊⠝⠛⠞⠑⠀
+⠀⠀⠃⠊⠇⠑⠗⠀⠕⠏⠏⠂⠀⠎⠞⠁⠝⠎⠑⠞⠀⠕⠛⠀⠧⠑⠝⠞⠑⠞⠀
+⠀⠀⠍⠑⠝⠎⠀⠙⠪⠗⠑⠗⠀⠃⠇⠑⠀⠡⠏⠝⠑⠞⠀⠕⠛⠀
+⠀⠀⠧⠕⠗⠙⠑⠝⠙⠑⠀⠍⠪⠙⠗⠑⠀⠅⠗⠪⠏⠀⠥⠞⠂⠀
+⠀⠀⠎⠞⠪⠞⠞⠑⠞⠀⠁⠧⠀⠍⠑⠝⠝⠀⠎⠕⠍⠀⠎⠅⠥⠇⠇⠑⠀⠃⠇⠊
+⠀⠀⠋⠑⠙⠗⠑⠄
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2015-09-15T09:35:17.496Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d4259e1" name="WhenPrintingDoublesidedWithDoubleLineSpacingPrintedLinesShallAlternateOnOddAndEvenPages" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="6.283">
+<properties><property name="input: source" value="&lt;level1 xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/level1&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/line-spacing/test.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/line-spacing/style-sbs.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:sbs)(grade:0)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec/tmp/xprocspec-201509151135049/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;!--
+      Generated from line_spacing.txt using table "sbs.dis"
+  --&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="28" rows="28" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠍⠊⠞⠞⠺⠕⠹&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠙⠁⠎⠀⠊⠾⠀⠝⠊⠝⠝⠊⠂⠀⠁⠇⠎⠀⠎⠬⠀⠝⠕⠹&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠎⠑⠹⠎⠀⠚⠁⠓⠗⠑⠀⠁⠇⠞⠀⠺⠁⠗⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠃⠊⠎⠀⠵⠥⠀⠊⠓⠗⠑⠍⠀⠎⠬⠃⠞⠑⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠛⠑⠃⠥⠗⠞⠎⠞⠁⠛⠀⠺⠁⠗⠀⠑⠎⠀⠝⠊⠹⠞⠀⠍⠑⠓⠗&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠇⠁⠝⠛⠑⠀⠓⠊⠝⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠝⠊⠝⠝⠊⠀⠅⠕⠝⠝⠞⠑⠀⠙⠑⠝⠀⠞⠁⠛⠀⠅⠡⠍&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠑⠗⠺⠁⠗⠞⠑⠝⠄⠀⠺⠜⠓⠗⠑⠝⠙⠀⠎⠬&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠺⠁⠗⠞⠑⠞⠑⠂⠀⠃⠡⠞⠑⠀⠎⠬⠀⠓⠪⠓⠇⠑⠝⠀⠋⠳⠗&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠎⠊⠹⠀⠥⠝⠙⠀⠊⠓⠗⠑⠀⠅⠇⠩⠝⠑⠀⠱⠺⠑⠾⠑⠗⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠓⠪⠓⠇⠑⠝⠀⠡⠎⠀⠾⠳⠓⠇⠑⠝⠀⠥⠝⠙&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠺⠕⠇⠇⠙⠑⠉⠅⠑⠝⠀⠥⠝⠙⠀⠱⠊⠗⠍⠑⠝⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠙⠬⠀⠅⠇⠩⠝⠑⠀⠱⠺⠑⠾⠑⠗⠀⠓⠩⠮⠞⠀⠙⠊⠝⠊⠄&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠁⠃⠑⠗⠀⠓⠣⠞⠑⠀⠺⠕⠇⠇⠞⠑⠀⠙⠊⠝⠊⠀⠊⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠅⠩⠝⠑⠗⠀⠓⠪⠓⠇⠑⠀⠎⠩⠝⠄⠀⠙⠡⠑⠗⠝⠙&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠅⠗⠁⠃⠃⠑⠇⠞⠑⠀⠎⠬⠀⠓⠊⠝⠡⠎⠀⠊⠝⠀⠙⠑⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠋⠇⠥⠗⠂⠀⠥⠍⠀⠍⠊⠞⠀⠍⠁⠍⠁⠎⠀⠱⠥⠓⠑⠝⠀⠵⠥&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠎⠏⠬⠇⠑⠝⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2015-09-15
+
+
+
+
+
+
+⠍⠊⠞⠞⠺⠕⠹
+⠙⠀⠾⠀⠝⠔⠝⠊⠂⠀⠩⠀⠎⠀⠝⠹⠀⠎⠑⠹⠎⠀⠚⠗⠑⠀⠒⠞
+⠴⠄
+⠃⠎⠀⠵⠀⠊⠷⠀⠎⠬⠃⠞⠉⠀⠯⠃⠥⠗⠞⠎⠞⠁⠛⠀⠴⠀⠿⠀
+⠝⠀⠶⠀⠇⠛⠑⠀⠓⠔⠄
+⠝⠔⠝⠊⠀⠅⠞⠑⠀⠑⠀⠞⠁⠛⠀⠅⠡⠍⠀⠻⠺⠴⠞⠉⠄⠀⠜⠙
+⠎⠀⠺⠴⠦⠦⠂⠀⠃⠡⠦⠀⠎⠀⠓⠪⠓⠇⠉⠀⠋⠀⠉⠀⠥⠀⠊⠑
+⠅⠇⠫⠑⠀⠱⠺⠑⠾⠻⠄
+⠓⠪⠓⠇⠉⠀⠡⠎⠀⠾⠳⠓⠇⠉⠀⠥⠀⠂⠕⠙⠑⠨⠉⠀⠥⠀
+⠱⠊⠗⠍⠉⠄
+⠬⠀⠅⠇⠫⠑⠀⠱⠺⠑⠾⠻⠀⠓⠩⠠⠮⠞⠀⠙⠔⠊⠄
+⠁⠀⠓⠣⠦⠀⠂⠕⠦⠀⠙⠔⠊⠀⠔⠀⠅⠫⠻⠀⠓⠪⠓⠇⠑⠀⠪⠄
+⠙⠡⠻⠝⠙⠀⠅⠗⠁⠃⠃⠽⠦⠀⠎⠀⠓⠔⠡⠎⠀⠔⠀⠑⠀
+⠋⠇⠥⠗⠂⠀⠥⠍⠀⠞⠀⠍⠁⠍⠁⠎⠀⠱⠥⠓⠉⠀⠵⠀⠂⠬⠉⠄
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

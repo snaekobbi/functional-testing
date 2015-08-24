@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dtbook xml:lang="nl" version="2005-3" xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+<book>
+<frontmatter>
+<doctitle>Test tabel 1</doctitle>
+<docauthor>Davy Kager</docauthor>
+</frontmatter>
+<bodymatter>
+<level1>
+<pagenum page="normal" id="p-2">2</pagenum>
+<!--
+	The table title is marked up with a <p>, not a <caption>!
+-->
+<p class="table-title">Rijtjes woorden</p>
+<table>
+<tr>
+<td>bel</td>
+<td/>
+<td/>
+<td>tel</td>
+</tr>
+<tr>
+<td>bal</td>
+<td>dal</td>
+<td>hal</td>
+<td>tal</td>
+</tr>
+<tr>
+<td/>
+<td/>
+<td/>
+<td/>
+</tr>
+</table>
+</level1>
+</bodymatter>
+</book>
+</dtbook>

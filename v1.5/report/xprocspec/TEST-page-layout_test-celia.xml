@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuites tests="12" failures="6" time="5.065" errors="0" name="testcelia"><testsuite timestamp="2016-01-27T16:11:55.064Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6620e1" name="4583TextFlowsInHeaderPageNumberRight" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.364">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171150317/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_318696224&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="30" rows="26" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠠⠅⠜⠽⠝⠀⠥⠎⠑⠊⠝⠀⠇⠕⠥⠝⠁⠁⠇⠇⠁⠀⠀⠀⠀⠀⠀⠀⠼⠊&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠓⠜⠝⠑⠝⠀⠅⠁⠝⠎⠎⠁⠁⠝⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠠⠧⠁⠝⠓⠑⠍⠏⠁⠝⠊⠀⠁⠎⠥⠧⠁⠞⠀⠞⠜⠜⠇⠇⠜&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠧⠊⠑⠇⠜⠅⠊⠝⠂⠀⠚⠕⠞⠑⠝⠀⠧⠕⠊⠝⠀⠞⠁⠧⠁⠞⠁&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠓⠑⠊⠞⠜⠅⠊⠝⠀⠑⠝⠑⠍⠍⠜⠝⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠠⠏⠕⠇⠊⠊⠎⠊⠅⠁⠧⠑⠗⠊⠝⠊⠀⠠⠅⠕⠊⠧⠥⠀⠕⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠞⠪⠊⠎⠎⠜⠀⠠⠚⠕⠑⠝⠎⠥⠥⠎⠎⠁⠂⠀⠇⠜⠓⠑⠇⠇⠜&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠠⠁⠗⠏⠊⠅⠽⠇⠜⠜⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠠⠕⠇⠊⠍⠍⠑⠀⠑⠝⠝⠑⠝⠀⠞⠪⠊⠎⠎⠜⠀⠠⠓⠑⠇⠎⠊⠝⠤&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠛⠊⠝⠀⠏⠕⠇⠊⠊⠎⠊⠎⠎⠁⠀⠚⠁⠀⠎⠊⠇⠇⠕⠊⠝&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠊⠍⠍⠑⠀⠞⠪⠊⠞⠜⠀⠽⠓⠙⠑⠎⠎⠜⠄&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠠⠕⠝⠀⠍⠥⠅⠁⠧⠁⠁⠂⠀⠑⠞⠞⠜⠀⠧⠕⠊⠍⠍⠑&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠀⠀⠞⠁⠧⠁⠞⠁⠀⠥⠎⠑⠊⠝⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:55.072Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6628e1" name="4583TextFlowsInHeaderPageNumberLeftOrRight4585PositionOfBraillePageNumberDiffersBetweenLeftright" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.418">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171150317/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_178998873&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="30" rows="27" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠼⠉⠙⠀⠀⠀⠠⠕⠝⠅⠕⠀⠑⠓⠙⠕⠞⠥⠅⠎⠊⠁⠢⠰&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠰⠠⠓⠕⠍⠑⠀⠠⠎⠺⠑⠑⠞⠀⠠⠓⠕⠍⠑⠂⠀⠕⠍⠁&lt;/row&gt;
+          &lt;row&gt;⠅⠕⠞⠊⠀⠅⠥⠇⠇⠁⠝⠀⠅⠁⠇⠇⠊⠎⠄⠀⠠⠎⠊⠞⠜⠓⠜⠝&lt;/row&gt;
+          &lt;row&gt;⠍⠑⠀⠅⠁⠊⠅⠅⠊⠀⠞⠁⠧⠕⠊⠞⠞⠑⠇⠑⠍⠍⠑⠄⠰⠀⠠⠁⠝⠤&lt;/row&gt;
+          &lt;row&gt;⠝⠁⠀⠓⠽⠍⠽⠊⠇⠊⠀⠚⠁⠀⠞⠽⠪⠝⠎⠊⠀⠅⠁⠅⠤&lt;/row&gt;
+          &lt;row&gt;⠅⠥⠇⠁⠥⠞⠁⠎⠞⠁⠀⠅⠕⠓⠞⠊⠀⠠⠍⠊⠉⠓⠑⠇⠇⠑⠜⠄&lt;/row&gt;
+          &lt;row&gt;⠰⠠⠁⠥⠞⠁⠀⠍⠊⠝⠥⠁⠀⠞⠥⠓⠕⠁⠍⠁⠁⠝⠀⠞⠜⠍⠜⠄&lt;/row&gt;
+          &lt;row&gt;⠠⠎⠊⠊⠝⠜⠀⠕⠝⠀⠏⠥⠕⠇⠑⠞⠀⠧⠜⠓⠑⠍⠍⠜⠝⠀⠗⠁⠎⠤&lt;/row&gt;
+          &lt;row&gt;⠧⠁⠁⠂⠀⠚⠕⠎⠀⠎⠽⠪⠍⠍⠑⠀⠎⠑⠝⠀⠅⠁⠓⠙⠑⠎⠤&lt;/row&gt;
+          &lt;row&gt;⠞⠁⠁⠝⠄⠰&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠅⠥⠝⠀⠠⠍⠊⠉⠓⠑⠇⠇⠑⠀⠎⠑⠥⠗⠁⠁⠧⠁⠝⠁&lt;/row&gt;
+          &lt;row&gt;⠁⠁⠍⠥⠝⠁⠀⠎⠁⠁⠏⠥⠊⠀⠇⠊⠊⠅⠅⠑⠑⠎⠑⠑⠝⠎⠜&lt;/row&gt;
+          &lt;row&gt;⠍⠥⠅⠁⠝⠁⠁⠝⠀⠗⠑⠍⠕⠝⠞⠞⠊⠗⠑⠊⠎⠅⠁⠂⠀⠍⠊⠞⠤&lt;/row&gt;
+          &lt;row&gt;⠞⠁⠝⠁⠥⠓⠁⠀⠚⠁⠀⠏⠗⠕⠚⠑⠅⠞⠊⠅⠁⠝⠎⠊⠕⠂⠀⠓⠜⠝&lt;/row&gt;
+          &lt;row&gt;⠇⠪⠽⠎⠊⠀⠗⠁⠏⠏⠥⠎⠊⠇⠞⠁⠀⠏⠊⠑⠝⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠏⠁⠅⠑⠞⠊⠝⠄⠀⠠⠎⠑⠝⠀⠽⠍⠏⠜⠗⠊⠇⠇⠑⠀⠕⠇⠊&lt;/row&gt;
+          &lt;row&gt;⠅⠊⠑⠙⠕⠞⠞⠥⠀⠎⠥⠥⠗⠏⠊⠊⠗⠞⠑⠊⠎⠑⠎⠞⠊&lt;/row&gt;
+          &lt;row&gt;⠝⠊⠊⠝⠊⠝⠁⠗⠥⠁⠂⠀⠚⠁⠀⠍⠥⠅⠁⠝⠁⠀⠕⠇⠑⠧⠁⠎⠎⠁&lt;/row&gt;
+          &lt;row&gt;⠅⠕⠗⠞⠊⠎⠎⠁⠀⠇⠥⠅⠊⠀⠧⠁⠊⠝⠀⠰⠠⠍⠊⠉⠓⠑⠇⠤&lt;/row&gt;
+          &lt;row&gt;⠇⠑⠰⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠕⠅⠎⠑⠞⠞⠁⠧⠁⠝⠀⠎⠑⠅⠥⠝⠝⠊⠝⠀⠁⠚⠁⠝&lt;/row&gt;
+          &lt;row&gt;⠠⠍⠊⠉⠓⠑⠇⠇⠑⠀⠍⠊⠑⠞⠞⠊⠂⠀⠕⠇⠊⠅⠕⠀⠠⠓⠁⠗⠤&lt;/row&gt;
+          &lt;row&gt;⠧⠑⠽⠀⠇⠪⠽⠞⠜⠝⠽⠞⠀⠓⠜⠝⠑⠞⠂⠀⠍⠥⠞⠞⠁&lt;/row&gt;
+          &lt;row&gt;⠏⠁⠅⠑⠞⠞⠊⠀⠑⠊⠀⠕⠇⠇⠥⠞⠀⠍⠊⠑⠓⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠞⠽⠽⠇⠊⠜⠄⠀⠠⠓⠁⠗⠧⠑⠽⠀⠑⠊⠀⠕⠇⠊⠎⠊⠀⠅⠊⠗⠤&lt;/row&gt;
+          &lt;row&gt;⠚⠕⠊⠞⠞⠁⠝⠥⠞⠀⠅⠕⠗⠞⠞⠊⠁⠀⠅⠜⠎⠊⠝⠂⠀⠚⠕⠎&lt;/row&gt;
+          &lt;row&gt;⠎⠁⠁⠞⠁⠧⠊⠇⠇⠁⠀⠕⠇⠊⠀⠍⠽⠪⠎⠀⠅⠥⠇⠤&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠞⠁⠏⠁⠊⠝⠁⠞⠥⠎⠄⠀⠠⠍⠊⠉⠓⠑⠇⠇⠑⠀⠀⠀⠀⠀⠀⠼⠉⠑&lt;/row&gt;
+          &lt;row&gt;⠁⠧⠁⠎⠊⠀⠝⠁⠗⠥⠝⠀⠚⠁⠀⠇⠪⠽⠎⠊⠀⠏⠁⠅⠑⠞⠊⠎⠞⠁&lt;/row&gt;
+          &lt;row&gt;⠗⠁⠎⠊⠁⠝⠀⠇⠁⠁⠙⠥⠅⠅⠁⠊⠞⠁⠀⠅⠑⠅⠎⠑⠚⠜⠀⠚⠁&lt;/row&gt;
+          &lt;row&gt;⠊⠞⠎⠑⠀⠞⠑⠓⠙⠽⠝⠀⠅⠊⠊⠞⠕⠎⠅⠕⠗⠞⠊⠝⠄⠀⠠⠁⠝⠤&lt;/row&gt;
+          &lt;row&gt;⠝⠁⠀⠕⠇⠊⠀⠅⠊⠗⠚⠕⠊⠞⠞⠁⠝⠥⠞⠀⠅⠕⠗⠞⠞⠊⠊⠝&lt;/row&gt;
+          &lt;row&gt;⠏⠽⠪⠗⠑⠜⠇⠇⠜⠀⠅⠜⠎⠊⠁⠇⠁⠇⠇⠁⠁⠝⠀⠏⠁⠊⠞⠎⠊&lt;/row&gt;
+          &lt;row&gt;⠕⠎⠕⠊⠞⠞⠑⠑⠝⠎⠁⠀⠚⠁⠀⠏⠥⠓⠑⠇⠊⠝⠝⠥⠍⠑⠗⠕⠝⠤&lt;/row&gt;
+          &lt;row&gt;⠎⠁⠀⠍⠽⠪⠎⠀⠠⠏⠕⠝⠛⠕⠝⠀⠑⠎⠊⠞⠞⠜⠍⠜⠝⠀⠅⠥⠞⠤&lt;/row&gt;
+          &lt;row&gt;⠎⠥⠝⠀⠇⠜⠓⠞⠑⠜⠀⠅⠜⠧⠑⠇⠽⠇⠇⠑&lt;/row&gt;
+          &lt;row&gt;⠎⠑⠥⠗⠁⠁⠧⠁⠝⠁⠀⠧⠊⠊⠅⠕⠝⠇⠕⠏⠏⠥⠝⠁⠂&lt;/row&gt;
+          &lt;row&gt;⠰⠚⠕⠇⠇⠕⠊⠝⠀⠎⠑⠀⠇⠥⠏⠁⠁⠀⠅⠜⠽⠞⠞⠜⠽⠞⠽⠜⠰⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠁⠝⠝⠁⠀⠕⠇⠊⠀⠅⠊⠗⠚⠕⠊⠞⠞⠁⠝⠥⠞⠀⠅⠕⠗⠞⠤&lt;/row&gt;
+          &lt;row&gt;⠞⠊⠊⠝⠀⠍⠽⠪⠎⠀⠕⠍⠁⠝⠀⠧⠊⠑⠎⠞⠊⠝⠂⠀⠚⠕⠎⠎⠁&lt;/row&gt;
+          &lt;row&gt;⠓⠜⠝⠀⠏⠽⠽⠎⠊⠀⠠⠍⠊⠉⠓⠑⠇⠇⠑⠜⠀⠅⠜⠽⠍⠜⠜⠝&lt;/row&gt;
+          &lt;row&gt;⠞⠽⠪⠏⠁⠊⠅⠁⠇⠇⠁⠁⠝⠀⠅⠊⠗⠚⠁⠎⠞⠕⠎⠎⠁⠂&lt;/row&gt;
+          &lt;row&gt;⠅⠕⠎⠅⠁⠀⠓⠁⠇⠥⠎⠊⠀⠞⠁⠗⠚⠕⠞⠁⠀⠞⠜⠇⠇⠑&lt;/row&gt;
+          &lt;row&gt;⠇⠕⠥⠝⠁⠁⠝⠀⠚⠁⠀⠝⠜⠽⠞⠞⠜⠜⠀⠎⠁⠍⠁⠇⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠠⠇⠕⠝⠛⠓⠁⠍⠏⠞⠕⠝⠊⠝⠀⠅⠕⠓⠕⠅⠕⠓⠙⠁⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠰⠠⠎⠊⠊⠓⠑⠝⠀⠗⠊⠊⠞⠞⠜⠜⠀⠏⠊⠅⠁⠇⠕⠥⠝⠁⠎⠲⠰&lt;/row&gt;
+          &lt;row&gt;⠠⠁⠝⠝⠁⠀⠕⠇⠊⠀⠇⠊⠎⠜⠝⠝⠽⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠍⠊⠉⠓⠑⠇⠇⠑⠀⠎⠑⠊⠎⠕⠊⠀⠥⠥⠙⠑⠝⠀⠇⠊⠊⠅⠤&lt;/row&gt;
+          &lt;row&gt;⠅⠑⠑⠝⠎⠜⠀⠑⠙⠑⠎⠎⠜⠂⠀⠚⠁⠀⠎⠁⠍⠁⠎⠎⠁&lt;/row&gt;
+          &lt;row&gt;⠁⠥⠗⠊⠝⠅⠕⠀⠎⠁⠊⠀⠠⠇⠕⠝⠛⠓⠁⠍⠏⠞⠕⠝⠊⠝&lt;/row&gt;
+          &lt;row&gt;⠏⠜⠜⠅⠁⠙⠥⠝⠀⠓⠑⠓⠅⠥⠍⠁⠁⠝⠄⠀⠠⠕⠇⠕⠀⠕⠇⠊&lt;/row&gt;
+          &lt;row&gt;⠚⠕⠀⠏⠁⠇⠚⠕⠝⠀⠏⠁⠗⠑⠍⠏⠊⠂⠀⠧⠁⠊⠅⠅⠁⠀⠓⠜⠝&lt;/row&gt;
+          &lt;row&gt;⠑⠊⠀⠕⠇⠇⠥⠞⠀⠧⠊⠑⠇⠜⠀⠁⠇⠕⠊⠞⠞⠁⠝⠥⠞⠅⠁⠁⠝&lt;/row&gt;
+          &lt;row&gt;⠎⠊⠎⠥⠎⠞⠁⠍⠊⠎⠞⠁⠄&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:55.079Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6635e1" name="4581BraillePageNumber+NoTextFlowInHeader4585PositionOfBraillePageNumberDiffersBetweenLeftright" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.338">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171150317/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_320935590&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="31" rows="26" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠼⠛⠙&lt;/row&gt;
+          &lt;row&gt;⠎⠅⠁⠙⠁⠙⠑⠀⠊⠝⠞⠑⠛⠗⠑⠗⠁⠙⠑⠀⠎⠅⠕⠇⠤&lt;/row&gt;
+          &lt;row&gt;⠑⠇⠑⠧⠑⠗⠝⠁⠄⠀⠠⠊⠙⠁⠛⠀⠝⠜⠗⠀⠥⠞⠃⠥⠙⠑⠞⠀⠜⠗&lt;/row&gt;
+          &lt;row&gt;⠎⠡⠀⠑⠝⠕⠗⠍⠞⠀⠜⠗⠀⠙⠑⠞⠞⠁⠀⠃⠡⠙⠑⠀⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠏⠗⠁⠅⠞⠊⠎⠅⠞⠀⠕⠉⠓⠀⠑⠅⠕⠝⠕⠍⠊⠎⠅⠞⠀⠧⠊⠅⠤&lt;/row&gt;
+          &lt;row&gt;⠞⠊⠛⠀⠥⠏⠏⠛⠊⠋⠞⠄⠀⠠⠙⠑⠝⠀⠑⠝⠎⠅⠊⠇⠙⠁&lt;/row&gt;
+          &lt;row&gt;⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠀⠑⠇⠑⠧⠑⠝⠎⠀⠃⠑⠓⠕⠧⠀⠃⠪⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠇⠇⠞⠊⠙⠀⠞⠁⠎⠀⠊⠀⠃⠑⠁⠅⠞⠁⠝⠙⠑⠄⠀⠠⠙⠑⠞&lt;/row&gt;
+          &lt;row&gt;⠋⠊⠝⠝⠎⠀⠊⠝⠛⠁⠀⠰⠎⠚⠜⠇⠧⠅⠇⠁⠗⠁⠰&lt;/row&gt;
+          &lt;row&gt;⠏⠁⠅⠑⠞⠇⠪⠎⠝⠊⠝⠛⠁⠗⠄⠀⠠⠇⠽⠉⠅⠁⠝⠀⠪⠧⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠞⠞⠀⠙⠑⠀⠑⠇⠑⠅⠞⠗⠕⠝⠊⠎⠅⠁⠀⠎⠅⠗⠊⠧⠤&lt;/row&gt;
+          &lt;row&gt;⠓⠚⠜⠇⠏⠍⠑⠙⠇⠑⠝⠀⠋⠥⠝⠛⠑⠗⠁⠗⠀⠎⠡⠀⠃⠗⠁&lt;/row&gt;
+          &lt;row&gt;⠋⠪⠗⠀⠙⠑⠀⠋⠇⠑⠎⠞⠁⠀⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠀⠑⠇⠑⠧⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠋⠡⠗⠀⠊⠝⠞⠑⠀⠃⠑⠞⠽⠙⠁⠀⠁⠞⠞⠀⠑⠇⠑⠧⠑⠝⠀⠍⠑⠙&lt;/row&gt;
+          &lt;row&gt;⠍⠕⠞⠕⠗⠊⠎⠅⠁⠀⠎⠞⠪⠗⠝⠊⠝⠛⠁⠗⠀⠊⠝⠞⠑⠀⠅⠁⠝&lt;/row&gt;
+          &lt;row&gt;⠋⠡⠀⠑⠝⠀⠧⠁⠝⠇⠊⠛⠀⠏⠥⠝⠅⠞⠎⠅⠗⠊⠋⠞⠎⠤&lt;/row&gt;
+          &lt;row&gt;⠍⠁⠎⠅⠊⠝⠀⠎⠕⠍⠀⠋⠥⠝⠛⠑⠗⠁⠗⠀⠃⠜⠞⠞⠗⠑⠀⠋⠪⠗&lt;/row&gt;
+          &lt;row&gt;⠓⠕⠝⠕⠍⠀⠑⠋⠞⠑⠗⠎⠕⠍⠀⠙⠑⠝⠀⠓⠁⠗⠀⠑⠞⠞&lt;/row&gt;
+          &lt;row&gt;⠎⠞⠪⠗⠗⠑⠀⠍⠕⠞⠎⠞⠡⠝⠙⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠋⠪⠗⠥⠞⠕⠍⠀⠁⠇⠇⠞⠀⠙⠑⠞⠞⠁⠀⠁⠗⠃⠑⠞⠑&lt;/row&gt;
+          &lt;row&gt;⠎⠕⠍⠀⠙⠊⠗⠑⠅⠞⠀⠎⠞⠪⠙⠑⠗⠀⠑⠇⠑⠧⠑⠝⠀⠊⠀⠙⠑⠞&lt;/row&gt;
+          &lt;row&gt;⠙⠁⠛⠇⠊⠛⠁⠀⠁⠗⠃⠑⠞⠑⠞⠀⠃⠪⠗⠀⠗⠑⠎⠥⠗⠎⠤&lt;/row&gt;
+          &lt;row&gt;⠉⠑⠝⠞⠗⠑⠝⠀⠙⠑⠎⠎⠥⠞⠕⠍⠀⠥⠞⠧⠑⠉⠅⠇⠁⠀⠝⠽&lt;/row&gt;
+          &lt;row&gt;⠏⠑⠙⠁⠛⠕⠛⠊⠅⠂⠀⠓⠡⠇⠇⠁⠀⠎⠊⠛⠀⠷⠁⠀⠚⠕⠥⠗&lt;/row&gt;
+          &lt;row&gt;⠍⠑⠙⠀⠥⠞⠧⠑⠉⠅⠇⠊⠝⠛⠑⠝⠀⠃⠡⠙⠑⠀⠊⠝⠕⠍&lt;/row&gt;
+          &lt;row&gt;⠇⠁⠝⠙⠑⠞⠎⠀⠎⠅⠕⠇⠧⠜⠎⠑⠝⠙⠑⠀⠕⠉⠓⠀⠥⠞⠑⠀⠊&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠛⠑&lt;/row&gt;
+          &lt;row&gt;⠎⠞⠕⠗⠁⠀⠧⠜⠗⠇⠙⠑⠝⠄⠀⠠⠧⠊⠀⠜⠗⠀⠎⠡⠀⠋⠡&lt;/row&gt;
+          &lt;row&gt;⠕⠉⠓⠀⠎⠡⠀⠎⠍⠡⠀⠊⠀⠠⠝⠕⠗⠙⠑⠝⠀⠁⠞⠞⠀⠧⠊&lt;/row&gt;
+          &lt;row&gt;⠞⠗⠕⠞⠎⠀⠁⠞⠞⠀⠧⠊⠀⠎⠞⠡⠗⠀⠏⠡⠀⠓⠪⠛&lt;/row&gt;
+          &lt;row&gt;⠧⠜⠗⠇⠙⠎⠝⠊⠧⠡⠀⠃⠑⠓⠪⠧⠑⠗⠀⠊⠍⠏⠥⠇⠎⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠕⠉⠅⠎⠡⠀⠥⠞⠊⠋⠗⠡⠝⠄⠀⠠⠞⠊⠇⠇⠎⠁⠍⠍⠁⠝⠎&lt;/row&gt;
+          &lt;row&gt;⠍⠑⠙⠀⠥⠝⠊⠧⠑⠗⠎⠊⠞⠑⠞⠑⠝⠀⠃⠪⠗⠀⠍⠁⠝&lt;/row&gt;
+          &lt;row&gt;⠕⠉⠅⠎⠡⠀⠃⠑⠙⠗⠊⠧⠁⠀⠋⠕⠗⠎⠅⠝⠊⠝⠛⠀⠋⠪⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠞⠞⠀⠅⠥⠝⠝⠁⠀⠥⠞⠧⠜⠗⠙⠑⠗⠁⠀⠙⠑⠞&lt;/row&gt;
+          &lt;row&gt;⠁⠗⠃⠑⠞⠑⠀⠎⠕⠍⠀⠛⠪⠗⠎⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠙⠑⠞⠀⠃⠜⠎⠞⠁⠀⠎⠞⠪⠙⠑⠞⠀⠑⠝⠀⠎⠽⠝⠤&lt;/row&gt;
+          &lt;row&gt;⠎⠅⠁⠙⠁⠙⠀⠅⠁⠝⠀⠋⠡⠀⠜⠗⠀⠝⠁⠞⠥⠗⠇⠊⠛⠞⠧⠊⠎&lt;/row&gt;
+          &lt;row&gt;⠙⠑⠞⠀⠎⠏⠕⠝⠞⠁⠝⠁⠀⠎⠞⠪⠙⠑⠞⠀⠓⠑⠍⠊⠋⠗⠡⠝&lt;/row&gt;
+          &lt;row&gt;⠕⠉⠓⠀⠋⠗⠡⠝⠀⠅⠇⠁⠎⠎⠅⠁⠍⠗⠁⠞⠑⠗⠝⠁⠄&lt;/row&gt;
+          &lt;row&gt;⠠⠃⠜⠎⠞⠀⠜⠗⠀⠙⠑⠞⠀⠚⠥⠀⠕⠍⠀⠓⠑⠍⠍⠑⠞⠀⠎⠞⠪⠤&lt;/row&gt;
+          &lt;row&gt;⠙⠑⠗⠀⠎⠊⠞⠞⠀⠎⠽⠝⠎⠅⠁⠙⠁⠙⠑⠀⠃⠁⠗⠝⠀⠏⠡&lt;/row&gt;
+          &lt;row&gt;⠎⠁⠍⠍⠁⠀⠎⠜⠞⠞⠀⠎⠕⠍⠀⠙⠑⠞⠀⠎⠞⠪⠙⠑⠗⠀⠎⠽⠎⠤&lt;/row&gt;
+          &lt;row&gt;⠅⠕⠝⠑⠝⠂⠀⠙⠄⠀⠧⠄⠀⠎⠄⠀⠧⠊⠎⠁⠗⠀⠊⠝⠞⠗⠑⠎⠎⠑&lt;/row&gt;
+          &lt;row&gt;⠕⠉⠓⠀⠓⠚⠜⠇⠏⠑⠗⠀⠞⠊⠇⠇⠀⠕⠍⠀⠝⠡⠛⠕⠝⠞⠊⠝⠛&lt;/row&gt;
+          &lt;row&gt;⠜⠗⠀⠎⠏⠑⠉⠊⠑⠇⠇⠞⠀⠎⠧⠡⠗⠞⠄⠀⠠⠕⠉⠓⠀⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠅⠇⠁⠎⠎⠀⠙⠜⠗⠀⠅⠁⠍⠗⠁⠞⠑⠗⠝⠁⠀⠁⠗⠃⠑⠞⠁⠗⠀⠊&lt;/row&gt;
+          &lt;row&gt;⠗⠥⠏⠏⠀⠕⠉⠓⠀⠙⠜⠗⠀⠁⠇⠇⠁⠀⠅⠁⠝⠀⠙⠑⠇⠞⠁⠀⠊&lt;/row&gt;
+          &lt;row&gt;⠏⠗⠕⠃⠇⠑⠍⠇⠪⠎⠝⠊⠝⠛⠁⠗⠀⠜⠗⠀⠊⠙⠑⠁⠇⠑⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:55.086Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6642e1" name="4580TwoHeaderRows4581BraillePageNumberOnFirstRow+PrintPageNumberOnSecond4585PositionOfBraillePageNumberDiffersBetweenLeftright+FixedPositionOfPrintPageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.355">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171150317/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_650291072&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="30" rows="26" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠦⠼⠁⠛⠉⠴&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠁⠄⠀⠠⠊⠇⠀⠽⠀⠁⠀⠍⠕⠊⠝⠎&lt;/row&gt;
+          &lt;row&gt;⠙⠐⠓⠁⠃⠊⠞⠁⠝⠞⠎⠀⠑⠝⠀⠠⠎⠥⠊⠎⠎⠑⠀⠟⠥⠐⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠠⠃⠑⠇⠛⠊⠟⠥⠑⠄⠀⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠼⠁⠛⠙&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠷⠠⠅⠥⠥⠝⠞⠑⠇⠥⠞⠑⠓⠞⠜⠧⠜⠾&lt;/row&gt;
+          &lt;row&gt;⠼⠃⠄⠀⠠⠿⠉⠕⠥⠞⠑⠵⠀⠑⠞⠀⠉⠕⠍⠏⠇⠿⠞⠑⠵⠄&lt;/row&gt;
+          &lt;row&gt;⠠⠞⠜⠽⠙⠑⠝⠝⠜⠀⠎⠑⠥⠗⠁⠁⠧⠁⠞⠀⠠⠎⠧⠑⠊⠞⠎⠊⠜&lt;/row&gt;
+          &lt;row&gt;⠅⠕⠎⠅⠑⠧⠁⠞⠀⠋⠁⠅⠞⠁⠇⠥⠧⠥⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠄⠀⠠⠇⠁⠀⠎⠥⠏⠑⠗⠋⠊⠉⠊⠑⠀⠙⠑⠀⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠠⠎⠥⠊⠎⠎⠑⠀⠑⠎⠞⠀⠙⠑⠀⠄⠄⠄⠀⠅⠍⠬⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠃⠄⠀⠠⠑⠝⠀⠠⠎⠥⠊⠎⠎⠑⠂⠀⠊⠇⠀⠽⠀⠁&lt;/row&gt;
+          &lt;row&gt;⠑⠝⠧⠊⠗⠕⠝⠀⠄⠄⠄⠀⠙⠐⠓⠁⠃⠊⠞⠁⠝⠞⠎⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠉⠄⠀⠠⠇⠁⠀⠠⠎⠥⠊⠎⠎⠑⠀⠑⠎⠞⠀⠙⠊⠧⠊⠎⠿⠑⠀⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠄⠄⠄⠀⠉⠁⠝⠞⠕⠝⠎⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠙⠄⠀⠠⠇⠁⠀⠎⠥⠏⠑⠗⠋⠊⠉⠊⠑⠀⠙⠑⠎⠀⠉⠁⠝⠞⠕⠝⠎&lt;/row&gt;
+          &lt;row&gt;⠧⠁⠗⠊⠑⠀⠑⠝⠞⠗⠑⠀⠄⠄⠄⠀⠑⠞⠀⠄⠄⠄⠀⠅⠍⠬⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠑⠄⠀⠠⠇⠁⠀⠏⠕⠏⠥⠇⠁⠞⠊⠕⠝⠀⠟⠥⠊⠀⠥⠞⠊⠇⠊⠎⠑&lt;/row&gt;
+          &lt;row&gt;⠏⠗⠊⠝⠉⠊⠏⠁⠇⠑⠍⠑⠝⠞⠀⠇⠐⠁⠇⠇⠑⠍⠁⠝⠙&lt;/row&gt;
+          &lt;row&gt;⠗⠑⠏⠗⠿⠎⠑⠝⠞⠑⠀⠄⠄⠄⠀⠹⠀⠙⠑⠀⠇⠁&lt;/row&gt;
+          &lt;row&gt;⠏⠕⠏⠥⠇⠁⠞⠊⠕⠝⠀⠞⠕⠞⠁⠇⠑⠂⠀⠇⠑⠀⠋⠗⠁⠝⠯⠁⠊⠎&lt;/row&gt;
+          &lt;row&gt;⠄⠄⠄⠀⠹⠄&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠼⠁⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠦⠼⠁⠛⠙⠴&lt;/row&gt;
+          &lt;row&gt;⠼⠉⠄⠀⠠⠙⠊⠎⠉⠥⠞⠑⠵⠄⠀⠠⠅⠽⠎⠑⠇⠅⠜⠜⠀⠚⠁&lt;/row&gt;
+          &lt;row&gt;⠧⠁⠎⠞⠁⠞⠅⠁⠁⠀⠏⠁⠗⠑⠊⠞⠞⠁⠊⠝⠄&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠁⠴⠀⠠⠧⠕⠥⠎⠀⠁⠧⠑⠵⠀⠿⠞⠿⠀⠑⠝⠀⠠⠎⠥⠊⠎⠎⠑&lt;/row&gt;
+          &lt;row&gt;⠕⠥⠀⠙⠁⠝⠎⠀⠥⠝⠀⠁⠥⠞⠗⠑⠀⠏⠁⠽⠎&lt;/row&gt;
+          &lt;row&gt;⠋⠗⠁⠝⠉⠕⠏⠓⠕⠝⠑⠢⠀⠠⠉⠕⠍⠃⠊⠑⠝⠀⠙⠑⠀⠋⠕⠊⠎⠢&lt;/row&gt;
+          &lt;row&gt;⠠⠉⠕⠍⠃⠊⠑⠝⠀⠙⠑⠀⠞⠑⠍⠏⠎⠢&lt;/row&gt;
+          &lt;row&gt;⠃⠴⠀⠠⠑⠎⠞⠤⠉⠑⠀⠟⠥⠑⠀⠧⠕⠥⠎⠀⠉⠕⠝⠝⠁⠊⠎⠎⠑⠵&lt;/row&gt;
+          &lt;row&gt;⠙⠑⠎⠀⠠⠎⠥⠊⠎⠎⠑⠎⠢⠀⠠⠟⠥⠑⠇⠇⠑⠎⠀⠇⠁⠝⠛⠥⠑⠎&lt;/row&gt;
+          &lt;row&gt;⠑⠎⠞⠤⠉⠑⠀⠟⠥⠐⠊⠇⠎⠀⠏⠁⠗⠇⠑⠝⠞⠢&lt;/row&gt;
+          &lt;row&gt;⠉⠴⠀⠠⠎⠊⠀⠧⠕⠥⠎⠀⠋⠁⠊⠎⠊⠑⠵⠀⠥⠝⠀⠧⠕⠽⠁⠛⠑&lt;/row&gt;
+          &lt;row&gt;⠑⠝⠀⠠⠎⠥⠊⠎⠎⠑⠂⠀⠕⠾⠀⠑⠎⠞⠤⠉⠑⠀⠟⠥⠑⠀⠧⠕⠥⠎&lt;/row&gt;
+          &lt;row&gt;⠊⠗⠊⠑⠵⠢⠀⠠⠏⠕⠥⠗⠟⠥⠕⠊⠢&lt;/row&gt;
+          &lt;row&gt;⠙⠴⠀⠠⠇⠁⠀⠠⠎⠥⠊⠎⠎⠑⠀⠧⠕⠥⠎⠀⠊⠝⠞⠿⠗⠑⠎⠎⠑⠢&lt;/row&gt;
+          &lt;row&gt;⠠⠏⠕⠥⠗⠟⠥⠕⠊⠀⠌⠀⠠⠏⠕⠥⠗⠟⠥⠕⠊⠀⠏⠁⠎⠢&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+          &lt;row&gt;⠃⠊⠇⠊⠝⠛⠥⠑⠀⠅⠁⠅⠎⠊⠅⠊⠑⠇⠊⠝⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠰⠶⠃⠊⠇⠲⠜⠛⠰⠶&lt;/row&gt;
+          &lt;row&gt;⠍⠑⠍⠃⠗⠑⠀⠍⠀⠚⠜⠎⠑⠝⠀⠰⠶⠍⠲⠡⠍⠃⠗⠰⠶&lt;/row&gt;
+          &lt;row&gt;⠍⠕⠝⠝⠁⠊⠑⠀⠋⠀⠗⠁⠓⠁⠽⠅⠎⠊⠅⠅⠪⠀⠰⠶⠍⠣⠝⠜⠰⠶&lt;/row&gt;
+          &lt;row&gt;⠗⠕⠽⠁⠥⠍⠑⠀⠍⠀⠅⠥⠝⠊⠝⠛⠁⠎⠅⠥⠝⠞⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠰⠶⠗⠺⠁⠚⠕⠍⠰⠶&lt;/row&gt;
+          &lt;row&gt;⠙⠗⠁⠏⠑⠁⠥⠀⠍⠀⠇⠊⠏⠏⠥⠀⠰⠶⠙⠗⠁⠏⠕⠰⠶&lt;/row&gt;
+          &lt;row&gt;⠀&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:55.094Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6649e1" name="4580TwoHeaderRows4581BraillePageNumberOnFirstRow+PrintPageNumberBeneath48105LineOf333+NewPrintPageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.338">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171150317/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_882234256&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="30" rows="26" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠑⠉&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠉⠉&lt;/row&gt;
+          &lt;row&gt;⠠⠃⠊⠎⠀⠓⠑⠥⠞⠑⠀⠠⠁⠃⠑⠝⠙⠀⠁⠇⠎⠕⠄⠰&lt;/row&gt;
+          &lt;row&gt;⠀⠠⠑⠗⠀⠃⠗⠁⠉⠓⠞⠑⠀⠍⠊⠉⠓⠀⠓⠊⠎⠀⠵⠥⠗&lt;/row&gt;
+          &lt;row&gt;⠠⠓⠁⠥⠎⠞⠳⠗⠄⠀⠠⠑⠎⠀⠞⠁⠞⠀⠍⠊⠗⠀⠠⠇⠑⠊⠙⠂&lt;/row&gt;
+          &lt;row&gt;⠙⠁⠎⠎⠀⠊⠉⠓⠀⠍⠊⠞⠀⠊⠓⠍⠀⠝⠊⠉⠓⠞⠀⠳⠃⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠁⠝⠙⠑⠗⠑⠀⠠⠙⠊⠝⠛⠑⠀⠓⠁⠞⠞⠑⠀⠗⠑⠙⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠅⠪⠝⠝⠑⠝⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠉⠚⠀⠀⠠⠺⠊⠗⠀⠓⠜⠞⠞⠑⠝⠀⠥⠝⠎⠀⠎⠊⠉⠓⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠼⠉⠚⠀⠛⠥⠞⠀⠧⠑⠗⠎⠞⠁⠝⠙⠑⠝⠄⠀⠠⠍⠕⠺⠛⠇⠊&lt;/row&gt;
+          &lt;row&gt;⠎⠉⠓⠇⠥⠛⠀⠍⠊⠞⠀⠎⠑⠊⠝⠑⠍⠀⠠⠎⠉⠓⠺⠁⠝⠵⠀⠁⠥⠋&lt;/row&gt;
+          &lt;row&gt;⠙⠊⠑⠀⠠⠑⠗⠙⠑⠂⠀⠁⠇⠎⠀⠊⠉⠓⠀⠝⠜⠓⠑⠗⠀⠅⠁⠍⠄⠰&lt;/row&gt;
+          &lt;row&gt;⠠⠍⠑⠊⠝⠀⠠⠓⠥⠝⠙⠀⠓⠁⠞⠀⠠⠎⠊⠑⠀⠊⠝⠎⠀⠠⠓⠑⠗⠵&lt;/row&gt;
+          &lt;row&gt;⠛⠑⠎⠉⠓⠇⠕⠎⠎⠑⠝⠰⠂⠎⠁⠛⠞⠑⠀⠠⠋⠁⠃⠗⠊⠵⠊⠥⠎⠄&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠼⠉⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠠⠊⠉⠓⠀⠎⠁⠛⠞⠑⠒⠀⠰⠠⠑⠊⠝⠀⠎⠉⠓⠪⠝⠑⠗&lt;/row&gt;
+          &lt;row&gt;⠠⠓⠥⠝⠙⠄⠀⠠⠍⠕⠺⠛⠇⠊⠂⠃⠊⠎⠞⠀⠙⠥⠀⠎⠉⠓⠪⠝⠢⠰&lt;/row&gt;
+          &lt;row&gt;⠠⠙⠑⠗⠀⠠⠝⠑⠥⠋⠥⠝⠙⠀⠇⠜⠝⠙⠑⠗⠀⠓⠕⠃⠀⠙⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠠⠅⠕⠏⠋⠀⠥⠝⠙⠀⠙⠗⠑⠓⠞⠑⠀⠊⠓⠝⠀⠓⠊⠝⠀⠥⠝⠙&lt;/row&gt;
+          &lt;row&gt;⠓⠑⠗⠄⠀⠠⠺⠊⠗⠀⠇⠁⠉⠓⠞⠑⠝⠄⠀⠠⠙⠁⠎&lt;/row&gt;
+          &lt;row&gt;⠠⠍⠜⠙⠉⠓⠑⠝⠀⠇⠁⠉⠓⠞⠑⠀⠃⠑⠎⠕⠝⠙⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠓⠳⠃⠎⠉⠓⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠑⠀⠀⠀⠰⠠⠁⠥⠋⠀⠠⠺⠊⠑⠙⠑⠗⠎⠑⠓⠑⠝⠰⠂⠎⠁⠛⠞⠑&lt;/row&gt;
+          &lt;row&gt;⠊⠉⠓⠄⠀⠰⠠⠎⠉⠓⠪⠝⠑⠝⠀⠠⠙⠁⠝⠅⠀⠋⠳⠗⠀⠙⠑⠝&lt;/row&gt;
+          &lt;row&gt;⠠⠅⠁⠋⠋⠑⠑⠄⠰&lt;/row&gt;
+          &lt;row&gt;⠀⠰⠠⠁⠥⠋⠀⠠⠺⠊⠑⠙⠑⠗⠎⠑⠓⠑⠝⠰⠂⠀⠎⠁⠛⠞⠑&lt;/row&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite><testsuite timestamp="2016-01-27T16:11:55.101Z" hostname="localhost" tests="2" errors="0" failures="1" skipped="0" id="d6656e1" name="4580TwoHeaderRows4581BraillePageNumberOnFirstRow+PrintPageNumberInBracketsBeneath+HintWord48105LineOf333+NewPrintPageNumber" package="http://www.daisy.org/ns/pipeline/xproc/internal" time="0.341">
+<properties><property name="input: source" value="&lt;_ xmlns=&#34;http://www.daisy.org/z3986/2005/dtbook/&#34; ...&gt;...&lt;/_&gt; (Base URI: file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/test-celia.xprocspec)"/>
+
+<property name="option: stylesheet" value="file:/Users/bert/src/snaekobbi/src/requirements/src/test/page-layout/style-celia.css"/>
+<property name="option: transform" value="(formatter:dotify)(translator:celia)"/>
+<property name="option: ascii-table" value="(id:&#34;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&#34;)"/>
+<property name="option: temp-dir" value="file:/Users/bert/src/snaekobbi/src/requirements/target/xprocspec//tmp/xprocspec-20160127171150317/"/>
+
+</properties>
+<testcase name="theStepShouldExecuteSuccessfullyWithoutThrowingAnyErrors" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="SUCCESS"><system-out>the step should execute successfully without throwing any errors: SUCCESS</system-out>
+<system-err/></testcase><testcase name="result" classname="css-inline-and-px-transform-type-css" assertions="1" time="0" status="FAILED"><failure message="result" type="custom"/><system-out>result: FAILED</system-out>
+<system-err>Expected:
+&lt;pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1"&gt;
+  &lt;head&gt;
+    &lt;meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline"&gt;
+      &lt;dc:date&gt;2015-09-15&lt;/dc:date&gt;
+      &lt;dc:format&gt;application/x-pef+xml&lt;/dc:format&gt;
+      &lt;dc:identifier&gt;AUTO_ID_641497377&lt;/dc:identifier&gt;
+      &lt;dp2:ascii-table&gt;(id:'com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00')&lt;/dp2:ascii-table&gt;
+    &lt;/meta&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;volume cols="40" rows="26" rowgap="0" duplex="false"&gt;
+      &lt;section&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙⠚&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠏⠗⠑⠏⠕⠎⠊⠞⠊⠕⠞⠀⠦⠼⠁⠑⠃⠴&lt;/row&gt;
+          &lt;row&gt;⠼⠃⠄⠀⠠⠧⠁⠙⠀⠊⠝⠝⠑⠃⠜⠗⠀⠙⠑⠀⠝⠕⠗⠙⠊⠎⠅⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠧⠜⠗⠙⠑⠗⠊⠝⠛⠁⠗⠝⠁⠀⠄⠄⠄⠀⠙⠊⠛⠢&lt;/row&gt;
+          &lt;row&gt;⠼⠉⠄⠀⠠⠜⠗⠀⠋⠊⠝⠎⠅⠁⠀⠞⠗⠁⠙⠊⠞⠊⠕⠝⠑⠗⠀⠧⠊⠅⠞⠊⠛⠁⠀⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠙⠊⠛⠢&lt;/row&gt;
+          &lt;row&gt;⠼⠙⠄⠀⠠⠧⠁⠙⠀⠃⠑⠎⠞⠡⠗⠀⠙⠑⠝⠀⠅⠥⠇⠞⠥⠗⠑⠇⠇⠁⠀⠊⠙⠑⠝⠞⠊⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠑⠞⠑⠝⠀⠄⠄⠄⠢&lt;/row&gt;
+          &lt;row&gt;⠼⠑⠄⠀⠠⠋⠊⠝⠝⠎⠀⠙⠑⠞⠀⠝⠡⠛⠗⠁⠀⠎⠅⠊⠇⠇⠝⠁⠙⠑⠗⠀⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠋⠊⠝⠇⠜⠝⠙⠁⠗⠑⠀⠕⠉⠓⠀⠁⠝⠙⠗⠁⠀⠝⠕⠗⠙⠃⠕⠗⠢&lt;/row&gt;
+          &lt;row&gt;⠼⠋⠄⠀⠠⠧⠁⠙⠀⠧⠑⠞⠀⠙⠥⠀⠄⠄⠄⠀⠙⠊⠝⠁⠀⠛⠗⠁⠝⠝⠇⠜⠝⠙⠑⠗⠎&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠗⠁⠙⠊⠞⠊⠕⠝⠑⠗⠢&lt;/row&gt;
+          &lt;row&gt;⠼⠛⠄⠀⠠⠚⠁⠛⠀⠜⠗⠀⠎⠞⠕⠇⠞⠀⠄⠄⠄⠀⠧⠡⠗⠞⠀⠧⠁⠉⠅⠗⠁⠀⠇⠁⠝⠙⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠓⠄⠀⠠⠧⠊⠀⠝⠕⠗⠙⠃⠕⠗⠀⠇⠊⠅⠝⠁⠗⠀⠧⠁⠗⠁⠝⠙⠗⠁⠀⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠍⠡⠝⠛⠁⠀⠎⠜⠞⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠊⠄⠀⠠⠋⠊⠝⠇⠁⠝⠙⠀⠜⠗⠀⠅⠜⠝⠞⠀⠄⠄⠄⠀⠎⠊⠝⠁⠀⠞⠥⠎⠑⠝⠞⠁⠇⠎&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠚⠪⠁⠗⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠚⠄⠀⠠⠋⠁⠎⠞⠀⠓⠕⠝⠀⠇⠑⠧⠙⠑⠀⠑⠞⠞⠀⠑⠝⠅⠑⠇⠞⠀⠇⠊⠧⠀⠧⠁⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠓⠕⠝⠀⠝⠪⠚⠙⠀⠄⠄⠄⠀⠙⠑⠞⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠁⠄⠀⠠⠊⠀⠙⠁⠛⠀⠞⠁⠗⠀⠎⠁⠍⠓⠜⠇⠇⠑⠞⠀⠃⠜⠞⠞⠗⠑⠀⠓⠁⠝⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠄⠄⠄⠀⠍⠜⠝⠝⠊⠎⠅⠕⠗⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠃⠄⠀⠠⠚⠁⠛⠀⠓⠁⠗⠀⠊⠝⠞⠑⠀⠃⠑⠓⠪⠧⠞⠀⠃⠑⠅⠽⠍⠗⠁⠀⠍⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠡⠀⠍⠽⠉⠅⠑⠞⠀⠄⠄⠄⠀⠓⠥⠗⠀⠚⠁⠛⠀⠎⠅⠁⠀⠋⠪⠗⠎⠪⠗⠚⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠍⠊⠛⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠉⠄⠀⠠⠍⠪⠚⠇⠊⠛⠓⠑⠞⠑⠗⠝⠁⠀⠞⠊⠇⠇⠀⠥⠞⠃⠊⠇⠙⠝⠊⠝⠛⠀⠜⠗&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠛⠗⠜⠝⠎⠇⠪⠎⠁⠂⠀⠋⠪⠗⠀⠓⠑⠇⠁⠀⠧⠜⠗⠇⠙⠑⠝⠀⠜⠗⠀⠋⠥⠇⠇&lt;/row&gt;
+        &lt;/page&gt;
+        &lt;page&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠙⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠏⠗⠑⠏⠕⠎⠊⠞⠊⠕⠞⠀⠦⠼⠁⠑⠃⠴&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠄⠄⠄⠀⠕⠇⠊⠅⠁⠀⠁⠇⠞⠑⠗⠝⠁⠞⠊⠧⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠙⠄⠀⠠⠊⠀⠋⠗⠁⠍⠞⠊⠙⠑⠝⠀⠧⠊⠇⠇⠀⠚⠁⠛⠀⠃⠇⠊⠀⠋⠜⠗⠙⠊⠛&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠄⠄⠄⠀⠍⠊⠝⠁⠀⠎⠞⠥⠙⠊⠑⠗⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠑⠄⠀⠠⠧⠊⠀⠋⠊⠝⠇⠜⠝⠙⠁⠗⠑⠀⠜⠗⠀⠃⠗⠁⠀⠄⠄⠄⠀⠁⠞⠞⠀⠃⠁⠙⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠃⠁⠎⠞⠥⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠋⠄⠀⠠⠍⠡⠝⠛⠁⠀⠞⠥⠗⠊⠎⠞⠑⠗⠀⠃⠇⠊⠗⠀⠋⠪⠗⠞⠚⠥⠎⠞⠁⠀⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠠⠇⠁⠏⠏⠇⠁⠝⠙⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠛⠄⠀⠠⠍⠜⠝⠝⠊⠎⠅⠕⠗⠝⠁⠀⠙⠜⠗⠀⠜⠗⠀⠪⠏⠏⠝⠁⠀⠕⠉⠓⠀⠇⠜⠞⠞⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠁⠞⠞⠀⠥⠍⠛⠡⠎⠀⠄⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠓⠄⠀⠠⠋⠊⠝⠇⠜⠝⠙⠁⠗⠑⠀⠞⠽⠉⠅⠑⠗⠀⠕⠍⠀⠁⠞⠞⠀⠙⠑⠇⠞⠁⠀⠄⠄⠄&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠁⠇⠇⠁⠀⠎⠇⠁⠛⠎⠀⠗⠕⠇⠊⠛⠁⠀⠞⠜⠧⠇⠊⠝⠛⠁⠗⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠁⠊⠄⠀⠠⠧⠊⠀⠃⠑⠓⠪⠧⠑⠗⠀⠊⠝⠞⠑⠀⠎⠅⠜⠍⠍⠁⠎⠀⠄⠄⠄⠀⠧⠡⠗⠁&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠎⠏⠗⠡⠅⠅⠥⠝⠎⠅⠁⠏⠑⠗⠄&lt;/row&gt;
+          &lt;row&gt;⠼⠃⠚⠄⠀⠠⠍⠡⠝⠛⠁⠀⠋⠊⠝⠝⠁⠗⠀⠇⠜⠝⠛⠞⠁⠗⠀⠄⠄⠄⠀⠗⠡⠛⠃⠗⠪⠙&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠝⠜⠗⠀⠙⠑⠀⠜⠗⠀⠥⠞⠕⠍⠇⠁⠝⠙⠎⠄&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠀⠼⠁⠑⠉&lt;/row&gt;
+          &lt;row/&gt;
+          &lt;row&gt;⠠⠅⠥⠥⠝⠞⠑⠇⠥⠀⠤⠀⠠⠓⠪⠗⠋⠪⠗⠎⠞⠡⠑⠇⠎⠑&lt;/row&gt;
+          &lt;row&gt;⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒&lt;/row&gt;
+          &lt;row&gt;⠿⠼⠁⠄⠀⠠⠅⠥⠥⠇⠑⠞⠀⠅⠕⠇⠍⠑⠝⠀⠓⠑⠝⠅⠊⠇⠪⠝⠀⠅⠑⠗⠞⠕⠧⠁⠝&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠇⠑⠍⠏⠊⠧⠥⠕⠙⠑⠝⠁⠚⠁⠎⠞⠁⠁⠝⠄⠀⠠⠅⠥⠥⠝⠞⠑⠇⠑⠀⠚⠁⠀⠧⠁⠎⠤&lt;/row&gt;
+          &lt;row&gt;⠀⠀⠞⠁⠁⠀⠅⠽⠎⠽⠍⠽⠅⠎⠊⠊⠝⠀⠎⠥⠕⠍⠑⠅⠎⠊⠄&lt;/row&gt;
+          &lt;row/&gt;
+        &lt;/page&gt;
+      &lt;/section&gt;
+    &lt;/volume&gt;
+  &lt;/body&gt;
+&lt;/pef&gt;
+
+Was:
+
+
+
+application/x-pef+xml
+identifier?
+2016-01-27
+(id:"com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00")
+
+
+
+
+
+⠞⠕⠙⠕
+
+
+
+
+</system-err></testcase></testsuite></testsuites>

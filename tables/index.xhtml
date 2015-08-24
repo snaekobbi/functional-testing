@@ -1,0 +1,2881 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml">
+   
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      
+      <title>Requirements</title>
+      
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+      <script type="text/javascript">
+      $(document).ready(function() {
+        var branches = $("#branches");
+        var path = location.pathname.split('/');
+        var branch = path[path.length-2];
+        var version = $("#version").text().replace(/^\s+|\s+$/g,'');
+        if (branch != "master" &amp;&amp; branch != "v" + version) {
+          branches.after(
+            $("&lt;a/&gt;", {
+              href: "https://github.com/snaekobbi/requirements/compare/" + branch,
+              title: "View diff",
+              text: "View diff"
+            })
+          );
+        }
+        $.get(
+          "https://api.travis-ci.org/repos/snaekobbi/requirements/branches/" + branch,
+          function(data) {
+            branches.after(
+              $("&lt;a/&gt;", {
+                href: "https://travis-ci.org/snaekobbi/requirements/builds/" + data.branch.id,
+                title: "Re-run tests",
+                text: "Re-run tests"
+              })
+            );
+          }
+        );
+        $.get(
+          "https://api.github.com/repos/snaekobbi/requirements/branches",
+          function(data) {
+            $.each(data, function(i, branch) {
+              if (branch.name != 'gh-pages') {
+                $(branches.children()[1]).append(
+                  $("&lt;option/&gt;", {
+                    value: branch.name,
+                    text: branch.name
+                  })
+                );
+              }
+            });
+            branches.val(branch);
+          }
+        );
+        $.get(
+          "https://api.github.com/repos/snaekobbi/requirements/tags",
+          function(data) {
+            $.each(data, function(i, tag) {
+              $(branches.children()[0]).append(
+                $("&lt;option/&gt;", {
+                  value: tag.name,
+                  text: tag.name
+                })
+              );
+            });
+            branches.val(branch);
+          }
+        );
+        branches.change(function() {
+          window.location.href = "http://snaekobbi.github.io/requirements/" + branches.val() + "/index.xhtml" + window.location.hash;
+        });
+        $.get(
+          "https://api.github.com/repos/snaekobbi/requirements/pulls",
+          {
+            state: "open",
+            head: "snaekobbi:" + branch,
+            base: "master"
+          },
+          function(data) {
+            $(data).first().each(function(i, pull) {
+              branches.after(
+                $("&lt;a/&gt;", {
+                  href: "http://github.com/snaekobbi/requirements/issues/" + pull.number,
+                  title: "Go to discussion",
+                  text: "Go to discussion"
+                })
+              );
+            });
+          }
+        )
+        var changed = $(".changed.requirement");
+        if (changed[0]) {
+          var list = $("&lt;ul/&gt;", { id: "changes" });
+          changed.each(function(i, req) {
+            list.append(
+              $("&lt;li/&gt;").append(
+                $("&lt;a/&gt;", {
+                  href: "#" + req.id,
+                  title: req.id,
+                  text: req.id
+                })
+              )
+            );
+          });
+          list.appendTo($("&lt;li/&gt;").appendTo("#version_section"));
+        }
+        $("#version").empty();
+        $("#version").append(
+          $("&lt;a/&gt;", { href: "#" }).text(version).click(function() {
+            window.location.href = "http://snaekobbi.github.io/requirements/v" + version + "/index.xhtml";
+          })
+        );
+      });
+    </script>
+      </head>
+   
+   <body>
+      
+      <div id="header">
+         <select id="branches" name="Select a branch">
+            
+            <optgroup label="Tags"></optgroup>
+            
+            <optgroup label="Branches"></optgroup>
+            </select>
+         
+      </div>
+      
+      <h1>
+         Functional Requirements
+         
+      </h1>
+      
+      <ul id="version_section">
+         
+         <li>
+            <span id="version"> 1.4 </span>
+            
+         </li>
+         
+         <li>
+            <span id="date">01/06/2016</span>
+            
+         </li>
+         
+      </ul>
+      
+      <section>
+         
+         <h2>
+            Support for effective and flexible production of braille on paper/embosser files
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.1:25">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:25">4.1:25</a>
+                  The system shall support editing on block level in order to fix wrong translations,
+                  e.g. in the case of complex material such as mathematics. It is assumed that all other
+                  improvements outside blocks can be accomplished by changing the input document.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.1:26">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:26">4.1:26</a>
+                  The system shall support editing beyond block level, e.g. in order to change the layout
+                  of tables or to manually alter the volume breaking.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.1:27">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:27">4.1:27</a>
+                  The system shall be able to merge changes made in the original text with changes made
+                  previously in the braille version (possibly independently by another person). This
+                  ensures that the transcriber is not condemned to keeping on editing in the braille
+                  version after the smallest change.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.1:28">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:28">4.1:28</a>
+                  The system shall be able to produce “synchronization data” for various intermediary
+                  and
+                  output files, which can be used for finding a location in one file that corresponds
+                  to a
+                  location in another file.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.1:29">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:29">4.1:29</a>
+                  The system shall provide a graphical user interface for editing an intermediary braille
+                  file.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.1:30">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:30">4.1:30</a>
+                  The user interface shall provide a side-by-side view of the original text and braille
+                  with synchronized cursor positions. For any position in the braille view, the user
+                  shall
+                  instantly see the corresponding original text, so that he/she is encouraged to do
+                  changes in the original whenever possible.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.1:31">
+               
+               <h3>
+                  <a class="req-nr" href="#4.1:31">4.1:31</a>
+                  There shall be support for inserting braille characters using 6/8 keys on the keyboard.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for effective and flexible production of braille in electronic form
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.2:32">
+               
+               <h3>
+                  <a class="req-nr" href="#4.2:32">4.2:32</a>
+                  The system shall be able to output various e-braille formats.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.2:33">
+               
+               <h3>
+                  <a class="req-nr" href="#4.2:33">4.2:33</a>
+                  The system shall support a new e-braille format.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for languages used in the countries of the interested parties
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.3:34">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:34">4.3:34<br />4.3:34C</a>
+                  The system shall support the braille code used in Denmark, Finland, Norway, Sweden
+                  and
+                  Switzerland for uncontracted braille.<br />
+                  The system shall support the braille code used in the Netherlands for uncontracted
+                  braille.
+                  
+               </h3>
+               
+               <p>
+                  Examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test external-test">
+                        Finnish (external Liblouis harness test)
+                        <a class="test-src" href="https://github.com/liblouis/liblouis/blob/7b31bd97c67e69c8903078e9a881c0ab59234ea1/tests/harness/fi_harness.txt">source</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Swedish (tested with Dotify)
+                        <a class="test-src" href="test/swedish/test.xspec.xhtml#test1">source</a><a class="test-report" href="report/xspec/HTML-swedish_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Swedish (tested with Liblouis)
+                        <a class="test-src" href="test/swedish/test.xspec.xhtml#test2">source</a><a class="test-report" href="report/xspec/HTML-swedish_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test external-test">
+                        Norwegian (external Liblouis harness test)
+                        <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/54850ff448ef52d6e57a19960558a416c36d1558/tests/harness/no_harness.txt">source</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test external-test">
+                        Dutch (external Liblouis harness test)
+                        <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/07d63dbc069f8b1e4f1ee379c117c621015991fc/tests/harness/nl-NL-g0_harness.txt">source</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:34B">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:34B">4.3:34B</a>
+                  The system shall be easily extended with new languages - for uncontracted braille
+                  - to
+                  make the system work globally in the long term.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:35">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:35">4.3:35<br />4.3:35B</a>
+                  The system shall support the braille code used in Denmark, Finland, Norway, Sweden
+                  and
+                  Switzerland for 8-dot braille.<br />
+                  The system shall support the braille code used in the Netherlands for 8-dot braille.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:35C">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:35C">4.3:35C</a>
+                  The system shall support the possibility to leave out capital signs in some products.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.3:36">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:36">4.3:36</a>
+                  The system shall support double letter spacing, meaning adding a space between
+                  characters. Some characters should be kept together such as a capital sign and a
+                  letter.
+                  
+               </h3>
+               
+               <p>
+                  Celia requirements and examples:
+                  
+               </p>
+               
+               <p>
+                  There are three subtypes of books with double letter spacing. In the first one,
+                  intended for early primary education, the original print text is usually in all caps
+                  with no punctuation. The braille has only letter signs, no capital signs. Hyphenation
+                  is to be avoided. Between words there are 3 spaces.
+                  
+               </p>
+               
+               <p>
+                  In the second type, also intended for early primary education, the print text is pre-
+                  hyphenated. The text is capitalized with the usual rules and punctuation is used.
+                  In braille, capital sign and number sign are attached to the next character. Numbers
+                  don't have spaces in between. Punctuation marks are attached to the previous character,
+                  except the hyphen that has a space on both sides. In this regard, the pre-existing
+                  hyphen can be considered as an ordinary letter. Between words there are 3 spaces.
+                  Breaking words across multiple lines is to be avoided.
+                  
+               </p>
+               
+               <p>
+                  In the third type, intended for literate braille learners, the original print text
+                  is
+                  not pre-hyphenated and punctuation and capitalization are used. In braille, capital
+                  and
+                  number signs are attached to the next character. Numbers don't have spaces in between.
+                  Punctuation marks are attached to the previous character. Hyphenation may be used,
+                  if
+                  required, to break words across multiple lines. If this happens, the hyphen is attached
+                  to the previous character. Between words there are 3 spaces.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1 (type 1, 2 and 3)
+                        <a class="test-src" href="test/letter-spacing/test-celia.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/letter-spacing_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2 (type 3)
+                        <a class="test-src" href="test/letter-spacing/test-celia.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/letter-spacing_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 3 (type 3)
+                        <a class="test-src" href="test/letter-spacing/test-celia.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/letter-spacing_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 4 (type 3)
+                        <a class="test-src" href="test/letter-spacing/test-celia.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/letter-spacing_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:37">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:37">4.3:37</a>
+                  The system shall support the braille code used in Denmark, Norway, Sweden and
+                  Switzerland for contracted braille.
+                  
+               </h3>
+               
+               <p>
+                  Examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test external-test">
+                        Norwegian grade 1 (external Liblouis harness test)
+                        <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/af065e22013bd7dee36f609b0bb517f3e9416a66/tests/harness/no_harness_g1.txt">source</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test external-test">
+                        Norwegian grade 2 (external Liblouis harness test)
+                        <a class="test-src" href="https://github.com/snaekobbi/liblouis/blob/af065e22013bd7dee36f609b0bb517f3e9416a66/tests/harness/no_harness_g2.txt">source</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:37B">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:37B">4.3:37B</a>
+                  The system shall be easily extended with new languages - for contracted braille -
+                  to
+                  make the system work globally in the long term.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:37C">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:37C">4.3:37C</a>
+                  The system shall support the braille code used in the Netherlands for contracted
+                  braille.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:38">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:38">4.3:38</a>
+                  The system shall support marking of text-level semantics (i.e. em, strong) with braille
+                  indicators.
+                  
+               </h3>
+               
+               <p>
+                  Examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Finnish uncontracted
+                        <a class="test-src" href="test/emphasis/test-fi.xspec.xhtml#test1">source</a><a class="test-report" href="report/xspec/HTML-emphasis_test-fi.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Norwegian
+                        <a class="test-src" href="test/emphasis/test-no.xspec.xhtml#test1">source</a><a class="test-report" href="report/xspec/HTML-emphasis_test-no.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:39">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:39">4.3:39</a>
+                  The system shall support marking of visual text styling/typography (i.e. span[@class])
+                  with braille indicators. This is because we are often dealing with input files that
+                  are
+                  marked up according to visual features of the print text instead of semantic meaning.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:40">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:40">4.3:40</a>
+                  The system shall have a flexible and configurable mapping from markup to braille
+                  indicators. Because there is only a limited set of braille indicators they must be
+                  reused for different semantic meanings or typography depending on document and
+                  context. It must be possible to ignore certain styles that don't convey any useful
+                  information for the braille version.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:41">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:41">4.3:41</a>
+                  The system shall be able to perform automatic hyphenation for uncontracted and
+                  contracted braille.
+                  
+               </h3>
+               
+               <p>
+                  Examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test external-test">
+                        Finnish uncontracted (external JUnit test)
+                        <a class="test-src" href="https://github.com/snaekobbi/pipeline-mod-celia/blob/cb20c2d87a7b2e5a2f5f8547049e5b35a2bccdcd/src/test/java/HyphenationTest.java">source</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Norwegian (line breaking)
+                        <a class="test-src" href="test/hyphenation/test-no.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/hyphenation_test-no.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Norwegian (single words)
+                        <a class="test-src" href="test/hyphenation/test_no.java.xhtml#testNorwegianHyphenation">source</a><a class="test-report" href="report/junit/hyphenation.test_no.xml">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Dutch (single words)
+                        <a class="test-src" href="test/hyphenation/test_nl.java.xhtml#testDutchHyphenation">source</a><a class="test-report" href="report/junit/hyphenation.test_nl.xml">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:42">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:42">4.3:42</a>
+                  The system shall support non-standard hyphenation. By non-standard hyphenation we
+                  mean
+                  that the spelling of a word can change when it is hyphenated. The braille translation
+                  of
+                  a hyphenated word can only change because the spelling changes, not e.g. because it
+                  is
+                  contracted in some other way. In other words the definition of non-standard hyphenation
+                  is not “extrapolated to braille”.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.3:43">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:43">4.3:43</a>
+                  When automatic hyphenation is enabled, it shall be possible to exclude certain elements
+                  such as hyperlinks (based on markup).
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-passed">
+                     Example
+                     <a class="test-src" href="test/hyphenation/test-43.xspec.xhtml#test1">source</a><a class="test-report" href="report/xspec/HTML-hyphenation_test-43.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.3:44">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:44">4.3:44</a>
+                  The user shall be able to make a top-level configuration, e.g. toggle hyphenation.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.3:45">
+               
+               <h3>
+                  <a class="req-nr" href="#4.3:45">4.3:45</a>
+                  The user shall have fine-grained control over the translation (on element-level) by
+                  means of configuration in those cases where markup of the input is inadequate or
+                  undesirable.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for layout/formatting of paragraphs/text blocks
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.4:46">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:46">4.4:46</a>
+                  The system shall have support for top, right, bottom and left margins on blocks.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-passed">
+                     Example
+                     <a class="test-src" href="test/margins/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/margins_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:47">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:47">4.4:47</a>
+                  The system shall have support for top, right, bottom and left borders and padding
+                  on
+                  blocks.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-passed">
+                     Example
+                     <a class="test-src" href="test/borders/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/borders_test.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  SBS examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Block start/end indicator lines
+                        <a class="test-src" href="test/borders/test-sbs.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/borders_test-sbs.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Thin left border
+                        <a class="test-src" href="test/borders/test-sbs.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/borders_test-sbs.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Thick left border
+                        <a class="test-src" href="test/borders/test-sbs.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/borders_test-sbs.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Full box
+                        <a class="test-src" href="test/borders/test-sbs.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/borders_test-sbs.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.4:48">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:48">4.4:48</a>
+                  By default margins shall be collapsing. However there shall be a way to override this
+                  behaviour.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.4:49">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:49">4.4:49</a>
+                  By default empty lines at the top and bottom of a page shall be suppressed. However
+                  there shall be a way to override this behaviour.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.4:50">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:50">4.4:50</a>
+                  There shall be the possibility of shrinking a block with a border to the size of its
+                  contents. This feature shall be supported at least for blocks with left-aligned text
+                  and
+                  no nested blocks.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example
+                     <a class="test-src" href="test/borders/test-sbs.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/borders_test-sbs.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:51">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:51">4.4:51</a>
+                  The system shall have support for first line indentation.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:52">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:52">4.4:52</a>
+                  Besides left-aligned text, the system shall have support for centered and right-aligned
+                  text.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:53">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:53">4.4:53</a>
+                  The system shall support block alignment relative to a vertical position on the page.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example: Vertical positioning on title pages.
+                     <a class="test-src" href="test/vertical-positioning/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/vertical-positioning_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:54">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:54">4.4:54</a>
+                  The system shall by default handle whitespace characters (spaces, tabs, line feeds)
+                  in
+                  the source XML according to the following rules:
+                  
+                  <ul>
+                     
+                     <li> Comments are removed entirely and do not affect whitespace handling. </li>
+                     
+                     <li> All whitespace surrounding block elements is removed. </li>
+                     
+                     <li> Leading and trailing whitespace inside block elements are removed. </li>
+                     
+                     <li>
+                        Sequences of whitespace characters are reduced to a single space character. Newline
+                        characters are handled as other whitespace.
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Example
+                     <a class="test-src" href="test/white-space/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/white-space_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_2 changed" id="4.4:55">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:55">4.4:55</a>
+                  The user shall be able to override the default handling of whitespace for certain
+                  elements:
+                  
+                  <ul>
+                     
+                     <li> Prevent collapsing of sequences of whitespace. </li>
+                     
+                     <li> Preserve leading and trailing whitespace inside block elements. </li>
+                     
+                     <li> Preserve newline characters as forced line breaks. </li>
+                     
+                  </ul>
+                  
+               </h3>
+               
+               <p>
+                  SBS examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-passed">
+                        Preserve newline characters (br elements) as forced line breaks.
+                        <a class="test-src" href="test/white-space/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/white-space_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Preserve two spaces before and after mathematical expressions, but not at the
+                        beginning or end of a line.
+                        <a class="test-src" href="test/white-space/test.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/white-space_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Dedicon example of a pre-formatted table.
+                     <a class="test-src" href="test/tables/test-dedicon.xprocspec.xhtml#rijtjes1">source</a><a class="test-report" href="report/xprocspec/tables_test-dedicon.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  Note that this table is pre-<em>formatted</em> but not <em>pre-translated</em> and that
+                  while the formatting can be preserved with <samp>white-space: pre-wrap</samp>, it can
+                  still be messed up by the translation. A better solution would be to mark up these
+                  kind
+                  of tables with <samp>&lt;table&gt;</samp> (see <a href="#4.4:57">requirement
+                     4.4:57</a>).
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1 changed" id="4.4:57">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:57">4.4:57</a>
+                  There shall be the option to reformat a table into a list,
+                  
+                  <ul>
+                     
+                     <li> either by linearizing the table row-by-row with delimiters between cells, </li>
+                     
+                     <li>
+                        or by rendering each row as a sublist, where the cells are the list items. It must
+                        be possible to set off cells with a left margin according to their column, so that
+                        a
+                        stairstep format can be accomplished.
+                        
+                     </li>
+                     
+                     <li> It must be possible to prepend cells with their column header. </li>
+                     
+                  </ul>
+                  
+               </h3>
+               
+               <p>
+                  SBS examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1: Large tables can be rendered row-wise with a special symbol
+                        <samp>::</samp> to indicate the beginning of a new column. (This method can always
+                        be used as a fallback unless the table contains paragraphs/lists in its cells.)
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2: Rendering table rows as sublists, with the headers of columns repeated
+                        before each cell in that column.
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test9">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Dedicon examples of tables linearized row-by-row:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1: table linearized row-by-row with columns separated by a <samp>;</samp>
+                        and one space. The table starts and ends with the marks <samp>bt</samp> (= "begin
+                        table") <samp>et</samp> (= "end table").
+                        <a class="test-src" href="test/tables/test-dedicon.xprocspec.xhtml#rijtjes2">source</a><a class="test-report" href="report/xprocspec/tables_test-dedicon.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2. For empty cells the text "gg" is inserted. The table title is rendered
+                        at
+                        the top of the table beneath the line "titel tabel".
+                        <a class="test-src" href="test/tables/test-dedicon.xprocspec.xhtml#test_tabel1">source</a><a class="test-report" href="report/xprocspec/tables_test-dedicon.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 3.
+                        <a class="test-src" href="test/tables/test-dedicon.xprocspec.xhtml#test_tabel2">source</a><a class="test-report" href="report/xprocspec/tables_test-dedicon.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Nota examples<a class="noteref" href="#note_1">1</a>
+                     <a class="test-src" href="test/tables/test-nota.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/tables_test-nota.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  Explanation:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li>
+                     Tables are rendered row by row with columns separated by a <samp>⠆</samp> (cell 2-3)
+                     and a space.
+                     
+                  </li>
+                  
+                  <li>
+                     Data cells are preceded by the appropriate column heading if present, with a
+                     <samp>⠒</samp> (cell 2-5) and a space in between. Rows containing column headings are
+                     discarded.
+                     
+                  </li>
+                  
+                  <li>
+                     A row is preceded by its row heading if present, with a <samp>⠒</samp> (cell 2-5) and
+                     a space in between.
+                     
+                  </li>
+                  
+                  <li>
+                     When nested row or column headings are present, the table is split up into several
+                     "sub-tables" by grouping the content by the outermost row or column headings. The
+                     outermost headings form a list, and the sub-tables form sub-lists. (See 7th example.)
+                     
+                  </li>
+                  
+                  <li>
+                     When both nested row headers and nested column headings are present the table is split
+                     up by grouping by combinations of the outermost row and columns headings. (See last
+                     example.)
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1 changed" id="4.4:58">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:58">4.4:58</a> There shall be the option to render a table
+                  in matrix format, thereby mimicking the original form. This feature shall be supported
+                  at least for small tables that fit on a page horizontally without the need for text
+                  wrapping in cells, and that have no column- or rowspan. The matrix format supports
+                  borders and padding on rows, columns and cells.
+                  
+               </h3>
+               
+               <p>
+                  SBS examples: Small tables can be rendered as in the print (matrix).
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 3
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 4: A wide table is split vertically into several parts. Row headers are
+                        repeated for each part.
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 5
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test6">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 6: A table that spans multiple pages.
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test8">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Dedicon example: tables can be used for simulating floating of blocks (i.e. stacking
+                     blocks horizontally instead of vertically).
+                     <a class="test-src" href="test/tables/test-dedicon.xprocspec.xhtml#floating">source</a><a class="test-report" href="report/xprocspec/tables_test-dedicon.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.4:56">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:56">4.4:56</a>
+                  The system shall provide a way to control the layout of each table separately.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2 changed" id="4.4:59">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:59">4.4:59</a>
+                  When a table in matrix format spans multiple pages, there shall be the possibility
+                  of
+                  repeating the table heading at the top of each page.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example
+                     <a class="test-src" href="test/tables/test.xprocspec.xhtml#test8">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_2 changed" id="4.4:60">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:60">4.4:60</a>
+                  There shall be the possibility of transposing tables, that is, treat rows as if they
+                  were columns and columns as if they were rows.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example: Some tables can be mirrored to fit on the page.
+                     <a class="test-src" href="test/tables/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Nota examples<a class="noteref" href="#note_1">1</a>
+                     <a class="test-src" href="test/tables/test-nota.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/tables_test-nota.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  Explanation:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li>
+                     If a table has few columns compared to the number of rows, it may be better to render
+                     it column by column. (See 4th example: the table with class "render_by_column".)
+                     
+                  </li>
+                  
+                  <li>
+                     Tables with class "render_by_both" are duplicated: the first instance is rendered
+                     row
+                     by row; the second instance is rendered column by column. Some explanatory text is
+                     added to indicate which is which. (See 5th example.)
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.4:61">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:61">4.4:61</a>
+                  The system shall provide a table layout fallback mechanism that determines the best
+                  way
+                  to render a certain table by trying several alternatives.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3 changed" id="4.4:62">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:62">4.4:62</a>
+                  The system shall be able to cope with column- and rowspan in tables (in a yet undefined
+                  way).
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example: In the case of matrix layout, a possibility is to fill up empty space
+                     in
+                     a cell that spans several columns with some dot pattern.
+                     <a class="test-src" href="test/tables/test.xprocspec.xhtml#test6">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Nota examples<a class="noteref" href="#note_1">1</a>
+                     <a class="test-src" href="test/tables/test-nota.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/tables_test-nota.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  Explanation:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li>
+                     Cells spanning multiple columns/rows are simply repeated. (See 6th example.)
+                     
+                  </li>
+                  
+                  <li>
+                     Heading cells that span multiple columns/rows but that are also the outer part of
+                     nested headings (see last two examples) are rendered by splitting the table into
+                     sub-tables (see <a href="#4.4:57">requirement 4.4:57</a>).
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.4:63">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:63">4.4:63</a>
+                  There shall be the option to render a big or complex table in matrix format through
+                  wrapping of text in cells and automatic computing of optimal column widths.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3 changed" id="4.4:64">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:64">4.4:64</a>
+                  There shall be the option to render a wide table on facing pages.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example: A table can span across 2 pages (left-hand page and right-hand page).
+                     <a class="test-src" href="test/tables/test.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1 changed" id="4.4:65">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:65">4.4:65</a>
+                  The system shall be able to render tables of contents, list of images, index,
+                  glossaries, etc. in a two-column format with the entries on the left and other content
+                  such as page numbers aligned on the right. Optionally leaders may be used to connect
+                  the
+                  two columns.
+                  
+               </h3>
+               
+               <p>
+                  SBS examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Two-column table with second column left-aligned and with leaders.
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Two two-column tables below each other with same alignment of second columns and
+                        with leaders.
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test7">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Leaders may also be used in tables with <strong>more than two columns</strong>. In
+                        this example a wide table is split vertically into several parts each existing of
+                        4
+                        columns.
+                        <a class="test-src" href="test/tables/test.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/tables_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:66">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:66">4.4:66</a>
+                  The system shall support positioning of notes at the bottom of the page on which they
+                  are being referenced.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:67">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:67">4.4:67</a>
+                  The system shall support collecting of notes either at the end of each volume, or
+                  at the
+                  end of the entire book.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:68">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:68">4.4:68</a>
+                  The system shall provide a notes layout fallback mechanism that determines the best
+                  way
+                  to render notes. Notes of a certain type (e.g. footnote or endnote) shall be handled
+                  consistently throughout the whole document.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.4:69">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:69">4.4:69</a>
+                  The system shall support inline rendering of notes right after the note reference,
+                  possibly surrounded by brackets or the like. This feature shall be supported at least
+                  for very small notes. As an option, notes may be floated to the end of sentences.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.4:70">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:70">4.4:70</a>
+                  The system shall support rendering of certain elements such as line numbers in the
+                  left
+                  margin, taking them out of the normal text flow so that text that follows the element
+                  can continue on the same line.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.4:71">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:71">4.4:71</a>
+                  The system shall provide the possibility of moving certain content that hinders
+                  readability, such as large tables, to a later position in the document.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.4:72">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:72">4.4:72</a>
+                  The system shall provide the possibility of omitting certain content.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.4:73">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:73">4.4:73</a>
+                  There shall be the possibility of rendering certain elements such as line numbers
+                  in the
+                  left margin, thereby reducing the area for normal text. A line break is inserted first
+                  whenever such an element is placed in the left margin, text that follows the element
+                  starts on the new line as well. In other words, the element is not taken out of the
+                  normal flow of the text.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:74">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:74">4.4:74</a>
+                  The system shall support single and double line spacing.
+                  
+               </h3>
+               
+               <p>
+                  NLB examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Single line spacing
+                        <a class="test-src" href="test/line-spacing/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/line-spacing_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Double line spacing
+                        <a class="test-src" href="test/line-spacing/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/line-spacing_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  It shall be possible to configure line spacing on section level, i.e. to switch from
+                  a
+                  single line spacing section to a double line spacing section or vice-versa.
+                  
+               </p>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     MTM example: Single line spacing on title page, double line spacing on subsequent
+                     pages.
+                     <a class="test-src" href="test/double-sided/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/double-sided_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.4:75">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:75">4.4:75</a>
+                  When printing double-sided with line spacing greater than 1, printed lines shall
+                  alternate on odd and even pages.
+                  
+               </h3>
+               
+               <p>
+                  Optionally the header lines shall overlap.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        SBS example: Printed lines alternate on odd and even pages.
+                        <a class="test-src" href="test/line-spacing/test.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/line-spacing_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        MTM example: Printed lines alternate on odd and even pages, header lines overlap.
+                        <a class="test-src" href="test/double-sided/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/double-sided_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_3 dropped" id="4.4:76">
+               
+               <h3>
+                  <a class="req-nr" href="#4.4:76">4.4:76</a>
+                  The system shall support line spacing between single and double.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for pagination
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.5:78">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:78">4.5:78</a>
+                  The user shall have control over page breaking by means of
+                  
+                  <ul>
+                     
+                     <li> inserting hard page breaks, </li>
+                     
+                     <li> protecting blocks from being split across multiple pages, </li>
+                     
+                     <li>
+                        avoiding page breaks within blocks leaving only the first line(s) on the first page
+                        (orphan control),
+                        
+                     </li>
+                     
+                     <li>
+                        avoiding page breaks within blocks leaving only the last line(s) on the second
+                        page (widow control), and
+                        
+                     </li>
+                     
+                     <li> keeping a block’s first line(s) on the same page as the preceding block. </li>
+                     
+                  </ul>
+                  
+               </h3>
+               
+               <div>
+                  
+                  <div class="test test-failed">
+                     Celia example: Cover pages embossed separately as a 4 page set, text only on the first
+                     page.
+                     <a class="test-src" href="test/page-breaking/test-celia.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/page-breaking_test-celia.html">report</a></div>
+                  
+               </div>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.5:79">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:79">4.5:79</a>
+                  The system shall provide the option to disable page breaking for the purpose of
+                  producing digital documents (for reading on a refreshable braille display).
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.5:80">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:80">4.5:80</a>
+                  The user shall have control over the page dimensions and the size of page margins.
+                  
+               </h3>
+               
+               <p>
+                  SBS examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Page width = 28 cells, page height = 28 lines
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Page width = 36 cells, page height = 18 lines
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Page width = 28 cells, page height = 28 lines, left margin = 2 cells
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Celia examples: Top margin of 2 lines.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 3
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test6">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.5:81">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:81">4.5:81</a>
+                  There shall be support for content in the header and footer of pages. Content can
+                  be
+                  rendered in the left corner, the center and the right corner.
+                  
+               </h3>
+               
+               <p>
+                  Nota examples of footer layout<a class="noteref" href="#note_1">1</a>:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example without indication of print pagination.
+                        <a class="test-src" href="test/page-layout/test-nota.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/page-layout_test-nota.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example with indication of print pagination.
+                        <a class="test-src" href="test/page-layout/test-nota.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test-nota.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Explanation: Footers appear on recto pages only. The footer consists of a single line
+                  at
+                  the bottom of the page. No text flows into the footer. Generally, the footer contains
+                  only the braille page number (right-aligned); however, if indication of print pagination
+                  is enabled, the footer will also contain (centered) the print page or range of print
+                  pages covered by the current braille page.
+                  
+               </p>
+               
+               <p>
+                  SBS examples of various footer layouts:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on the right, text flows into the footer. (1)
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on the right, text flows into the footer. (2)
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test9">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on the right, print page number on the left.
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on the right, print page number on the left, chapter info
+                        (heading) in the middle.
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test6">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on the right, no print page number, chapter info (heading).
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test7">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Celia examples of various header layouts:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number in the corner, no text flows in the header.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on first row, print page number on second row.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on top and the current print page number under it, both without
+                        any text flow.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number on top and beneath it the current print page in brackets with
+                        hint word.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test6">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.5:82">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:82">4.5:82</a>
+                  The header and footer layout shall be able to change between sections within the
+                  document.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example: Footer layout in frontmatter is different from footer layout in bodymatter.
+                     <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test8">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.5:83">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:83">4.5:83</a>
+                  The system shall support flowing of text into the header or footer. With this is meant
+                  normal text that wraps around content in the right corner of the header or footer,
+                  not
+                  text that simply extends to the top or bottom of the page because there is no content
+                  in
+                  the header/footer. <del>When there is content in either the left corner or the center,
+                     flowing into the header/footer is not allowed.</del>
+                  
+               </h3>
+               
+               <p>
+                  SBS examples: Flowing of text into the footer. At least 4 cells before the braille
+                  page
+                  number must remain empty.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/page-layout/test.xprocspec.xhtml#test9">source</a><a class="test-report" href="report/xprocspec/page-layout_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Celia examples: Flowing of test into the header.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Text can flow in the header with the page number in the right corner.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Text can flow in the header with page numbers in the top left <strong>or top right
+                           corner</strong>.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.5:84">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:84">4.5:84</a>
+                  When printing double-sided, there shall be support for hard page breaks that jump
+                  to the
+                  next right- or left-hand page.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     MTM example: Jump to first right-hand page after title page.
+                     <a class="test-src" href="test/double-sided/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/double-sided_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.5:85">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:85">4.5:85</a>
+                  When printing double-sided, the system shall allow the page layout (page margins as
+                  well
+                  as header and footer layout) to differ between left- and right-hand pages.
+                  
+               </h3>
+               
+               <p>
+                  It is assumed that the inner margins of a sheet are always equal on both sides, and
+                  similarly the outer margins of a sheet are always equal.
+                  
+               </p>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     MTM example: Even braille page numbers are on the left, odd braille page numbers on
+                     the right.
+                     <a class="test-src" href="test/double-sided/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/double-sided_test.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  SBS examples: Footers only appear on right hand pages.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/double-sided/test_sbs.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/double-sided_test_sbs.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Celia examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number switches corner between left- and right-hand pages. (1)
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number switches corner between left- and right-hand pages. (2)
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Braille page number can change corners but the print page number doesn't have to
+                        follow.
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Nota examples: Footers appear on recto pages only<a class="noteref" href="#note_1">1</a>.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/page-layout/test-nota.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/page-layout_test-nota.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/page-layout/test-nota.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test-nota.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.5:86">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:86">4.5:86</a>
+                  Support for mixed braille and ink on the cover page, the main purpose being to help
+                  sighted people in finding a specific volume of a specific title. This feature doesn't
+                  require the text in ink to be exactly that of the original (so back-translation would
+                  be
+                  a possibility).
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.5:87">
+               
+               <h3>
+                  <a class="req-nr" href="#4.5:87">4.5:87</a>
+                  Support for interlining braille and ink, or combining braille and ink on facing
+                  pages. This feature requires synchronization between the source and the braille with
+                  medium (for facing pages) to high (for interlining) precision.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for volume breaking
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.6:88">
+               
+               <h3>
+                  <a class="req-nr" href="#4.6:88">4.6:88</a>
+                  The system shall be able to perform automatic volume breaking with constraints. It
+                  shall
+                  be possible to precisely tweak the algorithm. It shall take values for minimal and
+                  maximal number of pages per volume. It shall support special ranges for the first
+                  and
+                  last volume of sections. The algorithm shall take into account that certain points
+                  in
+                  the book are better suited for being the start of a new volume than other points and
+                  that certain sections belong in certain volumes.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.6:89">
+               
+               <h3>
+                  <a class="req-nr" href="#4.6:89">4.6:89</a>
+                  The system shall provide the possibility of repeating certain content, such as title
+                  pages, in several volumes.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.6:90">
+               
+               <h3>
+                  <a class="req-nr" href="#4.6:90">4.6:90</a>
+                  The system shall support trimming down of a table of contents to a volume-scope table
+                  of
+                  contents that includes only the entries that reference items present in the current
+                  volume.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.6:91">
+               
+               <h3>
+                  <a class="req-nr" href="#4.6:91">4.6:91</a>
+                  In the case of an extended table of contents that is not trimmed down (e.g. in the
+                  first
+                  volume), it shall be possible to group entries according to volume and insert a heading
+                  before each group.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.6:92">
+               
+               <h3>
+                  <a class="req-nr" href="#4.6:92">4.6:92</a>
+                  In the case of endnotes being collected at the end of a book, it shall be possible
+                  to
+                  group the notes according to volume and insert a heading before each group.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.6:93">
+               
+               <h3>
+                  <a class="req-nr" href="#4.6:93">4.6:93</a>
+                  The user shall have some form of manual control over volume breaking.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for generated content
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.7:94">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:94">4.7:94</a>
+                  The system shall support formatting of numbers and other variables in a wide selection
+                  of formats. Supported formats shall include at least arabic, roman (small and capital),
+                  alpha (small and capital), downshifted, written out, and various date formats. It
+                  shall
+                  be possible to specify number prefixes and suffixes too. Some numbers might need
+                  specialized translation, such as ranges of print pages.
+                  
+               </h3>
+               
+               <p>
+                  SBS examples of "downshifted number format":
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.7:96">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:96">4.7:96</a>
+                  The system shall support automatic insertion of content that is not present in the
+                  source. Examples include:
+                  
+                  <ul>
+                     
+                     <li> boilerplate text inserted e.g. on the title page, </li>
+                     
+                     <li> metadata and details about the production process, </li>
+                     
+                     <li>
+                        automatic transcriber notes that give information about omitted or moved content,
+                        about how tables are rendered, 
+                     </li>
+                     
+                     <li> etc. </li>
+                     
+                  </ul>
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.7:95">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:95">4.7:95</a>
+                  The system shall support insertion of content that is not present in the source, through
+                  configuration. Examples include:
+                  
+                  <ul>
+                     
+                     <li> boilerplate text inserted e.g. on the title pages/colophons, </li>
+                     
+                     <li>
+                        freely definable one-character marks inserted in the left margin at certain
+                        elements,
+                        
+                     </li>
+                     
+                     <li> configurable titles for sidebars, figures, </li>
+                     
+                     <li> etc. </li>
+                     
+                  </ul>
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.7:97">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:97">4.7:97</a>
+                  The system shall be able to perform automatic numbering of braille pages and volumes.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.7:98">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:98">4.7:98</a>
+                  The system shall be able to perform automatic numbering on type "ol" lists. This
+                  includes advanced numbering of nested lists.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.7:99">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:99">4.7:99</a>
+                  The system shall support resetting of braille page numbering at the start of major
+                  sections (frontmatter, bodymatter, rearmatter). Resetting numbering for each volume
+                  is
+                  not part of this requirement.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.7:100">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:100">4.7:100</a>
+                  The system shall be able to perform automatic numbering (i.e. re-numbering) of
+                  notes. This feature relies on markup of the original numbering. The numbering shall
+                  be
+                  resettable for each page or for each volume.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.7:101">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:101">4.7:101</a>
+                  The system shall support resetting braille page numbering for each volume.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.7:102">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:102">4.7:102</a>
+                  The system shall be able to evaluate certain variables and counters at so-called
+                  "fields", for example on the title page or in the page header or footer. Supported
+                  variables shall include at least the current braille page number, the current print
+                  page
+                  number or range of print pages contained in the current braille page, the current
+                  volume
+                  number, the total number of volumes, the total number of braille pages or sheets
+                  contained in the current volume or book, the current chapter title, the current chapter
+                  number, and the date.
+                  
+               </h3>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Nota example: if indication of print pagination is enabled, the footer (which appears
+                     on recto pages only) will contain the print page or range of print pages covered by
+                     the current braille page spread (left/previous + right/current page) <a class="noteref" href="#note_1">1</a>.
+                     <a class="test-src" href="test/page-layout/test-nota.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test-nota.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  SBS examples: The footer contains the range of print pages, expressed in "downshifted
+                  number format".
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        If only right hand pages have a footer, it's the range of print pages contained in
+                        the
+                        previous and current braille pages.
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        If both right and left hand pages have a footer, it's the range of print pages
+                        contained in the current braille page.
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+               <p>
+                  Explanation:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li>
+                     The footer may appear either on right hand pages only (usually in fiction books) or
+                     both on left and right hand pages (in more complex books such as non-fiction or
+                     educational literature). (See also requirement <a href="#4.5:85">4.5:85</a>.)
+                     
+                  </li>
+                  
+                  <li>
+                     The footer contains the range of print page numbers (left-aligned), a short
+                     information (heading/cue) about the current section (centered) and the braille page
+                     number (right-aligned).
+                     
+                  </li>
+                  
+                  <li>
+                     The range of print page numbers is preceded by the symbol <samp>_</samp> (dots 456;
+                     it's the symbol we generally use to reference print page numbers): <samp>_#AB,/</samp>
+                     means from print page 12 to print page 14 (the second part of the number
+                     <samp>,/</samp> = 14 is a 'downshifted' number format which is also used for dates and
+                     ordinal numbers).
+                     
+                  </li>
+                  
+                  <li>
+                     If the print page numbers are omitted (or not available), the gap in the footer is
+                     filled with <samp>:::</samp> (left-aligned) followed immediately by the heading/cue
+                     information, e.g. <samp>::: BLABLA #B</samp>.
+                     
+                  </li>
+                  
+                  <li>
+                     If both print page numbers and heading/cue information is omitted, the text flows
+                     into
+                     the footer: a gap of at least 2 braille cells is required before the braille page
+                     number (right-aligned), e.g. <samp>BLA BLA BLA BLA #B</samp>. (See also requirement <a href="#4.5:83">4.5:83</a>.)
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.7:103">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:103">4.7:103</a>
+                  The system shall support insertion of certain variables and counters at references
+                  evaluated at the target. An example is references in a table of contents. Supported
+                  variables shall include the print page number at the target, the braille page number
+                  at
+                  the target, and the note number if the target is a renumbered note. This feature relies
+                  on explicit markup of references.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.7:104">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:104">4.7:104</a>
+                  The system shall support insertion of certain variables and counters at referenced
+                  items
+                  evaluated at the reference. Supported variables shall include the volume number at
+                  the
+                  reference and the braille page number at the reference.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_3" id="4.7:118">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:118">4.7:118</a>
+                  The system shall support the creation of symbols lists, when characters have different
+                  meaning than normally (e.g. in mathematics).
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for indication of original pagination
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.8:105">
+               
+               <h3>
+                  <a class="req-nr" href="#4.8:105">4.8:105</a>
+                  The system shall provide the possibility of rendering print page breaks as full lines
+                  across the width of the page, optionally with the page number of the new print page
+                  incorporated in the line. A line break is inserted first whenever a print page break
+                  indicator is rendered, and following text continues on the line below the indicator.
+                  In
+                  other words, the print page break is not taken out of the normal flow of the text
+                  in
+                  order not to lose precision.
+                  
+               </h3>
+               
+               <p>
+                  A possible additional requirement is that the print page break may optionally be taken
+                  out of the normal text flow:
+                  
+               </p>
+               
+               <blockquote>
+                  A page number within a block is extracted such that it appears immediately above the
+                  block, again as a line with the number at the end.
+                  
+                  <footer>
+                     <cite><a href="https://github.com/snaekobbi/requirements/pull/36#issuecomment-110286863">issue
+                           #36 comment</a> by @stesk</cite>
+                     
+                  </footer>
+                  
+               </blockquote>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example: Print page breaks are indicated with a full line followed by the page
+                     number of the new print page.
+                     <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     Nota example: A page break between paragraphs will appear at its true position as
+                     a
+                     sequence of dashes followed by the page number. An inline page break is repositioned
+                     such that it appears before the parent paragraph, again as the page number preceded
+                     by
+                     dashes<a class="noteref" href="#note_1">1</a>.
+                     <a class="test-src" href="test/page-layout/test-nota.xprocspec.xhtml#test2">source</a><a class="test-report" href="report/xprocspec/page-layout_test-nota.html">report</a></div>
+                  
+               </p>
+               
+               <p>
+                  Celia examples: Change of the printed page indicated with a line of 333 and the new
+                  print page number.
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 1
+                        <a class="test-src" href="test/print-pages/test-celia.xprocspec.xhtml#test1">source</a><a class="test-report" href="report/xprocspec/print-pages_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 2
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Example 3
+                        <a class="test-src" href="test/page-layout/test-celia.xprocspec.xhtml#test6">source</a><a class="test-report" href="report/xprocspec/page-layout_test-celia.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.8:106">
+               
+               <h3>
+                  <a class="req-nr" href="#4.8:106">4.8:106</a>
+                  The system shall provide the possibility of rendering print page breaks as marks in
+                  the
+                  left margin, taking them out of the normal text flow so that text that follows the
+                  element can continue on the same line.
+                  
+               </h3>
+               
+               <p>
+                  NLB examples:
+                  
+               </p>
+               
+               <ul>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Rendering print page breaks as marks in the left margin.
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test4">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+                  <li class="example">
+                     
+                     <div class="test test-failed">
+                        Rendering print page breaks as marks in the left margin. The mark is taken out of
+                        the
+                        normal text flow, and appears at the same line as the word that comes after the
+                        pagenum tag.
+                        <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test5">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                     
+                  </li>
+                  
+               </ul>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.8:107">
+               
+               <h3>
+                  <a class="req-nr" href="#4.8:107">4.8:107</a>
+                  The system shall support skipping print page breaks when no text precedes or follows
+                  on
+                  the same braille page.
+                  
+               </h3>
+               
+               <p>
+                  If print page breaks are not skipped, they should be rendered at the top of a new
+                  braille page rather than at the bottom of previous page.
+                  
+               </p>
+               
+               <p>
+                  Also, several consecutive print page breaks can be combined into a single break
+                  indicator.
+                  
+               </p>
+               
+               <p>
+                  
+                  <div class="test test-failed">
+                     SBS example of consecutive print page breaks combined.
+                     <a class="test-src" href="test/print-pages/test.xprocspec.xhtml#test3">source</a><a class="test-report" href="report/xprocspec/print-pages_test.html">report</a></div>
+                  
+               </p>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for ordering and monitoring of braille production
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_1" id="4.9:108">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:108">4.9:108</a>
+                  The system shall support templates for different products, e.g. books vs. magazines.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.9:109">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:109">4.9:109</a>
+                  The system shall support templates for different end user groups.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.9:110">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:110">4.9:110</a>
+                  Users shall be able to reuse templates.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.9:111">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:111">4.9:111</a>
+                  Certain users shall be able to create templates.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.9:112">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:112">4.9:112</a>
+                  The system shall save jobs so that e.g. a job history can be showed, and jobs can
+                  be
+                  rerun.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.9:113">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:113">4.9:113</a>
+                  The user shall be able to monitor jobs: get an overview of the jobs waiting, running,
+                  finished, etc., and receive notifications of certain events.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_2" id="4.9:114">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:114">4.9:114</a>
+                  The system shall provide the user with help and guidance for creating templates.
+                  
+               </h3>
+               
+            </li>
+            
+            <li class="requirement priority_1" id="4.9:115">
+               
+               <h3>
+                  <a class="req-nr" href="#4.9:115">4.9:115</a>
+                  The system shall provide a graphical user interface for creating and monitoring jobs.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Support for mathematics
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_3" id="4.10:119">
+               
+               <h3>
+                  <a class="req-nr" href="#4.10:119">4.10:119</a>
+                  The system shall support giving marked up mathematics code in ASCII-Math an output
+                  according to the mathematical braille code in the Netherlands.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section>
+         
+         <h2>
+            Miscellaneous
+            
+         </h2>
+         
+         <ul>
+            
+            <li class="requirement priority_3" id="4.7:117">
+               
+               <h3>
+                  <a class="req-nr" href="#4.7:117">4.7:117</a>
+                  The system shall support the possibility to integrate tactile drawings in braille.
+                  
+               </h3>
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+      <section id="notes">
+         
+         <h3>
+            Notes
+            
+         </h3>
+         
+         <ul>
+            
+            <li class="note" id="note_1">
+               As produced by the current implementation, for demonstration purposes only. Source:
+               <a href="https://github.com/stesk/danishbraille/tree/master/tests/pagination">https://github.com/stesk/danishbraille</a>.
+               
+            </li>
+            
+         </ul>
+         
+      </section>
+      
+   </body>
+   
+</html>

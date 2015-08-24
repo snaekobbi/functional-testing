@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list xmlns="http://www.daisy.org/z3986/2005/dtbook/"
+      xmlns:brl="http://www.daisy.org/z3986/2009/braille/"
+      type="pl">
+	<li>
+		<brl:num role="ordinal">2.</brl:num> die Mittelsenkrechte auf der Strecke
+		<brl:select>
+			<brl:when-braille>
+				<brl:literal>&#x00A0;&#x200B;[&gt;AB]&#x00A0;</brl:literal>
+			</brl:when-braille>
+			<brl:otherwise>[AB]</brl:otherwise>
+		</brl:select>
+		im Punkt <abbr>P</abbr>,
+	</li>
+	<li>
+		<brl:num role="ordinal">3.</brl:num> die Mittelsenkrechte auf der Strecke
+		<brl:select>
+			<brl:when-braille>
+				<brl:literal>&#x00A0;&#x200B;[&gt;CD]&#x00A0;</brl:literal>
+			</brl:when-braille>
+			<brl:otherwise>[CD]</brl:otherwise>
+		</brl:select>
+		im Punkt <abbr>Q</abbr>.
+	</li>
+</list>
