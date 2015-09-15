@@ -84,7 +84,7 @@
             });
           }
         )
-        var changed = $(".changed.requirement");
+        var changed = $(".changed.requirement,.dropped.requirement");
         if (changed[0]) {
           var list = $("&lt;ul/&gt;", { id: "changes" });
           changed.each(function(i, req) {
@@ -701,20 +701,29 @@
             normal flow of the text.
           </h3>
         </li>
-        <li class="requirement priority_1" id="4.4:74">
+        <li class="requirement priority_1 changed" id="4.4:74">
           <h3>
             <a class="req-nr" href="#4.4:74">4.4:74</a>
             The system shall support single and double line spacing.
           </h3>
+          <div>
+            <a class="test-src" href="test/line-spacing/test.xprocspec#74.1"/>
+          </div>
+          <div>
+            <a class="test-src" href="test/line-spacing/test.xprocspec#74.2"/>
+          </div>
         </li>
-        <li class="requirement priority_1" id="4.4:75">
+        <li class="requirement priority_1 changed" id="4.4:75">
           <h3>
             <a class="req-nr" href="#4.4:75">4.4:75</a>
             When printing double-sided with line spacing greater than 1, printed lines shall
             alternate on odd and even pages.
           </h3>
+          <div>
+            <a class="test-src" href="test/line-spacing/test.xprocspec#75"/>
+          </div>
         </li>
-        <li class="requirement priority_3" id="4.4:76">
+        <li class="requirement priority_3 dropped" id="4.4:76">
           <h3>
             <a class="req-nr" href="#4.4:76">4.4:76</a>
             The system shall support line spacing between single and double.
