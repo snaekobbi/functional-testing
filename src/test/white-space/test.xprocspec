@@ -9,7 +9,7 @@
         <x:document type="file" href="../../resources/white-space/nlb_white_space.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('nlb-style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -26,7 +26,7 @@
         <x:document type="file" href="../../resources/white-space/sbs_white_space_1.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -43,7 +43,7 @@
         <x:document type="file" href="../../resources/white-space/sbs_white_space_2.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">

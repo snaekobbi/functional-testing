@@ -9,7 +9,7 @@
         <x:document type="file" href="../../resources/vertical-positioning/vertical_positioning.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de-CH)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">

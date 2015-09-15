@@ -14,7 +14,7 @@
         <x:document type="file" href="../../resources/hyphenation/Test.DTBook.Norwegian hyphenation.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('style-no.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
