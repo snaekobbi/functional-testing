@@ -128,6 +128,7 @@ public class RunTestsAndProcessFiles {
 			brailleModule("pef-saxon"),
 			brailleModule("pef-utils"),
 			pipelineModule("file-utils"),
+			pipelineModule("common-utils"),
 			xprocspecBundles(),
 			xspecBundles(),
 			mavenBundle().groupId("org.daisy.pipeline").artifactId("saxon-adapter").versionAsInProject(),

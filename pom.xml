@@ -13,7 +13,7 @@
   <packaging>pom</packaging>
   <properties>
     <pipeline.version>1.9</pipeline.version>
-    <braille-modules.version>1.9.2</braille-modules.version>
+    <mod-braille.version>1.9.4</mod-braille.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -41,7 +41,7 @@
       <dependency>
         <groupId>org.daisy.pipeline.modules.braille</groupId>
         <artifactId>braille-modules-bom</artifactId>
-        <version>${braille-modules.version}</version>
+        <version>${mod-braille.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
