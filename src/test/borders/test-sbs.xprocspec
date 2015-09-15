@@ -10,6 +10,7 @@
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style-1.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -27,6 +28,7 @@
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style-2.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -44,6 +46,7 @@
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style-3.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -61,6 +64,7 @@
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style-4.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -78,6 +82,7 @@
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('sbs-style.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">

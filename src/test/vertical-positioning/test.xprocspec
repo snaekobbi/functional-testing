@@ -10,6 +10,7 @@
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">

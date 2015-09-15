@@ -11,6 +11,7 @@
   
   <p:option name="stylesheet" required="true"/>
   <p:option name="transform" required="true"/>
+  <p:option name="ascii-table"/>
   <p:option name="temp-dir" required="true"/>
   
   <p:import href="http://www.daisy.org/pipeline/modules/braille/common-utils/library.xpl"/>
@@ -24,5 +25,19 @@
     <p:with-option name="query" select="$transform"/>
     <p:with-option name="temp-dir" select="$temp-dir"/>
   </px:transform>
+  
+  <p:choose>
+    <p:when test="p:value-available('ascii-table')">
+      <p:xslt>
+        <p:input port="stylesheet">
+          <p:document href="add-ascii-table-metadata.xsl"/>
+        </p:input>
+        <p:with-param name="ascii-table" select="$ascii-table"/>
+      </p:xslt>
+    </p:when>
+    <p:otherwise>
+      <p:identity/>
+    </p:otherwise>
+  </p:choose>
   
 </p:declare-step>

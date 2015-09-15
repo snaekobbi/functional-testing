@@ -5,6 +5,7 @@
                 xmlns:pf="http://www.daisy.org/ns/pipeline/functions"
                 xmlns:pef="http://www.daisy.org/ns/2008/pef"
                 xmlns:html="http://www.w3.org/1999/xhtml"
+                xmlns:dp2="http://www.daisy.org/ns/pipeline"
                 xmlns="http://www.w3.org/1999/xhtml"
                 exclude-result-prefixes="#all"
                 version="2.0">
@@ -159,8 +160,16 @@
 		</span>
 	</xsl:template>
 	
+	<xsl:template match="pef:pef[pef:head/pef:meta/dp2:ascii-table]">
+		<xsl:copy>
+			<xsl:apply-templates select="@*|node()">
+				<xsl:with-param name="ascii-table" tunnel="yes" select="string(pef:head/pef:meta/dp2:ascii-table)"/>
+			</xsl:apply-templates>
+		</xsl:copy>
+	</xsl:template>
+	
 	<xsl:template match="pef:page">
-		<xsl:param name="brf-table" as="xs:string" tunnel="yes"
+		<xsl:param name="ascii-table" as="xs:string" tunnel="yes"
 		           select="'(id:&quot;org.daisy.braille.impl.table.DefaultTableProvider.TableType.EN_US&quot;)'"/>
 		<xsl:variable name="rows" select="xs:integer(number(ancestor::*[@rows][1]/@rows))"/>
 		<xsl:variable name="cols" select="xs:integer(number(ancestor::*[@cols][1]/@cols))"/>
@@ -174,7 +183,7 @@
 					<xsl:sequence select="$row"/>
 				</pef:row>
 				<pef:row class="ascii" rowgap="{format-number($rowgap,'0')}">
-					<xsl:sequence select="pef:encode($brf-table, $row)"/>
+					<xsl:sequence select="pef:encode($ascii-table, $row)"/>
 				</pef:row>
 			</xsl:for-each>
 			<xsl:for-each select="1 to (($rows * 4
@@ -186,7 +195,7 @@
 					<xsl:sequence select="$row"/>
 				</pef:row>
 				<pef:row class="ascii">
-					<xsl:sequence select="pef:encode($brf-table, $row)"/>
+					<xsl:sequence select="pef:encode($ascii-table, $row)"/>
 				</pef:row>
 			</xsl:for-each>
 		</xsl:copy>

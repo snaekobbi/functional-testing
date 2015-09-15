@@ -4,10 +4,11 @@
       Generated from borders.txt using table "sbs.dis"
   -->
   <head>
-    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline">
       <dc:date>2015-05-28</dc:date>
       <dc:format>application/x-pef+xml</dc:format>
       <dc:identifier>AUTO_ID_621593435</dc:identifier>
+      <dp2:ascii-table>(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")</dp2:ascii-table>
     </meta>
   </head>
   <body>

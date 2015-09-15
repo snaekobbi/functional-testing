@@ -4,8 +4,9 @@
       Generated from vertical_positioning.txt using table "sbs.dis"
   -->
   <head>
-    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline">
       <dc:format>application/x-pef+xml</dc:format>
+      <dp2:ascii-table>(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")</dp2:ascii-table>
     </meta>
   </head>
   <body>
