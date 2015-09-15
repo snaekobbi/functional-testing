@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
   <head>
-    <meta xmlns:dc="http://purl.org/dc/elements/1.1/">
-      <dc:date>2015-08-05</dc:date>
+    <meta xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dp2="http://www.daisy.org/ns/pipeline">
       <dc:format>application/x-pef+xml</dc:format>
-      <dc:identifier>AUTO_ID_741176678</dc:identifier>
+      <dp2:ascii-table>(liblouis-table:"http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis")</dp2:ascii-table>
     </meta>
   </head>
   <body>

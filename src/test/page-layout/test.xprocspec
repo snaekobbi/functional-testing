@@ -8,7 +8,8 @@
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/sbs-page-dimensions.xml"/>
       </x:input>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:scenario id="80.1" label="page width = 28 cells, page height = 28 lines">
@@ -51,7 +52,8 @@
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/sbs-footer.xml"/>
       </x:input>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:scenario id="81.1" label="braille page number on the right, text flows into the footer">
@@ -106,7 +108,8 @@
         <x:document type="file" href="../../resources/page-layout/sbs-footer-change.xml"/>
       </x:input>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -123,7 +126,8 @@
         <x:document type="file" href="../../resources/page-layout/test_4.5.83.xml"/>
       </x:input>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">

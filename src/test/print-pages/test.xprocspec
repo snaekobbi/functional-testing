@@ -12,7 +12,8 @@
     <x:scenario id="102.2" label="If both right and left hand pages have a footer, it's the range of print pages contained in the current braille page.">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
-        <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+        <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+        <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
         <x:option name="temp-dir" select="$temp-dir"/>
       </x:call>
       <x:context label="result">
@@ -25,7 +26,8 @@
     <x:scenario id="102.1" label="If only right hand pages have a footer, it's the range of print pages contained in the previous and current braille pages.">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
-        <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+        <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+        <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
         <x:option name="temp-dir" select="$temp-dir"/>
       </x:call>
       <x:context label="result">
@@ -43,7 +45,8 @@
         <x:document type="file" href="../../resources/print-pages/sbs_page_break_line.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
