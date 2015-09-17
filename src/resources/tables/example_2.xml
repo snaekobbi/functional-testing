@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+	<tr>
+		<th>Bienen</th>
+		<td>50</td>
+		<td>100</td>
+		<td>150</td>
+		<td>200</td>
+		<td><span class="answer">---</span></td>
+		<td><span class="answer">---</span></td>
+		<td><span class="answer">---</span></td>
+		<td><span class="answer">---</span></td>
+		<td><span class="answer">---</span></td>
+	</tr>
+	<tr>
+		<th>Drohnen</th>
+		<td><span class="answer">---</span></td>
+		<td>2</td>
+		<td><span class="answer">---</span></td>
+		<td><span class="answer">---</span></td>
+		<td>5</td>
+		<td>50</td>
+		<td>100</td>
+		<td>150</td>
+		<td>200</td>
+	</tr>
+</table>
