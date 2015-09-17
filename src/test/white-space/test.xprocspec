@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="54" label="White space is normalised">
+  <x:scenario id="test1" label="[4.4:54]">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/white-space/nlb_white_space.xml"/>
@@ -20,7 +20,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="55.1" label="Preserve newline characters (br elements) as forced line breaks">
+  <x:scenario id="test2" label="[4.4:55] forced line breaks">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/white-space/sbs_white_space_1.xml"/>
@@ -38,7 +38,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="55.2" label="Preserve two spaces before and after mathematical expressions, but not at the beginning or end of a line.">
+  <x:scenario id="test3" label="[4.4:55] preserved spaces without soft wrap opportunities">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/white-space/sbs_white_space_2.xml"/>

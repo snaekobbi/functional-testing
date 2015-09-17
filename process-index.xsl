@@ -61,10 +61,7 @@
 			</xsl:choose>
 		</xsl:variable>
 		<div class="test {if ($passed) then 'test-passed' else 'test-failed'}">
-			<xsl:value-of select="if (ends-with($uri, '.java')) then $id
-			                      else string-join(document($abs-uri)//*[@id=$id]
-			                                       /(ancestor-or-self::xspec:scenario|ancestor-or-self::xprocspec:scenario)/@label,
-			                                       ' -- ')"/>
+			<xsl:apply-templates/>
 			<a class="test-src" href="{concat($uri,'.xhtml#',$id)}">source</a>
 			<xsl:if test="$report">
 				<a class="test-report" href="{pf:relativize-uri(base-uri($report/*), $result-base)}">report</a>
@@ -74,9 +71,7 @@
 	
 	<xsl:template match="html:a[@class='test-src' and matches(@href, '^https?://')]">
 		<div class="test external-test">
-			<a href="{@href}">
-				<xsl:value-of select="@href"/>
-			</a>
+			<xsl:apply-templates/>
 			<a class="test-src" href="{@href}">source</a>
 		</div>
 	</xsl:template>

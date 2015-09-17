@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario label="Various page dimensions">
+  <x:scenario label="[4.5:80]">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/sbs-page-dimensions.xml"/>
@@ -12,7 +12,7 @@
       <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
-    <x:scenario id="80.1" label="page width = 28 cells, page height = 28 lines">
+    <x:scenario id="test1" label="[4.5:80] page dimensions 1">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -23,7 +23,7 @@
         <x:document type="file" href="../../resources/page-layout/sbs-page-dimensions-1.pef"/>
       </x:expect>
     </x:scenario>
-    <x:scenario id="80.2" label="page width = 36 cells, page height = 18 lines">
+    <x:scenario id="test2" label="[4.5:80] page dimensions 2">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -34,7 +34,7 @@
         <x:document type="file" href="../../resources/page-layout/sbs-page-dimensions-2.pef"/>
       </x:expect>
     </x:scenario>
-    <x:scenario id="80.3" label="page width = 28 cells, page height = 28 lines, left margin = 2 cells">
+    <x:scenario id="test3" label="[4.5:80] page dimensions 3">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -47,7 +47,7 @@
     </x:scenario>
   </x:scenario>
   
-  <x:scenario label="Various footer layouts">
+  <x:scenario label="[4.5:81] footer">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/sbs-footer.xml"/>
@@ -56,7 +56,8 @@
       <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
-    <x:scenario id="81.1" label="braille page number on the right, text flows into the footer">
+    <x:scenario id="test4" label="[4.5:81] braille page number
+                                  [4.5:83] text flows in footer">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -67,7 +68,7 @@
         <x:document type="file" href="../../resources/page-layout/sbs-footer-1.pef"/>
       </x:expect>
     </x:scenario>
-    <x:scenario id="81.2" label="braille page number on the right, print page number on the left">
+    <x:scenario id="test5" label="[4.5:81] print page number + braille page number">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -78,7 +79,7 @@
         <x:document type="file" href="../../resources/page-layout/sbs-footer-2.pef"/>
       </x:expect>
     </x:scenario>
-    <x:scenario id="81.3" label="braille page number on the right, print page number on the left, chapter info (heading) in the middle">
+    <x:scenario id="test6" label="[4.5:81] print page number + chapter info + braille page number">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -89,7 +90,7 @@
         <x:document type="file" href="../../resources/page-layout/sbs-footer-3.pef"/>
       </x:expect>
     </x:scenario>
-    <x:scenario id="81.4" label="braille page number on the right, no print page number, chapter info (heading)">
+    <x:scenario id="test7" label="[4.5:81] chapter info + braille page number">
       <x:call>
         <x:option name="stylesheet" select="resolve-uri('style.css')"/>
       </x:call>
@@ -102,7 +103,7 @@
     </x:scenario>
   </x:scenario>
   
-  <x:scenario id="82" label="Footer layout in frontmatter is different from footer layout in bodymatter">
+  <x:scenario id="test8" label="[4.5:82] footer differs between frontmatter/bodymatter">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/sbs-footer-change.xml"/>
@@ -120,7 +121,8 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="83" label="Flowing of text into the footer. At least 4 cells before the braille page number must remain empty.">
+  <x:scenario id="test9" label="[4.5:81] braille page number in footer
+                                [4.5:83] text flows in footer + minimum distance to page number">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/test_4.5.83.xml"/>

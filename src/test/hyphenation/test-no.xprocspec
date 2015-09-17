@@ -8,7 +8,7 @@
                xmlns:css="http://www.daisy.org/ns/pipeline/braille-css"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="41.1" label="Automatic hyphenation of Norwegian">
+  <x:scenario id="test1" label="[4.3:41] Norwegian">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/hyphenation/Test.DTBook.Norwegian hyphenation.xml"/>

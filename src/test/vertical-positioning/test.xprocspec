@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="53" label="Block alignment relative to a vertical position on the page">
+  <x:scenario id="test1" label="[4.4:53]">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/vertical-positioning/vertical_positioning.xml"/>

@@ -143,54 +143,66 @@ ul#changes li:last-child::after {
 	content: "③";
 }
 
-.todo::before {
-	content: "TODO";
-	font-weight: bold;
-	font-style: normal;
+.requirement h3 ul {
+	padding-left: 20px;
 }
 
-.todo {
-	color: #FF0000;
-	font-style: italic;
+.requirement ul {
+	padding-left: 10px;
+}
+
+li.example {
+	list-style-type: none;
+	margin: 5px 0;
 }
 
 .test {
 	display: block;
 	position: relative;
-	padding: 7px;
-	padding-right: 110px;
+	padding: 7px 150px 7px 17px;
+	background-color: #EEE;
 }
 
 .test-passed {
-	border-left: 7px solid #60E050;
-	background-color: #99FF99;
+	padding-left: 7px;
+	padding-right: 115px;
+	border-right: 35px solid #60E050;
+	border-left: 10px solid #60E050;
 }
 
 .test-failed {
-	border-left: 7px solid #EE6622;
-	background-color: #FF8833;
-}
-
-.external-test {
-	border-left: 7px solid #999999;
-	background-color: #CCCCCC;
+	padding-left: 7px;
+	padding-right: 115px;
+	border-right: 35px solid #EE6622;
+	border-left: 10px solid #EE6622;
 }
 
 .test > a.test-src,
 .test > a.test-report {
 	display: block;
 	position: absolute;
-	width: 45px;
 	top: 7px;
 	font-size: 90%;
 }
 
 .test > a.test-src {
+	width: 135px;
+	right: 5px;
+}
+
+.test-passed > a.test-src,
+.test-failed > a.test-src {
+	width: 45px;
 	right: 60px;
 }
 
 .test > a.test-report {
+	width: 45px;
 	right: 5px;
+}
+
+a[href^="http"]::after {
+	content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
 
 code {

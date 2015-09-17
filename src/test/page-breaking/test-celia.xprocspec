@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
 
-  <x:scenario id="78" label="Cover pages embossed separately as a 4 page set, text only on the first page.">
+  <x:scenario id="test1" label="[4.5:78] hard page break to pages 4">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-breaking/EX6.xml"/>

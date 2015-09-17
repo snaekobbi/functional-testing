@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="85" label="Footers only appear on right hand pages">
+  <x:scenario id="test1" label="[4.5:85] footer only on right pages">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/double-sided/sbs_double_sided_footer.xml"/>

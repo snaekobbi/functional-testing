@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="105" label="Change of the printed page shown with a line of 333 and the new print page number.">
+  <x:scenario id="test1" label="[4.8:105] line of 333 + new print page number">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/print-pages/EX4.xml"/>

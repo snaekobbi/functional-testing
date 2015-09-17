@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
 
-  <x:scenario id="83" label="Text can flow in the header with the page number in the (right) corner.">
+  <x:scenario id="test1" label="[4.5:83] text flows in header, page number right">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/EX1.xml"/>
@@ -21,7 +21,8 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="83+85" label="Text can flow in the header with page numbers in the top left or top right corner. Page number switches corner between left- and right-hand pages.">
+  <x:scenario id="test2" label="[4.5:83] text flows in header, page number left or right
+                                [4.5:85] position of braille page number differs between left/right">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/EX2.xml"/>
@@ -39,7 +40,8 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="81+85.1" label="No text in the header. Page number switches corner between left- and right-hand pages.">
+  <x:scenario id="test3" label="[4.5:81] braille page number + no text flow in header
+                                [4.5:85] position of braille page number differs between left/right">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/EX3.xml"/>
@@ -57,7 +59,9 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="81+85.2" label="Braille page number can change corners but the print page number doesn't have to follow.">
+  <x:scenario id="test4" label="[4.5:80] two header rows
+                                [4.5:81] braille page number on first row + print page number on second
+                                [4.5:85] position of braille page number differs between left/right + fixed position of print page number">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/EX8.xml"/>
@@ -75,7 +79,9 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="81+105.1" label="Braille page number on top and the current print page number under it, both without any text flow. Change of the printed page indicated with a line of 333.">
+  <x:scenario id="test5" label="[4.5:80] two header rows
+                                [4.5:81] braille page number on first row + print page number beneath
+                                [4.8:105] line of 333 + new print page number">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/EX5.xml"/>
@@ -93,7 +99,9 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="81+105.2" label="Braille page number on top and beneath it the current print page in brackets with hint word. Change of the printed page indicated with a line of 333.">
+  <x:scenario id="test6" label="[4.5:80] two header rows
+                                [4.5:81] braille page number on first row + print page number in brackets beneath + hint word
+                                [4.8:105] line of 333 + new print page number">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/page-layout/EX7.xml"/>

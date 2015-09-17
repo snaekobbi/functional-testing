@@ -3,7 +3,10 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="75+84" label="Double sided printing and double line spacing. Printed lines alternate on odd and even pages. It is possible to jump to right-hand pages. Even braille page numbers are on the left, odd braille page numbers on the right.">
+  <x:scenario id="test1" label="[4.4:74] double line spacing
+                                [4.4:75] double sided with alternating lines + overlapping header
+                                [4.5:84] hard page breaks to right page
+                                [4.5:85] position of braille page number differs between left/right">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/double-sided/DTB18126.xml"/>
