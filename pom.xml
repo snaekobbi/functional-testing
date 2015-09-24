@@ -16,6 +16,7 @@
     <mod-braille.version>1.9.4</mod-braille.version>
     <mod-celia.version>1.0.0</mod-celia.version>
     <mod-nlb.version>1.1.0</mod-nlb.version>
+    <mod-nota.version>1.0.0</mod-nota.version>
     <mod-sbs.version>1.1.0</mod-sbs.version>
   </properties>
   <dependencyManagement>
@@ -57,6 +58,11 @@
         <groupId>org.daisy.pipeline.modules.braille</groupId>
         <artifactId>mod-nlb</artifactId>
         <version>${mod-nlb.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline.modules.braille</groupId>
+        <artifactId>mod-nota</artifactId>
+        <version>${mod-nota.version}</version>
       </dependency>
       <dependency>
         <groupId>org.daisy.pipeline.modules.braille</groupId>
@@ -144,6 +150,11 @@
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
       <artifactId>mod-nlb</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.daisy.pipeline.modules.braille</groupId>
+      <artifactId>mod-nota</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

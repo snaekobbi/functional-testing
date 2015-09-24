@@ -868,6 +868,28 @@
             rendered in the left corner, the center and the right corner.
           </h3>
           <p>
+            Nota examples of footer layout<a class="noteref" href="#note_1">1</a>:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/page-layout/test-nota.xprocspec#test1">
+                Example without indication of print pagination.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/page-layout/test-nota.xprocspec#test2">
+                Example with indication of print pagination.
+              </a>
+            </li>
+          </ul>
+          <p>
+            Explanation: Footers appear on recto pages only. The footer consists of a single line at
+            the bottom of the page. No text flows into the footer. Generally, the footer contains
+            only the braille page number (right-aligned); however, if indication of print pagination
+            is enabled, the footer will also contain (centered) the print page or range of print
+            pages covered by the current braille page.
+          </p>
+          <p>
             SBS examples of various footer layouts:
           </p>
           <ul>
@@ -1037,6 +1059,22 @@
               <a class="test-src" href="test/page-layout/test-celia.xprocspec#test4">
                 Braille page number can change corners but the print page number doesn't have to
                 follow.
+              </a>
+            </li>
+          </ul>
+          <p>
+            Nota examples: Footers appear on recto pages only<a class="noteref"
+            href="#note_1">1</a>.
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/page-layout/test-nota.xprocspec#test1">
+                Example 1
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/page-layout/test-nota.xprocspec#test2">
+                Example 2
               </a>
             </li>
           </ul>
@@ -1222,6 +1260,13 @@
             number, and the date.
           </h3>
           <p>
+            <a class="test-src" href="test/page-layout/test-nota.xprocspec#test2">
+              Nota example: if indication of print pagination is enabled, the footer will contain
+              the print page or range of print pages covered by the current braille page <a
+              class="noteref" href="#note_1">1</a>.
+            </a>
+          </p>
+          <p>
             SBS examples: The footer contains the range of print pages, expressed in "downshifted
             number format".
           </p>
@@ -1316,9 +1361,30 @@
             order not to lose precision.
           </h3>
           <p>
+            A possible additional requirement is that the print page break may optionally be taken
+            out of the normal text flow:
+          </p>
+          <blockquote>
+            A page number within a block is extracted such that it appears immediately above the
+            block, again as a line with the number at the end.
+            <footer>
+              <cite><a
+              href="https://github.com/snaekobbi/requirements/pull/36#issuecomment-110286863">issue
+              #36 comment</a> by @stesk</cite>
+            </footer>
+          </blockquote>
+          <p>
             <a class="test-src" href="test/print-pages/test.xprocspec#test3">
               SBS example: Print page breaks are indicated with a full line followed by the page
               number of the new print page.
+            </a>
+          </p>
+          <p>
+            <a class="test-src" href="test/page-layout/test-nota.xprocspec#test2">
+              Nota example: A page break between paragraphs will appear at its true position as a
+              sequence of dashes followed by the page number. An inline page break is repositioned
+              such that it appears before the parent paragraph, again as the page number preceded by
+              dashes<a class="noteref" href="#note_1">1</a>.
             </a>
           </p>
           <p>
@@ -1342,19 +1408,6 @@
               </a>
             </li>
           </ul>
-          <p>
-            A possible additional requirement is that the print page break may optionally be taken
-            out of the normal text flow:
-          </p>
-          <blockquote>
-            A page number within a block is extracted such that it appears immediately above the
-            block, again as a line with the number at the end.
-            <footer>
-              <cite><a
-              href="https://github.com/snaekobbi/requirements/pull/36#issuecomment-110286863">issue
-              #36 comment</a> by @stesk</cite>
-            </footer>
-          </blockquote>
         </li>
         <li class="requirement priority_2 changed" id="4.8:106">
           <h3>
@@ -1480,6 +1533,17 @@
             <a class="req-nr" href="#4.7:117">4.7:117</a>
             The system shall support the possibility to integrate tactile drawings in braille.
           </h3>
+        </li>
+      </ul>
+    </section>
+    <section id="notes">
+      <h3>
+        Notes
+      </h3>
+      <ul>
+        <li class="note" id="note_1">
+          As produced by the current implementation, for demonstration purposes only. Source: <a
+          href="https://github.com/stesk/danishbraille/tree/master/tests/pagination">https://github.com/stesk/danishbraille</a>.
         </li>
       </ul>
     </section>

@@ -201,6 +201,33 @@ a[href^="http"]::after {
 	content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
 
+a.noteref {
+	vertical-align: super;
+	font-size: 80%;
+}
+a.noteref::before {
+	content: "["
+}
+
+a.noteref::after {
+	content: "]"
+}
+
+section#notes {
+	border-top: 1px solid black;
+	padding-top: 5px;
+}
+
+li.note {
+	counter-increment: note;
+	list-style-type: none;
+}
+
+li.note::before {
+	content: "[" counter(note) "]";
+	margin-right: 7px;
+}
+
 code {
 	display: block;
 	max-height: 300px;
