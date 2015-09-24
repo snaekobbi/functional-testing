@@ -627,6 +627,17 @@
                 Example 3
               </a>
             </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test5">
+                Example 4: A wide table is split vertically into several parts. Row headers are
+                repeated for each part.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test6">
+                Example 5
+              </a>
+            </li>
           </ul>
         </li>
         <li class="requirement priority_2" id="4.4:56">
@@ -661,12 +672,18 @@
             to render a certain table by trying several alternatives.
           </h3>
         </li>
-        <li class="requirement priority_3" id="4.4:62">
+        <li class="requirement priority_3 changed" id="4.4:62">
           <h3>
             <a class="req-nr" href="#4.4:62">4.4:62</a>
             The system shall be able to cope with column- and rowspan in tables (in a yet undefined
             way).
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test6">
+              SBS example: In the case of matrix layout, a possibility is to fill up empty space in
+              a cell that spans several columns with some dot pattern.
+            </a>
+          </p>
         </li>
         <li class="requirement priority_3" id="4.4:63">
           <h3>
@@ -707,6 +724,13 @@
               <a class="test-src" href="test/horizontal-positioning/test.xprocspec#test">
                 Two two-column tables below each other with same alignment of second columns and
                 with leaders.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test5">
+                Leaders may also be used in tables with <strong>more than two columns</strong>. In
+                this example a wide table is split vertically into several parts each existing of 4
+                columns.
               </a>
             </li>
           </ul>

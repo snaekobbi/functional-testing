@@ -78,4 +78,42 @@
     </x:expect>
   </x:scenario>
   
+  <x:scenario id="test5" label="[4.4:58] matrix + heading cells underlined + split with borders between parts and row headers repeated
+                                [4.4:65] leaders">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/table_splitting_up_in_parts.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/table_splitting_up_in_parts.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test6" label="[4.4:58] matrix + heading cells underlined
+                                [4.4:62] colspan with fill pattern">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/table_fill_colspan_with_char.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/table_fill_colspan_with_char.pef"/>
+    </x:expect>
+  </x:scenario>
+  
 </x:description>
