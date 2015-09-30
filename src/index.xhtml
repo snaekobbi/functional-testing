@@ -1021,6 +1021,10 @@
             as header and footer layout) to differ between left- and right-hand pages.
           </h3>
           <p>
+            It is assumed that the inner margins of a sheet are always equal on both sides, and
+            similarly the outer margins of a sheet are always equal.
+          </p>
+          <p>
             <a class="test-src" href="test/double-sided/test.xprocspec#test1">
               MTM example: Even braille page numbers are on the left, odd braille page numbers on
               the right.
@@ -1157,7 +1161,7 @@
         Support for generated content
       </h2>
       <ul>
-        <li class="requirement priority_1" id="4.7:94">
+        <li class="requirement priority_1 changed" id="4.7:94">
           <h3>
             <a class="req-nr" href="#4.7:94">4.7:94</a>
             The system shall support formatting of numbers and other variables in a wide selection
