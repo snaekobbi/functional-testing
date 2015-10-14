@@ -113,8 +113,7 @@ ul#changes li:last-child::after {
 	text-decoration: none;
 }
 
-.changed.requirement h3 .req-nr,
-.dropped.requirement h3 .req-nr {
+.changed.requirement h3 .req-nr {
 	background-color: #FFEE77;
 }
 
