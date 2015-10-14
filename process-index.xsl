@@ -3,6 +3,8 @@
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:pf="http://www.daisy.org/ns/pipeline/functions"
                 xmlns:html="http://www.w3.org/1999/xhtml"
+                xmlns:xspec="http://www.jenitennison.com/xslt/xspec"
+                xmlns:xprocspec="http://www.daisy.org/ns/xprocspec"
                 xmlns="http://www.w3.org/1999/xhtml"
                 exclude-result-prefixes="#all"
                 version="2.0">
@@ -59,7 +61,7 @@
 			</xsl:choose>
 		</xsl:variable>
 		<div class="test {if ($passed) then 'test-passed' else 'test-failed'}">
-			<xsl:value-of select="$label"/>
+			<xsl:apply-templates/>
 			<a class="test-src" href="{concat($uri,'.xhtml#',$id)}">source</a>
 			<xsl:if test="$report">
 				<a class="test-report" href="{pf:relativize-uri(base-uri($report/*), $result-base)}">report</a>
@@ -69,9 +71,7 @@
 	
 	<xsl:template match="html:a[@class='test-src' and matches(@href, '^https?://')]">
 		<div class="test external-test">
-			<a href="{@href}">
-				<xsl:value-of select="@href"/>
-			</a>
+			<xsl:apply-templates/>
 			<a class="test-src" href="{@href}">source</a>
 		</div>
 	</xsl:template>

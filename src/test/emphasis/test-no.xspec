@@ -5,14 +5,14 @@
                 xmlns:html="http://www.w3.org/1999/xhtml"
                stylesheet="translate-no.xsl">
   
-  <x:scenario id="38.1" label="Marking of text-level semantics with braille indicators for Norwegian (preserving structure).">
+  <x:scenario id="test1" label="[4.3:38] Norwegian (preserving structure)">
     <x:context href="../../resources/emphasis/data_norwegian.xml" select="//input"/>
     <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml"
               select="for $x in //expect return css:normalize-space($x)"
               test="for $x in /expect return css:normalize-space($x)"/>
   </x:scenario>
   
-  <x:scenario id="38.2" label="Marking of text-level semantics with braille indicators for Norwegian (not preserving structure).">
+  <x:scenario id="test2" label="[4.3:38] Norwegian (not preserving structure)">
     <x:context href="../../resources/emphasis/data_norwegian.xml" select="//input"/>
     <x:expect label="expect" href="../../resources/emphasis/data_norwegian.xml"
               select="for $x in //expect return html:flatten(css:normalize-space($x))"

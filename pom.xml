@@ -14,7 +14,9 @@
   <properties>
     <pipeline.version>1.9</pipeline.version>
     <mod-braille.version>1.9.4</mod-braille.version>
+    <mod-celia.version>1.0.0</mod-celia.version>
     <mod-nlb.version>1.1.0</mod-nlb.version>
+    <mod-nota.version>1.0.0</mod-nota.version>
     <mod-sbs.version>1.1.0</mod-sbs.version>
   </properties>
   <dependencyManagement>
@@ -49,8 +51,18 @@
       </dependency>
       <dependency>
         <groupId>org.daisy.pipeline.modules.braille</groupId>
+        <artifactId>mod-celia</artifactId>
+        <version>${mod-celia.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline.modules.braille</groupId>
         <artifactId>mod-nlb</artifactId>
         <version>${mod-nlb.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline.modules.braille</groupId>
+        <artifactId>mod-nota</artifactId>
+        <version>${mod-nota.version}</version>
       </dependency>
       <dependency>
         <groupId>org.daisy.pipeline.modules.braille</groupId>
@@ -132,7 +144,17 @@
   <dependencies>
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
+      <artifactId>mod-celia</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.daisy.pipeline.modules.braille</groupId>
       <artifactId>mod-nlb</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.daisy.pipeline.modules.braille</groupId>
+      <artifactId>mod-nota</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -218,6 +240,14 @@
     <dependency>
       <groupId>org.daisy.pipeline</groupId>
       <artifactId>pax-exam-helper</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!--
+        for mod-celia
+    -->
+    <dependency>
+      <groupId>org.daisy.pipeline.modules.braille</groupId>
+      <artifactId>texhyph-core</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>

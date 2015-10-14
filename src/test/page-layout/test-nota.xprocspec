@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               script="../css_inline_and_px_transform_type_css.xpl">
+
+  <x:scenario label="[4.5:81] footer layout
+                     [4.5:85] on recto pages only">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/page-layout/nota_pagination.xml"/>
+      </x:input>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:scenario id="test1" label="[4.5:81] [4.5:85] braille page number right">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style-nota.css')"/>
+        <x:option name="transform" select="'(formatter:dotify)(translator:nota)(grade:1)'"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/page-layout/nota_pagination.pef"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario id="test2" label="[4.5:81] [4.5:85] braille page number right + print page number (range) center
+                                  [4.7:102] range of print pages
+                                  [4.7:105] full line indicator">
+      <x:call>
+        <x:option name="stylesheet" select="resolve-uri('style-nota.css')"/>
+        <x:option name="transform" select="'(formatter:dotify)(translator:nota)(grade:1)'"/>
+      </x:call>
+      <x:context label="result">
+        <x:document type="port" port="result"/>
+      </x:context>
+      <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+        <x:document type="file" href="../../resources/page-layout/nota_pagination_print.pef"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+  
+</x:description>

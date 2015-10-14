@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<_ xml:lang="no">
+<level2>
 <p>Vi har et system hvor vi deler de ulike f&#x00F8;rerkortene inn i klasser. Skjemaet nedenfor gir en oversikt over de ulike f&#x00F8;rerkortklassene.</p>
 <!-- NorBraille can't handle tables -->
 <table>
@@ -82,4 +84,4 @@
     </list>
     <p>Det trafikale grunnkurset</p>
 </level2>
-        
+</_>

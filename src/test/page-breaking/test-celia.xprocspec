@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.daisy.org/ns/xprocspec"
+               xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
+               script="../css_inline_and_px_transform_type_css.xpl">
+
+  <x:scenario id="test1" label="[4.5:78] hard page break to pages 4">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/page-breaking/EX6.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-celia.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:celia)'"/>
+      <x:option name="ascii-table" select="'(id:&quot;com_braillo.BrailloTableProvider.TableType.BRAILLO_6DOT_001_00&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/page-breaking/EX6.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+</x:description>

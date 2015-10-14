@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="46.1" label="Top, right, bottom and left margins.">
+  <x:scenario id="test1" label="[4.4:46] left + right margin">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/margins/source.xml"/>

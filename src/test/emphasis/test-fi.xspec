@@ -3,7 +3,7 @@
                xmlns:louis="http://liblouis.org/liblouis"
                stylesheet="translate-fi.xsl">
   
-  <x:scenario id="38.1" label="Marking of text-level semantics with braille indicators for Finnish.">
+  <x:scenario id="test1" label="[4.3:38] Finnish">
     <x:context href="../../resources/emphasis/data_finnish.xml" select="//input"/>
     <x:expect label="expect" href="../../resources/emphasis/data_finnish.xml" select="//expect"/>
   </x:scenario>

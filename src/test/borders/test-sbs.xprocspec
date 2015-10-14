@@ -3,7 +3,7 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="47.1" label="Block start/end indicator lines">
+  <x:scenario id="test1" label="[4.4:47] top left + bottom left corners">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
@@ -21,7 +21,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="47.2" label="Thin left border">
+  <x:scenario id="test2" label="[4.4:47] left thin">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
@@ -39,7 +39,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="47.3" label="Thick left border">
+  <x:scenario id="test3" label="[4.4:47] left thick">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
@@ -57,7 +57,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="47.4" label="Full box">
+  <x:scenario id="test4" label="[4.4:47] left + top + right + bottom">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/borders.xml"/>
@@ -75,7 +75,7 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="50" label="Simple underlinings where the blocks are shrinked to the width of their contents">
+  <x:scenario id="test5" label="[4.4:50]">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/borders/shrinking-a-block-with-a-border.xml"/>

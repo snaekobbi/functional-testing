@@ -3,13 +3,13 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario label="The system shall support single and double line spacing">
+  <x:scenario label="[4.4:74] single + double line spacing">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/line-spacing/Test.DTBook.Line spacing. Singel spacing.xml"/>
       </x:input>
     </x:call>
-    <x:scenario id="74.1" label="The system shall support single line spacing">
+    <x:scenario id="test1" label="[4.4:74] single line spacing">
         <x:call>
           <x:option name="stylesheet" select="resolve-uri('single.css')"/>
           <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
@@ -22,7 +22,7 @@
           <x:document type="file" href="../../resources/line-spacing/Test.PEF.Line spacing.Singel spacing.pef"/>
         </x:expect>
     </x:scenario>
-    <x:scenario id="74.2" label="The system shall support double line spacing">
+    <x:scenario id="test2" label="[4.4:74] double line spacing">
         <x:call>
           <x:option name="stylesheet" select="resolve-uri('double.css')"/>
           <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:0)'"/>
@@ -37,7 +37,7 @@
     </x:scenario>
   </x:scenario>
   
-  <x:scenario id="75" label="When printing double-sided with double line spacing, printed lines shall alternate on odd and even pages.">
+  <x:scenario id="test3" label="[4.4:75] double sided with alternating lines">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/line-spacing/line_spacing.xml"/>
