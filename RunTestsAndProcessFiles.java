@@ -109,6 +109,7 @@ public class RunTestsAndProcessFiles {
 			mavenBundle().groupId("org.daisy.bindings").artifactId("jhyphen").versionAsInProject(),
 			mavenBundle().groupId("com.googlecode.texhyphj").artifactId("texhyphj").versionAsInProject(),
 			brailleModule("mod-celia"),
+			brailleModule("mod-dedicon"),
 			brailleModule("mod-nlb"),
 			brailleModule("mod-sbs"),
 			mavenBundle().groupId("ch.sbs.pipeline").artifactId("sbs-braille-tables").versionAsInProject(),

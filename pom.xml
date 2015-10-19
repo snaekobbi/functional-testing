@@ -15,6 +15,7 @@
     <pipeline.version>1.9</pipeline.version>
     <mod-braille.version>1.9.5</mod-braille.version>
     <mod-celia.version>1.0.0</mod-celia.version>
+    <mod-dedicon.version>1.0.0</mod-dedicon.version>
     <mod-nlb.version>1.1.0</mod-nlb.version>
     <mod-nota.version>1.0.0</mod-nota.version>
     <mod-sbs.version>1.1.0</mod-sbs.version>
@@ -53,6 +54,11 @@
         <groupId>org.daisy.pipeline.modules.braille</groupId>
         <artifactId>mod-celia</artifactId>
         <version>${mod-celia.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.pipeline.modules.braille</groupId>
+        <artifactId>mod-dedicon</artifactId>
+        <version>${mod-dedicon.version}</version>
       </dependency>
       <dependency>
         <groupId>org.daisy.pipeline.modules.braille</groupId>
@@ -145,6 +151,11 @@
     <dependency>
       <groupId>org.daisy.pipeline.modules.braille</groupId>
       <artifactId>mod-celia</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.daisy.pipeline.modules.braille</groupId>
+      <artifactId>mod-dedicon</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

@@ -599,7 +599,7 @@
             </a>
           </p>
         </li>
-        <li class="requirement priority_2" id="4.4:55">
+        <li class="requirement priority_2 changed" id="4.4:55">
           <h3>
             <a class="req-nr" href="#4.4:55">4.4:55</a>
             The user shall be able to override the default handling of whitespace for certain elements:
@@ -625,6 +625,18 @@
               </a>
             </li>
           </ul>
+          <p>
+            <a class="test-src" href="test/tables/test-dedicon.xprocspec#rijtjes1">
+              Dedicon example of a pre-formatted table.
+            </a>
+          </p>
+          <p>
+            Note that this table is pre-<em>formatted</em> but not <em>pre-translated</em> and that
+            while the formatting can be preserved with <samp>white-space: pre-wrap</samp>, it can
+            still be messed up by the translation. A better solution would be to mark up these kind
+            of tables with <samp>&lt;table&gt;</samp> (see <a href="#4.4:57">requirement
+            4.4:57</a>).
+          </p>
         </li>
         <li class="requirement priority_1 changed" id="4.4:57">
           <h3>
@@ -658,6 +670,13 @@
               </a>
             </li>
           </ul>
+          <p>
+            <a class="test-src" href="test/tables/test-dedicon.xprocspec#rijtjes2">
+              Dedicon example of a table linearized row-by-row with columns separated by a
+              <samp>;</samp> and one space. The table starts and ends with the marks <samp>bt</samp>
+              (= "begin table") <samp>et</samp> (= "end table").
+            </a>
+          </p>
         </li>
         <li class="requirement priority_1 changed" id="4.4:58">
           <h3>

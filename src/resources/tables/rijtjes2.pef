@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pef xmlns="http://www.daisy.org/ns/2008/pef" version="2010X">
+  <head>
+  </head>
+  <body>
+    <volume cols="32" rows="29" rowgap="0" duplex="true" xmlns:ext="PEF extension">
+      <section>
+        <page ext:page-number="1">
+          <row>⠞⠊⠞⠑⠇⠀⠞⠁⠃⠑⠇</row>
+          <row>⠀⠀⠨⠗⠊⠚⠞⠚⠑⠎⠀⠺⠕⠕⠗⠙⠑⠝⠀⠊⠝⠀⠐⠪⠞⠁⠤</row>
+          <row>⠀⠀⠃⠇⠑⠐⠕</row>
+          <row></row>
+          <row>⠃⠞</row>
+          <row>⠃⠑⠇⠆⠀⠙⠑⠇⠆⠀⠓⠑⠇⠆⠀⠞⠑⠇</row>
+          <row>⠃⠁⠇⠆⠀⠙⠁⠇⠆⠀⠓⠁⠇⠆⠀⠞⠁⠇</row>
+          <row>⠃⠕⠇⠆⠀⠙⠕⠇⠆⠀⠓⠕⠇⠆⠀⠞⠕⠇</row>
+          <row>⠃⠊⠇⠆⠀⠙⠊⠇⠆⠀⠓⠊⠇⠆⠀⠞⠊⠇</row>
+          <row>⠑⠞</row>
+        </page>
+      </section>
+    </volume>
+  </body>
+</pef>
