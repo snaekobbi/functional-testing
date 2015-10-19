@@ -1,0 +1,11 @@
+
+@page { size: 28 28; } 
+
+dtbook {
+  hyphens: none;
+}
+
+table,
+tr {
+	display: block;
+}
