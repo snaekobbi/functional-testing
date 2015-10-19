@@ -134,4 +134,41 @@
     </x:expect>
   </x:scenario>
   
+  <x:scenario id="test8" label="[4.4:58] matrix + heading cells underlined
+                                [4.4:59] table heading repeated on each page">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.59_ex1_repeating_heading/test_4.4.59.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.59_ex1_repeating_heading/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.59_ex1_repeating_heading/output_expected/test_4.4.59.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test9" label="[4.4:57] row as sublist, repeat column header">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/test_4.4.57_ex2_row_as_sublist/test_4.4.57.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('../../resources/tables/test_4.4.57_ex2_row_as_sublist/style.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/test_4.4.57_ex2_row_as_sublist/output_expected/test_4.4.57.pef"/>
+    </x:expect>
+  </x:scenario>
+  
 </x:description>

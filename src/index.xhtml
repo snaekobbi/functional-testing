@@ -641,20 +641,31 @@
             </ul>
           </h3>
           <p>
-            <a class="test-src" href="test/tables/test.xprocspec#test3">
-              SBS example: Large tables can be rendered row-wise with a special symbol
-              <samp>::</samp> to indicate the beginning of a new column. (This method can always be
-              used as a fallback unless the table contains paragraphs/lists in its cells.)
-            </a>
+            SBS examples:
           </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test3">
+                Example 1: Large tables can be rendered row-wise with a special symbol
+                <samp>::</samp> to indicate the beginning of a new column. (This method can always
+                be used as a fallback unless the table contains paragraphs/lists in its cells.)
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test9">
+                Example 2: Rendering table rows as sublists, with the headers of columns repeated
+                before each cell in that column.
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_1 changed" id="4.4:58">
           <h3>
-            <a class="req-nr" href="#4.4:58">4.4:58</a>
-            There shall be the option to render a table in matrix format, thereby mimicking the
-            original form. This feature shall be supported at least for small tables that fit on a
-            page horizontally without the need for text wrapping in cells, and that have no column-
-            or rowspan. The matrix format supports borders and padding on rows, columns and cells.
+            <a class="req-nr" href="#4.4:58">4.4:58</a> There shall be the option to render a table
+            in matrix format, thereby mimicking the original form. This feature shall be supported
+            at least for small tables that fit on a page horizontally without the need for text
+            wrapping in cells, and that have no column- or rowspan. The matrix format supports
+            borders and padding on rows, columns and cells.
           </h3>
           <p>
             SBS examples: Small tables can be rendered as in the print (matrix).
@@ -686,6 +697,11 @@
                 Example 5
               </a>
             </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test8">
+                Example 6: A table that spans multiple pages.
+              </a>
+            </li>
           </ul>
         </li>
         <li class="requirement priority_2" id="4.4:56">
@@ -694,12 +710,17 @@
             The system shall provide a way to control the layout of each table separately.
           </h3>
         </li>
-        <li class="requirement priority_2" id="4.4:59">
+        <li class="requirement priority_2 changed" id="4.4:59">
           <h3>
             <a class="req-nr" href="#4.4:59">4.4:59</a>
             When a table in matrix format spans multiple pages, there shall be the possibility of
             repeating the table heading at the top of each page.
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test8">
+              SBS example
+            </a>
+          </p>
         </li>
         <li class="requirement priority_2 changed" id="4.4:60">
           <h3>
