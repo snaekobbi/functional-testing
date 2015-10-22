@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+  <head>
+    <meta/>
+  </head>
+  <body>
+    <volume cols="22" rows="20" rowgap="1">
+	  <section>
+	    <page>
+		  <line>⠑⠀⠝⠀⠝⠀⠊⠀⠀⠀⠥⠀⠊</line>
+  		  <line>⠕⠀⠝⠀⠝⠀⠊⠀⠀⠀⠥⠀⠊</line>
+		</page>
+	  </section>
+  	  <section>
+	    <page>
+		  <line>⠠⠑⠀⠝⠀⠤⠀⠝⠀⠊</line>
+		  <line>⠇⠀⠁⠀⠥⠀⠤⠀⠇⠀⠁⠀⠁⠄</line>
+  		  <line>⠠⠕⠀⠝⠀⠤⠀⠝⠀⠊⠀⠀⠀⠥⠀⠊⠄</line>
+		</page>
+	  </section>
+	  <section>
+	    <page>
+	      <line>⠠⠇⠀⠥⠀⠕⠀⠤⠀⠅⠀⠁⠀⠎⠀⠤⠀⠎⠀⠁</line>
+	      <line>⠕⠀⠝⠀⠀⠀⠼⠉⠀⠀⠀⠇⠀⠁⠀⠎⠀⠤⠀⠞⠀⠁⠄</line>
+		</page>
+	  </section>
+	  <section>
+	    <page>
+	      <line>⠠⠇⠀⠜⠀⠏⠀⠊⠀⠀⠀⠝⠀⠜⠀⠅⠀⠽⠀⠽⠂</line>
+	      <line>⠇⠀⠜⠀⠍⠀⠏⠀⠊⠀⠍⠀⠜⠀⠝⠀⠀⠀⠏⠀⠊⠤</line>
+	      <line>⠞⠀⠜⠀⠜⠢</line>
+		</page>
+	  </section>
+	  <section>
+	    <page>
+	      <line>⠠⠓⠀⠊⠀⠝⠀⠞⠀⠁⠀⠀⠀⠕⠀⠝⠀⠀⠀⠼⠉⠚</line>
+	      <line>⠍⠀⠁⠀⠗⠀⠅⠀⠅⠀⠁⠀⠁⠄</line>
+		</page>
+	  </section>
+	</volume>
+  </body>
+</pef>
