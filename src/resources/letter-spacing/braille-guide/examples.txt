@@ -1,13 +1,13 @@
-# All caps, for early primary education
+# All caps, for early primary education. No hyphenation.
 ENNI UI
 ONNI UI
 
-# Pre-hyphenated, with majuscules and minuscules
+# Pre-hyphenated, with majuscules and minuscules. No hyphenation.
 En-ni lau-laa. On-ni ui.
 
 Luo-kas-sa on 3 las-ta.
 
-# Literate braille learner's books
+# Literate braille learner's books. Hyphenation allowed.
 Läpi näkyy, lämpimän pitää?
 
 Hinta on 30 markkaa.
