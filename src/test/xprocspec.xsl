@@ -170,10 +170,15 @@
 	
 	<xsl:template match="pef:section">
 		<xsl:variable name="duplex" select="ancestor-or-self::*[@duplex][1]/@duplex='true'"/>
-		<xsl:choose>
-			<xsl:when test="$duplex
-			                and (count(child::pef:page) mod 2 = 1)
-			                and (following::pef:page intersect ancestor::pef:pef/descendant::pef:page)">
+		<xsl:copy>
+			<xsl:sequence select="@* except @duplex"/>
+			<xsl:if test="$duplex">
+				<xsl:attribute name="duplex" select="'true'"/>
+			</xsl:if>
+			<xsl:apply-templates select="*"/>
+			<xsl:if test="$duplex
+			              and (count(child::pef:page) mod 2 = 1)
+			              and (following::pef:page intersect ancestor::pef:pef/descendant::pef:page)">
 				<xsl:variable name="section" as="element()">
 					<pef:section rows="{ancestor-or-self::*[@rows][1]/@rows}"
 					             cols="{ancestor-or-self::*[@cols][1]/@cols}"
@@ -181,16 +186,9 @@
 						<pef:page/>
 					</pef:section>
 				</xsl:variable>
-				<xsl:copy>
-					<xsl:sequence select="@*"/>
-					<xsl:apply-templates select="*"/>
-					<xsl:apply-templates select="$section/pef:page"/>
-				</xsl:copy>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:next-match/>
-			</xsl:otherwise>
-		</xsl:choose>
+				<xsl:apply-templates select="$section/pef:page"/>
+			</xsl:if>
+		</xsl:copy>
 	</xsl:template>
 	
 	<xsl:template match="pef:page">

@@ -308,6 +308,10 @@ pef|head {
 	display: none;
 }
 
+pef|section {
+	display: block;
+}
+
 pef|page {
 	display: inline-block;
 	border: 1px solid #ccc;
@@ -315,6 +319,16 @@ pef|page {
 	padding: 0.5em;
 	margin: 15px 0 0 15px;
 	vertical-align: top;
+}
+
+pef|section[duplex=true] > pef|page:nth-child(2n + 1) {
+	margin-left: -5px;
+	border-left: 5px solid #ccc;
+}
+
+pef|section[duplex=true] > pef|page:first-child {
+	margin-left: 15px;
+	border-left: 1px solid #ccc;
 }
 
 pef|row {
