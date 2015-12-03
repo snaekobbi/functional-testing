@@ -24,7 +24,7 @@ cat <<- EOF > $TMP_DIR/index.html
 	  <head>
 	    <meta charset="UTF-8"/>
 	    <script type="text/javascript">
-	      window.location.href = "http://snaekobbi.github.io/requirements/v1.3/index.xhtml" + window.location.hash
+	      window.location.href = "http://snaekobbi.github.io/requirements/v1.4/index.xhtml" + window.location.hash
 	    </script>
 	  </head>
 	</html>
