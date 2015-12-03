@@ -3,13 +3,13 @@
                xmlns:pxi="http://www.daisy.org/ns/pipeline/xproc/internal"
                script="../css_inline_and_px_transform_type_css.xpl">
   
-  <x:scenario id="96.1" label="Optional text preceding sidebar (&quot;Margin text:&quot;)">
+  <x:scenario id="test1" label="[4.7:96] optional text preceding sidebar">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/generated-content/Test.DTBook.Generated content.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="stylesheet" select="resolve-uri('style-nlb.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:1)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -20,14 +20,14 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="96.2" label="Boilerplate text on the title page (&quot;NLB, Norge 2015 and Volume x of y&quot;)
-                               and optional text preceding sidebar (&quot;Margin text:&quot;)">
+  <x:scenario id="test2" label="[4.7:96] boilerplate text on the title page
+                                         optional text preceding sidebar">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/generated-content/Test.DTBook.4.7.96.Automatic-insertion-of-content.xml"/>
       </x:input>
-      <x:option name="stylesheet" select="resolve-uri('style.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:no)'"/>
+      <x:option name="stylesheet" select="resolve-uri('style-nlb.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:nlb)(grade:1)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -38,13 +38,13 @@
     </x:expect>
   </x:scenario>
   
-  <x:scenario id="96.3" label="Boilerplate added when breaking into volumes (&quot;End of volume x&quot; and &quot;Chapter x (continuation)&quot;)">
+  <x:scenario id="test3" label="[4.7:96] boilerplate when breaking into volumes">
     <x:call step="pxi:css-inline-and-px-transform-type-css">
       <x:input port="source">
         <x:document type="file" href="../../resources/generated-content/sbs-volume-breaking.xml"/>
       </x:input>
       <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
-      <x:option name="transform" select="'(formatter:dotify)(locale:de)'"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
       <x:option name="temp-dir" select="$temp-dir"/>
     </x:call>
     <x:context label="result">
@@ -52,6 +52,48 @@
     </x:context>
     <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
       <x:document type="file" href="../../resources/generated-content/sbs-volume-breaking.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test4" label="[4.7:95] marks in left margin pt. 1">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline">
+          <_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+            todo
+          </_>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/generated-content/sbs-marks-in-left-margin-1.pef"/>
+    </x:expect>
+  </x:scenario>
+  
+  <x:scenario id="test5" label="[4.7:95] marks in left margin pt. 2">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="inline">
+          <_ xmlns="http://www.daisy.org/z3986/2005/dtbook/">
+            todo
+          </_>
+        </x:document>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('style-sbs.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:sbs)(grade:0)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/generated-content/sbs-marks-in-left-margin-2.pef"/>
     </x:expect>
   </x:scenario>
   
