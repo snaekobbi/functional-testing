@@ -626,7 +626,7 @@
             </li>
           </ul>
         </li>
-        <li class="requirement priority_1" id="4.4:57">
+        <li class="requirement priority_1 changed" id="4.4:57">
           <h3>
             <a class="req-nr" href="#4.4:57">4.4:57</a>
             There shall be the option to reformat a table into a list,
@@ -640,8 +640,15 @@
               <li> It must be possible to prepend cells with their column header. </li>
             </ul>
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test3">
+              SBS example: Large tables can be rendered row-wise with a special symbol
+              <samp>::</samp> to indicate the beginning of a new column. (This method can always be
+              used as a fallback unless the table contains paragraphs/lists in its cells.)
+            </a>
+          </p>
         </li>
-        <li class="requirement priority_1" id="4.4:58">
+        <li class="requirement priority_1 changed" id="4.4:58">
           <h3>
             <a class="req-nr" href="#4.4:58">4.4:58</a>
             There shall be the option to render a table in matrix format, thereby mimicking the
@@ -649,6 +656,37 @@
             page horizontally without the need for text wrapping in cells, and that have no column-
             or rowspan. The matrix format supports borders and padding on rows, columns and cells.
           </h3>
+          <p>
+            SBS examples: Small tables can be rendered as in the print (matrix).
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test1">
+                Example 1
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test2">
+                Example 2
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test4">
+                Example 3
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test5">
+                Example 4: A wide table is split vertically into several parts. Row headers are
+                repeated for each part.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test6">
+                Example 5
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_2" id="4.4:56">
           <h3>
@@ -663,12 +701,17 @@
             repeating the table heading at the top of each page.
           </h3>
         </li>
-        <li class="requirement priority_2" id="4.4:60">
+        <li class="requirement priority_2 changed" id="4.4:60">
           <h3>
             <a class="req-nr" href="#4.4:60">4.4:60</a>
             There shall be the possibility of transposing tables, that is, treat rows as if they
             were columns and columns as if they were rows.
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test2">
+              SBS example: Some tables can be mirrored to fit on the page.
+            </a>
+          </p>
         </li>
         <li class="requirement priority_2" id="4.4:61">
           <h3>
@@ -677,12 +720,18 @@
             to render a certain table by trying several alternatives.
           </h3>
         </li>
-        <li class="requirement priority_3" id="4.4:62">
+        <li class="requirement priority_3 changed" id="4.4:62">
           <h3>
             <a class="req-nr" href="#4.4:62">4.4:62</a>
             The system shall be able to cope with column- and rowspan in tables (in a yet undefined
             way).
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test6">
+              SBS example: In the case of matrix layout, a possibility is to fill up empty space in
+              a cell that spans several columns with some dot pattern.
+            </a>
+          </p>
         </li>
         <li class="requirement priority_3" id="4.4:63">
           <h3>
@@ -691,13 +740,18 @@
             wrapping of text in cells and automatic computing of optimal column widths.
           </h3>
         </li>
-        <li class="requirement priority_3" id="4.4:64">
+        <li class="requirement priority_3 changed" id="4.4:64">
           <h3>
             <a class="req-nr" href="#4.4:64">4.4:64</a>
             There shall be the option to render a wide table on facing pages.
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test4">
+              SBS example: A table can span across 2 pages (left-hand page and right-hand page).
+            </a>
+          </p>
         </li>
-        <li class="requirement priority_1" id="4.4:65">
+        <li class="requirement priority_1 changed" id="4.4:65">
           <h3>
             <a class="req-nr" href="#4.4:65">4.4:65</a>
             The system shall be able to render tables of contents, list of images, index,
@@ -705,6 +759,29 @@
             such as page numbers aligned on the right. Optionally leaders may be used to connect the
             two columns.
           </h3>
+          <p>
+            SBS examples:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test2">
+                Two-column table with second column left-aligned and with leaders.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/horizontal-positioning/test.xprocspec#test">
+                Two two-column tables below each other with same alignment of second columns and
+                with leaders.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test5">
+                Leaders may also be used in tables with <strong>more than two columns</strong>. In
+                this example a wide table is split vertically into several parts each existing of 4
+                columns.
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_1" id="4.4:66">
           <h3>
