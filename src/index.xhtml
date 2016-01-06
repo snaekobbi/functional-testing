@@ -677,6 +677,39 @@
               (= "begin table") <samp>et</samp> (= "end table").
             </a>
           </p>
+          <p>
+            <a class="test-src" href="test/tables/test-nota.xprocspec#test1">
+               Nota examples<a class="noteref" href="#note_1">1</a>
+            </a>
+          </p>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              Tables are rendered row by row with columns separated by a <samp>⠆</samp> (cell 2-3)
+              and a space.
+            </li>
+            <li>
+              Data cells are preceded by the appropriate column heading if present, with a
+              <samp>⠒</samp> (cell 2-5) and a space in between. Rows containing column headings are
+              discarded.
+            </li>
+            <li>
+              A row is preceded by its row heading if present, with a <samp>⠒</samp> (cell 2-5) and
+              a space in between.
+            </li>
+            <li>
+              When nested row or column headings are present, the table is split up into several
+              "sub-tables" by grouping the content by the outermost row or column headings. The
+              outermost headings form a list, and the sub-tables form sub-lists. (See 7th example.)
+            </li>
+            <li>
+              When both nested row headers and nested column headings are present the table is split
+              up by grouping by combinations of the outermost row and columns headings. (See last
+              example.)
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_1 changed" id="4.4:58">
           <h3>
@@ -752,6 +785,25 @@
               SBS example: Some tables can be mirrored to fit on the page.
             </a>
           </p>
+          <p>
+            <a class="test-src" href="test/tables/test-nota.xprocspec#test1">
+               Nota examples<a class="noteref" href="#note_1">1</a>
+            </a>
+          </p>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              If a table has few columns compared to the number of rows, it may be better to render
+              it column by column. (See 4th example: the table with class "render_by_column".)
+            </li>
+            <li>
+              Tables with class "render_by_both" are duplicated: the first instance is rendered row
+              by row; the second instance is rendered column by column. Some explanatory text is
+              added to indicate which is which. (See 5th example.)
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_2" id="4.4:61">
           <h3>
@@ -772,6 +824,24 @@
               a cell that spans several columns with some dot pattern.
             </a>
           </p>
+          <p>
+            <a class="test-src" href="test/tables/test-nota.xprocspec#test1">
+               Nota examples<a class="noteref" href="#note_1">1</a>
+            </a>
+          </p>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              Cells spanning multiple columns/rows are simply repeated. (See 6th example.)
+            </li>
+            <li>
+              Heading cells that span multiple columns/rows but that are also the outer part of
+              nested headings (see last two examples) are rendered by splitting the table into
+              sub-tables (see <a href="#4.4:57">requirement 4.4:57</a>).
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_3" id="4.4:63">
           <h3>
