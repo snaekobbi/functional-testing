@@ -1,0 +1,15 @@
+titel tabel
+  {Kolommen met langere stukken
+  tekst erin die niet op %1 regel
+  passen
+
+bt
+tekst; langere tekst; nog iets
+  langere tekst; hele lange tekst
+  die zeker niet meer op een
+  enkele regel zal passen
+lange tekst die niet op een
+  enkele regel zal passen; tekst
+  ; tekst; tekst
+et
+
