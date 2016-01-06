@@ -39,4 +39,22 @@
     </x:expect>
   </x:scenario>
   
+  <x:scenario id="floating" label="[4.4:58] matrix">
+    <x:call step="pxi:css-inline-and-px-transform-type-css">
+      <x:input port="source">
+        <x:document type="file" href="../../resources/tables/floating.xml"/>
+      </x:input>
+      <x:option name="stylesheet" select="resolve-uri('floating.css')"/>
+      <x:option name="transform" select="'(formatter:dotify)(translator:dedicon)'"/>
+      <x:option name="ascii-table" select="'(liblouis-table:&quot;http://www.sbs.ch/pipeline/liblouis/tables/sbs.dis&quot;)'"/>
+      <x:option name="temp-dir" select="$temp-dir"/>
+    </x:call>
+    <x:context label="result">
+      <x:document type="port" port="result"/>
+    </x:context>
+    <x:expect label="result" type="custom" href="http://www.daisy.org/pipeline/modules/braille/pef-utils/library.xpl" step="x:pef-compare">
+      <x:document type="file" href="../../resources/tables/floating.pef"/>
+    </x:expect>
+  </x:scenario>
+  
 </x:description>
