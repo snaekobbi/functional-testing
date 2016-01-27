@@ -599,7 +599,7 @@
             </a>
           </p>
         </li>
-        <li class="requirement priority_2" id="4.4:55">
+        <li class="requirement priority_2 changed" id="4.4:55">
           <h3>
             <a class="req-nr" href="#4.4:55">4.4:55</a>
             The user shall be able to override the default handling of whitespace for certain elements:
@@ -625,8 +625,20 @@
               </a>
             </li>
           </ul>
+          <p>
+            <a class="test-src" href="test/tables/test-dedicon.xprocspec#rijtjes1">
+              Dedicon example of a pre-formatted table.
+            </a>
+          </p>
+          <p>
+            Note that this table is pre-<em>formatted</em> but not <em>pre-translated</em> and that
+            while the formatting can be preserved with <samp>white-space: pre-wrap</samp>, it can
+            still be messed up by the translation. A better solution would be to mark up these kind
+            of tables with <samp>&lt;table&gt;</samp> (see <a href="#4.4:57">requirement
+            4.4:57</a>).
+          </p>
         </li>
-        <li class="requirement priority_1" id="4.4:57">
+        <li class="requirement priority_1 changed" id="4.4:57">
           <h3>
             <a class="req-nr" href="#4.4:57">4.4:57</a>
             There shall be the option to reformat a table into a list,
@@ -640,15 +652,131 @@
               <li> It must be possible to prepend cells with their column header. </li>
             </ul>
           </h3>
+          <p>
+            SBS examples:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test3">
+                Example 1: Large tables can be rendered row-wise with a special symbol
+                <samp>::</samp> to indicate the beginning of a new column. (This method can always
+                be used as a fallback unless the table contains paragraphs/lists in its cells.)
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test9">
+                Example 2: Rendering table rows as sublists, with the headers of columns repeated
+                before each cell in that column.
+              </a>
+            </li>
+          </ul>
+          <p>
+            Dedicon examples of tables linearized row-by-row:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test-dedicon.xprocspec#rijtjes2">
+                Example 1: table linearized row-by-row with columns separated by a <samp>;</samp>
+                and one space. The table starts and ends with the marks <samp>bt</samp> (= "begin
+                table") <samp>et</samp> (= "end table").
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test-dedicon.xprocspec#test_tabel1">
+                Example 2. For empty cells the text "gg" is inserted. The table title is rendered at
+                the top of the table beneath the line "titel tabel".
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test-dedicon.xprocspec#test_tabel2">
+                Example 3.
+              </a>
+            </li>
+          </ul>
+          <p>
+            <a class="test-src" href="test/tables/test-nota.xprocspec#test1">
+               Nota examples<a class="noteref" href="#note_1">1</a>
+            </a>
+          </p>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              Tables are rendered row by row with columns separated by a <samp>⠆</samp> (cell 2-3)
+              and a space.
+            </li>
+            <li>
+              Data cells are preceded by the appropriate column heading if present, with a
+              <samp>⠒</samp> (cell 2-5) and a space in between. Rows containing column headings are
+              discarded.
+            </li>
+            <li>
+              A row is preceded by its row heading if present, with a <samp>⠒</samp> (cell 2-5) and
+              a space in between.
+            </li>
+            <li>
+              When nested row or column headings are present, the table is split up into several
+              "sub-tables" by grouping the content by the outermost row or column headings. The
+              outermost headings form a list, and the sub-tables form sub-lists. (See 7th example.)
+            </li>
+            <li>
+              When both nested row headers and nested column headings are present the table is split
+              up by grouping by combinations of the outermost row and columns headings. (See last
+              example.)
+            </li>
+          </ul>
         </li>
-        <li class="requirement priority_1" id="4.4:58">
+        <li class="requirement priority_1 changed" id="4.4:58">
           <h3>
-            <a class="req-nr" href="#4.4:58">4.4:58</a>
-            There shall be the option to render a table in matrix format, thereby mimicking the
-            original form. This feature shall be supported at least for small tables that fit on a
-            page horizontally without the need for text wrapping in cells, and that have no column-
-            or rowspan. The matrix format supports borders and padding on rows, columns and cells.
+            <a class="req-nr" href="#4.4:58">4.4:58</a> There shall be the option to render a table
+            in matrix format, thereby mimicking the original form. This feature shall be supported
+            at least for small tables that fit on a page horizontally without the need for text
+            wrapping in cells, and that have no column- or rowspan. The matrix format supports
+            borders and padding on rows, columns and cells.
           </h3>
+          <p>
+            SBS examples: Small tables can be rendered as in the print (matrix).
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test1">
+                Example 1
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test2">
+                Example 2
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test4">
+                Example 3
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test5">
+                Example 4: A wide table is split vertically into several parts. Row headers are
+                repeated for each part.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test6">
+                Example 5
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test8">
+                Example 6: A table that spans multiple pages.
+              </a>
+            </li>
+          </ul>
+          <p>
+            <a class="test-src" href="test/tables/test-dedicon.xprocspec#floating">
+              Dedicon example: tables can be used for simulating floating of blocks (i.e. stacking
+              blocks horizontally instead of vertically).
+            </a>
+          </p>
         </li>
         <li class="requirement priority_2" id="4.4:56">
           <h3>
@@ -656,19 +784,48 @@
             The system shall provide a way to control the layout of each table separately.
           </h3>
         </li>
-        <li class="requirement priority_2" id="4.4:59">
+        <li class="requirement priority_2 changed" id="4.4:59">
           <h3>
             <a class="req-nr" href="#4.4:59">4.4:59</a>
             When a table in matrix format spans multiple pages, there shall be the possibility of
             repeating the table heading at the top of each page.
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test8">
+              SBS example
+            </a>
+          </p>
         </li>
-        <li class="requirement priority_2" id="4.4:60">
+        <li class="requirement priority_2 changed" id="4.4:60">
           <h3>
             <a class="req-nr" href="#4.4:60">4.4:60</a>
             There shall be the possibility of transposing tables, that is, treat rows as if they
             were columns and columns as if they were rows.
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test2">
+              SBS example: Some tables can be mirrored to fit on the page.
+            </a>
+          </p>
+          <p>
+            <a class="test-src" href="test/tables/test-nota.xprocspec#test1">
+               Nota examples<a class="noteref" href="#note_1">1</a>
+            </a>
+          </p>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              If a table has few columns compared to the number of rows, it may be better to render
+              it column by column. (See 4th example: the table with class "render_by_column".)
+            </li>
+            <li>
+              Tables with class "render_by_both" are duplicated: the first instance is rendered row
+              by row; the second instance is rendered column by column. Some explanatory text is
+              added to indicate which is which. (See 5th example.)
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_2" id="4.4:61">
           <h3>
@@ -677,12 +834,36 @@
             to render a certain table by trying several alternatives.
           </h3>
         </li>
-        <li class="requirement priority_3" id="4.4:62">
+        <li class="requirement priority_3 changed" id="4.4:62">
           <h3>
             <a class="req-nr" href="#4.4:62">4.4:62</a>
             The system shall be able to cope with column- and rowspan in tables (in a yet undefined
             way).
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test6">
+              SBS example: In the case of matrix layout, a possibility is to fill up empty space in
+              a cell that spans several columns with some dot pattern.
+            </a>
+          </p>
+          <p>
+            <a class="test-src" href="test/tables/test-nota.xprocspec#test1">
+               Nota examples<a class="noteref" href="#note_1">1</a>
+            </a>
+          </p>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              Cells spanning multiple columns/rows are simply repeated. (See 6th example.)
+            </li>
+            <li>
+              Heading cells that span multiple columns/rows but that are also the outer part of
+              nested headings (see last two examples) are rendered by splitting the table into
+              sub-tables (see <a href="#4.4:57">requirement 4.4:57</a>).
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_3" id="4.4:63">
           <h3>
@@ -691,13 +872,18 @@
             wrapping of text in cells and automatic computing of optimal column widths.
           </h3>
         </li>
-        <li class="requirement priority_3" id="4.4:64">
+        <li class="requirement priority_3 changed" id="4.4:64">
           <h3>
             <a class="req-nr" href="#4.4:64">4.4:64</a>
             There shall be the option to render a wide table on facing pages.
           </h3>
+          <p>
+            <a class="test-src" href="test/tables/test.xprocspec#test4">
+              SBS example: A table can span across 2 pages (left-hand page and right-hand page).
+            </a>
+          </p>
         </li>
-        <li class="requirement priority_1" id="4.4:65">
+        <li class="requirement priority_1 changed" id="4.4:65">
           <h3>
             <a class="req-nr" href="#4.4:65">4.4:65</a>
             The system shall be able to render tables of contents, list of images, index,
@@ -705,6 +891,29 @@
             such as page numbers aligned on the right. Optionally leaders may be used to connect the
             two columns.
           </h3>
+          <p>
+            SBS examples:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test2">
+                Two-column table with second column left-aligned and with leaders.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test7">
+                Two two-column tables below each other with same alignment of second columns and
+                with leaders.
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/tables/test.xprocspec#test5">
+                Leaders may also be used in tables with <strong>more than two columns</strong>. In
+                this example a wide table is split vertically into several parts each existing of 4
+                columns.
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_1" id="4.4:66">
           <h3>

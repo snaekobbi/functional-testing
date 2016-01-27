@@ -1,0 +1,34 @@
+pMAL  #A   #B   #C   #D   #E
+ :::  :::  :::  :::  :::  :::
+ #A   #A   #B   #C   #D   #E
+ #B   #B   #D   #F   #H   #AJ
+ #C   #C   #F   #I   #AB  #AE
+ #D   #D   #H   #AB  #AF  #BJ
+ #E   #E   #AJ  #AE  #BJ  #BE
+                           #A
+pMAL  #A   #B   #C   #D   #E
+ :::  :::  :::  :::  :::  :::
+ #F   #F   #AB  #AH  #BD  #CJ
+ #G   #G   #AD  #BA  #BH  #CE
+ #H   #H   #AF  #BD  #CB  #DJ
+ #I   #I   #AH  #BG  #CF  #DE
+ #AJ  #AJ  #BJ  #CJ  #DJ  #EJ
+ #AA  #AA  #BB  #CC  #DD  #EE
+pMAL  #A   #B   #C   #D   #E
+ :::  :::  :::  :::  :::  :::
+ #AB  #AB  #BD  #CF  #DH  #FJ
+ #AC  #AC  #BF  #CI  #EB  #FE
+ #AD  #AD  #BH  #DB  #EF  #GJ
+ #AE  #AE  #CJ  #DE  #FJ  #GE
+ #AF  #AF  #CB  #DH  #FD  #HJ
+                           #C
+pMAL  #A   #B   #C   #D   #E
+ :::  :::  :::  :::  :::  :::
+ #AG  #AG  #CD  #EA  #FH  #HE
+ #AH  #AH  #CF  #ED  #GB  #IJ
+ #AI  #AI  #CH  #EG  #GF  #IE
+
+
+
+p
+p

@@ -1,0 +1,114 @@
+p         #FAF.JJJ #FAF.BEJ #FAF.EJJ
+          :::::::: :::::::: ::::::::
+ #AFG.JJJ #AFGJ .. #AGJJ .. #AFHJ
+ #AFF.GEJ #AHHJ .. #AHFJ .. #AGHJ
+ #AFF.EJJ #BJBJ .. #BJFJ .. #AIIJ
+ #AFF.BEJ #BAJJ .. #BBHJ .. #BAHJ
+ #AFF.JJJ --- .... --- .... ---
+ #AFE.GEJ #BAGJ .. #BAFJ .. #BABJ
+ #AFE.EJJ #BJHJ .. #AIIJ .. #AIIJ
+ #AFE.BEJ #AIBJ .. #AHHJ .. #AHFJ
+ #AFE.JJJ #AHJJ .. #AGFJ .. #AGCJ
+ ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+          #FAF.GEJ #FAG.JJJ #FAG.BEJ
+          :::::::: :::::::: ::::::::
+ #AFG.JJJ #AEBJ .. #ABFJ .. #AAFJ
+ #AFF.GEJ #AFJJ .. #ADJJ .. #ABBJ
+ #AFF.EJJ #AGCJ .. #AEGJ .. #AEBJ
+ #AFF.BEJ #AHHJ .. #AGHJ .. #AFGJ
+ #AFF.JJJ --- .... --- .... ---
+ #AFE.GEJ #AIBJ .. #AHFJ .. #AGFJ
+ #AFE.EJJ #AHHJ .. #AGDJ .. #AFCJ
+ #AFE.BEJ #AGDJ .. #AGJJ .. #AEBJ
+ #AFE.JJJ #AFDJ .. #AEHJ .. #ADGJ
+
+
+
+
+                                  #A
+p,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+          #FAG.EJJ #FAG.GEJ #FAH.JJJ
+          :::::::: :::::::: ::::::::
+ #AFG.JJJ #AJCJ .. #AJBJ .. ---
+ #AFF.GEJ #ABJJ .. #AAJJ .. ---
+ #AFF.EJJ #ACDJ .. #ABJJ .. ---
+ #AFF.BEJ #ADFJ .. #ACFJ .. ---
+ #AFF.JJJ --- .... --- .... ---
+ #AFE.GEJ #AFHJ .. #AECJ .. ---
+ #AFE.EJJ #AEHJ .. #ADJJ .. ---
+ #AFE.BEJ #ADFJ .. #AEJJ .. ---
+ #AFE.JJJ #ACHJ .. #ADJJ .. ---
+ ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+          #FAH.BEJ #FAH.EJJ #FAH.GEJ
+          :::::::: :::::::: ::::::::
+ #AFG.JJJ #GJJ ... #FGJ ... #GJJ
+ #AFF.GEJ #GHJ ... #GBJ ... #FHJ
+ #AFF.EJJ #HFJ ... #HJJ ... #GBJ
+ #AFF.BEJ #IFJ ... #HFJ ... #GEJ
+ #AFF.JJJ --- .... --- .... ---
+ #AFE.GEJ #ABJJ .. #IIJ ... #HFJ
+ #AFE.EJJ #AAHJ .. #AJJJ .. #HHJ
+ #AFE.BEJ #ABJJ .. #AJAJ .. #IBJ
+ #AFE.JJJ #ABBJ .. #AJCJ .. #IBJ
+
+
+
+
+p,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+          #FAI.JJJ #FAI.BEJ #FAI.EJJ
+          :::::::: :::::::: ::::::::
+ #AFG.JJJ #GEJ ... #HBJ ... ---
+ #AFF.GEJ #GJJ ... #HJJ ... ---
+ #AFF.EJJ #FHJ ... #GDJ ... ---
+ #AFF.BEJ #GJJ ... #GAJ ... ---
+ #AFF.JJJ --- .... --- .... ---
+ #AFE.GEJ #GEJ ... #FIJ ... ---
+ #AFE.EJJ #GGJ ... #FIJ ... ---
+ #AFE.BEJ #HJJ ... #FIJ ... ---
+ #AFE.JJJ #HBJ ... #FIJ ... ---
+ ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  #C
+p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p
+p
