@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pef xmlns="http://www.daisy.org/ns/2008/pef" version="2008-1">
+   <head>
+      <meta xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:generator="http://daisymfc.svn.sourceforge.net/viewvc/daisymfc/trunk/dmfc/transformers/org_pef_dtbook2pef/"
+            xmlns:ext="http://www.tpb.se/pef/extensions/"
+            ext:version="2010-1">
+         <dc:format>application/x-pef+xml</dc:format>
+         <dc:identifier>P12345</dc:identifier>
+         <dc:date>2015-06-15</dc:date>
+         <dc:title>På tal om Sherlock Holmes</dc:title>
+         <dc:creator>Sayers, Dorothy</dc:creator>
+         <dc:language>sv</dc:language>
+         <dc:publisher>MTM</dc:publisher>
+         <dc:source>DTB15474</dc:source>
+         <generator:entry key="writeTempFiles">false</generator:entry>
+         <generator:entry key="identifier">P12345</generator:entry>
+         <generator:entry key="row-spacing">1.0</generator:entry>
+         <generator:entry key="splitterMax">50</generator:entry>
+         <generator:entry key="inner-margin">2</generator:entry>
+         <generator:entry key="page-height">29</generator:entry>
+         <generator:entry key="rows">29</generator:entry>
+         <generator:entry key="cols">28</generator:entry>
+         <generator:entry key="systemBuild">1004</generator:entry>
+         <generator:entry key="systemName">Dotify</generator:entry>
+         <generator:entry key="outer-margin">2</generator:entry>
+         <generator:entry key="hyphenate">true</generator:entry>
+         <generator:entry key="keepTempFilesOnSuccess">true</generator:entry>
+         <generator:entry key="duplex">true</generator:entry>
+         <generator:entry key="dateFormat">yyyy-MM-dd</generator:entry>
+         <generator:entry key="inputFormat">xml</generator:entry>
+         <generator:entry key="conversionDate">Mon Jun 15 15:10:58 CEST 2015</generator:entry>
+         <generator:entry key="page-width">32</generator:entry>
+         <generator:entry key="rowgap">0</generator:entry>
+         <generator:entry key="date">2015-06-15</generator:entry>
+         <generator:entry key="outputFormat">pef</generator:entry>
+         <generator:entry key="systemRelease">2.3</generator:entry>
+         <ext:sheets>5</ext:sheets>
+         <ext:volumes>1</ext:volumes>
+         <ext:kiloChars>1</ext:kiloChars>
+      </meta>
+   </head>
+   <body>
+      <volume cols="32" rows="29" rowgap="0" duplex="true">
+         <section>
+            <page>
+               <row>⠀⠀⠏⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠹</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠠⠏⠡⠀⠞⠁⠇⠀⠕⠍⠀⠎⠓⠑⠗⠇⠕⠉⠅⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠕⠇⠍⠑⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠠⠙⠕⠗⠕⠞⠓⠽⠀⠠⠎⠁⠽⠑⠗⠎⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠠⠑⠝⠀⠧⠕⠇⠽⠍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸</row>
+               <row>⠀⠀⠧⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠼</row>
+            </page>
+            <page>
+               <row/>
+            </page>
+         </section>
+         <section>
+            <page>
+               <row>⠀⠀⠀⠀⠼⠁⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁</row>
+               <row/>
+               <row/>
+               <row/>
+               <row>⠀⠀⠠⠝⠜⠗⠀⠚⠁⠛⠀⠋⠪⠗⠎⠞⠀⠅⠕⠍⠀⠞⠊⠇⠇</row>
+               <row>⠀⠀⠠⠇⠕⠝⠙⠕⠝⠀⠃⠕⠙⠙⠑⠀⠚⠁⠛⠀⠧⠊⠙⠀⠠⠍⠕⠝⠤</row>
+               <row>⠀⠀⠞⠁⠛⠥⠑⠀⠠⠎⠞⠗⠑⠑⠞⠀⠄⠄⠄⠀⠕⠉⠓⠀⠙⠜⠗</row>
+               <row>⠀⠀⠃⠊⠙⠁⠙⠑⠀⠚⠁⠛⠀⠍⠊⠝⠀⠞⠊⠙⠂⠀⠋⠽⠇⠇⠙⠑</row>
+               <row>⠀⠀⠍⠊⠝⠀⠁⠇⠇⠙⠑⠇⠑⠎⠀⠋⠪⠗⠀⠽⠍⠝⠊⠛⠞⠀⠇⠑⠤</row>
+               <row>⠀⠀⠙⠊⠛⠁⠀⠞⠊⠙⠀⠍⠑⠙⠀⠁⠞⠞⠀⠎⠞⠥⠙⠑⠗⠁⠀⠁⠇⠤</row>
+               <row>⠀⠀⠇⠁⠀⠙⠑⠀⠕⠇⠊⠅⠁⠀⠧⠑⠞⠑⠝⠎⠅⠁⠏⠎⠛⠗⠑⠝⠁⠗</row>
+               <row>⠀⠀⠎⠕⠍⠀⠅⠥⠝⠙⠑⠀⠛⠪⠗⠁⠀⠍⠊⠛⠀⠍⠑⠗⠀⠑⠋⠤</row>
+               <row>⠀⠀⠋⠑⠅⠞⠊⠧⠄⠀⠠⠎⠞⠥⠝⠙⠕⠍⠀⠅⠕⠍⠀⠋⠁⠇⠇⠀⠊</row>
+               <row>⠀⠀⠍⠊⠝⠀⠧⠜⠛⠂⠀⠋⠗⠁⠍⠋⠪⠗⠀⠁⠇⠇⠞⠀⠛⠑⠝⠕⠍</row>
+               <row>⠀⠀⠁⠞⠞⠀⠛⠁⠍⠇⠁⠀⠛⠑⠍⠑⠝⠎⠁⠍⠍⠁⠀⠎⠞⠥⠤</row>
+               <row>⠀⠀⠙⠑⠝⠞⠃⠑⠅⠁⠝⠞⠁⠀⠊⠝⠞⠗⠕⠙⠥⠉⠑⠗⠁⠙⠑</row>
+               <row>⠀⠀⠍⠊⠛⠂⠀⠋⠪⠗⠀⠥⠝⠙⠑⠗⠀⠍⠊⠝⠁⠀⠎⠊⠎⠞⠁⠀⠡⠗</row>
+               <row>⠀⠀⠧⠊⠙⠀⠥⠝⠊⠧⠑⠗⠎⠊⠞⠑⠞⠑⠞⠀⠞⠁⠇⠁⠙⠑⠀⠍⠁⠝</row>
+               <row>⠀⠀⠛⠁⠝⠎⠅⠁⠀⠍⠽⠉⠅⠑⠞⠀⠕⠍⠀⠍⠊⠛⠀⠕⠉⠓⠀⠍⠊⠤</row>
+               <row>⠀⠀⠝⠁⠀⠍⠑⠞⠕⠙⠑⠗⠄⠀⠠⠙⠑⠞⠀⠞⠗⠑⠙⠚⠑⠀⠁⠧</row>
+               <row>⠀⠀⠙⠑⠎⠎⠁⠀⠋⠁⠇⠇⠼⠁⠀⠧⠁⠗⠀⠠⠤⠠⠞⠓⠑</row>
+               <row>⠀⠀⠠⠍⠥⠎⠛⠗⠁⠧⠑⠀⠗⠊⠞⠥⠁⠇⠀⠄⠄⠄⠱⠀⠠⠗⠑⠛⠊⠤</row>
+               <row>⠀⠀⠝⠁⠇⠙⠀⠠⠍⠥⠎⠛⠗⠁⠧⠑⠀⠓⠁⠙⠑⠀⠛⠡⠞⠞⠀⠏⠡</row>
+               <row>⠀⠀⠎⠁⠍⠍⠁⠀⠉⠕⠇⠇⠑⠛⠑⠀⠎⠕⠍⠀⠚⠁⠛⠀⠕⠉⠓⠀⠧⠊</row>
+               <row>⠀⠀⠧⠁⠗⠀⠑⠝⠀⠎⠍⠥⠇⠁⠀⠃⠑⠅⠁⠝⠞⠁⠄⠄⠄⠀⠠⠓⠁⠝</row>
+               <row>⠀⠀⠎⠡⠛⠀⠊⠀⠓⠪⠛⠎⠞⠁⠀⠛⠗⠁⠙⠀⠁⠗⠊⠎⠞⠕⠅⠗⠁⠤</row>
+               <row>⠀⠀⠞⠊⠎⠅⠀⠥⠞⠀⠄⠄⠄⠀⠠⠓⠁⠝⠀⠧⠁⠗⠀⠋⠁⠅⠤</row>
+               <row>⠀⠀⠞⠊⠎⠅⠞⠀⠍⠑⠙⠇⠑⠍⠀⠁⠧⠀⠑⠝⠀⠁⠧⠀⠅⠥⠝⠛⠁⠤</row>
+               <row>⠀⠀⠙⠪⠍⠑⠞⠎⠀⠜⠇⠙⠎⠞⠁⠀⠋⠁⠍⠊⠇⠚⠑⠗⠀⠄⠄⠄</row>
+            </page>
+            <page>
+               <row>⠀⠀⠀⠀⠼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠁⠚</row>
+               <row>⠀⠀⠠⠊⠃⠇⠁⠝⠙⠀⠎⠁⠍⠞⠁⠇⠁⠙⠑⠀⠧⠊⠀⠍⠑⠙</row>
+               <row>⠀⠀⠧⠁⠗⠁⠝⠙⠗⠁⠀⠕⠉⠓⠀⠚⠁⠛⠀⠍⠊⠝⠝⠎⠀⠁⠞⠞</row>
+               <row>⠀⠀⠓⠁⠝⠀⠧⠊⠙⠀⠍⠑⠗⠀⠜⠝⠀⠑⠞⠞⠀⠞⠊⠇⠇⠋⠜⠇⠇⠑</row>
+               <row>⠀⠀⠧⠊⠎⠁⠙⠑⠀⠥⠏⠏⠀⠑⠞⠞⠀⠇⠊⠧⠇⠊⠛⠞⠀⠊⠝⠤</row>
+               <row>⠀⠀⠞⠗⠑⠎⠎⠑⠀⠋⠪⠗⠀⠍⠊⠝⠁⠀⠍⠑⠞⠕⠙⠑⠗⠀⠄⠄⠄</row>
+               <row>⠀⠀⠠⠚⠁⠛⠀⠓⠁⠙⠑⠀⠊⠝⠞⠑⠀⠞⠗⠜⠋⠋⠁⠞⠀⠓⠕⠝⠕⠍</row>
+               <row>⠀⠀⠏⠡⠀⠋⠽⠗⠁⠀⠡⠗⠀⠝⠜⠗⠀⠓⠁⠝⠀⠑⠝⠀⠍⠕⠗⠛⠕⠝</row>
+               <row>⠀⠀⠅⠕⠍⠀⠞⠊⠇⠇⠀⠍⠊⠝⠀⠃⠕⠎⠞⠁⠙⠀⠧⠊⠙</row>
+               <row>⠀⠀⠠⠍⠕⠝⠞⠁⠛⠥⠑⠀⠠⠎⠞⠗⠑⠑⠞⠄</row>
+            </page>
+         </section>
+         <section>
+            <page>
+               <row/>
+               <row>⠀⠀⠒⠒⠀⠠⠞⠗⠽⠉⠅⠥⠏⠏⠛⠊⠋⠞⠑⠗⠀⠒⠒⠒⠒⠒⠒⠒⠒⠒</row>
+               <row/>
+               <row>⠀⠀⠠⠏⠥⠝⠅⠞⠎⠅⠗⠊⠋⠞⠎⠃⠕⠅⠑⠝⠀⠜⠗⠀⠏⠗⠕⠙⠥⠤</row>
+               <row>⠀⠀⠉⠑⠗⠁⠙⠀⠼⠃⠚⠁⠑⠀⠁⠧⠀⠠⠠⠍⠞⠍⠂⠀⠠⠚⠕⠤</row>
+               <row>⠀⠀⠓⠁⠝⠝⠑⠎⠓⠕⠧</row>
+               <row/>
+               <row>⠀⠀⠠⠍⠑⠙⠊⠑⠝⠥⠍⠍⠑⠗⠒⠀⠠⠏⠼⠁⠃⠉⠙⠑</row>
+               <row/>
+               <row>⠀⠀⠓⠑⠚</row>
+               <row>⠀⠀⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒</row>
+            </page>
+            <page>
+               <row/>
+            </page>
+         </section>
+         <section>
+            <page>
+               <row/>
+               <row>⠀⠀⠒⠒⠀⠠⠃⠁⠅⠎⠊⠙⠑⠎⠞⠑⠭⠞⠀⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒</row>
+               <row/>
+               <row>⠀⠀⠠⠃⠕⠅⠑⠝⠄</row>
+               <row>⠀⠀⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒</row>
+            </page>
+            <page>
+               <row/>
+            </page>
+         </section>
+         <section>
+            <page>
+               <row>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠝⠕⠞⠑⠗⠀⠼⠁</row>
+               <row/>
+               <row/>
+               <row/>
+               <row>⠀⠀⠠⠋⠕⠞⠝⠕⠞⠑⠗⠀⠞⠊⠇⠇⠀⠙⠑⠝⠝⠁⠀⠧⠕⠇⠽⠍</row>
+               <row/>
+               <row>⠀⠀⠠⠎⠊⠙⠁⠀⠼⠁</row>
+               <row>⠀⠀⠬⠼⠁⠀⠠⠙⠑⠞⠀⠜⠗⠀⠊⠝⠞⠑⠀⠅⠇⠁⠗⠞⠀⠕⠍</row>
+               <row>⠀⠀⠀⠀⠀⠠⠓⠕⠇⠍⠑⠎⠀⠋⠁⠅⠞⠊⠎⠅⠞⠀⠍⠑⠝⠁⠗</row>
+               <row>⠀⠀⠀⠀⠀⠰⠍⠊⠞⠞⠀⠞⠗⠑⠙⠚⠑⠀⠋⠁⠇⠇⠰⠀⠑⠇⠇⠑⠗⠂</row>
+               <row>⠀⠀⠀⠀⠀⠍⠑⠗⠀⠎⠏⠑⠉⠊⠋⠊⠅⠞⠂⠀⠰⠙⠑⠞⠀⠞⠗⠑⠙⠤</row>
+               <row>⠀⠀⠀⠀⠀⠚⠑⠀⠋⠁⠇⠇⠑⠞⠀⠏⠡⠀⠙⠑⠞⠞⠁⠀⠎⠜⠞⠞⠰⠄</row>
+               <row>⠀⠀⠀⠀⠀⠠⠙⠑⠝⠀⠋⠪⠗⠎⠞⠁⠀⠞⠕⠇⠅⠝⠊⠝⠛⠑⠝</row>
+               <row>⠀⠀⠀⠀⠀⠓⠁⠗⠀⠋⠥⠝⠝⠊⠞⠀⠎⠞⠪⠗⠗⠑⠀⠛⠊⠇⠇⠁⠝⠤</row>
+               <row>⠀⠀⠀⠀⠀⠙⠑⠀⠓⠕⠎⠀⠅⠜⠝⠝⠁⠗⠝⠁⠂⠀⠍⠑⠝⠀⠙⠑⠝</row>
+               <row>⠀⠀⠀⠀⠀⠎⠑⠝⠁⠗⠑⠀⠜⠗⠀⠊⠀⠁⠇⠇⠁⠀⠋⠁⠇⠇</row>
+               <row>⠀⠀⠀⠀⠀⠍⠪⠚⠇⠊⠛⠂⠀⠕⠉⠓⠀⠑⠗⠃⠚⠥⠙⠑⠗⠀⠍⠑⠗</row>
+               <row>⠀⠀⠀⠀⠀⠥⠞⠗⠽⠍⠍⠑⠀⠋⠪⠗⠀⠙⠑⠝⠀⠎⠕⠍⠀⠎⠞⠥⠤</row>
+               <row>⠀⠀⠀⠀⠀⠙⠑⠗⠁⠗⠀⠠⠓⠕⠇⠍⠑⠎⠅⠗⠕⠝⠕⠇⠕⠛⠊⠝⠄</row>
+               <row>⠀⠀⠀⠀⠀⠠⠎⠑⠀⠝⠑⠙⠁⠝⠂⠀⠎⠄⠀⠼⠁⠉⠄</row>
+            </page>
+            <page>
+               <row/>
+            </page>
+         </section>
+      </volume>
+   </body>
+</pef>
