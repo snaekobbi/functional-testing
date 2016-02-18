@@ -1443,7 +1443,7 @@
             </li>
           </ul>
         </li>
-        <li class="requirement priority_1" id="4.7:96">
+        <li class="requirement priority_1 changed" id="4.7:96">
           <h3>
             <a class="req-nr" href="#4.7:96">4.7:96</a>
             The system shall support automatic insertion of content that is not present in the
@@ -1457,8 +1457,51 @@
               <li> etc. </li>
             </ul>
           </h3>
+          <p>
+            NLB examples:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/generated-content/test.xprocspec#test1">
+                Optional text preceding sidebar ("Margin text:")
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/generated-content/test.xprocspec#test2">
+                Boilerplate text on the title page ("NLB, Norge 2015" and "Volume x of y") and
+                optional text preceding sidebar ("Margin text:")
+              </a>
+            </li>
+          </ul>
+          <p>
+            Explanation:
+          </p>
+          <ul>
+            <li>
+              The title page has an example of boiler text: "NLB Norge 2015" and "Hefte 1 av 2". The
+              year changes automatically in NorBraille every new year. NorBraille is not an open
+              source tool and we can not edit the template/the title page unless we do it manually
+              in the PEF file. "Volume number x of y" is printed on every titlepage. The dividing
+              into volumes happens in NorBraille.
+            </li>
+            <li>
+              On the third page of the second example is a standard text "Om boka" ("About the
+              book") that is inserted automatically in the first volume of all productions. It has
+              standard text as "Uncontracted braille" and "The book shall not be returned".
+            </li>
+            <li>
+              Text in the margin (in the original book, sidebar in XML) gets an automatic inserted
+              word in our braille books ("Margtekst:")
+            </li>
+          </ul>
+          <p>
+            <a class="test-src" href="test/generated-content/test.xprocspec#test3">
+              SBS example: boilerplate added when breaking into volumes: "End of volume x" and
+              "Chapter x (continuation)"
+            </a>
+          </p>
         </li>
-        <li class="requirement priority_2" id="4.7:95">
+        <li class="requirement priority_2 changed" id="4.7:95">
           <h3>
             <a class="req-nr" href="#4.7:95">4.7:95</a>
             The system shall support insertion of content that is not present in the source, through
@@ -1473,6 +1516,21 @@
               <li> etc. </li>
             </ul>
           </h3>
+          <p>
+            SBS examples of freely definable one-character marks inserted in the left margin:
+          </p>
+          <ul>
+            <li class="example">
+              <a class="test-src" href="test/generated-content/test.xprocspec#test4">
+                Example 1: "." indicates new print page, "+" indicates difficult task
+              </a>
+            </li>
+            <li class="example">
+              <a class="test-src" href="test/generated-content/test.xprocspec#test5">
+                Example 2: "." indicates new print page, "R" indicates tactile graphic available
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="requirement priority_1" id="4.7:97">
           <h3>
